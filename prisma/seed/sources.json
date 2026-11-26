@@ -1,0 +1,102 @@
+[
+  {
+    "title": "BNPB - Badan Nasional Penanggulangan Bencana",
+    "publisher": "BNPB",
+    "url": "https://bnpb.go.id",
+    "category": "OFFICIAL",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Indonesia's National Disaster Management Agency - official disaster data, situation reports, and assistance distribution records",
+    "importBatchId": "seed-official-2024"
+  },
+  {
+    "title": "BMKG - Badan Meteorologi, Klimatologi, dan Geofisika",
+    "publisher": "BMKG",
+    "url": "https://bmkg.go.id",
+    "category": "OFFICIAL",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Indonesia's Meteorology, Climatology, and Geophysical Agency - official earthquake, tsunami, and weather data",
+    "importBatchId": "seed-official-2024"
+  },
+  {
+    "title": "BPS - Badan Pusat Statistik",
+    "publisher": "BPS",
+    "url": "https://bps.go.id",
+    "category": "OFFICIAL",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Indonesia's Central Statistics Agency - official administrative boundaries, population data, and socioeconomic indicators",
+    "importBatchId": "seed-official-2024"
+  },
+  {
+    "title": "BIG - Badan Informasi Geospasial",
+    "publisher": "BIG",
+    "url": "https://big.go.id",
+    "category": "OFFICIAL",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Indonesia's Geospatial Information Agency - official geospatial data and administrative boundary datasets",
+    "importBatchId": "seed-official-2024"
+  },
+  {
+    "title": "PMI - Palang Merah Indonesia",
+    "publisher": "Palang Merah Indonesia",
+    "url": "https://pmi.or.id",
+    "category": "OFFICIAL",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Indonesian Red Cross Society - humanitarian assistance data and disaster response reports",
+    "importBatchId": "seed-official-2024"
+  },
+  {
+    "title": "BAZNAS - Badan Amil Zakat Nasional",
+    "publisher": "BAZNAS",
+    "url": "https://baznas.go.id",
+    "category": "OFFICIAL",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "National Zakat Board - disaster relief and assistance distribution through zakat funds",
+    "importBatchId": "seed-official-2024"
+  },
+  {
+    "title": "Kompas.com - Bencana",
+    "publisher": "Kompas Cyber Media",
+    "url": "https://www.kompas.com/tag/bencana",
+    "category": "MEDIA",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Major Indonesian news outlet disaster reporting",
+    "importBatchId": "seed-media-2024"
+  },
+  {
+    "title": "Detik.com - Bencana",
+    "publisher": "Detikcom",
+    "url": "https://www.detik.com/tag/bencana",
+    "category": "MEDIA",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Indonesian news portal disaster coverage",
+    "importBatchId": "seed-media-2024"
+  },
+  {
+    "title": "The Conversation Indonesia - Bencana Alam",
+    "publisher": "The Conversation",
+    "url": "https://theconversation.com/id/topics/bencana-alam-12345",
+    "category": "RESEARCH",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "Academic analysis and research-based articles on natural disasters in Indonesia",
+    "importBatchId": "seed-research-2024"
+  },
+  {
+    "title": "LIPI - Lembaga Ilmu Pengetahuan Indonesia",
+    "publisher": "BRIN (Badan Riset dan Inovasi Nasional)",
+    "url": "https://brin.go.id",
+    "category": "RESEARCH",
+    "publicationDate": "2024-01-01T00:00:00.000Z",
+    "accessDate": "2024-11-26T00:00:00.000Z",
+    "description": "National Research and Innovation Agency - scientific research on disasters, geology, and climate",
+    "importBatchId": "seed-research-2024"
+  }
+]

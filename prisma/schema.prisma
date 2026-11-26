@@ -1,0 +1,156 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum SourceCategory {
+  OFFICIAL
+  MEDIA
+  RESEARCH
+  EDITORIAL
+}
+
+enum DisasterType {
+  EARTHQUAKE
+  FLOOD
+  LANDSLIDE
+  COASTAL_EROSION
+  TIDAL_FLOOD
+  EXTREME_WEATHER
+  LAND_SUBSIDENCE
+  VOLCANIC_ERUPTION
+  TSUNAMI
+  OTHER
+}
+
+enum EventNature {
+  GEOLOGICAL
+  ENVIRONMENTAL
+}
+
+enum PublicStatus {
+  DILAPORKAN_BELUM_MENERIMA_BANTUAN
+  AKSES_TERISOLIR
+  BELUM_TERVERIFIKASI
+}
+
+enum RegionLevel {
+  PROVINCE
+  REGENCY_CITY
+  DISTRICT
+  VILLAGE
+}
+
+model Source {
+  id              String          @id @default(cuid())
+  title           String
+  publisher       String?
+  url             String?
+  category        SourceCategory
+  publicationDate DateTime?
+  accessDate      DateTime        @default(now())
+  description     String?
+  importBatchId   String?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  stats           Stat[]
+  eventImpacts    EventImpact[]
+
+  @@index([category])
+  @@index([importBatchId])
+}
+
+model Region {
+  id            String       @id @default(cuid())
+  code          String       @unique
+  name          String
+  level         RegionLevel
+  parentCode    String?
+  parent        Region?      @relation("RegionHierarchy", fields: [parentCode], references: [code])
+  children      Region[]     @relation("RegionHierarchy")
+  geometry      Json?
+  centroid      Json?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  eventImpacts  EventImpact[]
+  stats         Stat[]
+
+  @@index([code])
+  @@index([parentCode])
+  @@index([level])
+}
+
+model DisasterEvent {
+  id            String       @id @default(cuid())
+  name          String
+  type          DisasterType
+  nature        EventNature
+  occurredAt    DateTime
+  endedAt       DateTime?
+  description   String?
+  location      Json?
+  metadata      Json?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  impacts       EventImpact[]
+  stats         Stat[]
+
+  @@index([type])
+  @@index([nature])
+  @@index([occurredAt])
+}
+
+model EventImpact {
+  id              String        @id @default(cuid())
+  eventId         String
+  event           DisasterEvent @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  regionId        String
+  region          Region        @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  status          PublicStatus?
+  affectedCount   Int?
+  displacedCount  Int?
+  injuredCount    Int?
+  fatalitiesCount Int?
+  damagedHouses   Int?
+  notes           String?
+  sourceId        String?
+  source          Source?       @relation(fields: [sourceId], references: [id], onDelete: SetNull)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@unique([eventId, regionId])
+  @@index([eventId])
+  @@index([regionId])
+  @@index([status])
+}
+
+model Stat {
+  id          String   @id @default(cuid())
+  sourceId    String
+  source      Source   @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  eventId     String?
+  event       DisasterEvent? @relation(fields: [eventId], references: [id], onDelete: SetNull)
+  regionId    String?
+  region      Region?  @relation(fields: [regionId], references: [id], onDelete: SetNull)
+  key         String
+  label       String
+  value       String
+  unit        String?
+  asOfDate    DateTime
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sourceId])
+  @@index([eventId])
+  @@index([regionId])
+  @@index([key])
+  @@index([asOfDate])
+}

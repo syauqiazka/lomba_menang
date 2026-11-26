@@ -6,21 +6,48 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "prisma skills sync || exit 0",
+    "db:generate": "prisma generate",
+    "db:validate": "prisma validate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio",
+    "import:sources": "tsx scripts/import-source.ts",
+    "import:regions": "tsx scripts/import-region.ts",
+    "import:events": "tsx scripts/import-disaster-event.ts",
+    "import:impacts": "tsx scripts/import-event-impact.ts",
+    "import:stats": "tsx scripts/import-stat.ts",
+    "import:all": "tsx scripts/import-all.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "csv-parse": "^5.5.6",
+    "gsap": "^3.15.1",
+    "maplibre-gl": "^6.19.0",
     "next": "16.4.6",
+    "prisma": "^6.19.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",
+    "@types/maplibre-gl": "^1.14.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "tailwindcss": "4.3.3",
-    "typescript": "^5"
+    "tsx": "^4.15.0",
+    "typescript": "^5",
+    "vitest": "^1.6.0"
   }
 }
