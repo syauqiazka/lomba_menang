@@ -1,6 +1,5 @@
 import { PrismaClient, DisasterType } from "@prisma/client";
 import type { Prisma } from "@prisma/client";
-import type { InputJsonValue } from "@prisma/client/runtime/library";
 import { BaseImporter, ImportResult, createPrismaClient } from "./import-base";
 import { z, ZodError } from "zod";
 
@@ -63,7 +62,7 @@ export class StatImporter extends BaseImporter<StatInput, StatNormalized> {
     this.prisma = prisma;
   }
 
-  validate(input: StatInput, rowNumber: number): { valid: boolean; errors: string[]; normalized?: StatNormalized } {
+  validate(input: StatInput, _rowNumber: number): { valid: boolean; errors: string[]; normalized?: StatNormalized } {
     const parsed = StatInputSchema.safeParse(input);
     if (!parsed.success) {
       const zodError = parsed.error as ZodError;

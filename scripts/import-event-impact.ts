@@ -217,3 +217,4 @@ export async function importEventImpactsFromCSV(
   await prisma.$disconnect();
   importer.printSummary();
   return result;
+}

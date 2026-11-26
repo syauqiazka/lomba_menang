@@ -3,6 +3,7 @@ import { MainLayout } from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/Card";
 import { LinkButton } from "@/components/ui/Button";
 import { StatisticDisplay } from "@/components/ui/StatisticDisplay";
+import { Badge } from "@/components/ui/Badge";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -77,9 +78,9 @@ const quickLinks = [
     ),
   },
   {
-    title: "Kasus Flores NTT 2026",
-    description: "Studi kasus gempa Flores Agustus 2026 dan distribusi bantuan",
-    href: "/kasus/ntt-2026",
+    title: "Studi Kasus",
+    description: "Daftar studi kasus bencana: Aceh 2026 (aktif), NTT 2026 (historis)",
+    href: "/kasus",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -152,7 +153,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <LinkButton size="lg" href="/peta">Lihat Peta Nasional</LinkButton>
-              <LinkButton variant="secondary" size="lg" href="/kasus/ntt-2026">Kasus Flores NTT 2026</LinkButton>
+              <LinkButton variant="secondary" size="lg" href="/kasus">Studi Kasus</LinkButton>
             </div>
           </div>
         </div>
@@ -218,7 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Case Study */}
+      {/* Featured Case Studies */}
       <section className="py-16 md:py-20 bg-secondary-background" aria-labelledby="case-study-heading">
         <div className="container-main">
           <header className="text-center mb-12">
@@ -226,41 +227,60 @@ export default function HomePage() {
               Studi Kasus Unggulan
             </h2>
             <p className="text-secondary-text max-w-2xl mx-auto mb-8">
-              Gempa bumi Flores, NTT pada Agustus 2026 — studi kasus distribusi bantuan dan
-              keterelaksanaan informasi bencana geologis.
+              Dua studi kasus prioritas: banjir hidrometeorologis Aceh (Nov 2026, aktif) dan gempa geologis Flores NTT (Agu 2026, historis).
+              Keduanya menunjukkan tantangan distribusi bantuan dan jejak informasi yang berbeda.
             </p>
           </header>
 
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="font-display font-semibold text-2xl text-primary mb-3">
-                  Gempa Flores NTT, Agustus 2026
-                </h3>
-                <p className="text-secondary-text mb-4">
-                  Gempa bumi magnitudo 6.1 SR mengguncang Pulau Flores, Nusa Tenggara Timur pada
-                  Agustus 2026. Studi kasus ini menelusuri dampak, respons bantuan, dan tantangan
-                  akses informasi di wilayah terpencil.
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* Aceh 2026 - Active */}
+            <Card className="h-full border-l-4 border-primary">
+              <CardContent className="flex flex-col h-full p-6">
+                <div className="flex items-center gap-2 text-sm mb-3">
+                  <Badge variant="safe">Hidrometeorologis</Badge>
+                  <time dateTime="2026-11" className="text-secondary-text font-mono">November 2026</time>
+                  <Badge variant="safe">Aktif</Badge>
+                </div>
+                <h3 className="font-display font-semibold text-xl text-primary mb-2">Banjir & Longsor Aceh</h3>
+                <p className="text-secondary-text text-sm mb-4 flex-1">
+                  Banjir bandang dan longsor akibat hujan ekstrem melanda 7 kabupaten/kota di Aceh.
+                  Tantangan evakuasi, akses terputus, dan validasi data korban di wilayah terisolir.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="badge badge-warning">Dilaporkan belum menerima bantuan</span>
-                  <span className="badge badge-danger">Akses terisolir</span>
-                  <span className="badge badge-neutral">Belum terverifikasi</span>
+                  <Badge variant="warning">Dilaporkan belum menerima bantuan</Badge>
+                  <Badge variant="danger">Akses terisolir</Badge>
+                  <Badge variant="neutral">Belum terverifikasi</Badge>
                 </div>
-                <LinkButton size="lg" href="/kasus/ntt-2026">Baca Studi Kasus Lengkap</LinkButton>
-              </div>
-              <div className="w-full md:w-1/2 aspect-square bg-secondary-background rounded-lg flex items-center justify-center">
-                <div className="text-center p-4">
-                  <svg className="w-16 h-16 mx-auto text-secondary-text mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p className="text-secondary-text text-sm">Peta wilayah Flores, NTT</p>
-                  <p className="text-xs text-secondary-text/70 mt-1">Visualisasi wilayah terdampak gempa</p>
+                <LinkButton size="lg" href="/kasus/aceh-2026">Baca Studi Kasus</LinkButton>
+              </CardContent>
+            </Card>
+
+            {/* NTT 2026 - Historical */}
+            <Card className="h-full border-l-4 border-warning">
+              <CardContent className="flex flex-col h-full p-6">
+                <div className="flex items-center gap-2 text-sm mb-3">
+                  <Badge variant="warning">Geologis</Badge>
+                  <time dateTime="2026-08" className="text-secondary-text font-mono">Agustus 2026</time>
+                  <Badge variant="neutral">Historis</Badge>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+                <h3 className="font-display font-semibold text-xl text-primary mb-2">Gempa Flores NTT</h3>
+                <p className="text-secondary-text text-sm mb-4 flex-1">
+                  Gempa bumi magnitudo 6.1 SR mengguncang Pulau Flores. Studi kasus distribusi bantuan
+                  ke wilayah terpencil dan keterelaksanaan informasi bencana geologis.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <Badge variant="warning">Dilaporkan belum menerima bantuan</Badge>
+                  <Badge variant="danger">Akses terisolir</Badge>
+                  <Badge variant="neutral">Belum terverifikasi</Badge>
+                </div>
+                <LinkButton size="lg" href="/kasus/ntt-2026">Baca Studi Kasus</LinkButton>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-8">
+            <LinkButton variant="secondary" size="lg" href="/kasus">Lihat Semua Studi Kasus</LinkButton>
+          </div>
         </div>
       </section>
 

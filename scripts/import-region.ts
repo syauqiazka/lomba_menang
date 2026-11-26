@@ -1,6 +1,5 @@
 import { PrismaClient, RegionLevel } from "@prisma/client";
 import type { Prisma } from "@prisma/client";
-import type { InputJsonValue } from "@prisma/client/runtime/library";
 import { BaseImporter, ImportResult, createPrismaClient } from "./import-base";
 import { z, ZodError } from "zod";
 import { validateProvinceCode } from "../src/lib/indonesian-admin-codes";
@@ -40,7 +39,7 @@ export class RegionImporter extends BaseImporter<RegionInput, RegionNormalized> 
     this.prisma = prisma;
   }
 
-  validate(input: RegionInput, rowNumber: number): { valid: boolean; errors: string[]; normalized?: RegionNormalized } {
+  validate(input: RegionInput, _rowNumber: number): { valid: boolean; errors: string[]; normalized?: RegionNormalized } {
     const parsed = RegionInputSchema.safeParse(input);
     if (!parsed.success) {
       const zodError = parsed.error as ZodError;

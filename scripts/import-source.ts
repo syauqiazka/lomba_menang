@@ -44,7 +44,7 @@ export class SourceImporter extends BaseImporter<SourceInput, SourceNormalized> 
     this.prisma = prisma;
   }
 
-  validate(input: SourceInput, rowNumber: number): { valid: boolean; errors: string[]; normalized?: SourceNormalized } {
+  validate(input: SourceInput, _rowNumber: number): { valid: boolean; errors: string[]; normalized?: SourceNormalized } {
     const parsed = SourceInputSchema.safeParse(input);
     if (!parsed.success) {
       const zodError = parsed.error as ZodError;
