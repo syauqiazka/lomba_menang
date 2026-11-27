@@ -1,0 +1,13 @@
+{
+  "extraction_date": "2026-11-27T14:59:34.364100",
+  "source": "BIG ArcGIS REST Service (geoservices.big.go.id)",
+  "data_summary": {
+    "regency_city_count": 0,
+    "province_count": 0,
+    "new_papua_count": 0,
+    "kdpkab_codes": []
+  },
+  "files_created": [
+    "all-admin-boundaries-attributes.json"
+  ]
+}

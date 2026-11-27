@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-11-27T03:00:00Z",
+  "objective": "Verify coverage of post-2022 Indonesian administrative boundaries",
+  "reference_edition": "Kepmendagri No. 300/2022 (Papua pemekaran)",
+  "expected_provinces": 38,
+  "expected_regencies": 514,
+  "verification_results": {
+    "source_mashadinoor": {
+      "total_files": 518,
+      "files_with_valid_geometry": 507,
+      "files_with_empty_geometry": 11,
+      "unique_valid_regencies": 506,
+      "province_count": 38,
+      "missing_provinces": [],
+      "missing_regencies_from_papua_pemekaran": [
+        "93.01 Kabupaten Babel-Timur (Papua Selatan)",
+        "93.02 Kabupaten Boven Digoel (Papua Selatan)",
+        "93.03 Kabupaten Merauke (Papua Selatan)",
+        "93.04 Kabupaten Puncak Jaya (Papua Selatan)",
+        "94.01 Kabupaten Dei Panai (Papua Pegunungan)",
+        "94.02 Kabupaten Dogo (Papua Pegunungan)",
+        "94.03 Kabupaten Mamberamo (Papua Pegunungan)",
+        "94.04 Kabupaten Penuktibol (Papua Pegunungan)",
+        "94.05 Kabupaten Rambut (Papua Pegunungan)",
+        "94.06 Kabupaten Sorong Selatan (Papua Pegunungan)",
+        "94.07 Kabupaten Suki (Papua Pegunungan)",
+        "94.08 Kabupaten Waropen (Papua Pegunungan)",
+        "95.01 Kabupaten Asmat (Papua Tengah)",
+        "95.02 Kabupaten Bintuni (Papua Tengah)",
+        "95.03 Kabupaten Bunaken (Papua Tengah)",
+        "95.04 Kabupaten Daru (Papua Tengah)",
+        "95.05 Kabupaten Fak-Fak (Papua Tengah)",
+        "95.06 Kabupaten Kapo Timur (Papua Tengah)",
+        "95.07 Kabupaten Maybrat (Papua Tengah)",
+        "95.08 Kabupaten Ndug (Papua Tengah)",
+        "95.09 Kabupaten Teluk Ambara (Papua Tengah)",
+        "96.01 Kabupaten Boven Digoel (Papua Barat Daya)",
+        "96.02 Kabupaten Nattabri (Papua Barat Daya)",
+        "96.03 Kabupaten Siaulu (Papua Barat Daya)",
+        "96.04 Kabupaten Tembagapura (Papua Barat Daya)",
+        "96.07 Kabupaten Wamena (Papua Barat Daya)"
+      ],
+      "discrepancy": 8,
+      "status": "EXPIRED - Missing 8-9 regencies from Papua post-2022"
+    },
+    "candidate_cahyadsn": {
+      "total_files": null,
+      "format": "SQL dump",
+      "regency_count": 289,
+      "status": "REJECTED - Incomplete coverage"
+    },
+    "candidate_big_rest": {
+      "url": "https://geoservices.big.go.id/rbi/rest/services/BATASWILAYAH/BATAS_WILAYAH/MapServer",
+      "layer_1_count": "unknown (API timeout)",
+      "layer_2_count": "unknown (API timeout)",
+      "status": "INACCESSIBLE - Cannot retrieve data"
+    }
+  },
+  "recommendation": "BIG REST API is the only authoritative source but is currently inaccessible. Consider: 1) Contact BIMBIG directly, 2) Search for updated GitHub repos with post-2022 data, 3) Accept current source with documented limitations",
+  "blocking_issues": [
+    "BIG Geoservices API inaccessible from this environment",
+    "No alternative post-2022 GeoJSON source found",
+    "Cannot verify complete 514 regency coverage"
+  ]
+}

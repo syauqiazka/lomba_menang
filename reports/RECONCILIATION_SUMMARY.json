@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-11-27T03:00:00Z",
+  "source_dataset": "Candidate A - mashadinoor/Indonesia-Geojson-2026",
+  "commit": "c95911f3f23af6e01c3bf706c80e36a9f3958588",
+  "summary": {
+    "total_files_in_source": 518,
+    "files_with_valid_geometry": 507,
+    "files_with_empty_geometry": 11,
+    "unique_valid_regencies": 506,
+    "bps_expected_2022": 514,
+    "missing_due_to_papua_pemekaran": 7,
+    "status": "Source is pre-2022 Papua pemekaran data"
+  },
+  "exclusions": {
+    "empty_geometry_files": [
+      "Kabupaten_Administrasi_Kepulauan_Seribu.json (Pulau Untung Jawa - KDPKAB: 31.01)",
+      "Kabupaten_Pahuwato.json (Area Tidak Terdefinisi - KDPKAB: 75.04)",
+      "Kota_Magelang.json (Panjang - KDPKAB: 33.71)",
+      "Kabupaten_Jawa_Timur.json (Jawa Timur - KDPKAB: None)",
+      "Kota_Mojokerto.json (Balongsari - KDPKAB: 35.76)",
+      "Kabupaten_Sumbawa-Sumbawa_Barat.json (Labuhan Mapin/Senayan - KDPKAB: 52.0452.07)",
+      "Kabupaten_Minahasa_Selatan-Bolaang_Mongondwo_Timur.json (Minahasa Selatan/Bolaang Mongondwo Timur - KDPKAB: 71.05/71.10)",
+      "Kota_Bukittinggi.json (Aur Kuning - KDPKAB: 13.75)",
+      "Kota_Padang_Panjang.json (Balai-Balai - KDPKAB: 13.74)",
+      "Kota_Sibolga.json (Huta Barangan - KDPKAB: 12.73)",
+      "Kota_Tebing_Tinggi.json (Pabatu - KDPKAB: 12.76)"
+    ]
+  },
+  "key_findings": [
+    "Source dataset is from pre-2022 (before Papua pemekaran)",
+    "Papua codes 93-96 are not represented in source data",
+    "This explains the 7-regency discrepancy with BPS 2022 count",
+    "Kabupaten_Pohuwato.json (75.04) should be used instead of Kabupaten_Pahuwato.json (same code, null geometry)",
+    "Sumbawa-Sumbawa_Barat.json is a merged test file (71.05/71.10 format)"
+  ],
+  "recommendation": "Source the missing 8 Papua regencies from official BPS 2022+ data to reach target count of 514"
+}

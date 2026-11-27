@@ -1,0 +1,4326 @@
+{
+  "generated_at": "2026-11-27T03:00:00Z",
+  "description": "Crosswalk between source file names and official administrative codes",
+  "provinces": {
+    "Aceh": {
+      "kode_prov": "11",
+      "provinsi": "Aceh",
+      "source_file": "Aceh.json"
+    },
+    "Bali": {
+      "kode_prov": "51",
+      "provinsi": "Bali",
+      "source_file": "Bali.json"
+    },
+    "Banten": {
+      "kode_prov": "36",
+      "provinsi": "Banten",
+      "source_file": "Banten.json"
+    },
+    "Bengkulu": {
+      "kode_prov": "17",
+      "provinsi": "Bengkulu",
+      "source_file": "Bengkulu.json"
+    },
+    "Daerah_Istimewa_Yogyakarta": {
+      "kode_prov": "34",
+      "provinsi": "Daerah Istimewa Yogyakarta",
+      "source_file": "Daerah_Istimewa_Yogyakarta.json"
+    },
+    "DKI_Jakarta": {
+      "kode_prov": "31",
+      "provinsi": "DKI Jakarta",
+      "source_file": "DKI_Jakarta.json"
+    },
+    "Gorontalo": {
+      "kode_prov": "75",
+      "provinsi": "Gorontalo",
+      "source_file": "Gorontalo.json"
+    },
+    "Jambi": {
+      "kode_prov": "15",
+      "provinsi": "Jambi",
+      "source_file": "Jambi.json"
+    },
+    "Jawa_Barat": {
+      "kode_prov": "32",
+      "provinsi": "Jawa Barat",
+      "source_file": "Jawa_Barat.json"
+    },
+    "Jawa_Tengah": {
+      "kode_prov": "33",
+      "provinsi": "Jawa Tengah",
+      "source_file": "Jawa_Tengah.json"
+    },
+    "Jawa_Timur": {
+      "kode_prov": "35",
+      "provinsi": "Jawa Timur",
+      "source_file": "Jawa_Timur.json"
+    },
+    "Kalimantan_Barat": {
+      "kode_prov": "61",
+      "provinsi": "Kalimantan Barat",
+      "source_file": "Kalimantan_Barat.json"
+    },
+    "Kalimantan_Selatan": {
+      "kode_prov": "63",
+      "provinsi": "Kalimantan Selatan",
+      "source_file": "Kalimantan_Selatan.json"
+    },
+    "Kalimantan_Tengah": {
+      "kode_prov": "62",
+      "provinsi": "Kalimantan Tengah",
+      "source_file": "Kalimantan_Tengah.json"
+    },
+    "Kalimantan_Timur": {
+      "kode_prov": "64",
+      "provinsi": "Kalimantan Timur",
+      "source_file": "Kalimantan_Timur.json"
+    },
+    "Kalimantan_Utara": {
+      "kode_prov": "65",
+      "provinsi": "Kalimantan Utara",
+      "source_file": "Kalimantan_Utara.json"
+    },
+    "Kepulauan_Bangka_Belitung": {
+      "kode_prov": "19",
+      "provinsi": "Kepulauan Bangka Belitung",
+      "source_file": "Kepulauan_Bangka_Belitung.json"
+    },
+    "Kepulauan_Riau": {
+      "kode_prov": "21",
+      "provinsi": "Kepulauan Riau",
+      "source_file": "Kepulauan_Riau.json"
+    },
+    "Lampung": {
+      "kode_prov": "18",
+      "provinsi": "Lampung",
+      "source_file": "Lampung.json"
+    },
+    "Maluku": {
+      "kode_prov": "81",
+      "provinsi": "Maluku",
+      "source_file": "Maluku.json"
+    },
+    "Maluku_Utara": {
+      "kode_prov": "82",
+      "provinsi": "Maluku Utara",
+      "source_file": "Maluku_Utara.json"
+    },
+    "Nusa_Tenggara_Barat": {
+      "kode_prov": "52",
+      "provinsi": "Nusa Tenggara Barat",
+      "source_file": "Nusa_Tenggara_Barat.json"
+    },
+    "Nusa_Tenggara_Timur": {
+      "kode_prov": "53",
+      "provinsi": "Nusa Tenggara Timur",
+      "source_file": "Nusa_Tenggara_Timur.json"
+    },
+    "Papua": {
+      "kode_prov": "91",
+      "provinsi": "Papua",
+      "source_file": "Papua.json"
+    },
+    "Papua_Barat": {
+      "kode_prov": "92",
+      "provinsi": "Papua Barat",
+      "source_file": "Papua_Barat.json"
+    },
+    "Papua_Barat_Daya": {
+      "kode_prov": "96",
+      "provinsi": "Papua Barat Daya",
+      "source_file": "Papua_Barat_Daya.json"
+    },
+    "Papua_Pegunungan": {
+      "kode_prov": "95",
+      "provinsi": "Papua Pegunungan",
+      "source_file": "Papua_Pegunungan.json"
+    },
+    "Papua_Selatan": {
+      "kode_prov": "93",
+      "provinsi": "Papua Selatan",
+      "source_file": "Papua_Selatan.json"
+    },
+    "Papua_Tengah": {
+      "kode_prov": "94",
+      "provinsi": "Papua Tengah",
+      "source_file": "Papua_Tengah.json"
+    },
+    "Riau": {
+      "kode_prov": "14",
+      "provinsi": "Riau",
+      "source_file": "Riau.json"
+    },
+    "Sulawesi_Barat": {
+      "kode_prov": "76",
+      "provinsi": "Sulawesi Barat",
+      "source_file": "Sulawesi_Barat.json"
+    },
+    "Sulawesi_Selatan": {
+      "kode_prov": "73",
+      "provinsi": "Sulawesi Selatan",
+      "source_file": "Sulawesi_Selatan.json"
+    },
+    "Sulawesi_Tengah": {
+      "kode_prov": "72",
+      "provinsi": "Sulawesi Tengah",
+      "source_file": "Sulawesi_Tengah.json"
+    },
+    "Sulawesi_Tenggara": {
+      "kode_prov": "74",
+      "provinsi": "Sulawesi Tenggara",
+      "source_file": "Sulawesi_Tenggara.json"
+    },
+    "Sulawesi_Utara": {
+      "kode_prov": "71",
+      "provinsi": "Sulawesi Utara",
+      "source_file": "Sulawesi_Utara.json"
+    },
+    "Sumatera_Barat": {
+      "kode_prov": "13",
+      "provinsi": "Sumatera Barat",
+      "source_file": "Sumatera_Barat.json"
+    },
+    "Sumatera_Selatan": {
+      "kode_prov": "16",
+      "provinsi": "Sumatera Selatan",
+      "source_file": "Sumatera_Selatan.json"
+    },
+    "Sumatera_Utara": {
+      "kode_prov": "12",
+      "provinsi": "Sumatera Utara",
+      "source_file": "Sumatera_Utara.json"
+    }
+  },
+  "regencies": {
+    "Kabupaten_Aceh_Barat": {
+      "kdpkab": "11.05",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alue Bagok",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Barat_Daya": {
+      "kdpkab": "11.12",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Adan",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Besar": {
+      "kdpkab": "11.06",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Ajee Cut",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Jaya": {
+      "kdpkab": "11.14",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alue Abed",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Selatan": {
+      "kdpkab": "11.01",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Air Berudang",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Singkil": {
+      "kdpkab": "11.10",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alur Linci",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Tamiang": {
+      "kdpkab": "11.16",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Air Masin",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Tengah": {
+      "kdpkab": "11.04",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Antara",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Tenggara": {
+      "kdpkab": "11.02",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Akhih Majile",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Timur": {
+      "kdpkab": "11.03",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Abeuk Geulanteu",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Aceh_Utara": {
+      "kdpkab": "11.08",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Abeuk Leupon",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bener_Meriah": {
+      "kdpkab": "11.17",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alam Jaya",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bireuen": {
+      "kdpkab": "11.11",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Abeuk Budi",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gayo_Lues": {
+      "kdpkab": "11.13",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Agusan",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nagan_Raya": {
+      "kdpkab": "11.15",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alue Bata",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pidie": {
+      "kdpkab": "11.07",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Abo Teubeng",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pidie_Jaya": {
+      "kdpkab": "11.18",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Abah Lueng",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Simeulue": {
+      "kdpkab": "11.09",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Abail",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kota_Banda_Aceh": {
+      "kdpkab": "11.71",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alue Deah Teungoh",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kota_Langsa": {
+      "kdpkab": "11.74",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alue Beurawe",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kota_Lhokseumawe": {
+      "kdpkab": "11.73",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Alue Awe",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kota_Sabang": {
+      "kdpkab": "11.72",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Aneuk Laot",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kota_Subulussalam": {
+      "kdpkab": "11.75",
+      "kdppum": "11",
+      "kode_prov": null,
+      "admin_name": "Badar",
+      "folder": "Aceh",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Badung": {
+      "kdpkab": "51.03",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Abianbase",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bangli": {
+      "kdpkab": "51.06",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Abangsongan",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buleleng": {
+      "kdpkab": "51.08",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Alasangker",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gianyar": {
+      "kdpkab": "51.04",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Abianbase",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Jembrana": {
+      "kdpkab": "51.01",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Air Kuning",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Karangasem": {
+      "kdpkab": "51.07",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Ababi",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Klungkung": {
+      "kdpkab": "51.05",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Aan",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tabanan": {
+      "kdpkab": "51.02",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Abian Tuwung",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kota_Denpasar": {
+      "kdpkab": "51.71",
+      "kdppum": "51",
+      "kode_prov": null,
+      "admin_name": "Dangin Puri",
+      "folder": "Bali",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lebak": {
+      "kdpkab": "36.02",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Cipedang",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pandeglang": {
+      "kdpkab": "36.01",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Bama",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Serang": {
+      "kdpkab": "36.04",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Umbul Tanjung",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tangerang": {
+      "kdpkab": "36.03",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Ancol Pasir",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kota_Cilegon": {
+      "kdpkab": "36.72",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Bagendung",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kota_Serang": {
+      "kdpkab": "36.73",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Banjar Agung",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kota_Tangerang": {
+      "kdpkab": "36.71",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Sukarasa",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kota_Tangerang_Selatan": {
+      "kdpkab": "36.74",
+      "kdppum": "36",
+      "kode_prov": null,
+      "admin_name": "Babakan",
+      "folder": "Banten",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bengkulu_Selatan": {
+      "kdpkab": "17.01",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Kuning",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bengkulu_Tengah": {
+      "kdpkab": "17.09",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Raja",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bengkulu_Utara": {
+      "kdpkab": "17.03",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Layang",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kaur": {
+      "kdpkab": "17.04",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Lungun",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepahiang": {
+      "kdpkab": "17.08",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Kalung",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lebong": {
+      "kdpkab": "17.07",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Bioa Putiak",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Muko_Muko": {
+      "kdpkab": "17.06",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Ejung",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Rejang_Lebong": {
+      "kdpkab": "17.02",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Galing",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Seluma": {
+      "kdpkab": "17.05",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Batu Tugu",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kota_Bengkulu": {
+      "kdpkab": "17.71",
+      "kdppum": "17",
+      "kode_prov": null,
+      "admin_name": "Belakang Pondok",
+      "folder": "Bengkulu",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bantul": {
+      "kdpkab": "34.02",
+      "kdppum": "34",
+      "kode_prov": null,
+      "admin_name": "Argodadi",
+      "folder": "Daerah_Istimewa_Yogyakarta",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gunungkidul": {
+      "kdpkab": "34.03",
+      "kdppum": "34",
+      "kode_prov": null,
+      "admin_name": "Baleharjo",
+      "folder": "Daerah_Istimewa_Yogyakarta",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kulon_Progo": {
+      "kdpkab": "34.01",
+      "kdppum": "34",
+      "kode_prov": null,
+      "admin_name": "Banaran",
+      "folder": "Daerah_Istimewa_Yogyakarta",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sleman": {
+      "kdpkab": "34.04",
+      "kdppum": "34",
+      "kode_prov": null,
+      "admin_name": "Ambarketawang",
+      "folder": "Daerah_Istimewa_Yogyakarta",
+      "has_valid_geometry": true
+    },
+    "Kota_Yogyakarta": {
+      "kdpkab": "34.71",
+      "kdppum": "34",
+      "kode_prov": null,
+      "admin_name": "Baciro",
+      "folder": "Daerah_Istimewa_Yogyakarta",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Administrasi_Kepulauan_Seribu": {
+      "kdpkab": "31.01",
+      "kdppum": "31",
+      "kode_prov": null,
+      "admin_name": "Pulau Untung Jawa",
+      "folder": "DKI_Jakarta",
+      "has_valid_geometry": false
+    },
+    "Kota_Administrasi_Jakarta_Barat": {
+      "kdpkab": "31.73",
+      "kdppum": "31",
+      "kode_prov": null,
+      "admin_name": "Angke",
+      "folder": "DKI_Jakarta",
+      "has_valid_geometry": true
+    },
+    "Kota_Administrasi_Jakarta_Pusat": {
+      "kdpkab": "31.71",
+      "kdppum": "31",
+      "kode_prov": null,
+      "admin_name": "Bendungan Hilir",
+      "folder": "DKI_Jakarta",
+      "has_valid_geometry": true
+    },
+    "Kota_Administrasi_Jakarta_Selatan": {
+      "kdpkab": "31.74",
+      "kdppum": "31",
+      "kode_prov": null,
+      "admin_name": "Bangka",
+      "folder": "DKI_Jakarta",
+      "has_valid_geometry": true
+    },
+    "Kota_Administrasi_Jakarta_Timur": {
+      "kdpkab": "31.75",
+      "kdppum": "31",
+      "kode_prov": null,
+      "admin_name": "Balekambang",
+      "folder": "DKI_Jakarta",
+      "has_valid_geometry": true
+    },
+    "Kota_Administrasi_Jakarta_Utara": {
+      "kdpkab": "31.72",
+      "kdppum": "31",
+      "kode_prov": null,
+      "admin_name": "Ancol",
+      "folder": "DKI_Jakarta",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Boalemo": {
+      "kdpkab": "75.02",
+      "kdppum": "75",
+      "kode_prov": null,
+      "admin_name": "Apitalawu",
+      "folder": "Gorontalo",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bone_Bolango": {
+      "kdpkab": "75.03",
+      "kdppum": "75",
+      "kode_prov": null,
+      "admin_name": "Alale",
+      "folder": "Gorontalo",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gorontalo": {
+      "kdpkab": "75.01",
+      "kdppum": "75",
+      "kode_prov": null,
+      "admin_name": "Ambara",
+      "folder": "Gorontalo",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gorontalo_Utara": {
+      "kdpkab": "75.05",
+      "kdppum": "75",
+      "kode_prov": null,
+      "admin_name": "Alata Karya",
+      "folder": "Gorontalo",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pahuwato": {
+      "kdpkab": "75.04",
+      "kdppum": "75",
+      "kode_prov": null,
+      "admin_name": "Area Tidak Terdefinisi",
+      "folder": "Gorontalo",
+      "has_valid_geometry": false
+    },
+    "Kabupaten_Pohuwato": {
+      "kdpkab": "75.04",
+      "kdppum": "75",
+      "kode_prov": null,
+      "admin_name": "Ayula",
+      "folder": "Gorontalo",
+      "has_valid_geometry": true
+    },
+    "Kota_Gorontalo": {
+      "kdpkab": "75.71",
+      "kdppum": "75",
+      "kode_prov": null,
+      "admin_name": "Biawao",
+      "folder": "Gorontalo",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Batanghari": {
+      "kdpkab": "15.04",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Hajran",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bungo": {
+      "kdpkab": "15.08",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Dwi Karya Bakti",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kerinci": {
+      "kdpkab": "15.01",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Dusun Baru",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Merangin": {
+      "kdpkab": "15.02",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Baru",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Muaro_Jambi": {
+      "kdpkab": "15.05",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Dusun Mudo",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sarolangun": {
+      "kdpkab": "15.03",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Argo Sari",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tanjung_Jabung_Barat": {
+      "kdpkab": "15.06",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Dusun Kebun",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tanjung_Jabung_Timur": {
+      "kdpkab": "15.07",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Harapan Makmur",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tebo": {
+      "kdpkab": "15.09",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Dusun Baru",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kota_Jambi": {
+      "kdpkab": "15.71",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Eka Jaya",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kota_Sungai_Penuh": {
+      "kdpkab": "15.72",
+      "kdppum": "15",
+      "kode_prov": null,
+      "admin_name": "Dusun Baru",
+      "folder": "Jambi",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bandung": {
+      "kdpkab": "32.04",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Neglawangi",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bandung_Barat": {
+      "kdpkab": "32.17",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cijenuk",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bekasi": {
+      "kdpkab": "32.16",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Karangindah",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bogor": {
+      "kdpkab": "32.01",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Antajaya",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ciamis": {
+      "kdpkab": "32.07",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Andapraja",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Cianjur": {
+      "kdpkab": "32.03",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cidamar",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Cirebon": {
+      "kdpkab": "32.09",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Losari Kidul",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Garut": {
+      "kdpkab": "32.05",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cidatar",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Indramayu": {
+      "kdpkab": "32.12",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Lobener Lor",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Karawang": {
+      "kdpkab": "32.15",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Adiarsa Barat",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kuningan": {
+      "kdpkab": "32.08",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Ancaran",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Majalengka": {
+      "kdpkab": "32.10",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cidulang",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pangandaran": {
+      "kdpkab": "32.18",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Ciganjeng",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Purwakarta": {
+      "kdpkab": "32.14",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Anjun",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Subang": {
+      "kdpkab": "32.13",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cibeusi",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sukabumi": {
+      "kdpkab": "32.02",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cidadap",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumedang": {
+      "kdpkab": "32.11",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cikareo Selatan",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tasikmalaya": {
+      "kdpkab": "32.06",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cidugaleun",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Bandung": {
+      "kdpkab": "32.73",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Derwati",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Banjar": {
+      "kdpkab": "32.79",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Hegarsari",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Bekasi": {
+      "kdpkab": "32.75",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Jatikarya",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Bogor": {
+      "kdpkab": "32.71",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Babakan Pasar",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Cimahi": {
+      "kdpkab": "32.77",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Baros",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Cirebon": {
+      "kdpkab": "32.74",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Panjunan",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Depok": {
+      "kdpkab": "32.76",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Abadi Jaya",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Sukabumi": {
+      "kdpkab": "32.72",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cikundul",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Tasikmalaya": {
+      "kdpkab": "32.78",
+      "kdppum": "32",
+      "kode_prov": null,
+      "admin_name": "Cigantang",
+      "folder": "Jawa_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banjarnegara": {
+      "kdpkab": "33.04",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Merden",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banyumas": {
+      "kdpkab": "33.02",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Melung",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Batang": {
+      "kdpkab": "33.25",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Pranten",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Blora": {
+      "kdpkab": "33.16",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Adirejo",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Boyolali": {
+      "kdpkab": "33.09",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Metuk",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Brebes": {
+      "kdpkab": "33.29",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Mendala",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Cilacap": {
+      "kdpkab": "33.01",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Mergawati",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Demak": {
+      "kdpkab": "33.21",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Menur",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Grobogan": {
+      "kdpkab": "33.15",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Mrisi",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Jepara": {
+      "kdpkab": "33.20",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Rengging",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Karanganyar": {
+      "kdpkab": "33.13",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Alastuwo",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kebumen": {
+      "kdpkab": "33.05",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Menganti",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kendal": {
+      "kdpkab": "33.24",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Merbuh",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Klaten": {
+      "kdpkab": "33.10",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Menden",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kudus": {
+      "kdpkab": "33.19",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Rejosari",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Magelang": {
+      "kdpkab": "33.08",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Menayu",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pati": {
+      "kdpkab": "33.18",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Pakem",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pekalongan": {
+      "kdpkab": "33.26",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Mendolo",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pemalang": {
+      "kdpkab": "33.27",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Babakan",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Purbalingga": {
+      "kdpkab": "33.03",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Tanalum",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Purworejo": {
+      "kdpkab": "33.06",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Mendiro",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Rembang": {
+      "kdpkab": "33.17",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Rendeng",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Semarang": {
+      "kdpkab": "33.22",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Mendongan",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sragen": {
+      "kdpkab": "33.14",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Bagor",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sukoharjo": {
+      "kdpkab": "33.11",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Alasombo",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tegal": {
+      "kdpkab": "33.28",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Mokaha",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Temanggung": {
+      "kdpkab": "33.23",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Menggoro",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Wonogiri": {
+      "kdpkab": "33.12",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Bakalan",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Wonosobo": {
+      "kdpkab": "33.07",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Ngadikerso",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kota_Magelang": {
+      "kdpkab": "33.71",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Panjang",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": false
+    },
+    "Kota_Pekalongan": {
+      "kdpkab": "33.75",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Banyurip",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kota_Salatiga": {
+      "kdpkab": "33.73",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Noborejo",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kota_Semarang": {
+      "kdpkab": "33.74",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Meteseh",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kota_Surakarta": {
+      "kdpkab": "33.72",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Kadipiro",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kota_Tegal": {
+      "kdpkab": "33.76",
+      "kdppum": "33",
+      "kode_prov": null,
+      "admin_name": "Bandung",
+      "folder": "Jawa_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bangkalan": {
+      "kdpkab": "35.26",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alang Alang",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banyuwangi": {
+      "kdpkab": "35.10",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alas Rejo",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Blitar": {
+      "kdpkab": "35.05",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Ampelgading",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bojonegoro": {
+      "kdpkab": "35.22",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alasgung",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bondowoso": {
+      "kdpkab": "35.11",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alas Sumur",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gresik": {
+      "kdpkab": "35.25",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Abar-abir",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Jember": {
+      "kdpkab": "35.09",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Ajung",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Jombang": {
+      "kdpkab": "35.17",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alang-alang Caruban",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kediri": {
+      "kdpkab": "35.06",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Adan-adan",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lamongan": {
+      "kdpkab": "35.24",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Ardirejo",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lumajang": {
+      "kdpkab": "35.08",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alun-alun",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Madiun": {
+      "kdpkab": "35.19",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Babadan Lor",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Magetan": {
+      "kdpkab": "35.20",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alastuwo",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Malang": {
+      "kdpkab": "35.07",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Ampeldento",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mojokerto": {
+      "kdpkab": "35.16",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Awang-awang",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nganjuk": {
+      "kdpkab": "35.18",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Babadan",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ngawi": {
+      "kdpkab": "35.21",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Babadan",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pacitan": {
+      "kdpkab": "35.01",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Arjosari",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pamekasan": {
+      "kdpkab": "35.28",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Akkor",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pasuruan": {
+      "kdpkab": "35.14",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alas Tlogo",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ponorogo": {
+      "kdpkab": "35.02",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Babadan",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Probolinggo": {
+      "kdpkab": "35.13",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Alaskandang",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sampang": {
+      "kdpkab": "35.27",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Aengsareh",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sidoarjo": {
+      "kdpkab": "35.15",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Anggaswangi",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Situbondo": {
+      "kdpkab": "35.12",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Agel",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumenep": {
+      "kdpkab": "35.29",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Aeng Baja Kenek",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Trenggalek": {
+      "kdpkab": "35.03",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Banaran",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tuban": {
+      "kdpkab": "35.23",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Bandungrejo",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tulungagung": {
+      "kdpkab": "35.04",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Ariyojeding",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Batu": {
+      "kdpkab": "35.79",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Beji",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Blitar": {
+      "kdpkab": "35.72",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Bendo",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Kediri": {
+      "kdpkab": "35.71",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Balowerti",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Madiun": {
+      "kdpkab": "35.77",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Banjarejo",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Malang": {
+      "kdpkab": "35.73",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Arjosari",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Mojokerto": {
+      "kdpkab": "35.76",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Balongsari",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": false
+    },
+    "Kota_Pasuruan": {
+      "kdpkab": "35.75",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Bakalan",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Probolinggo": {
+      "kdpkab": "35.74",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Curahgrinting",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Surabaya": {
+      "kdpkab": "35.78",
+      "kdppum": "35",
+      "kode_prov": null,
+      "admin_name": "Airlangga",
+      "folder": "Jawa_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bengkayang": {
+      "kdpkab": "61.07",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Setanduk",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kapuas_Hulu": {
+      "kdpkab": "61.06",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Setulang",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kayong_Utara": {
+      "kdpkab": "61.11",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Simpang Tiga",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ketapang": {
+      "kdpkab": "61.04",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Air Hitam Besar",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kubu_Raya": {
+      "kdpkab": "61.12",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Seruat Dua",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Landak": {
+      "kdpkab": "61.08",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Sidan",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Melawi": {
+      "kdpkab": "61.10",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Sidomulyo",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mempawah": {
+      "kdpkab": "61.02",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Suak Barangan",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sambas": {
+      "kdpkab": "61.01",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Serumpun",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sanggau": {
+      "kdpkab": "61.03",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Sosok",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sekadau": {
+      "kdpkab": "61.09",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Setawar",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sintang": {
+      "kdpkab": "61.05",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Setungkup",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Pontianak": {
+      "kdpkab": "61.71",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Siantan Hilir",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Singkawang": {
+      "kdpkab": "61.72",
+      "kdppum": "61",
+      "kode_prov": null,
+      "admin_name": "Setapuk Besar",
+      "folder": "Kalimantan_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Balangan": {
+      "kdpkab": "63.11",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Kambiyain",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banjar": {
+      "kdpkab": "63.03",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Abirau",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Barito_Kuala": {
+      "kdpkab": "63.04",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Andaman",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Hulu_Sungai_Selatan": {
+      "kdpkab": "63.06",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Amawang Kanan",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Hulu_Sungai_Tengah": {
+      "kdpkab": "63.07",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Abung",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Hulu_Sungai_Utara": {
+      "kdpkab": "63.08",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Ambahai",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kotabaru": {
+      "kdpkab": "63.02",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Alle-Alle",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tabalong": {
+      "kdpkab": "63.09",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Simpung Layung",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tanah_Bumbu": {
+      "kdpkab": "63.10",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Al Kautsar",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tanah_Laut": {
+      "kdpkab": "63.01",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Alur",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tapin": {
+      "kdpkab": "63.05",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "A. Yani Pura",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Banjarbaru": {
+      "kdpkab": "63.72",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Bangkal",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Banjarmasin": {
+      "kdpkab": "63.71",
+      "kdppum": "63",
+      "kode_prov": null,
+      "admin_name": "Alalak Selatan",
+      "folder": "Kalimantan_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Barito_Selatan": {
+      "kdpkab": "62.04",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Tabatan",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Barito_Timur": {
+      "kdpkab": "62.13",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Sibung",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Barito_Utara": {
+      "kdpkab": "62.05",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Sikan",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gunung_Mas": {
+      "kdpkab": "62.10",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Sumur Mas",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kapuas": {
+      "kdpkab": "62.03",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Anjir Kalampan",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Katingan": {
+      "kdpkab": "62.06",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Bakung Raya",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kotawaringin_Barat": {
+      "kdpkab": "62.01",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Babual Baboti",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kotawaringin_Timur": {
+      "kdpkab": "62.02",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Baamang Hilir",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lamandau": {
+      "kdpkab": "62.09",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Suja",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Murung_Raya": {
+      "kdpkab": "62.12",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Sungai Bakanon",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pulang_Pisau": {
+      "kdpkab": "62.11",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Anjir Pulang Pisau",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Seruyan": {
+      "kdpkab": "62.07",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Bahaur",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sukamara": {
+      "kdpkab": "62.08",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Kartamulia",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kota_Palangkaraya": {
+      "kdpkab": "62.71",
+      "kdppum": "62",
+      "kode_prov": null,
+      "admin_name": "Tangkiling",
+      "folder": "Kalimantan_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Berau": {
+      "kdpkab": "64.03",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Sido Bangen",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kutai_Barat": {
+      "kdpkab": "64.07",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Simpang Raya",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kutai_Kartanegara": {
+      "kdpkab": "64.02",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Sidomukti",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kutai_Timur": {
+      "kdpkab": "64.08",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Sidomulyo",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mahakam_Ulu": {
+      "kdpkab": "64.11",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Sirau",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Paser": {
+      "kdpkab": "64.01",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Songka",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Penajam_Paser_Utara": {
+      "kdpkab": "64.09",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Sesulu",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Balikpapan": {
+      "kdpkab": "64.71",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Sumber Rejo",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Bontang": {
+      "kdpkab": "64.74",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Api-api",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Samarinda": {
+      "kdpkab": "64.72",
+      "kdppum": "64",
+      "kode_prov": null,
+      "admin_name": "Sidodadi",
+      "folder": "Kalimantan_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bulungan": {
+      "kdpkab": "65.01",
+      "kdppum": "65",
+      "kode_prov": null,
+      "admin_name": "Ambalat",
+      "folder": "Kalimantan_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Malinau": {
+      "kdpkab": "65.02",
+      "kdppum": "65",
+      "kode_prov": null,
+      "admin_name": "Sungai Barang",
+      "folder": "Kalimantan_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nunukan": {
+      "kdpkab": "65.03",
+      "kdppum": "65",
+      "kode_prov": null,
+      "admin_name": "Aji Kuning",
+      "folder": "Kalimantan_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tana_Tidung": {
+      "kdpkab": "65.04",
+      "kdppum": "65",
+      "kode_prov": null,
+      "admin_name": "Balayan Ari",
+      "folder": "Kalimantan_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Tarakan": {
+      "kdpkab": "65.71",
+      "kdppum": "65",
+      "kode_prov": null,
+      "admin_name": "Gunung Lingkas",
+      "folder": "Kalimantan_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bangka": {
+      "kdpkab": "19.01",
+      "kdppum": "19",
+      "kode_prov": null,
+      "admin_name": "Air Asam",
+      "folder": "Kepulauan_Bangka_Belitung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bangka_Barat": {
+      "kdpkab": "19.05",
+      "kdppum": "19",
+      "kode_prov": null,
+      "admin_name": "Air Belo",
+      "folder": "Kepulauan_Bangka_Belitung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bangka_Selatan": {
+      "kdpkab": "19.03",
+      "kdppum": "19",
+      "kode_prov": null,
+      "admin_name": "Airbara",
+      "folder": "Kepulauan_Bangka_Belitung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bangka_Tengah": {
+      "kdpkab": "19.04",
+      "kdppum": "19",
+      "kode_prov": null,
+      "admin_name": "Arung Dalam",
+      "folder": "Kepulauan_Bangka_Belitung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Belitung": {
+      "kdpkab": "19.02",
+      "kdppum": "19",
+      "kode_prov": null,
+      "admin_name": "Aik Ketekok",
+      "folder": "Kepulauan_Bangka_Belitung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Belitung_Timur": {
+      "kdpkab": "19.06",
+      "kdppum": "19",
+      "kode_prov": null,
+      "admin_name": "Aik Madu",
+      "folder": "Kepulauan_Bangka_Belitung",
+      "has_valid_geometry": true
+    },
+    "Kota_Pangkal_Pinang": {
+      "kdpkab": "19.71",
+      "kdppum": "19",
+      "kode_prov": null,
+      "admin_name": "Air Itam",
+      "folder": "Kepulauan_Bangka_Belitung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bintan": {
+      "kdpkab": "21.01",
+      "kdppum": "21",
+      "kode_prov": null,
+      "admin_name": "Ekang Anculai",
+      "folder": "Kepulauan_Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Karimun": {
+      "kdpkab": "21.02",
+      "kdppum": "21",
+      "kode_prov": null,
+      "admin_name": "Gading Sari",
+      "folder": "Kepulauan_Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Anambas": {
+      "kdpkab": "21.05",
+      "kdppum": "21",
+      "kode_prov": null,
+      "admin_name": "Air Biru",
+      "folder": "Kepulauan_Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lingga": {
+      "kdpkab": "21.04",
+      "kdppum": "21",
+      "kode_prov": null,
+      "admin_name": "Jagoh",
+      "folder": "Kepulauan_Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Natuna": {
+      "kdpkab": "21.03",
+      "kdppum": "21",
+      "kode_prov": null,
+      "admin_name": "Area Tidak Terdefinisi",
+      "folder": "Kepulauan_Riau",
+      "has_valid_geometry": true
+    },
+    "Kota_Batam": {
+      "kdpkab": "21.71",
+      "kdppum": "21",
+      "kode_prov": null,
+      "admin_name": "Duriangkang",
+      "folder": "Kepulauan_Riau",
+      "has_valid_geometry": true
+    },
+    "Kota_Tanjung_Pinang": {
+      "kdpkab": "21.72",
+      "kdppum": "21",
+      "kode_prov": null,
+      "admin_name": "Kampung Baru",
+      "folder": "Kepulauan_Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lampung_Barat": {
+      "kdpkab": "18.04",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Gunungratu",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lampung_Selatan": {
+      "kdpkab": "18.01",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Haduyang",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lampung_Tengah": {
+      "kdpkab": "18.02",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Haduyang Ratu",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lampung_Timur": {
+      "kdpkab": "18.07",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Hargomulyo",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lampung_Utara": {
+      "kdpkab": "18.03",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Haduyang Ratu",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mesuji": {
+      "kdpkab": "18.11",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Hadi Mulyo",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pesawaran": {
+      "kdpkab": "18.09",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Halangan Ratu",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pesisir_Barat": {
+      "kdpkab": "18.13",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Gunungkemala Timur",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pringsewu": {
+      "kdpkab": "18.10",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Jati Agung",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tanggamus": {
+      "kdpkab": "18.06",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Guring",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tulang_Bawang": {
+      "kdpkab": "18.05",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Hargo Mulyo",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tulang_Bawang_Barat": {
+      "kdpkab": "18.12",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Indraloka I",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Way_Kanan": {
+      "kdpkab": "18.08",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Gunung Waras",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kota_Bandar_Lampung": {
+      "kdpkab": "18.71",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Gunungagung",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kota_Metro": {
+      "kdpkab": "18.72",
+      "kdppum": "18",
+      "kode_prov": null,
+      "admin_name": "Hadimulyo Barat",
+      "folder": "Lampung",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buru": {
+      "kdpkab": "81.04",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Air Buaya",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buru_Selatan": {
+      "kdpkab": "81.09",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Air Ternate",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Aru": {
+      "kdpkab": "81.07",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Algadang",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Tanimbar": {
+      "kdpkab": "81.03",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Abat",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Maluku_Barat_Daya": {
+      "kdpkab": "81.08",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Abusur",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Maluku_Tengah": {
+      "kdpkab": "81.01",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Aboru",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Maluku_Tenggara": {
+      "kdpkab": "81.02",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Abean",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Seram_Bagian_Barat": {
+      "kdpkab": "81.06",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Abio Ahiolo",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Seram_Bagian_Timur": {
+      "kdpkab": "81.05",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Abulate",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kota_Ambon": {
+      "kdpkab": "81.71",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Amahusu",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kota_Tual": {
+      "kdpkab": "81.72",
+      "kdppum": "81",
+      "kode_prov": null,
+      "admin_name": "Dullah",
+      "folder": "Maluku",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Halmahera_Barat": {
+      "kdpkab": "82.01",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Acango",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Halmahera_Selatan": {
+      "kdpkab": "82.04",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Air Mangga Indah",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Halmahera_Tengah": {
+      "kdpkab": "82.02",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Air Salobar",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Halmahera_Timur": {
+      "kdpkab": "82.06",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Ake Jawi",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Halmahera_Utara": {
+      "kdpkab": "82.03",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Asimiro",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Sula": {
+      "kdpkab": "82.05",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Auponhia",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pulau_Morotai": {
+      "kdpkab": "82.07",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Aha",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pulau_Taliabu": {
+      "kdpkab": "82.08",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Air Bulan",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Ternate": {
+      "kdpkab": "82.71",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Afe Taduma",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Tidore_Kepulauan": {
+      "kdpkab": "82.72",
+      "kdppum": "82",
+      "kode_prov": null,
+      "admin_name": "Ake Kolano",
+      "folder": "Maluku_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bima": {
+      "kdpkab": "52.06",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Kawinda Nae",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Dompu": {
+      "kdpkab": "52.05",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Beringin Jaya",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lombok_Barat": {
+      "kdpkab": "52.01",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Babussalam",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lombok_Tengah": {
+      "kdpkab": "52.02",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Aik Berik",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lombok_Timur": {
+      "kdpkab": "52.03",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Aik Dewa",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lombok_Utara": {
+      "kdpkab": "52.08",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Andalan",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumbawa-Sumbawa_Barat": {
+      "kdpkab": "52.0452.07",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Labuhan Mapin/Senayan",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": false
+    },
+    "Kabupaten_Sumbawa": {
+      "kdpkab": "52.04",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Ai Mual",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumbawa_Barat": {
+      "kdpkab": "52.07",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Ai Kangkung",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Bima": {
+      "kdpkab": "52.72",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Dara",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Mataram": {
+      "kdpkab": "52.71",
+      "kdppum": "52",
+      "kode_prov": null,
+      "admin_name": "Abian Tubuh Baru",
+      "folder": "Nusa_Tenggara_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Alor": {
+      "kdpkab": "53.05",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Silaipui",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Belu": {
+      "kdpkab": "53.04",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Silawan",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ende": {
+      "kdpkab": "53.08",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sipijena",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Flores_Timur": {
+      "kdpkab": "53.06",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sinamalaka",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kupang": {
+      "kdpkab": "53.01",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sillu",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lembata": {
+      "kdpkab": "53.13",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Tagawiti",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Malaka": {
+      "kdpkab": "53.21",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sisi",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Manggarai": {
+      "kdpkab": "53.10",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Tado",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Manggarai_Barat": {
+      "kdpkab": "53.15",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Siru",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Manggarai_Timur": {
+      "kdpkab": "53.19",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sipi",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nagekeo": {
+      "kdpkab": "53.16",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Solo",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ngada": {
+      "kdpkab": "53.09",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sobo",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Rote_Ndao": {
+      "kdpkab": "53.14",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Siomeda",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sabu_Raijua": {
+      "kdpkab": "53.20",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Tada",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sikka": {
+      "kdpkab": "53.07",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Takaplager",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumba_Barat": {
+      "kdpkab": "53.12",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Soba Rade",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumba_Barat_Daya": {
+      "kdpkab": "53.18",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Tana Mete",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumba_Tengah": {
+      "kdpkab": "53.17",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Soru",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sumba_Timur": {
+      "kdpkab": "53.11",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Tamburi",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Timor_Tengah_Selatan": {
+      "kdpkab": "53.02",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sillu",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Timor_Tengah_Utara": {
+      "kdpkab": "53.03",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Sone",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kota_Kupang": {
+      "kdpkab": "53.71",
+      "kdppum": "53",
+      "kode_prov": null,
+      "admin_name": "Solor",
+      "folder": "Nusa_Tenggara_Timur",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Biak_Numfor": {
+      "kdpkab": "91.06",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Adainasnosen",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Jayapura": {
+      "kdpkab": "91.03",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Asei Besar",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Keerom": {
+      "kdpkab": "91.11",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Amgotro",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Yapen": {
+      "kdpkab": "91.05",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Adiwipi",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mamberamo_Raya": {
+      "kdpkab": "91.20",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Bareri",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sarmi": {
+      "kdpkab": "91.10",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Ansudu Dua",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Supiori": {
+      "kdpkab": "91.19",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Amyas",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Waropen": {
+      "kdpkab": "91.15",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Aru Antu",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kota_Jayapura": {
+      "kdpkab": "91.71",
+      "kdppum": "91",
+      "kode_prov": "91",
+      "admin_name": "Angkasapura",
+      "folder": "Papua",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Fak_Fak": {
+      "kdpkab": "92.03",
+      "kdppum": "92",
+      "kode_prov": "92",
+      "admin_name": "Andamata",
+      "folder": "Papua_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kaimana": {
+      "kdpkab": "92.08",
+      "kdppum": "92",
+      "kode_prov": "92",
+      "admin_name": "Bahumia",
+      "folder": "Papua_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Manokwari": {
+      "kdpkab": "92.02",
+      "kdppum": "92",
+      "kode_prov": "92",
+      "admin_name": "Acemo",
+      "folder": "Papua_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Manokwari_Selatan": {
+      "kdpkab": "92.11",
+      "kdppum": "92",
+      "kode_prov": "92",
+      "admin_name": "Abreso",
+      "folder": "Papua_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pegunungan_Arfak": {
+      "kdpkab": "92.12",
+      "kdppum": "92",
+      "kode_prov": "92",
+      "admin_name": "Aduer",
+      "folder": "Papua_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Teluk_Bintuni": {
+      "kdpkab": "92.06",
+      "kdppum": "92",
+      "kode_prov": "92",
+      "admin_name": "Aroba",
+      "folder": "Papua_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Teluk_Wondama": {
+      "kdpkab": "92.07",
+      "kdppum": "92",
+      "kode_prov": "92",
+      "admin_name": "Ambumi",
+      "folder": "Papua_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Maybrat": {
+      "kdpkab": "92.10",
+      "kdppum": "92",
+      "kode_prov": "96",
+      "admin_name": "Adoh",
+      "folder": "Papua_Barat_Daya",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Raja_Ampat": {
+      "kdpkab": "92.05",
+      "kdppum": "92",
+      "kode_prov": "96",
+      "admin_name": "Kalwal",
+      "folder": "Papua_Barat_Daya",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sorong": {
+      "kdpkab": "92.01",
+      "kdppum": "92",
+      "kode_prov": "96",
+      "admin_name": "Aimas",
+      "folder": "Papua_Barat_Daya",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sorong_Selatan": {
+      "kdpkab": "92.04",
+      "kdppum": "92",
+      "kode_prov": "96",
+      "admin_name": "Adona",
+      "folder": "Papua_Barat_Daya",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tambrauw": {
+      "kdpkab": "92.09",
+      "kdppum": "92",
+      "kode_prov": "96",
+      "admin_name": "Afrawi",
+      "folder": "Papua_Barat_Daya",
+      "has_valid_geometry": true
+    },
+    "Kota_Sorong": {
+      "kdpkab": "92.71",
+      "kdppum": "92",
+      "kode_prov": "96",
+      "admin_name": "Dum Barat",
+      "folder": "Papua_Barat_Daya",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Jayawijaya": {
+      "kdpkab": "91.02",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Anegera",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lanny_Jaya": {
+      "kdpkab": "91.23",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Ambena",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mamberamo_Tengah": {
+      "kdpkab": "91.21",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Arsbol",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nduga": {
+      "kdpkab": "91.24",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Anggulpa",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pegunungan_Bintang": {
+      "kdpkab": "91.12",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Aplim",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tolikara": {
+      "kdpkab": "91.14",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Ambena",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Yahukimo": {
+      "kdpkab": "91.13",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Amdua",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Yalimo": {
+      "kdpkab": "91.22",
+      "kdppum": "91",
+      "kode_prov": "95",
+      "admin_name": "Ambiliki",
+      "folder": "Papua_Pegunungan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Asmat": {
+      "kdpkab": "91.18",
+      "kdppum": "91",
+      "kode_prov": "93",
+      "admin_name": "Amakot",
+      "folder": "Papua_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Boven_Digoel": {
+      "kdpkab": "91.16",
+      "kdppum": "91",
+      "kode_prov": "93",
+      "admin_name": "Amboran",
+      "folder": "Papua_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mappi": {
+      "kdpkab": "91.17",
+      "kdppum": "91",
+      "kode_prov": "93",
+      "admin_name": "Amk",
+      "folder": "Papua_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Merauke": {
+      "kdpkab": "91.01",
+      "kdppum": "91",
+      "kode_prov": "93",
+      "admin_name": "Alaku",
+      "folder": "Papua_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Deiyai": {
+      "kdpkab": "91.28",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Atouda",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Dogiyai": {
+      "kdpkab": "91.26",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Apogomakida",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Intan_Jaya": {
+      "kdpkab": "91.27",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Aneya",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mimika": {
+      "kdpkab": "91.09",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Amamapare",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nabire": {
+      "kdpkab": "91.04",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Argo Mulyo",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Paniai": {
+      "kdpkab": "91.08",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Amopa",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Puncak": {
+      "kdpkab": "91.25",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Ambobera",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Puncak_Jaya": {
+      "kdpkab": "91.07",
+      "kdppum": "91",
+      "kode_prov": "94",
+      "admin_name": "Amberiambut",
+      "folder": "Papua_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bengkalis": {
+      "kdpkab": "14.03",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Jamban",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Indragiri_Hilir": {
+      "kdpkab": "14.04",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Balui",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Indragiri_Hulu": {
+      "kdpkab": "14.02",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Jernih",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kampar": {
+      "kdpkab": "14.01",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Terbit",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Meranti": {
+      "kdpkab": "14.10",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Alah Air",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kuantan_Singingi": {
+      "kdpkab": "14.09",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Buluh",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pelalawan": {
+      "kdpkab": "14.05",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Emas",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Rokan_Hilir": {
+      "kdpkab": "14.07",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Hitam",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Rokan_Hulu": {
+      "kdpkab": "14.06",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Air Panas",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Siak": {
+      "kdpkab": "14.08",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Bandar Pedada",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kota_Dumai": {
+      "kdpkab": "14.72",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Bagan Besar",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kota_Pekanbaru": {
+      "kdpkab": "14.71",
+      "kdppum": "14",
+      "kode_prov": null,
+      "admin_name": "Agrowisata",
+      "folder": "Riau",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Majene": {
+      "kdpkab": "76.05",
+      "kdppum": "76",
+      "kode_prov": null,
+      "admin_name": "Adolang",
+      "folder": "Sulawesi_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mamasa": {
+      "kdpkab": "76.03",
+      "kdppum": "76",
+      "kode_prov": null,
+      "admin_name": "Aralle Selatan",
+      "folder": "Sulawesi_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mamuju": {
+      "kdpkab": "76.02",
+      "kdppum": "76",
+      "kode_prov": null,
+      "admin_name": "Ahu",
+      "folder": "Sulawesi_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mamuju_Tengah": {
+      "kdpkab": "76.06",
+      "kdppum": "76",
+      "kode_prov": null,
+      "admin_name": "Babana",
+      "folder": "Sulawesi_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pasangkayu": {
+      "kdpkab": "76.01",
+      "kdppum": "76",
+      "kode_prov": null,
+      "admin_name": "Ako",
+      "folder": "Sulawesi_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Polewali_Mandar": {
+      "kdpkab": "76.04",
+      "kdppum": "76",
+      "kode_prov": null,
+      "admin_name": "Amola",
+      "folder": "Sulawesi_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bantaeng": {
+      "kdpkab": "73.03",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barua",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Barru": {
+      "kdpkab": "73.11",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Batupute",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bone": {
+      "kdpkab": "73.08",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Abbanuang",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bulukumba": {
+      "kdpkab": "73.02",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barombong",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Enrekang": {
+      "kdpkab": "73.16",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Baringin",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Gowa": {
+      "kdpkab": "73.06",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barembeng",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Jeneponto": {
+      "kdpkab": "73.04",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Baraya",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Selayar": {
+      "kdpkab": "73.01",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barat Lambongan",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Luwu": {
+      "kdpkab": "73.17",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barowa",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Luwu_Timur": {
+      "kdpkab": "73.24",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Baruga",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Luwu_Utara": {
+      "kdpkab": "73.22",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Batang Tongka",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Maros": {
+      "kdpkab": "73.09",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Baruga",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pangkajene_Kepulauan": {
+      "kdpkab": "73.10",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Kapoposan Bali",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pinrang": {
+      "kdpkab": "73.15",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barang Palie",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sidenreng_Rappang": {
+      "kdpkab": "73.14",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Betao",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sinjai": {
+      "kdpkab": "73.07",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barania",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Soppeng": {
+      "kdpkab": "73.12",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Baringeng",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Takalar": {
+      "kdpkab": "73.05",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barangmamase",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tana_Toraja": {
+      "kdpkab": "73.18",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Batu Tiakka",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Toraja_Utara": {
+      "kdpkab": "73.26",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Rantebua Sanggalangi'",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Wajo": {
+      "kdpkab": "73.13",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Barangmamase",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Makassar": {
+      "kdpkab": "73.71",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Antang",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Palopo": {
+      "kdpkab": "73.73",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Purangi",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Pare_Pare": {
+      "kdpkab": "73.72",
+      "kdppum": "73",
+      "kode_prov": null,
+      "admin_name": "Bukit Harapan",
+      "folder": "Sulawesi_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banggai": {
+      "kdpkab": "72.01",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tinonda",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banggai_Kepulauan": {
+      "kdpkab": "72.07",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tobing",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banggai_Laut": {
+      "kdpkab": "72.11",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tintingo",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buol": {
+      "kdpkab": "72.05",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tolau",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Donggala": {
+      "kdpkab": "72.03",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Toaya",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Morowali": {
+      "kdpkab": "72.06",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Baho Makmur",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Morowali_Utara": {
+      "kdpkab": "72.12",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tingkeao",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Parigi_Moutong": {
+      "kdpkab": "72.08",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tingkulang",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Poso": {
+      "kdpkab": "72.02",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tiu",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sigi": {
+      "kdpkab": "72.10",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tinggede Selatan",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tojo_Una_Una": {
+      "kdpkab": "72.09",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tingki",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Toli_Toli": {
+      "kdpkab": "72.04",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tinigi",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kota_Palu": {
+      "kdpkab": "72.71",
+      "kdppum": "72",
+      "kode_prov": null,
+      "admin_name": "Tondo",
+      "folder": "Sulawesi_Tengah",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bombana": {
+      "kdpkab": "74.06",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Akacipong",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buton": {
+      "kdpkab": "74.04",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Ambuau Indah",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buton_Selatan": {
+      "kdpkab": "74.15",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Bahari",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buton_Tengah": {
+      "kdpkab": "74.14",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Air Bajo",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Buton_Utara": {
+      "kdpkab": "74.10",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Baluara",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kolaka": {
+      "kdpkab": "74.01",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Amamutu",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kolaka_Timur": {
+      "kdpkab": "74.11",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Aere",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kolaka_Utara": {
+      "kdpkab": "74.08",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Ainani Tajriani",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Konawe": {
+      "kdpkab": "74.02",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Abelisawah",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Konawe_Kepulauan": {
+      "kdpkab": "74.12",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Bahaba",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Konawe_Selatan": {
+      "kdpkab": "74.05",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Abenggi",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Konawe_Utara": {
+      "kdpkab": "74.09",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Abola",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Muna": {
+      "kdpkab": "74.03",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Bahutara",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Muna_Barat": {
+      "kdpkab": "74.13",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Abadi Jaya",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Wakatobi": {
+      "kdpkab": "74.07",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Ambeua Raya",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kota_Bau_Bau": {
+      "kdpkab": "74.72",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Baadia",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kota_Kendari": {
+      "kdpkab": "74.71",
+      "kdppum": "74",
+      "kode_prov": null,
+      "admin_name": "Abeli",
+      "folder": "Sulawesi_Tenggara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bolaang_Mongondow": {
+      "kdpkab": "71.01",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Abak",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bolaang_Mongondow_Selatan": {
+      "kdpkab": "71.11",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Adow",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bolaang_Mongondow_Timur": {
+      "kdpkab": "71.10",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Bangkudai Barat",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Bolaang_Mongondow_Utara": {
+      "kdpkab": "71.08",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Ampeng Sembeka",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Sangihe": {
+      "kdpkab": "71.03",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Aha Patung",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Siau_Tagulandang_Biaro": {
+      "kdpkab": "71.09",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Akesimbeka",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Talaud": {
+      "kdpkab": "71.04",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Akas",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Minahasa": {
+      "kdpkab": "71.02",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Amongena I",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Minahasa_Selatan": {
+      "kdpkab": "71.05",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Bojonegoro",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Minahasa_Tenggara": {
+      "kdpkab": "71.07",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Banga",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Minahasa_Utara": {
+      "kdpkab": "71.06",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Airbanua",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Bitung": {
+      "kdpkab": "71.72",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Pasir Panjang",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Kotamobagu": {
+      "kdpkab": "71.74",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Bungko",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Manado": {
+      "kdpkab": "71.71",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Alung Banua",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Tomohon": {
+      "kdpkab": "71.73",
+      "kdppum": "71",
+      "kode_prov": null,
+      "admin_name": "Tondangow",
+      "folder": "Sulawesi_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Agam": {
+      "kdpkab": "13.06",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Ampang Gadang",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Dharmasraya": {
+      "kdpkab": "13.10",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Abai Siat",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Kepulauan_Mentawai": {
+      "kdpkab": "13.09",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Betumonga",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lima_Puluh_Kota": {
+      "kdpkab": "13.07",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Ampalu",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Padang_Pariaman": {
+      "kdpkab": "13.05",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aie Tajun Lubuk Alung",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pasaman": {
+      "kdpkab": "13.08",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aia Manggih",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pasaman_Barat": {
+      "kdpkab": "13.12",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aia Bangih",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pesisir_Selatan": {
+      "kdpkab": "13.01",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Air Haji",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Sijunjung": {
+      "kdpkab": "13.03",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aie Amo",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Solok": {
+      "kdpkab": "13.02",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aie Batumbuak",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Solok_Selatan": {
+      "kdpkab": "13.11",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Abai",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tanah_Datar": {
+      "kdpkab": "13.04",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aie Angek",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Bukittinggi": {
+      "kdpkab": "13.75",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aur Kuning",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": false
+    },
+    "Kota_Padang": {
+      "kdpkab": "13.71",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aie Pacah",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Padang_Panjang": {
+      "kdpkab": "13.74",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Balai-Balai",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": false
+    },
+    "Kota_Pariaman": {
+      "kdpkab": "13.77",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Air Santok",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Payakumbuh": {
+      "kdpkab": "13.76",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Balai Jaring",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Sawahlunto": {
+      "kdpkab": "13.73",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aur Mulio",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kota_Solok": {
+      "kdpkab": "13.72",
+      "kdppum": "13",
+      "kode_prov": null,
+      "admin_name": "Aro Iv Korong",
+      "folder": "Sumatera_Barat",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Banyuasin": {
+      "kdpkab": "16.07",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Batu",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Empat_Lawang": {
+      "kdpkab": "16.11",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Kandis",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Lahat": {
+      "kdpkab": "16.04",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Guru Agung",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Muara_Enim": {
+      "kdpkab": "16.03",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Asam",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Musi_Banyuasin": {
+      "kdpkab": "16.06",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Balui",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Musi_Rawas": {
+      "kdpkab": "16.05",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Beliti",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Musi_Rawas_Utara": {
+      "kdpkab": "16.13",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Bening",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ogan_Ilir": {
+      "kdpkab": "16.10",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Arisan Deras",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ogan_Komering_Ilir": {
+      "kdpkab": "16.02",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Adil Makmur",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ogan_Komering_Ulu": {
+      "kdpkab": "16.01",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Gading",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ogan_Komering_Ulu_Selatan": {
+      "kdpkab": "16.09",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Alun",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Ogan_Komering_Ulu_Timur": {
+      "kdpkab": "16.08",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Adu manis",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Penukal_Abab_Lematang_Ilir": {
+      "kdpkab": "16.12",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Itam",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Lubuk_Linggau": {
+      "kdpkab": "16.73",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Air Kati",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Pagar_Alam": {
+      "kdpkab": "16.72",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Agung Lawangan",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Palembang": {
+      "kdpkab": "16.71",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Satu Ilir",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kota_Prabumulih": {
+      "kdpkab": "16.74",
+      "kdppum": "16",
+      "kode_prov": null,
+      "admin_name": "Anak Petai",
+      "folder": "Sumatera_Selatan",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Asahan": {
+      "kdpkab": "12.09",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Ofa Padang Mahondang",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Batu_Bara": {
+      "kdpkab": "12.19",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Pangkalan Dodek",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Dairi": {
+      "kdpkab": "12.11",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Onan Lama",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Deli_Serdang": {
+      "kdpkab": "12.07",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Naga Timbul",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Humbang_Hasundutan": {
+      "kdpkab": "12.16",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Nagasaribu I",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Karo": {
+      "kdpkab": "12.06",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Naga",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Labuhanbatu": {
+      "kdpkab": "12.10",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Kampung Dalam",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Labuhanbatu_Selatan": {
+      "kdpkab": "12.22",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Huta Godang",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Labuhanbatu_Utara": {
+      "kdpkab": "12.23",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Padang Maninjau",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Langkat": {
+      "kdpkab": "12.05",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Naman Jahe",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Mandailing_Natal": {
+      "kdpkab": "12.13",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Humbang I",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nias": {
+      "kdpkab": "12.04",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Heliweto Gido",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nias_Barat": {
+      "kdpkab": "12.25",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Hiambanua",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nias_Selatan": {
+      "kdpkab": "12.14",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Helefanikha",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Nias_Utara": {
+      "kdpkab": "12.24",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Hilibanua",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Padang_Lawas": {
+      "kdpkab": "12.21",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Horuon",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Padang_Lawas_Utara": {
+      "kdpkab": "12.20",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Hiteurat",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Pakpak_Bharat": {
+      "kdpkab": "12.15",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Napatalun Perlambuken",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Samosir": {
+      "kdpkab": "12.17",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Nainggolan",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Serdang_Bedagai": {
+      "kdpkab": "12.18",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Naga Kesiangan",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Simalungun": {
+      "kdpkab": "12.08",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Naga Bosar",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tapanuli_Selatan": {
+      "kdpkab": "12.03",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Huraba",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tapanuli_Tengah": {
+      "kdpkab": "12.01",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Hodopa Nauli",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Tapanuli_Utara": {
+      "kdpkab": "12.02",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Huta Barat",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kabupaten_Toba": {
+      "kdpkab": "12.12",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Naga Timbul",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Binjai": {
+      "kdpkab": "12.75",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Nangka",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Gunungsitoli": {
+      "kdpkab": "12.78",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Helefanikha",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Medan": {
+      "kdpkab": "12.71",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Namo Gajah",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Padang_Sidempuan": {
+      "kdpkab": "12.77",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Huta Koje",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Pematangsiantar": {
+      "kdpkab": "12.72",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Naga Huta",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Sibolga": {
+      "kdpkab": "12.73",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Huta Barangan",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": false
+    },
+    "Kota_Tanjung_Balai": {
+      "kdpkab": "12.74",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Pahang",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": true
+    },
+    "Kota_Tebing_Tinggi": {
+      "kdpkab": "12.76",
+      "kdppum": "12",
+      "kode_prov": null,
+      "admin_name": "Pabatu",
+      "folder": "Sumatera_Utara",
+      "has_valid_geometry": false
+    }
+  }
+}

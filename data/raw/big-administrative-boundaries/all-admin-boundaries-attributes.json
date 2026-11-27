@@ -1,0 +1,4348 @@
+{
+  "displayFieldName": "namobj",
+  "fieldAliases": {
+    "objectid": "OBJECTID",
+    "namobj": "Nama Objek",
+    "fcode": "Feature Code",
+    "wadmpr": "Nama wilayah administrasi Propinsi"
+  },
+  "fields": [
+    {
+      "name": "objectid",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID"
+    },
+    {
+      "name": "namobj",
+      "type": "esriFieldTypeString",
+      "alias": "Nama Objek",
+      "length": 250
+    },
+    {
+      "name": "fcode",
+      "type": "esriFieldTypeString",
+      "alias": "Feature Code",
+      "length": 50
+    },
+    {
+      "name": "wadmpr",
+      "type": "esriFieldTypeString",
+      "alias": "Nama wilayah administrasi Propinsi",
+      "length": 50
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "objectid": 1,
+        "namobj": "Sumbawa",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 2,
+        "namobj": "Sumbawa Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 3,
+        "namobj": "Lombok Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 4,
+        "namobj": "Lombok Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 5,
+        "namobj": "Lombok Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 6,
+        "namobj": "Badung",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 7,
+        "namobj": "Klungkung",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 8,
+        "namobj": "Kota Denpasar",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 9,
+        "namobj": "Banyuwangi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 10,
+        "namobj": "Jember",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 11,
+        "namobj": "Kota Mataram",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 12,
+        "namobj": "Tabanan",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 13,
+        "namobj": "Karangasem",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 14,
+        "namobj": "Trenggalek",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 15,
+        "namobj": "Tulungagung",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 16,
+        "namobj": "Lumajang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 17,
+        "namobj": "Blitar",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 18,
+        "namobj": "Lombok Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 19,
+        "namobj": "Gianyar",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 20,
+        "namobj": "Pacitan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 21,
+        "namobj": "Gunungkidul",
+        "fcode": "BA03050040",
+        "wadmpr": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 22,
+        "namobj": "Jembrana",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 23,
+        "namobj": "Bangli",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 24,
+        "namobj": "Dompu",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 25,
+        "namobj": "Buleleng",
+        "fcode": "BA03050040",
+        "wadmpr": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 26,
+        "namobj": "Kota Blitar",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 27,
+        "namobj": "Kota Malang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 28,
+        "namobj": "Tasikmalaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 29,
+        "namobj": "Pangandaran",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 30,
+        "namobj": "Cilacap",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 31,
+        "namobj": "Kebumen",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 32,
+        "namobj": "Kota Kediri",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 33,
+        "namobj": "Bantul",
+        "fcode": "BA03050040",
+        "wadmpr": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 34,
+        "namobj": "Ponorogo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 35,
+        "namobj": "Kota Yogyakarta",
+        "fcode": "BA03050040",
+        "wadmpr": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 36,
+        "namobj": "Pangkajene Dan Kepulauan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 37,
+        "namobj": "Bondowoso",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 38,
+        "namobj": "Garut",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 39,
+        "namobj": "Kota Batu",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 40,
+        "namobj": "Kota Probolinggo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 41,
+        "namobj": "Wonogiri",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 42,
+        "namobj": "Probolinggo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 43,
+        "namobj": "Kota Madiun",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 44,
+        "namobj": "Kulon Progo",
+        "fcode": "BA03050040",
+        "wadmpr": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 45,
+        "namobj": "Kota Pasuruan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 46,
+        "namobj": "Situbondo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 47,
+        "namobj": "Kediri",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 104,
+        "namobj": "Brebes",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 48,
+        "namobj": "Jawa Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 49,
+        "namobj": "Pasuruan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 50,
+        "namobj": "Sleman",
+        "fcode": "BA03050040",
+        "wadmpr": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 51,
+        "namobj": "Ngawi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 52,
+        "namobj": "Klaten",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 53,
+        "namobj": "Sukoharjo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 54,
+        "namobj": "Karanganyar",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 55,
+        "namobj": "Kota Surakarta",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 56,
+        "namobj": "Purworejo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 57,
+        "namobj": "Magetan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 58,
+        "namobj": "Semarang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 59,
+        "namobj": "Kota Mojokerto",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 60,
+        "namobj": "Kota Magelang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 61,
+        "namobj": "Sukabumi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 62,
+        "namobj": "Madiun",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 63,
+        "namobj": "Nganjuk",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 64,
+        "namobj": "Lamongan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 65,
+        "namobj": "Jombang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 66,
+        "namobj": "Kota Banjar",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 67,
+        "namobj": "Sidoarjo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 68,
+        "namobj": "Magelang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 69,
+        "namobj": "Sampang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 70,
+        "namobj": "Mojokerto",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 71,
+        "namobj": "Kota Salatiga",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 72,
+        "namobj": "Kota Tasikmalaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 73,
+        "namobj": "Sumenep",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 74,
+        "namobj": "Sragen",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 75,
+        "namobj": "Banyumas",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 76,
+        "namobj": "Kota Surabaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 105,
+        "namobj": "Kuningan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 106,
+        "namobj": "Pemalang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 107,
+        "namobj": "Tuban",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 108,
+        "namobj": "Kota Cirebon",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 109,
+        "namobj": "Bandung Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 110,
+        "namobj": "Rembang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 111,
+        "namobj": "Kudus",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 112,
+        "namobj": "Cianjur",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 113,
+        "namobj": "Sumedang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 77,
+        "namobj": "Jawa Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 78,
+        "namobj": "Wonosobo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 79,
+        "namobj": "Banjarnegara",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 80,
+        "namobj": "Purbalingga",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 81,
+        "namobj": "Boyolali",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 82,
+        "namobj": "Gresik",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 83,
+        "namobj": "Temanggung",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 84,
+        "namobj": "Ciamis",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 85,
+        "namobj": "Lebak",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 86,
+        "namobj": "Pandeglang",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 87,
+        "namobj": "Bojonegoro",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 88,
+        "namobj": "Demak",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 89,
+        "namobj": "Kota Semarang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 90,
+        "namobj": "Grobogan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 91,
+        "namobj": "Bangkalan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 92,
+        "namobj": "Kota Sukabumi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 93,
+        "namobj": "Pamekasan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 94,
+        "namobj": "Batang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 95,
+        "namobj": "Kota Pekalongan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 96,
+        "namobj": "Blora",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 97,
+        "namobj": "Tegal",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 98,
+        "namobj": "Kota Tegal",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 99,
+        "namobj": "Pekalongan",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 100,
+        "namobj": "Kota Bandung",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 101,
+        "namobj": "Kendal",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 102,
+        "namobj": "Kota Cimahi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 103,
+        "namobj": "Bandung",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 114,
+        "namobj": "Jepara",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 115,
+        "namobj": "Majalengka",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 116,
+        "namobj": "Cirebon",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 117,
+        "namobj": "Kota Bogor",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 118,
+        "namobj": "Pati",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 119,
+        "namobj": "Purwakarta",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 120,
+        "namobj": "Kota Depok",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 121,
+        "namobj": "Bogor",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 122,
+        "namobj": "Indramayu",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 123,
+        "namobj": "Kota Tangerang Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 124,
+        "namobj": "Subang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 125,
+        "namobj": "Kota Adm. Jakarta Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "DKI Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 126,
+        "namobj": "Kota Bekasi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 127,
+        "namobj": "Kota Adm. Jakarta Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "DKI Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 128,
+        "namobj": "Lampung Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 129,
+        "namobj": "Kota Adm. Jakarta Pusat",
+        "fcode": "BA03050040",
+        "wadmpr": "DKI Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 130,
+        "namobj": "Kota Adm. Jakarta Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "DKI Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 131,
+        "namobj": "Kota Tangerang",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 132,
+        "namobj": "Kota Adm. Jakarta Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "DKI Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 133,
+        "namobj": "Kota Cilegon",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 134,
+        "namobj": "Adm. Kep. Seribu",
+        "fcode": "BA03050040",
+        "wadmpr": "DKI Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 135,
+        "namobj": "Kota Serang",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 136,
+        "namobj": "Tangerang",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 137,
+        "namobj": "Serang",
+        "fcode": "BA03050040",
+        "wadmpr": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 138,
+        "namobj": "Karawang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 139,
+        "namobj": "Pesisir Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 140,
+        "namobj": "Tanggamus",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 141,
+        "namobj": "Bekasi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 142,
+        "namobj": "Lampung Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 143,
+        "namobj": "Pesawaran",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 144,
+        "namobj": "Kota Bandar Lampung",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 145,
+        "namobj": "Bengkulu Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 146,
+        "namobj": "Lampung Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 147,
+        "namobj": "Pringsewu",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 148,
+        "namobj": "Kota Metro",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 149,
+        "namobj": "Kotabaru",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 150,
+        "namobj": "Tulang Bawang",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 151,
+        "namobj": "Lampung Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 152,
+        "namobj": "Lampung Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 153,
+        "namobj": "Kaur",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 154,
+        "namobj": "Ogan Komering Ulu Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 155,
+        "namobj": "Way Kanan",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 156,
+        "namobj": "Bengkulu Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 157,
+        "namobj": "Tulang Bawang Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 158,
+        "namobj": "Tanah Laut",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 159,
+        "namobj": "Kota Pagar Alam",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 160,
+        "namobj": "Kota Bengkulu",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 161,
+        "namobj": "Seluma",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 162,
+        "namobj": "Belitung Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 163,
+        "namobj": "Ogan Komering Ulu",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 164,
+        "namobj": "Mesuji",
+        "fcode": "BA03050040",
+        "wadmpr": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 165,
+        "namobj": "Ogan Komering Ulu Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 166,
+        "namobj": "Kepulauan Mentawai",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 171,
+        "namobj": "Empat Lawang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 172,
+        "namobj": "Kota Banjarbaru",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 173,
+        "namobj": "Belitung",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 174,
+        "namobj": "Katingan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 175,
+        "namobj": "Kota Prabumulih",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 176,
+        "namobj": "Muara Enim",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 177,
+        "namobj": "Rejang Lebong",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 178,
+        "namobj": "Kota Banjarmasin",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 179,
+        "namobj": "Ogan Komering Ilir",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 180,
+        "namobj": "Bangka Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 181,
+        "namobj": "Kota Lubuk Linggau",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 182,
+        "namobj": "Ketapang",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 183,
+        "namobj": "Ogan Ilir",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 184,
+        "namobj": "Penukal Abab Lematang Ilir",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 185,
+        "namobj": "Mamuju",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 186,
+        "namobj": "Kotawaringin Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 187,
+        "namobj": "Kota Palembang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 188,
+        "namobj": "Banjar",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 189,
+        "namobj": "Musi Rawas",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 190,
+        "namobj": "Lebong",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 191,
+        "namobj": "Bangka Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 192,
+        "namobj": "Tapin",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 193,
+        "namobj": "Barito Kuala",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 194,
+        "namobj": "Hulu Sungai Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 195,
+        "namobj": "Rote Ndao",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 196,
+        "namobj": "Sabu Raijua",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 197,
+        "namobj": "Kupang",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 198,
+        "namobj": "Sumba Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 199,
+        "namobj": "Kota Kupang",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 200,
+        "namobj": "Timor Tengah Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 201,
+        "namobj": "Sumba Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 202,
+        "namobj": "Sumba Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 203,
+        "namobj": "Sumba Barat Daya",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 204,
+        "namobj": "Timor Tengah Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 205,
+        "namobj": "Belu",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 167,
+        "namobj": "Kepahiang",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 168,
+        "namobj": "Lahat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 169,
+        "namobj": "Bengkulu Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 170,
+        "namobj": "Tanah Bumbu",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 206,
+        "namobj": "Ngada",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 207,
+        "namobj": "Ende",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 208,
+        "namobj": "Bima",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 209,
+        "namobj": "Manggarai",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 210,
+        "namobj": "Nagekeo",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 211,
+        "namobj": "Manggarai Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 212,
+        "namobj": "Sikka",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 213,
+        "namobj": "Flores Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 214,
+        "namobj": "Lembata",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 215,
+        "namobj": "Alor",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 216,
+        "namobj": "Kota Bima",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 217,
+        "namobj": "Maluku Barat Daya",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 218,
+        "namobj": "Manggarai Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 219,
+        "namobj": "Kepulauan Selayar",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 220,
+        "namobj": "Maluku Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 221,
+        "namobj": "Merauke",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 222,
+        "namobj": "Kepulauan Tanimbar",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 223,
+        "namobj": "Kepulauan Aru",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 224,
+        "namobj": "Buton Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 225,
+        "namobj": "Wakatobi",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 226,
+        "namobj": "Sulawesi Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 227,
+        "namobj": "Jeneponto",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 228,
+        "namobj": "Buton",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 229,
+        "namobj": "Bulukumba",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 230,
+        "namobj": "Takalar",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 231,
+        "namobj": "Bantaeng",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 232,
+        "namobj": "Seram Bagian Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 233,
+        "namobj": "Maluku",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 267,
+        "namobj": "Buru",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 268,
+        "namobj": "Enrekang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 269,
+        "namobj": "Kolaka Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 270,
+        "namobj": "Luwu",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 271,
+        "namobj": "Kolaka Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 272,
+        "namobj": "Kota Palopo",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 234,
+        "namobj": "Maluku",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 235,
+        "namobj": "Buton Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 236,
+        "namobj": "Kota Bau Bau",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 237,
+        "namobj": "Maluku",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 238,
+        "namobj": "Gowa",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 239,
+        "namobj": "Maluku",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 240,
+        "namobj": "Maluku",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 241,
+        "namobj": "Maluku",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 242,
+        "namobj": "Bombana",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 243,
+        "namobj": "Muna",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 244,
+        "namobj": "Kota Makassar",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 245,
+        "namobj": "Sinjai",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 246,
+        "namobj": "Bone",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 247,
+        "namobj": "Buton Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 248,
+        "namobj": "Muna Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 249,
+        "namobj": "Pinrang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 250,
+        "namobj": "Maros",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 251,
+        "namobj": "Barru",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 252,
+        "namobj": "Konawe Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 253,
+        "namobj": "Kolaka",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 254,
+        "namobj": "Konawe Kepulauan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 255,
+        "namobj": "Soppeng",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 256,
+        "namobj": "Sidenreng Rappang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 257,
+        "namobj": "Konawe",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 258,
+        "namobj": "Kota Kendari",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 259,
+        "namobj": "Kota Parepare",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 260,
+        "namobj": "Buru Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 261,
+        "namobj": "Konawe Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 262,
+        "namobj": "Wajo",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 263,
+        "namobj": "Kota Ambon",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 264,
+        "namobj": "Majene",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 265,
+        "namobj": "Morowali",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 266,
+        "namobj": "Polewali Mandar",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 273,
+        "namobj": "Luwu Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 274,
+        "namobj": "Luwu Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 275,
+        "namobj": "Tana Toraja",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 276,
+        "namobj": "Mamasa",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 277,
+        "namobj": "Toraja Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 278,
+        "namobj": "Mappi",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 279,
+        "namobj": "Maluku Tenggara",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 280,
+        "namobj": "Kota Tual",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 281,
+        "namobj": "Asmat",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 282,
+        "namobj": "Mimika",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 283,
+        "namobj": "Seram Bagian Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 284,
+        "namobj": "Kaimana",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 285,
+        "namobj": "Nduga",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 286,
+        "namobj": "Deiyai",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 287,
+        "namobj": "Fak Fak",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 288,
+        "namobj": "Dogiyai",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 289,
+        "namobj": "Lanny Jaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 290,
+        "namobj": "Jayawijaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 291,
+        "namobj": "Yahukimo",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 292,
+        "namobj": "Pegunungan Bintang",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 293,
+        "namobj": "Yalimo",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 294,
+        "namobj": "Paniai",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 295,
+        "namobj": "Nabire",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 296,
+        "namobj": "Mamberamo Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 297,
+        "namobj": "Puncak",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 298,
+        "namobj": "Intan Jaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 299,
+        "namobj": "Puncak Jaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 300,
+        "namobj": "Tolikara",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 301,
+        "namobj": "Teluk Wondama",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 302,
+        "namobj": "Keerom",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 303,
+        "namobj": "Kota Jayapura",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 304,
+        "namobj": "Teluk Bintuni",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 305,
+        "namobj": "Waropen",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 306,
+        "namobj": "Banyuasin",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 307,
+        "namobj": "Bangka",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 308,
+        "namobj": "Paser",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 309,
+        "namobj": "Bangka Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 310,
+        "namobj": "Kota Pangkal Pinang",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 321,
+        "namobj": "Tabalong",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 322,
+        "namobj": "Kota Balikpapan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 323,
+        "namobj": "Lingga",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 324,
+        "namobj": "Lamandau",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 325,
+        "namobj": "Muaro Jambi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 390,
+        "namobj": "Mahakam Ulu",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 391,
+        "namobj": "Padang Lawas",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 311,
+        "namobj": "Kota Sungai Penuh",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 312,
+        "namobj": "Pesisir Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 313,
+        "namobj": "Kayong Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 314,
+        "namobj": "Kerinci",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 315,
+        "namobj": "Tanjung Jabung Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 316,
+        "namobj": "Barito Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 326,
+        "namobj": "Sumatera Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 327,
+        "namobj": "Sumatera Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 328,
+        "namobj": "Sumatera Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 329,
+        "namobj": "Kota Padang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 330,
+        "namobj": "Bungo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 331,
+        "namobj": "Solok Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 332,
+        "namobj": "Kutai Kartanegara",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 333,
+        "namobj": "Tebo",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 334,
+        "namobj": "Padang Pariaman",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 335,
+        "namobj": "Kepulauan Riau",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 336,
+        "namobj": "Kubu Raya",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 337,
+        "namobj": "Dharmasraya",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 392,
+        "namobj": "Tapanuli Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 393,
+        "namobj": "Kapuas Hulu",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 317,
+        "namobj": "Kota Palangkaraya",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 379,
+        "namobj": "Kampar",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 380,
+        "namobj": "Landak",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 381,
+        "namobj": "Sintang",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 382,
+        "namobj": "Nias Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 383,
+        "namobj": "Sambas",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 384,
+        "namobj": "Sanggau",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 385,
+        "namobj": "Siak",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 386,
+        "namobj": "Kota Gunungsitoli",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 387,
+        "namobj": "Rokan Hulu",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 389,
+        "namobj": "Sumatera Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 318,
+        "namobj": "Kota Jambi",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 319,
+        "namobj": "Penajam Paser Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 320,
+        "namobj": "Batanghari",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 338,
+        "namobj": "Kota Solok",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 339,
+        "namobj": "Tanjung Jabung Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 340,
+        "namobj": "Kota Pariaman",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 341,
+        "namobj": "Nias Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 342,
+        "namobj": "Kota Sawahlunto",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 343,
+        "namobj": "Solok",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 344,
+        "namobj": "Indragiri Hilir",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 345,
+        "namobj": "Kota Padang Panjang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 346,
+        "namobj": "Agam",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 347,
+        "namobj": "Kota Samarinda",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 348,
+        "namobj": "Sijunjung",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 349,
+        "namobj": "Gunung Mas",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 350,
+        "namobj": "Tanah Datar",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 351,
+        "namobj": "Kota Bukittinggi",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 352,
+        "namobj": "Kota Payakumbuh",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 353,
+        "namobj": "Pasaman Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 354,
+        "namobj": "Melawi",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 355,
+        "namobj": "Barito Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 356,
+        "namobj": "Kuantan Singingi",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 357,
+        "namobj": "Kota Bontang",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 388,
+        "namobj": "Kota Padangsidimpuan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 358,
+        "namobj": "Kota Pontianak",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 359,
+        "namobj": "Indragiri Hulu",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 360,
+        "namobj": "Mempawah",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 361,
+        "namobj": "Bintan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 362,
+        "namobj": "Mandailing Natal",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 363,
+        "namobj": "Kutai Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 364,
+        "namobj": "Lima Puluh Kota",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 365,
+        "namobj": "Pelalawan",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 366,
+        "namobj": "Kota Batam",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 367,
+        "namobj": "Karimun",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 368,
+        "namobj": "Bengkayang",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 369,
+        "namobj": "Kota Pekanbaru",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 370,
+        "namobj": "Sekadau",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 371,
+        "namobj": "Kepulauan Meranti",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 372,
+        "namobj": "Murung Raya",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 373,
+        "namobj": "Nias Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 374,
+        "namobj": "Kota Tanjung Pinang",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 375,
+        "namobj": "Kota Singkawang",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 376,
+        "namobj": "Pasaman",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 377,
+        "namobj": "Nias",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 378,
+        "namobj": "Kutai Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 394,
+        "namobj": "Bengkalis",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 395,
+        "namobj": "Kota Sibolga",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 396,
+        "namobj": "Natuna",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 397,
+        "namobj": "Berau",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 398,
+        "namobj": "Aceh Singkil",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 399,
+        "namobj": "Padang Lawas Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 400,
+        "namobj": "Simeulue",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 401,
+        "namobj": "Tapanuli Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 402,
+        "namobj": "Rokan Hilir",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 403,
+        "namobj": "Kota Dumai",
+        "fcode": "BA03050040",
+        "wadmpr": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 404,
+        "namobj": "Labuhanbatu Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 405,
+        "namobj": "Kepulauan Anambas",
+        "fcode": "BA03050040",
+        "wadmpr": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 406,
+        "namobj": "Tapanuli Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 407,
+        "namobj": "Humbang Hasundutan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 408,
+        "namobj": "Labuhanbatu",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 409,
+        "namobj": "Toba",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 410,
+        "namobj": "Labuhanbatu Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 411,
+        "namobj": "Pakpak Bharat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 412,
+        "namobj": "Samosir",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 413,
+        "namobj": "Bulungan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 414,
+        "namobj": "Aceh Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 418,
+        "namobj": "Dairi",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 419,
+        "namobj": "Asahan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 420,
+        "namobj": "Simalungun",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 421,
+        "namobj": "Karo",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 422,
+        "namobj": "Batu Bara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 423,
+        "namobj": "Kota Tarakan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 424,
+        "namobj": "Kota Tebing Tinggi",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 425,
+        "namobj": "Tana Tidung",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 426,
+        "namobj": "Serdang Bedagai",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 439,
+        "namobj": "Aceh Jaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 440,
+        "namobj": "Nagan Raya",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 441,
+        "namobj": "Aceh Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 442,
+        "namobj": "Aceh Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 443,
+        "namobj": "Bener Meriah",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 444,
+        "namobj": "Kota Lhokseumawe",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 445,
+        "namobj": "Aceh Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 446,
+        "namobj": "Bireuen",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 447,
+        "namobj": "Aceh Besar",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 448,
+        "namobj": "Pidie Jaya",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 449,
+        "namobj": "Kota Banda Aceh",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 450,
+        "namobj": "Pidie",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 451,
+        "namobj": "Kota Sabang",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 452,
+        "namobj": "Jayapura",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 453,
+        "namobj": "Raja Ampat",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 415,
+        "namobj": "Kota Subulussalam",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 416,
+        "namobj": "Kota Pematangsiantar",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 438,
+        "namobj": "Aceh Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 417,
+        "namobj": "Kota Tanjungbalai",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 427,
+        "namobj": "Kota Binjai",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 428,
+        "namobj": "Aceh Barat Daya",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 429,
+        "namobj": "Aceh Tenggara",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 430,
+        "namobj": "Nunukan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 431,
+        "namobj": "Kota Medan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 432,
+        "namobj": "Deli Serdang",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 433,
+        "namobj": "Langkat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 434,
+        "namobj": "Malinau",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 435,
+        "namobj": "Gayo Lues",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 436,
+        "namobj": "Aceh Tamiang",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 437,
+        "namobj": "Kota Langsa",
+        "fcode": "BA03050040",
+        "wadmpr": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 454,
+        "namobj": "Sarmi",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 455,
+        "namobj": "Banggai Laut",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 456,
+        "namobj": "Mamberamo Raya",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 457,
+        "namobj": "Mamuju Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 458,
+        "namobj": "Pulau Taliabu",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 459,
+        "namobj": "Morowali Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 460,
+        "namobj": "Kepulauan Sula",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 461,
+        "namobj": "Kepulauan Yapen",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 462,
+        "namobj": "Halmahera Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 463,
+        "namobj": "Pasangkayu",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 464,
+        "namobj": "Sorong",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 465,
+        "namobj": "Banggai Kepulauan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 466,
+        "namobj": "Sorong Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 467,
+        "namobj": "Tojo Una Una",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 468,
+        "namobj": "Banggai",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 469,
+        "namobj": "Biak Numfor",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 470,
+        "namobj": "Manokwari Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 471,
+        "namobj": "Poso",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 472,
+        "namobj": "Parigi Moutong",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 473,
+        "namobj": "Pegunungan Arfak",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 474,
+        "namobj": "Kota Sorong",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 475,
+        "namobj": "Manokwari",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 476,
+        "namobj": "Supiori",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 477,
+        "namobj": "Maybrat",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 478,
+        "namobj": "Kota Palu",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 479,
+        "namobj": "Sigi",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 480,
+        "namobj": "Donggala",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 481,
+        "namobj": "Tambrauw",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 482,
+        "namobj": "Halmahera Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 483,
+        "namobj": "Maluku Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 484,
+        "namobj": "Bolaang Mongondow Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 485,
+        "namobj": "Bone Bolango",
+        "fcode": "BA03050040",
+        "wadmpr": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 486,
+        "namobj": "Kota Tidore Kepulauan",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 487,
+        "namobj": "Pohuwato",
+        "fcode": "BA03050040",
+        "wadmpr": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 488,
+        "namobj": "Boalemo",
+        "fcode": "BA03050040",
+        "wadmpr": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 489,
+        "namobj": "Bolaang Mongondow Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 490,
+        "namobj": "Kota Gorontalo",
+        "fcode": "BA03050040",
+        "wadmpr": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 491,
+        "namobj": "Kota Ternate",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 492,
+        "namobj": "Halmahera Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 493,
+        "namobj": "Maluku Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 494,
+        "namobj": "Maluku Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 495,
+        "namobj": "Toli Toli",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 496,
+        "namobj": "Sulawesi Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 502,
+        "namobj": "Bolaang Mongondow Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 503,
+        "namobj": "Gorontalo",
+        "fcode": "BA03050040",
+        "wadmpr": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 504,
+        "namobj": "Halmahera Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 505,
+        "namobj": "Buol",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 506,
+        "namobj": "Minahasa Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 507,
+        "namobj": "Minahasa Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 508,
+        "namobj": "Kota Bitung",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 509,
+        "namobj": "Kota Tomohon",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 510,
+        "namobj": "Minahasa",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 511,
+        "namobj": "Kota Manado",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 512,
+        "namobj": "Pulau Morotai",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 513,
+        "namobj": "Kep. Siau Tagulandang Biaro",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 514,
+        "namobj": "Maluku Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 497,
+        "namobj": "Kota Kotamobagu",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 498,
+        "namobj": "Gorontalo Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 499,
+        "namobj": "Bolaang Mongondow",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 500,
+        "namobj": "Halmahera Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 501,
+        "namobj": "Minahasa Tenggara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 515,
+        "namobj": "Kepulauan Sangihe",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 516,
+        "namobj": "Kepulauan Talaud",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 517,
+        "namobj": "Mukomuko",
+        "fcode": "BA03050040",
+        "wadmpr": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 518,
+        "namobj": "Merangin",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 519,
+        "namobj": "Sarolangun",
+        "fcode": "BA03050040",
+        "wadmpr": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 520,
+        "namobj": "Musi Banyuasin",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 521,
+        "namobj": "Musi Rawas Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 522,
+        "namobj": "Sukamara",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 523,
+        "namobj": "Seruyan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 524,
+        "namobj": "Kotawaringin Timur",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 525,
+        "namobj": "Pulang Pisau",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 526,
+        "namobj": "Kapuas",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 527,
+        "namobj": "Barito Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 528,
+        "namobj": "Hulu Sungai Utara",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 533,
+        "namobj": "Muna",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 534,
+        "namobj": "Buton",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 535,
+        "namobj": "Muna Barat",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 536,
+        "namobj": "Konawe",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 537,
+        "namobj": "Konawe Selatan",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 538,
+        "namobj": "Malang",
+        "fcode": "BA03050040",
+        "wadmpr": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 539,
+        "namobj": "Malaka",
+        "fcode": "BA03050040",
+        "wadmpr": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 529,
+        "namobj": "Balangan",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 530,
+        "namobj": "Hulu Sungai Tengah",
+        "fcode": "BA03050040",
+        "wadmpr": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 531,
+        "namobj": "Boven Digoel",
+        "fcode": "BA03050040",
+        "wadmpr": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "objectid": 532,
+        "namobj": "Wakatobi",
+        "fcode": "BA03050040",
+        "wadmpr": "Sulawesi Tenggara"
+      }
+    }
+  ]
+}

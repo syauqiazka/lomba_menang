@@ -1,0 +1,4723 @@
+{
+  "displayFieldName": "NAMOBJ",
+  "fieldAliases": {
+    "OBJECTID": "OBJECTID",
+    "KDPKAB": "Kode PUM Kabupaten/Kota",
+    "NAMOBJ": "Nama Objek",
+    "WADMKK": "Nama wilayah administrasi Kebupaten/ Kota",
+    "WADMPR": "Nama wilayah administrasi Propinsi"
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "alias": "OBJECTID"
+    },
+    {
+      "name": "KDPKAB",
+      "type": "esriFieldTypeString",
+      "alias": "Kode PUM Kabupaten/Kota",
+      "length": 50
+    },
+    {
+      "name": "NAMOBJ",
+      "type": "esriFieldTypeString",
+      "alias": "Nama Objek",
+      "length": 250
+    },
+    {
+      "name": "WADMKK",
+      "type": "esriFieldTypeString",
+      "alias": "Nama wilayah administrasi Kebupaten/ Kota",
+      "length": 50
+    },
+    {
+      "name": "WADMPR",
+      "type": "esriFieldTypeString",
+      "alias": "Nama wilayah administrasi Propinsi",
+      "length": 50
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1077,
+        "KDPKAB": "11.05",
+        "NAMOBJ": "Aceh Barat",
+        "WADMKK": "Aceh Barat",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1078,
+        "KDPKAB": "11.12",
+        "NAMOBJ": "Aceh Barat Daya",
+        "WADMKK": "Aceh Barat Daya",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1080,
+        "KDPKAB": "11.14",
+        "NAMOBJ": "Aceh Jaya",
+        "WADMKK": "Aceh Jaya",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1081,
+        "KDPKAB": "11.01",
+        "NAMOBJ": "Aceh Selatan",
+        "WADMKK": "Aceh Selatan",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1082,
+        "KDPKAB": "11.10",
+        "NAMOBJ": "Aceh Singkil",
+        "WADMKK": "Aceh Singkil",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1083,
+        "KDPKAB": "11.16",
+        "NAMOBJ": "Aceh Tamiang",
+        "WADMKK": "Aceh Tamiang",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1084,
+        "KDPKAB": "11.04",
+        "NAMOBJ": "Aceh Tengah",
+        "WADMKK": "Aceh Tengah",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1085,
+        "KDPKAB": "11.02",
+        "NAMOBJ": "Aceh Tenggara",
+        "WADMKK": "Aceh Tenggara",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1086,
+        "KDPKAB": "11.03",
+        "NAMOBJ": "Aceh Timur",
+        "WADMKK": "Aceh Timur",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1087,
+        "KDPKAB": "11.08",
+        "NAMOBJ": "Aceh Utara",
+        "WADMKK": "Aceh Utara",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1088,
+        "KDPKAB": "31.01",
+        "NAMOBJ": "Administrasi Kepulauan Seribu",
+        "WADMKK": "Administrasi Kepulauan Seribu",
+        "WADMPR": "Daerah Khusus Ibukota Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1089,
+        "KDPKAB": "13.06",
+        "NAMOBJ": "Agam",
+        "WADMKK": "Agam",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1090,
+        "KDPKAB": "53.05",
+        "NAMOBJ": "Alor",
+        "WADMKK": "Alor",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1091,
+        "KDPKAB": "12.09",
+        "NAMOBJ": "Asahan",
+        "WADMKK": "Asahan",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1092,
+        "KDPKAB": "93.04",
+        "NAMOBJ": "Asmat",
+        "WADMKK": "Asmat",
+        "WADMPR": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1093,
+        "KDPKAB": "51.03",
+        "NAMOBJ": "Badung",
+        "WADMKK": "Badung",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1094,
+        "KDPKAB": "63.11",
+        "NAMOBJ": "Balangan",
+        "WADMKK": "Balangan",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1095,
+        "KDPKAB": "32.04",
+        "NAMOBJ": "Bandung",
+        "WADMKK": "Bandung",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1096,
+        "KDPKAB": "32.17",
+        "NAMOBJ": "Bandung Barat",
+        "WADMKK": "Bandung Barat",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1099,
+        "KDPKAB": "72.11",
+        "NAMOBJ": "Banggai Laut",
+        "WADMKK": "Banggai Laut",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1100,
+        "KDPKAB": "19.01",
+        "NAMOBJ": "Bangka",
+        "WADMKK": "Bangka",
+        "WADMPR": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1101,
+        "KDPKAB": "19.05",
+        "NAMOBJ": "Bangka Barat",
+        "WADMKK": "Bangka Barat",
+        "WADMPR": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1102,
+        "KDPKAB": "19.03",
+        "NAMOBJ": "Bangka Selatan",
+        "WADMKK": "Bangka Selatan",
+        "WADMPR": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1103,
+        "KDPKAB": "19.04",
+        "NAMOBJ": "Bangka Tengah",
+        "WADMKK": "Bangka Tengah",
+        "WADMPR": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1104,
+        "KDPKAB": "35.26",
+        "NAMOBJ": "Bangkalan",
+        "WADMKK": "Bangkalan",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1105,
+        "KDPKAB": "51.06",
+        "NAMOBJ": "Bangli",
+        "WADMKK": "Bangli",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1106,
+        "KDPKAB": "63.03",
+        "NAMOBJ": "Banjar",
+        "WADMKK": "Banjar",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1107,
+        "KDPKAB": "33.04",
+        "NAMOBJ": "Banjarnegara",
+        "WADMKK": "Banjarnegara",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1108,
+        "KDPKAB": "73.03",
+        "NAMOBJ": "Bantaeng",
+        "WADMKK": "Bantaeng",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1109,
+        "KDPKAB": "34.02",
+        "NAMOBJ": "Bantul",
+        "WADMKK": "Bantul",
+        "WADMPR": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1110,
+        "KDPKAB": "16.07",
+        "NAMOBJ": "Banyuasin",
+        "WADMKK": "Banyuasin",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1111,
+        "KDPKAB": "33.02",
+        "NAMOBJ": "Banyumas",
+        "WADMKK": "Banyumas",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1112,
+        "KDPKAB": "35.10",
+        "NAMOBJ": "Banyuwangi",
+        "WADMKK": "Banyuwangi",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1113,
+        "KDPKAB": "63.04",
+        "NAMOBJ": "Barito Kuala",
+        "WADMKK": "Barito Kuala",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1114,
+        "KDPKAB": "62.04",
+        "NAMOBJ": "Barito Selatan",
+        "WADMKK": "Barito Selatan",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1115,
+        "KDPKAB": "62.13",
+        "NAMOBJ": "Barito Timur",
+        "WADMKK": "Barito Timur",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1116,
+        "KDPKAB": "62.05",
+        "NAMOBJ": "Barito Utara",
+        "WADMKK": "Barito Utara",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1117,
+        "KDPKAB": "73.11",
+        "NAMOBJ": "Barru",
+        "WADMKK": "Barru",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1118,
+        "KDPKAB": "33.25",
+        "NAMOBJ": "Batang",
+        "WADMKK": "Batang",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1119,
+        "KDPKAB": "15.04",
+        "NAMOBJ": "Batanghari",
+        "WADMKK": "Batanghari",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1120,
+        "KDPKAB": "12.19",
+        "NAMOBJ": "Batu Bara",
+        "WADMKK": "Batu Bara",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1121,
+        "KDPKAB": "32.16",
+        "NAMOBJ": "Bekasi",
+        "WADMKK": "Bekasi",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1122,
+        "KDPKAB": "19.02",
+        "NAMOBJ": "Belitung",
+        "WADMKK": "Belitung",
+        "WADMPR": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1123,
+        "KDPKAB": "19.06",
+        "NAMOBJ": "Belitung Timur",
+        "WADMKK": "Belitung Timur",
+        "WADMPR": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1124,
+        "KDPKAB": "53.04",
+        "NAMOBJ": "Belu",
+        "WADMKK": "Belu",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1125,
+        "KDPKAB": "11.17",
+        "NAMOBJ": "Bener Meriah",
+        "WADMKK": "Bener Meriah",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1126,
+        "KDPKAB": "14.03",
+        "NAMOBJ": "Bengkalis",
+        "WADMKK": "Bengkalis",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1127,
+        "KDPKAB": "61.07",
+        "NAMOBJ": "Bengkayang",
+        "WADMKK": "Bengkayang",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1128,
+        "KDPKAB": "17.01",
+        "NAMOBJ": "Bengkulu Selatan",
+        "WADMKK": "Bengkulu Selatan",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1129,
+        "KDPKAB": "17.09",
+        "NAMOBJ": "Bengkulu Tengah",
+        "WADMKK": "Bengkulu Tengah",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1130,
+        "KDPKAB": "17.03",
+        "NAMOBJ": "Bengkulu Utara",
+        "WADMKK": "Bengkulu Utara",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1131,
+        "KDPKAB": "64.03",
+        "NAMOBJ": "Berau",
+        "WADMKK": "Berau",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1132,
+        "KDPKAB": "91.06",
+        "NAMOBJ": "Biak Numfor",
+        "WADMKK": "Biak Numfor",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1133,
+        "KDPKAB": "52.06",
+        "NAMOBJ": "Bima",
+        "WADMKK": "Bima",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1134,
+        "KDPKAB": "21.01",
+        "NAMOBJ": "Bintan",
+        "WADMKK": "Bintan",
+        "WADMPR": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1135,
+        "KDPKAB": "11.11",
+        "NAMOBJ": "Bireuen",
+        "WADMKK": "Bireuen",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1136,
+        "KDPKAB": "35.05",
+        "NAMOBJ": "Blitar",
+        "WADMKK": "Blitar",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1137,
+        "KDPKAB": "33.16",
+        "NAMOBJ": "Blora",
+        "WADMKK": "Blora",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1138,
+        "KDPKAB": "75.02",
+        "NAMOBJ": "Boalemo",
+        "WADMKK": "Boalemo",
+        "WADMPR": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1139,
+        "KDPKAB": "32.01",
+        "NAMOBJ": "Bogor",
+        "WADMKK": "Bogor",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1140,
+        "KDPKAB": "35.22",
+        "NAMOBJ": "Bojonegoro",
+        "WADMKK": "Bojonegoro",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1141,
+        "KDPKAB": "71.01",
+        "NAMOBJ": "Bolaang Mongondow",
+        "WADMKK": "Bolaang Mongondow",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1142,
+        "KDPKAB": "71.11",
+        "NAMOBJ": "Bolaang Mongondow Selatan",
+        "WADMKK": "Bolaang Mongondow Selatan",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1143,
+        "KDPKAB": "71.10",
+        "NAMOBJ": "Bolaang Mongondow Timur",
+        "WADMKK": "Bolaang Mongondow Timur",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1144,
+        "KDPKAB": "71.08",
+        "NAMOBJ": "Bolaang Mongondow Utara",
+        "WADMKK": "Bolaang Mongondow Utara",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1145,
+        "KDPKAB": "74.06",
+        "NAMOBJ": "Bombana",
+        "WADMKK": "Bombana",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1146,
+        "KDPKAB": "35.11",
+        "NAMOBJ": "Bondowoso",
+        "WADMKK": "Bondowoso",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1147,
+        "KDPKAB": "73.08",
+        "NAMOBJ": "Bone",
+        "WADMKK": "Bone",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1149,
+        "KDPKAB": "93.02",
+        "NAMOBJ": "Boven Digoel",
+        "WADMKK": "Boven Digoel",
+        "WADMPR": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1150,
+        "KDPKAB": "33.09",
+        "NAMOBJ": "Boyolali",
+        "WADMKK": "Boyolali",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1151,
+        "KDPKAB": "33.29",
+        "NAMOBJ": "Brebes",
+        "WADMKK": "Brebes",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1152,
+        "KDPKAB": "51.08",
+        "NAMOBJ": "Buleleng",
+        "WADMKK": "Buleleng",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1153,
+        "KDPKAB": "73.02",
+        "NAMOBJ": "Bulukumba",
+        "WADMKK": "Bulukumba",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1154,
+        "KDPKAB": "65.01",
+        "NAMOBJ": "Bulungan",
+        "WADMKK": "Bulungan",
+        "WADMPR": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1155,
+        "KDPKAB": "15.08",
+        "NAMOBJ": "Bungo",
+        "WADMKK": "Bungo",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1157,
+        "KDPKAB": "81.04",
+        "NAMOBJ": "Buru",
+        "WADMKK": "Buru",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1158,
+        "KDPKAB": "81.09",
+        "NAMOBJ": "Buru Selatan",
+        "WADMKK": "Buru Selatan",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1161,
+        "KDPKAB": "74.14",
+        "NAMOBJ": "Buton Tengah",
+        "WADMKK": "Buton Tengah",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1163,
+        "KDPKAB": "32.07",
+        "NAMOBJ": "Ciamis",
+        "WADMKK": "Ciamis",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1164,
+        "KDPKAB": "32.03",
+        "NAMOBJ": "Cianjur",
+        "WADMKK": "Cianjur",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1165,
+        "KDPKAB": "33.01",
+        "NAMOBJ": "Cilacap",
+        "WADMKK": "Cilacap",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1166,
+        "KDPKAB": "32.09",
+        "NAMOBJ": "Cirebon",
+        "WADMKK": "Cirebon",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1167,
+        "KDPKAB": "12.11",
+        "NAMOBJ": "Dairi",
+        "WADMKK": "Dairi",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1168,
+        "KDPKAB": "94.08",
+        "NAMOBJ": "Deiyai",
+        "WADMKK": "Deiyai",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1169,
+        "KDPKAB": "12.07",
+        "NAMOBJ": "Deli Serdang",
+        "WADMKK": "Deli Serdang",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1170,
+        "KDPKAB": "33.21",
+        "NAMOBJ": "Demak",
+        "WADMKK": "Demak",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1171,
+        "KDPKAB": "13.10",
+        "NAMOBJ": "Dharmasraya",
+        "WADMKK": "Dharmasraya",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1172,
+        "KDPKAB": "94.06",
+        "NAMOBJ": "Dogiyai",
+        "WADMKK": "Dogiyai",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1173,
+        "KDPKAB": "52.05",
+        "NAMOBJ": "Dompu",
+        "WADMKK": "Dompu",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1174,
+        "KDPKAB": "72.03",
+        "NAMOBJ": "Donggala",
+        "WADMKK": "Donggala",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1175,
+        "KDPKAB": "16.11",
+        "NAMOBJ": "Empat Lawang",
+        "WADMKK": "Empat Lawang",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1176,
+        "KDPKAB": "53.08",
+        "NAMOBJ": "Ende",
+        "WADMKK": "Ende",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1177,
+        "KDPKAB": "73.16",
+        "NAMOBJ": "Enrekang",
+        "WADMKK": "Enrekang",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1178,
+        "KDPKAB": "92.03",
+        "NAMOBJ": "Fak Fak",
+        "WADMKK": "Fak Fak",
+        "WADMPR": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1179,
+        "KDPKAB": "53.06",
+        "NAMOBJ": "Flores Timur",
+        "WADMKK": "Flores Timur",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1180,
+        "KDPKAB": "32.05",
+        "NAMOBJ": "Garut",
+        "WADMKK": "Garut",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1181,
+        "KDPKAB": "11.13",
+        "NAMOBJ": "Gayo Lues",
+        "WADMKK": "Gayo Lues",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1182,
+        "KDPKAB": "51.04",
+        "NAMOBJ": "Gianyar",
+        "WADMKK": "Gianyar",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1183,
+        "KDPKAB": "75.01",
+        "NAMOBJ": "Gorontalo",
+        "WADMKK": "Gorontalo",
+        "WADMPR": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1184,
+        "KDPKAB": "75.05",
+        "NAMOBJ": "Gorontalo Utara",
+        "WADMKK": "Gorontalo Utara",
+        "WADMPR": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1185,
+        "KDPKAB": "73.06",
+        "NAMOBJ": "Gowa",
+        "WADMKK": "Gowa",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1186,
+        "KDPKAB": "35.25",
+        "NAMOBJ": "Gresik",
+        "WADMKK": "Gresik",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1187,
+        "KDPKAB": "33.15",
+        "NAMOBJ": "Grobogan",
+        "WADMKK": "Grobogan",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1188,
+        "KDPKAB": "62.10",
+        "NAMOBJ": "Gunung Mas",
+        "WADMKK": "Gunung Mas",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1189,
+        "KDPKAB": "34.03",
+        "NAMOBJ": "Gunungkidul",
+        "WADMKK": "Gunungkidul",
+        "WADMPR": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1191,
+        "KDPKAB": "82.04",
+        "NAMOBJ": "Halmahera Selatan",
+        "WADMKK": "Halmahera Selatan",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1192,
+        "KDPKAB": "82.02",
+        "NAMOBJ": "Halmahera Tengah",
+        "WADMKK": "Halmahera Tengah",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1193,
+        "KDPKAB": "82.06",
+        "NAMOBJ": "Halmahera Timur",
+        "WADMKK": "Halmahera Timur",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1194,
+        "KDPKAB": "63.06",
+        "NAMOBJ": "Hulu Sungai Selatan",
+        "WADMKK": "Hulu Sungai Selatan",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1195,
+        "KDPKAB": "63.07",
+        "NAMOBJ": "Hulu Sungai Tengah",
+        "WADMKK": "Hulu Sungai Tengah",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1196,
+        "KDPKAB": "63.08",
+        "NAMOBJ": "Hulu Sungai Utara",
+        "WADMKK": "Hulu Sungai Utara",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1197,
+        "KDPKAB": "12.16",
+        "NAMOBJ": "Humbang Hasundutan",
+        "WADMKK": "Humbang Hasundutan",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1198,
+        "KDPKAB": "14.04",
+        "NAMOBJ": "Indragiri Hilir",
+        "WADMKK": "Indragiri Hilir",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1199,
+        "KDPKAB": "14.02",
+        "NAMOBJ": "Indragiri Hulu",
+        "WADMKK": "Indragiri Hulu",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1200,
+        "KDPKAB": "32.12",
+        "NAMOBJ": "Indramayu",
+        "WADMKK": "Indramayu",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1201,
+        "KDPKAB": "94.07",
+        "NAMOBJ": "Intan Jaya",
+        "WADMKK": "Intan Jaya",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1202,
+        "KDPKAB": "91.03",
+        "NAMOBJ": "Jayapura",
+        "WADMKK": "Jayapura",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1203,
+        "KDPKAB": "95.01",
+        "NAMOBJ": "Jayawijaya",
+        "WADMKK": "Jayawijaya",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1204,
+        "KDPKAB": "35.09",
+        "NAMOBJ": "Jember",
+        "WADMKK": "Jember",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1205,
+        "KDPKAB": "51.01",
+        "NAMOBJ": "Jembrana",
+        "WADMKK": "Jembrana",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1206,
+        "KDPKAB": "73.04",
+        "NAMOBJ": "Jeneponto",
+        "WADMKK": "Jeneponto",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1207,
+        "KDPKAB": "33.20",
+        "NAMOBJ": "Jepara",
+        "WADMKK": "Jepara",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1208,
+        "KDPKAB": "35.17",
+        "NAMOBJ": "Jombang",
+        "WADMKK": "Jombang",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1209,
+        "KDPKAB": "92.08",
+        "NAMOBJ": "Kaimana",
+        "WADMKK": "Kaimana",
+        "WADMPR": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1211,
+        "KDPKAB": "14.01",
+        "NAMOBJ": "Kampar",
+        "WADMKK": "Kampar",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1212,
+        "KDPKAB": "62.03",
+        "NAMOBJ": "Kapuas",
+        "WADMKK": "Kapuas",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1213,
+        "KDPKAB": "61.06",
+        "NAMOBJ": "Kapuas Hulu",
+        "WADMKK": "Kapuas Hulu",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1214,
+        "KDPKAB": "33.13",
+        "NAMOBJ": "Karanganyar",
+        "WADMKK": "Karanganyar",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1215,
+        "KDPKAB": "51.07",
+        "NAMOBJ": "Karangasem",
+        "WADMKK": "Karangasem",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1216,
+        "KDPKAB": "32.15",
+        "NAMOBJ": "Karawang",
+        "WADMKK": "Karawang",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1217,
+        "KDPKAB": "21.02",
+        "NAMOBJ": "Karimun",
+        "WADMKK": "Karimun",
+        "WADMPR": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1218,
+        "KDPKAB": "12.06",
+        "NAMOBJ": "Karo",
+        "WADMKK": "Karo",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1219,
+        "KDPKAB": "62.06",
+        "NAMOBJ": "Katingan",
+        "WADMKK": "Katingan",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1220,
+        "KDPKAB": "17.04",
+        "NAMOBJ": "Kaur",
+        "WADMKK": "Kaur",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1221,
+        "KDPKAB": "33.05",
+        "NAMOBJ": "Kebumen",
+        "WADMKK": "Kebumen",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1222,
+        "KDPKAB": "35.06",
+        "NAMOBJ": "Kediri",
+        "WADMKK": "Kediri",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1223,
+        "KDPKAB": "91.11",
+        "NAMOBJ": "Keerom",
+        "WADMKK": "Keerom",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1224,
+        "KDPKAB": "33.24",
+        "NAMOBJ": "Kendal",
+        "WADMKK": "Kendal",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1225,
+        "KDPKAB": "71.09",
+        "NAMOBJ": "Kep. Siau Tagulandang Biaro",
+        "WADMKK": "Kep. Siau Tagulandang Biaro",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1226,
+        "KDPKAB": "17.08",
+        "NAMOBJ": "Kepahiang",
+        "WADMKK": "Kepahiang",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1227,
+        "KDPKAB": "21.05",
+        "NAMOBJ": "Kepulauan Anambas",
+        "WADMKK": "Kepulauan Anambas",
+        "WADMPR": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1228,
+        "KDPKAB": "81.07",
+        "NAMOBJ": "Kepulauan Aru",
+        "WADMKK": "Kepulauan Aru",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1229,
+        "KDPKAB": "13.09",
+        "NAMOBJ": "Kepulauan Mentawai",
+        "WADMKK": "Kepulauan Mentawai",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1230,
+        "KDPKAB": "14.10",
+        "NAMOBJ": "Kepulauan Meranti",
+        "WADMKK": "Kepulauan Meranti",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1232,
+        "KDPKAB": "71.03",
+        "NAMOBJ": "Kepulauan Sangihe",
+        "WADMKK": "Kepulauan Sangihe",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1233,
+        "KDPKAB": "73.01",
+        "NAMOBJ": "Kepulauan Selayar",
+        "WADMKK": "Kepulauan Selayar",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1234,
+        "KDPKAB": "82.05",
+        "NAMOBJ": "Kepulauan Sula",
+        "WADMKK": "Kepulauan Sula",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1235,
+        "KDPKAB": "71.04",
+        "NAMOBJ": "Kepulauan Talaud",
+        "WADMKK": "Kepulauan Talaud",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1236,
+        "KDPKAB": "81.03",
+        "NAMOBJ": "Kepulauan Tanimbar",
+        "WADMKK": "Kepulauan Tanimbar",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1237,
+        "KDPKAB": "91.05",
+        "NAMOBJ": "Kepulauan Yapen",
+        "WADMKK": "Kepulauan Yapen",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1238,
+        "KDPKAB": "15.01",
+        "NAMOBJ": "Kerinci",
+        "WADMKK": "Kerinci",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1239,
+        "KDPKAB": "61.04",
+        "NAMOBJ": "Ketapang",
+        "WADMKK": "Ketapang",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1240,
+        "KDPKAB": "33.10",
+        "NAMOBJ": "Klaten",
+        "WADMKK": "Klaten",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1241,
+        "KDPKAB": "51.05",
+        "NAMOBJ": "Klungkung",
+        "WADMKK": "Klungkung",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1243,
+        "KDPKAB": "74.11",
+        "NAMOBJ": "Kolaka Timur",
+        "WADMKK": "Kolaka Timur",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1244,
+        "KDPKAB": "74.08",
+        "NAMOBJ": "Kolaka Utara",
+        "WADMKK": "Kolaka Utara",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1245,
+        "KDPKAB": "74.02",
+        "NAMOBJ": "Konawe",
+        "WADMKK": "Konawe",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1247,
+        "KDPKAB": "74.05",
+        "NAMOBJ": "Konawe Selatan",
+        "WADMKK": "Konawe Selatan",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1248,
+        "KDPKAB": "74.09",
+        "NAMOBJ": "Konawe Utara",
+        "WADMKK": "Konawe Utara",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1249,
+        "KDPKAB": "31.73",
+        "NAMOBJ": "Kota Administrasi Jakarta Barat",
+        "WADMKK": "Kota Administrasi Jakarta Barat",
+        "WADMPR": "Daerah Khusus Ibukota Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1250,
+        "KDPKAB": "31.71",
+        "NAMOBJ": "Kota Administrasi Jakarta Pusat",
+        "WADMKK": "Kota Administrasi Jakarta Pusat",
+        "WADMPR": "Daerah Khusus Ibukota Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1251,
+        "KDPKAB": "31.74",
+        "NAMOBJ": "Kota Administrasi Jakarta Selatan",
+        "WADMKK": "Kota Administrasi Jakarta Selatan",
+        "WADMPR": "Daerah Khusus Ibukota Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1252,
+        "KDPKAB": "31.75",
+        "NAMOBJ": "Kota Administrasi Jakarta Timur",
+        "WADMKK": "Kota Administrasi Jakarta Timur",
+        "WADMPR": "Daerah Khusus Ibukota Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1253,
+        "KDPKAB": "31.72",
+        "NAMOBJ": "Kota Administrasi Jakarta Utara",
+        "WADMKK": "Kota Administrasi Jakarta Utara",
+        "WADMPR": "Daerah Khusus Ibukota Jakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1254,
+        "KDPKAB": "81.71",
+        "NAMOBJ": "Kota Ambon",
+        "WADMKK": "Kota Ambon",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1255,
+        "KDPKAB": "64.71",
+        "NAMOBJ": "Kota Balikpapan",
+        "WADMKK": "Kota Balikpapan",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1256,
+        "KDPKAB": "11.71",
+        "NAMOBJ": "Kota Banda Aceh",
+        "WADMKK": "Kota Banda Aceh",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1257,
+        "KDPKAB": "18.71",
+        "NAMOBJ": "Kota Bandar Lampung",
+        "WADMKK": "Kota Bandar Lampung",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1258,
+        "KDPKAB": "32.73",
+        "NAMOBJ": "Kota Bandung",
+        "WADMKK": "Kota Bandung",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1259,
+        "KDPKAB": "32.79",
+        "NAMOBJ": "Kota Banjar",
+        "WADMKK": "Kota Banjar",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1260,
+        "KDPKAB": "63.72",
+        "NAMOBJ": "Kota Banjarbaru",
+        "WADMKK": "Kota Banjarbaru",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1261,
+        "KDPKAB": "63.71",
+        "NAMOBJ": "Kota Banjarmasin",
+        "WADMKK": "Kota Banjarmasin",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1262,
+        "KDPKAB": "21.71",
+        "NAMOBJ": "Kota Batam",
+        "WADMKK": "Kota Batam",
+        "WADMPR": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1263,
+        "KDPKAB": "35.79",
+        "NAMOBJ": "Kota Batu",
+        "WADMKK": "Kota Batu",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1265,
+        "KDPKAB": "32.75",
+        "NAMOBJ": "Kota Bekasi",
+        "WADMKK": "Kota Bekasi",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1266,
+        "KDPKAB": "17.71",
+        "NAMOBJ": "Kota Bengkulu",
+        "WADMKK": "Kota Bengkulu",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1267,
+        "KDPKAB": "52.72",
+        "NAMOBJ": "Kota Bima",
+        "WADMKK": "Kota Bima",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1268,
+        "KDPKAB": "12.75",
+        "NAMOBJ": "Kota Binjai",
+        "WADMKK": "Kota Binjai",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1269,
+        "KDPKAB": "71.72",
+        "NAMOBJ": "Kota Bitung",
+        "WADMKK": "Kota Bitung",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1270,
+        "KDPKAB": "35.72",
+        "NAMOBJ": "Kota Blitar",
+        "WADMKK": "Kota Blitar",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1271,
+        "KDPKAB": "32.71",
+        "NAMOBJ": "Kota Bogor",
+        "WADMKK": "Kota Bogor",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1273,
+        "KDPKAB": "13.75",
+        "NAMOBJ": "Kota Bukittinggi",
+        "WADMKK": "Kota Bukittinggi",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1274,
+        "KDPKAB": "36.72",
+        "NAMOBJ": "Kota Cilegon",
+        "WADMKK": "Kota Cilegon",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1275,
+        "KDPKAB": "32.77",
+        "NAMOBJ": "Kota Cimahi",
+        "WADMKK": "Kota Cimahi",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1276,
+        "KDPKAB": "32.74",
+        "NAMOBJ": "Kota Cirebon",
+        "WADMKK": "Kota Cirebon",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1277,
+        "KDPKAB": "51.71",
+        "NAMOBJ": "Kota Denpasar",
+        "WADMKK": "Kota Denpasar",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1278,
+        "KDPKAB": "32.76",
+        "NAMOBJ": "Kota Depok",
+        "WADMKK": "Kota Depok",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1279,
+        "KDPKAB": "14.72",
+        "NAMOBJ": "Kota Dumai",
+        "WADMKK": "Kota Dumai",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1280,
+        "KDPKAB": "75.71",
+        "NAMOBJ": "Kota Gorontalo",
+        "WADMKK": "Kota Gorontalo",
+        "WADMPR": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1281,
+        "KDPKAB": "12.78",
+        "NAMOBJ": "Kota Gunungsitoli",
+        "WADMKK": "Kota Gunungsitoli",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1282,
+        "KDPKAB": "15.71",
+        "NAMOBJ": "Kota Jambi",
+        "WADMKK": "Kota Jambi",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1283,
+        "KDPKAB": "91.71",
+        "NAMOBJ": "Kota Jayapura",
+        "WADMKK": "Kota Jayapura",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1284,
+        "KDPKAB": "35.71",
+        "NAMOBJ": "Kota Kediri",
+        "WADMKK": "Kota Kediri",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1286,
+        "KDPKAB": "71.74",
+        "NAMOBJ": "Kota Kotamobagu",
+        "WADMKK": "Kota Kotamobagu",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1287,
+        "KDPKAB": "53.71",
+        "NAMOBJ": "Kota Kupang",
+        "WADMKK": "Kota Kupang",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1288,
+        "KDPKAB": "11.74",
+        "NAMOBJ": "Kota Langsa",
+        "WADMKK": "Kota Langsa",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1289,
+        "KDPKAB": "11.73",
+        "NAMOBJ": "Kota Lhokseumawe",
+        "WADMKK": "Kota Lhokseumawe",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1290,
+        "KDPKAB": "16.73",
+        "NAMOBJ": "Kota Lubuk Linggau",
+        "WADMKK": "Kota Lubuk Linggau",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1291,
+        "KDPKAB": "35.77",
+        "NAMOBJ": "Kota Madiun",
+        "WADMKK": "Kota Madiun",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1292,
+        "KDPKAB": "33.71",
+        "NAMOBJ": "Kota Magelang",
+        "WADMKK": "Kota Magelang",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1293,
+        "KDPKAB": "73.71",
+        "NAMOBJ": "Kota Makassar",
+        "WADMKK": "Kota Makassar",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1294,
+        "KDPKAB": "35.73",
+        "NAMOBJ": "Kota Malang",
+        "WADMKK": "Kota Malang",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1295,
+        "KDPKAB": "71.71",
+        "NAMOBJ": "Kota Manado",
+        "WADMKK": "Kota Manado",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1296,
+        "KDPKAB": "52.71",
+        "NAMOBJ": "Kota Mataram",
+        "WADMKK": "Kota Mataram",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1297,
+        "KDPKAB": "12.71",
+        "NAMOBJ": "Kota Medan",
+        "WADMKK": "Kota Medan",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1298,
+        "KDPKAB": "18.72",
+        "NAMOBJ": "Kota Metro",
+        "WADMKK": "Kota Metro",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1299,
+        "KDPKAB": "35.76",
+        "NAMOBJ": "Kota Mojokerto",
+        "WADMKK": "Kota Mojokerto",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1300,
+        "KDPKAB": "13.71",
+        "NAMOBJ": "Kota Padang",
+        "WADMKK": "Kota Padang",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1301,
+        "KDPKAB": "13.74",
+        "NAMOBJ": "Kota Padang Panjang",
+        "WADMKK": "Kota Padang Panjang",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1302,
+        "KDPKAB": "12.77",
+        "NAMOBJ": "Kota Padangsidimpuan",
+        "WADMKK": "Kota Padangsidimpuan",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1303,
+        "KDPKAB": "16.72",
+        "NAMOBJ": "Kota Pagar Alam",
+        "WADMKK": "Kota Pagar Alam",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1304,
+        "KDPKAB": "62.71",
+        "NAMOBJ": "Kota Palangkaraya",
+        "WADMKK": "Kota Palangkaraya",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1305,
+        "KDPKAB": "16.71",
+        "NAMOBJ": "Kota Palembang",
+        "WADMKK": "Kota Palembang",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1307,
+        "KDPKAB": "72.71",
+        "NAMOBJ": "Kota Palu",
+        "WADMKK": "Kota Palu",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1308,
+        "KDPKAB": "19.71",
+        "NAMOBJ": "Kota Pangkal Pinang",
+        "WADMKK": "Kota Pangkal Pinang",
+        "WADMPR": "Kepulauan Bangka Belitung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1309,
+        "KDPKAB": "73.72",
+        "NAMOBJ": "Kota Parepare",
+        "WADMKK": "Kota Parepare",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1310,
+        "KDPKAB": "13.77",
+        "NAMOBJ": "Kota Pariaman",
+        "WADMKK": "Kota Pariaman",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1311,
+        "KDPKAB": "35.75",
+        "NAMOBJ": "Kota Pasuruan",
+        "WADMKK": "Kota Pasuruan",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1312,
+        "KDPKAB": "13.76",
+        "NAMOBJ": "Kota Payakumbuh",
+        "WADMKK": "Kota Payakumbuh",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1313,
+        "KDPKAB": "33.75",
+        "NAMOBJ": "Kota Pekalongan",
+        "WADMKK": "Kota Pekalongan",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1314,
+        "KDPKAB": "14.71",
+        "NAMOBJ": "Kota Pekanbaru",
+        "WADMKK": "Kota Pekanbaru",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1315,
+        "KDPKAB": "12.72",
+        "NAMOBJ": "Kota Pematangsiantar",
+        "WADMKK": "Kota Pematangsiantar",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1316,
+        "KDPKAB": "61.71",
+        "NAMOBJ": "Kota Pontianak",
+        "WADMKK": "Kota Pontianak",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1317,
+        "KDPKAB": "16.74",
+        "NAMOBJ": "Kota Prabumulih",
+        "WADMKK": "Kota Prabumulih",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1318,
+        "KDPKAB": "35.74",
+        "NAMOBJ": "Kota Probolinggo",
+        "WADMKK": "Kota Probolinggo",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1319,
+        "KDPKAB": "11.72",
+        "NAMOBJ": "Kota Sabang",
+        "WADMKK": "Kota Sabang",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1320,
+        "KDPKAB": "33.73",
+        "NAMOBJ": "Kota Salatiga",
+        "WADMKK": "Kota Salatiga",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1321,
+        "KDPKAB": "64.72",
+        "NAMOBJ": "Kota Samarinda",
+        "WADMKK": "Kota Samarinda",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1322,
+        "KDPKAB": "13.73",
+        "NAMOBJ": "Kota Sawahlunto",
+        "WADMKK": "Kota Sawahlunto",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1323,
+        "KDPKAB": "33.74",
+        "NAMOBJ": "Kota Semarang",
+        "WADMKK": "Kota Semarang",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1324,
+        "KDPKAB": "36.73",
+        "NAMOBJ": "Kota Serang",
+        "WADMKK": "Kota Serang",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1325,
+        "KDPKAB": "12.73",
+        "NAMOBJ": "Kota Sibolga",
+        "WADMKK": "Kota Sibolga",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1326,
+        "KDPKAB": "61.72",
+        "NAMOBJ": "Kota Singkawang",
+        "WADMKK": "Kota Singkawang",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1327,
+        "KDPKAB": "13.72",
+        "NAMOBJ": "Kota Solok",
+        "WADMKK": "Kota Solok",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1328,
+        "KDPKAB": "96.71",
+        "NAMOBJ": "Kota Sorong",
+        "WADMKK": "Kota Sorong",
+        "WADMPR": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1329,
+        "KDPKAB": "11.75",
+        "NAMOBJ": "Kota Subulussalam",
+        "WADMKK": "Kota Subulussalam",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1330,
+        "KDPKAB": "32.72",
+        "NAMOBJ": "Kota Sukabumi",
+        "WADMKK": "Kota Sukabumi",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1331,
+        "KDPKAB": "15.72",
+        "NAMOBJ": "Kota Sungai Penuh",
+        "WADMKK": "Kota Sungai Penuh",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1332,
+        "KDPKAB": "35.78",
+        "NAMOBJ": "Kota Surabaya",
+        "WADMKK": "Kota Surabaya",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1333,
+        "KDPKAB": "33.72",
+        "NAMOBJ": "Kota Surakarta",
+        "WADMKK": "Kota Surakarta",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1334,
+        "KDPKAB": "36.71",
+        "NAMOBJ": "Kota Tangerang",
+        "WADMKK": "Kota Tangerang",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1335,
+        "KDPKAB": "36.74",
+        "NAMOBJ": "Kota Tangerang Selatan",
+        "WADMKK": "Kota Tangerang Selatan",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1336,
+        "KDPKAB": "21.72",
+        "NAMOBJ": "Kota Tanjung Pinang",
+        "WADMKK": "Kota Tanjung Pinang",
+        "WADMPR": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1337,
+        "KDPKAB": "12.74",
+        "NAMOBJ": "Kota Tanjungbalai",
+        "WADMKK": "Kota Tanjungbalai",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1338,
+        "KDPKAB": "65.71",
+        "NAMOBJ": "Kota Tarakan",
+        "WADMKK": "Kota Tarakan",
+        "WADMPR": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1339,
+        "KDPKAB": "32.78",
+        "NAMOBJ": "Kota Tasikmalaya",
+        "WADMKK": "Kota Tasikmalaya",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1340,
+        "KDPKAB": "12.76",
+        "NAMOBJ": "Kota Tebing Tinggi",
+        "WADMKK": "Kota Tebing Tinggi",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1341,
+        "KDPKAB": "33.76",
+        "NAMOBJ": "Kota Tegal",
+        "WADMKK": "Kota Tegal",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1342,
+        "KDPKAB": "82.71",
+        "NAMOBJ": "Kota Ternate",
+        "WADMKK": "Kota Ternate",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1343,
+        "KDPKAB": "82.72",
+        "NAMOBJ": "Kota Tidore Kepulauan",
+        "WADMKK": "Kota Tidore Kepulauan",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1344,
+        "KDPKAB": "71.73",
+        "NAMOBJ": "Kota Tomohon",
+        "WADMKK": "Kota Tomohon",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1345,
+        "KDPKAB": "81.72",
+        "NAMOBJ": "Kota Tual",
+        "WADMKK": "Kota Tual",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1346,
+        "KDPKAB": "34.71",
+        "NAMOBJ": "Kota Yogyakarta",
+        "WADMKK": "Kota Yogyakarta",
+        "WADMPR": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1347,
+        "KDPKAB": "63.02",
+        "NAMOBJ": "Kotabaru",
+        "WADMKK": "Kotabaru",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1348,
+        "KDPKAB": "62.01",
+        "NAMOBJ": "Kotawaringin Barat",
+        "WADMKK": "Kotawaringin Barat",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1349,
+        "KDPKAB": "62.02",
+        "NAMOBJ": "Kotawaringin Timur",
+        "WADMKK": "Kotawaringin Timur",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1350,
+        "KDPKAB": "14.09",
+        "NAMOBJ": "Kuantan Singingi",
+        "WADMKK": "Kuantan Singingi",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1351,
+        "KDPKAB": "33.19",
+        "NAMOBJ": "Kudus",
+        "WADMKK": "Kudus",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1352,
+        "KDPKAB": "34.01",
+        "NAMOBJ": "Kulon Progo",
+        "WADMKK": "Kulon Progo",
+        "WADMPR": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1353,
+        "KDPKAB": "32.08",
+        "NAMOBJ": "Kuningan",
+        "WADMKK": "Kuningan",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1354,
+        "KDPKAB": "53.01",
+        "NAMOBJ": "Kupang",
+        "WADMKK": "Kupang",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1355,
+        "KDPKAB": "64.07",
+        "NAMOBJ": "Kutai Barat",
+        "WADMKK": "Kutai Barat",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1356,
+        "KDPKAB": "64.02",
+        "NAMOBJ": "Kutai Kartanegara",
+        "WADMKK": "Kutai Kartanegara",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1357,
+        "KDPKAB": "64.08",
+        "NAMOBJ": "Kutai Timur",
+        "WADMKK": "Kutai Timur",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1358,
+        "KDPKAB": "12.10",
+        "NAMOBJ": "Labuhanbatu",
+        "WADMKK": "Labuhanbatu",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1359,
+        "KDPKAB": "12.22",
+        "NAMOBJ": "Labuhanbatu Selatan",
+        "WADMKK": "Labuhanbatu Selatan",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1360,
+        "KDPKAB": "12.23",
+        "NAMOBJ": "Labuhanbatu Utara",
+        "WADMKK": "Labuhanbatu Utara",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1361,
+        "KDPKAB": "16.04",
+        "NAMOBJ": "Lahat",
+        "WADMKK": "Lahat",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1362,
+        "KDPKAB": "62.09",
+        "NAMOBJ": "Lamandau",
+        "WADMKK": "Lamandau",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1363,
+        "KDPKAB": "35.24",
+        "NAMOBJ": "Lamongan",
+        "WADMKK": "Lamongan",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1364,
+        "KDPKAB": "18.04",
+        "NAMOBJ": "Lampung Barat",
+        "WADMKK": "Lampung Barat",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1365,
+        "KDPKAB": "18.01",
+        "NAMOBJ": "Lampung Selatan",
+        "WADMKK": "Lampung Selatan",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1366,
+        "KDPKAB": "18.02",
+        "NAMOBJ": "Lampung Tengah",
+        "WADMKK": "Lampung Tengah",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1367,
+        "KDPKAB": "18.07",
+        "NAMOBJ": "Lampung Timur",
+        "WADMKK": "Lampung Timur",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1368,
+        "KDPKAB": "18.03",
+        "NAMOBJ": "Lampung Utara",
+        "WADMKK": "Lampung Utara",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1369,
+        "KDPKAB": "61.08",
+        "NAMOBJ": "Landak",
+        "WADMKK": "Landak",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1370,
+        "KDPKAB": "12.05",
+        "NAMOBJ": "Langkat",
+        "WADMKK": "Langkat",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1371,
+        "KDPKAB": "95.07",
+        "NAMOBJ": "Lanny Jaya",
+        "WADMKK": "Lanny Jaya",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1372,
+        "KDPKAB": "36.02",
+        "NAMOBJ": "Lebak",
+        "WADMKK": "Lebak",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1373,
+        "KDPKAB": "17.07",
+        "NAMOBJ": "Lebong",
+        "WADMKK": "Lebong",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1374,
+        "KDPKAB": "53.13",
+        "NAMOBJ": "Lembata",
+        "WADMKK": "Lembata",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1375,
+        "KDPKAB": "13.07",
+        "NAMOBJ": "Lima Puluh Kota",
+        "WADMKK": "Lima Puluh Kota",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1376,
+        "KDPKAB": "21.04",
+        "NAMOBJ": "Lingga",
+        "WADMKK": "Lingga",
+        "WADMPR": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1377,
+        "KDPKAB": "52.01",
+        "NAMOBJ": "Lombok Barat",
+        "WADMKK": "Lombok Barat",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1378,
+        "KDPKAB": "52.02",
+        "NAMOBJ": "Lombok Tengah",
+        "WADMKK": "Lombok Tengah",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1379,
+        "KDPKAB": "52.03",
+        "NAMOBJ": "Lombok Timur",
+        "WADMKK": "Lombok Timur",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1380,
+        "KDPKAB": "52.08",
+        "NAMOBJ": "Lombok Utara",
+        "WADMKK": "Lombok Utara",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1381,
+        "KDPKAB": "35.08",
+        "NAMOBJ": "Lumajang",
+        "WADMKK": "Lumajang",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1383,
+        "KDPKAB": "73.24",
+        "NAMOBJ": "Luwu Timur",
+        "WADMKK": "Luwu Timur",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1384,
+        "KDPKAB": "73.22",
+        "NAMOBJ": "Luwu Utara",
+        "WADMKK": "Luwu Utara",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1385,
+        "KDPKAB": "35.19",
+        "NAMOBJ": "Madiun",
+        "WADMKK": "Madiun",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1386,
+        "KDPKAB": "33.08",
+        "NAMOBJ": "Magelang",
+        "WADMKK": "Magelang",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1387,
+        "KDPKAB": "35.20",
+        "NAMOBJ": "Magetan",
+        "WADMKK": "Magetan",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1388,
+        "KDPKAB": "64.11",
+        "NAMOBJ": "Mahakam Ulu",
+        "WADMKK": "Mahakam Ulu",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1389,
+        "KDPKAB": "32.10",
+        "NAMOBJ": "Majalengka",
+        "WADMKK": "Majalengka",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1390,
+        "KDPKAB": "53.21",
+        "NAMOBJ": "Malaka",
+        "WADMKK": "Malaka",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1391,
+        "KDPKAB": "35.07",
+        "NAMOBJ": "Malang",
+        "WADMKK": "Malang",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1392,
+        "KDPKAB": "65.02",
+        "NAMOBJ": "Malinau",
+        "WADMKK": "Malinau",
+        "WADMPR": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1393,
+        "KDPKAB": "81.08",
+        "NAMOBJ": "Maluku Barat Daya",
+        "WADMKK": "Maluku Barat Daya",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1394,
+        "KDPKAB": "81.01",
+        "NAMOBJ": "Maluku Tengah",
+        "WADMKK": "Maluku Tengah",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1395,
+        "KDPKAB": "81.02",
+        "NAMOBJ": "Maluku Tenggara",
+        "WADMKK": "Maluku Tenggara",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1396,
+        "KDPKAB": "76.03",
+        "NAMOBJ": "Mamasa",
+        "WADMKK": "Mamasa",
+        "WADMPR": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1397,
+        "KDPKAB": "91.20",
+        "NAMOBJ": "Mamberamo Raya",
+        "WADMKK": "Mamberamo Raya",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1398,
+        "KDPKAB": "95.05",
+        "NAMOBJ": "Mamberamo Tengah",
+        "WADMKK": "Mamberamo Tengah",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1400,
+        "KDPKAB": "76.06",
+        "NAMOBJ": "Mamuju Tengah",
+        "WADMKK": "Mamuju Tengah",
+        "WADMPR": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1401,
+        "KDPKAB": "12.13",
+        "NAMOBJ": "Mandailing Natal",
+        "WADMKK": "Mandailing Natal",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1402,
+        "KDPKAB": "53.10",
+        "NAMOBJ": "Manggarai",
+        "WADMKK": "Manggarai",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1403,
+        "KDPKAB": "53.15",
+        "NAMOBJ": "Manggarai Barat",
+        "WADMKK": "Manggarai Barat",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1404,
+        "KDPKAB": "53.19",
+        "NAMOBJ": "Manggarai Timur",
+        "WADMKK": "Manggarai Timur",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1405,
+        "KDPKAB": "92.02",
+        "NAMOBJ": "Manokwari",
+        "WADMKK": "Manokwari",
+        "WADMPR": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1406,
+        "KDPKAB": "92.11",
+        "NAMOBJ": "Manokwari Selatan",
+        "WADMKK": "Manokwari Selatan",
+        "WADMPR": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1407,
+        "KDPKAB": "93.03",
+        "NAMOBJ": "Mappi",
+        "WADMKK": "Mappi",
+        "WADMPR": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1408,
+        "KDPKAB": "73.09",
+        "NAMOBJ": "Maros",
+        "WADMKK": "Maros",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1409,
+        "KDPKAB": "96.05",
+        "NAMOBJ": "Maybrat",
+        "WADMKK": "Maybrat",
+        "WADMPR": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1410,
+        "KDPKAB": "61.10",
+        "NAMOBJ": "Melawi",
+        "WADMKK": "Melawi",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1411,
+        "KDPKAB": "61.02",
+        "NAMOBJ": "Mempawah",
+        "WADMKK": "Mempawah",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1412,
+        "KDPKAB": "15.02",
+        "NAMOBJ": "Merangin",
+        "WADMKK": "Merangin",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1413,
+        "KDPKAB": "93.01",
+        "NAMOBJ": "Merauke",
+        "WADMKK": "Merauke",
+        "WADMPR": "Papua Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1414,
+        "KDPKAB": "18.11",
+        "NAMOBJ": "Mesuji",
+        "WADMKK": "Mesuji",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1415,
+        "KDPKAB": "94.04",
+        "NAMOBJ": "Mimika",
+        "WADMKK": "Mimika",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1416,
+        "KDPKAB": "71.02",
+        "NAMOBJ": "Minahasa",
+        "WADMKK": "Minahasa",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1417,
+        "KDPKAB": "71.05",
+        "NAMOBJ": "Minahasa Selatan",
+        "WADMKK": "Minahasa Selatan",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1418,
+        "KDPKAB": "71.07",
+        "NAMOBJ": "Minahasa Tenggara",
+        "WADMKK": "Minahasa Tenggara",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1419,
+        "KDPKAB": "71.06",
+        "NAMOBJ": "Minahasa Utara",
+        "WADMKK": "Minahasa Utara",
+        "WADMPR": "Sulawesi Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1420,
+        "KDPKAB": "35.16",
+        "NAMOBJ": "Mojokerto",
+        "WADMKK": "Mojokerto",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1422,
+        "KDPKAB": "72.12",
+        "NAMOBJ": "Morowali Utara",
+        "WADMKK": "Morowali Utara",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1423,
+        "KDPKAB": "16.03",
+        "NAMOBJ": "Muara Enim",
+        "WADMKK": "Muara Enim",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1424,
+        "KDPKAB": "15.05",
+        "NAMOBJ": "Muaro Jambi",
+        "WADMKK": "Muaro Jambi",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1425,
+        "KDPKAB": "17.06",
+        "NAMOBJ": "Mukomuko",
+        "WADMKK": "Mukomuko",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1427,
+        "KDPKAB": "74.13",
+        "NAMOBJ": "Muna Barat",
+        "WADMKK": "Muna Barat",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1428,
+        "KDPKAB": "62.12",
+        "NAMOBJ": "Murung Raya",
+        "WADMKK": "Murung Raya",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1429,
+        "KDPKAB": "16.06",
+        "NAMOBJ": "Musi Banyuasin",
+        "WADMKK": "Musi Banyuasin",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1430,
+        "KDPKAB": "16.05",
+        "NAMOBJ": "Musi Rawas",
+        "WADMKK": "Musi Rawas",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1431,
+        "KDPKAB": "16.13",
+        "NAMOBJ": "Musi Rawas Utara",
+        "WADMKK": "Musi Rawas Utara",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1432,
+        "KDPKAB": "94.01",
+        "NAMOBJ": "Nabire",
+        "WADMKK": "Nabire",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1433,
+        "KDPKAB": "11.15",
+        "NAMOBJ": "Nagan Raya",
+        "WADMKK": "Nagan Raya",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1434,
+        "KDPKAB": "53.16",
+        "NAMOBJ": "Nagekeo",
+        "WADMKK": "Nagekeo",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1435,
+        "KDPKAB": "21.03",
+        "NAMOBJ": "Natuna",
+        "WADMKK": "Natuna",
+        "WADMPR": "Kepulauan Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1436,
+        "KDPKAB": "95.08",
+        "NAMOBJ": "Nduga",
+        "WADMKK": "Nduga",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1437,
+        "KDPKAB": "53.09",
+        "NAMOBJ": "Ngada",
+        "WADMKK": "Ngada",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1438,
+        "KDPKAB": "35.18",
+        "NAMOBJ": "Nganjuk",
+        "WADMKK": "Nganjuk",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1439,
+        "KDPKAB": "35.21",
+        "NAMOBJ": "Ngawi",
+        "WADMKK": "Ngawi",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1440,
+        "KDPKAB": "12.04",
+        "NAMOBJ": "Nias",
+        "WADMKK": "Nias",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1441,
+        "KDPKAB": "12.25",
+        "NAMOBJ": "Nias Barat",
+        "WADMKK": "Nias Barat",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1442,
+        "KDPKAB": "12.14",
+        "NAMOBJ": "Nias Selatan",
+        "WADMKK": "Nias Selatan",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1443,
+        "KDPKAB": "12.24",
+        "NAMOBJ": "Nias Utara",
+        "WADMKK": "Nias Utara",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1444,
+        "KDPKAB": "65.03",
+        "NAMOBJ": "Nunukan",
+        "WADMKK": "Nunukan",
+        "WADMPR": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1445,
+        "KDPKAB": "16.10",
+        "NAMOBJ": "Ogan Ilir",
+        "WADMKK": "Ogan Ilir",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1446,
+        "KDPKAB": "16.02",
+        "NAMOBJ": "Ogan Komering Ilir",
+        "WADMKK": "Ogan Komering Ilir",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1447,
+        "KDPKAB": "16.01",
+        "NAMOBJ": "Ogan Komering Ulu",
+        "WADMKK": "Ogan Komering Ulu",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1448,
+        "KDPKAB": "16.09",
+        "NAMOBJ": "Ogan Komering Ulu Selatan",
+        "WADMKK": "Ogan Komering Ulu Selatan",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1449,
+        "KDPKAB": "16.08",
+        "NAMOBJ": "Ogan Komering Ulu Timur",
+        "WADMKK": "Ogan Komering Ulu Timur",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1450,
+        "KDPKAB": "35.01",
+        "NAMOBJ": "Pacitan",
+        "WADMKK": "Pacitan",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1451,
+        "KDPKAB": "12.21",
+        "NAMOBJ": "Padang Lawas",
+        "WADMKK": "Padang Lawas",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1452,
+        "KDPKAB": "12.20",
+        "NAMOBJ": "Padang Lawas Utara",
+        "WADMKK": "Padang Lawas Utara",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1454,
+        "KDPKAB": "12.15",
+        "NAMOBJ": "Pakpak Bharat",
+        "WADMKK": "Pakpak Bharat",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1455,
+        "KDPKAB": "35.28",
+        "NAMOBJ": "Pamekasan",
+        "WADMKK": "Pamekasan",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1456,
+        "KDPKAB": "36.01",
+        "NAMOBJ": "Pandeglang",
+        "WADMKK": "Pandeglang",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1457,
+        "KDPKAB": "32.18",
+        "NAMOBJ": "Pangandaran",
+        "WADMKK": "Pangandaran",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1458,
+        "KDPKAB": "73.10",
+        "NAMOBJ": "Pangkajene Dan Kepulauan",
+        "WADMKK": "Pangkajene Dan Kepulauan",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1459,
+        "KDPKAB": "94.03",
+        "NAMOBJ": "Paniai",
+        "WADMKK": "Paniai",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1460,
+        "KDPKAB": "72.08",
+        "NAMOBJ": "Parigi Moutong",
+        "WADMKK": "Parigi Moutong",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1461,
+        "KDPKAB": "13.08",
+        "NAMOBJ": "Pasaman",
+        "WADMKK": "Pasaman",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1462,
+        "KDPKAB": "13.12",
+        "NAMOBJ": "Pasaman Barat",
+        "WADMKK": "Pasaman Barat",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1463,
+        "KDPKAB": "76.01",
+        "NAMOBJ": "Pasangkayu",
+        "WADMKK": "Pasangkayu",
+        "WADMPR": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1464,
+        "KDPKAB": "64.01",
+        "NAMOBJ": "Paser",
+        "WADMKK": "Paser",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1465,
+        "KDPKAB": "35.14",
+        "NAMOBJ": "Pasuruan",
+        "WADMKK": "Pasuruan",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1466,
+        "KDPKAB": "33.18",
+        "NAMOBJ": "Pati",
+        "WADMKK": "Pati",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1467,
+        "KDPKAB": "92.12",
+        "NAMOBJ": "Pegunungan Arfak",
+        "WADMKK": "Pegunungan Arfak",
+        "WADMPR": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1468,
+        "KDPKAB": "95.02",
+        "NAMOBJ": "Pegunungan Bintang",
+        "WADMKK": "Pegunungan Bintang",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1469,
+        "KDPKAB": "33.26",
+        "NAMOBJ": "Pekalongan",
+        "WADMKK": "Pekalongan",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1470,
+        "KDPKAB": "14.05",
+        "NAMOBJ": "Pelalawan",
+        "WADMKK": "Pelalawan",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1471,
+        "KDPKAB": "33.27",
+        "NAMOBJ": "Pemalang",
+        "WADMKK": "Pemalang",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1472,
+        "KDPKAB": "64.09",
+        "NAMOBJ": "Penajam Paser Utara",
+        "WADMKK": "Penajam Paser Utara",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1473,
+        "KDPKAB": "16.12",
+        "NAMOBJ": "Penukal Abab Lematang Ilir",
+        "WADMKK": "Penukal Abab Lematang Ilir",
+        "WADMPR": "Sumatera Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1474,
+        "KDPKAB": "18.09",
+        "NAMOBJ": "Pesawaran",
+        "WADMKK": "Pesawaran",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1475,
+        "KDPKAB": "18.13",
+        "NAMOBJ": "Pesisir Barat",
+        "WADMKK": "Pesisir Barat",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1476,
+        "KDPKAB": "13.01",
+        "NAMOBJ": "Pesisir Selatan",
+        "WADMKK": "Pesisir Selatan",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1477,
+        "KDPKAB": "11.07",
+        "NAMOBJ": "Pidie",
+        "WADMKK": "Pidie",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1478,
+        "KDPKAB": "11.18",
+        "NAMOBJ": "Pidie Jaya",
+        "WADMKK": "Pidie Jaya",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1479,
+        "KDPKAB": "73.15",
+        "NAMOBJ": "Pinrang",
+        "WADMKK": "Pinrang",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1480,
+        "KDPKAB": "75.04",
+        "NAMOBJ": "Pohuwato",
+        "WADMKK": "Pohuwato",
+        "WADMPR": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1482,
+        "KDPKAB": "35.02",
+        "NAMOBJ": "Ponorogo",
+        "WADMKK": "Ponorogo",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1483,
+        "KDPKAB": "72.02",
+        "NAMOBJ": "Poso",
+        "WADMKK": "Poso",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1484,
+        "KDPKAB": "18.10",
+        "NAMOBJ": "Pringsewu",
+        "WADMKK": "Pringsewu",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1485,
+        "KDPKAB": "35.13",
+        "NAMOBJ": "Probolinggo",
+        "WADMKK": "Probolinggo",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1486,
+        "KDPKAB": "62.11",
+        "NAMOBJ": "Pulang Pisau",
+        "WADMKK": "Pulang Pisau",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1487,
+        "KDPKAB": "82.07",
+        "NAMOBJ": "Pulau Morotai",
+        "WADMKK": "Pulau Morotai",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1488,
+        "KDPKAB": "82.08",
+        "NAMOBJ": "Pulau Taliabu",
+        "WADMKK": "Pulau Taliabu",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1489,
+        "KDPKAB": "94.05",
+        "NAMOBJ": "Puncak",
+        "WADMKK": "Puncak",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1490,
+        "KDPKAB": "94.02",
+        "NAMOBJ": "Puncak Jaya",
+        "WADMKK": "Puncak Jaya",
+        "WADMPR": "Papua Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1491,
+        "KDPKAB": "33.03",
+        "NAMOBJ": "Purbalingga",
+        "WADMKK": "Purbalingga",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1492,
+        "KDPKAB": "32.14",
+        "NAMOBJ": "Purwakarta",
+        "WADMKK": "Purwakarta",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1493,
+        "KDPKAB": "33.06",
+        "NAMOBJ": "Purworejo",
+        "WADMKK": "Purworejo",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1494,
+        "KDPKAB": "96.03",
+        "NAMOBJ": "Raja Ampat",
+        "WADMKK": "Raja Ampat",
+        "WADMPR": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1495,
+        "KDPKAB": "17.02",
+        "NAMOBJ": "Rejang Lebong",
+        "WADMKK": "Rejang Lebong",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1496,
+        "KDPKAB": "33.17",
+        "NAMOBJ": "Rembang",
+        "WADMKK": "Rembang",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1497,
+        "KDPKAB": "14.07",
+        "NAMOBJ": "Rokan Hilir",
+        "WADMKK": "Rokan Hilir",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1498,
+        "KDPKAB": "14.06",
+        "NAMOBJ": "Rokan Hulu",
+        "WADMKK": "Rokan Hulu",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1499,
+        "KDPKAB": "61.01",
+        "NAMOBJ": "Sambas",
+        "WADMKK": "Sambas",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1500,
+        "KDPKAB": "12.17",
+        "NAMOBJ": "Samosir",
+        "WADMKK": "Samosir",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1501,
+        "KDPKAB": "35.27",
+        "NAMOBJ": "Sampang",
+        "WADMKK": "Sampang",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1502,
+        "KDPKAB": "61.03",
+        "NAMOBJ": "Sanggau",
+        "WADMKK": "Sanggau",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1503,
+        "KDPKAB": "91.10",
+        "NAMOBJ": "Sarmi",
+        "WADMKK": "Sarmi",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1504,
+        "KDPKAB": "15.03",
+        "NAMOBJ": "Sarolangun",
+        "WADMKK": "Sarolangun",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1505,
+        "KDPKAB": "61.09",
+        "NAMOBJ": "Sekadau",
+        "WADMKK": "Sekadau",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1506,
+        "KDPKAB": "17.05",
+        "NAMOBJ": "Seluma",
+        "WADMKK": "Seluma",
+        "WADMPR": "Bengkulu"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1507,
+        "KDPKAB": "33.22",
+        "NAMOBJ": "Semarang",
+        "WADMKK": "Semarang",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1508,
+        "KDPKAB": "81.06",
+        "NAMOBJ": "Seram Bagian Barat",
+        "WADMKK": "Seram Bagian Barat",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1509,
+        "KDPKAB": "81.05",
+        "NAMOBJ": "Seram Bagian Timur",
+        "WADMKK": "Seram Bagian Timur",
+        "WADMPR": "Maluku"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1510,
+        "KDPKAB": "36.04",
+        "NAMOBJ": "Serang",
+        "WADMKK": "Serang",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1511,
+        "KDPKAB": "12.18",
+        "NAMOBJ": "Serdang Bedagai",
+        "WADMKK": "Serdang Bedagai",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1512,
+        "KDPKAB": "62.07",
+        "NAMOBJ": "Seruyan",
+        "WADMKK": "Seruyan",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1513,
+        "KDPKAB": "14.08",
+        "NAMOBJ": "Siak",
+        "WADMKK": "Siak",
+        "WADMPR": "Riau"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1514,
+        "KDPKAB": "73.14",
+        "NAMOBJ": "Sidenreng Rappang",
+        "WADMKK": "Sidenreng Rappang",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1515,
+        "KDPKAB": "35.15",
+        "NAMOBJ": "Sidoarjo",
+        "WADMKK": "Sidoarjo",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1516,
+        "KDPKAB": "72.10",
+        "NAMOBJ": "Sigi",
+        "WADMKK": "Sigi",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1517,
+        "KDPKAB": "13.03",
+        "NAMOBJ": "Sijunjung",
+        "WADMKK": "Sijunjung",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1518,
+        "KDPKAB": "53.07",
+        "NAMOBJ": "Sikka",
+        "WADMKK": "Sikka",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1519,
+        "KDPKAB": "12.08",
+        "NAMOBJ": "Simalungun",
+        "WADMKK": "Simalungun",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1520,
+        "KDPKAB": "11.09",
+        "NAMOBJ": "Simeulue",
+        "WADMKK": "Simeulue",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1521,
+        "KDPKAB": "73.07",
+        "NAMOBJ": "Sinjai",
+        "WADMKK": "Sinjai",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1522,
+        "KDPKAB": "61.05",
+        "NAMOBJ": "Sintang",
+        "WADMKK": "Sintang",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1523,
+        "KDPKAB": "35.12",
+        "NAMOBJ": "Situbondo",
+        "WADMKK": "Situbondo",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1524,
+        "KDPKAB": "34.04",
+        "NAMOBJ": "Sleman",
+        "WADMKK": "Sleman",
+        "WADMPR": "Daerah Istimewa Yogyakarta"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1525,
+        "KDPKAB": "13.02",
+        "NAMOBJ": "Solok",
+        "WADMKK": "Solok",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1526,
+        "KDPKAB": "13.11",
+        "NAMOBJ": "Solok Selatan",
+        "WADMKK": "Solok Selatan",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1527,
+        "KDPKAB": "73.12",
+        "NAMOBJ": "Soppeng",
+        "WADMKK": "Soppeng",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1528,
+        "KDPKAB": "96.01",
+        "NAMOBJ": "Sorong",
+        "WADMKK": "Sorong",
+        "WADMPR": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1529,
+        "KDPKAB": "96.02",
+        "NAMOBJ": "Sorong Selatan",
+        "WADMKK": "Sorong Selatan",
+        "WADMPR": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1530,
+        "KDPKAB": "33.14",
+        "NAMOBJ": "Sragen",
+        "WADMKK": "Sragen",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1531,
+        "KDPKAB": "32.13",
+        "NAMOBJ": "Subang",
+        "WADMKK": "Subang",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1532,
+        "KDPKAB": "32.02",
+        "NAMOBJ": "Sukabumi",
+        "WADMKK": "Sukabumi",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1533,
+        "KDPKAB": "62.08",
+        "NAMOBJ": "Sukamara",
+        "WADMKK": "Sukamara",
+        "WADMPR": "Kalimantan Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1534,
+        "KDPKAB": "33.11",
+        "NAMOBJ": "Sukoharjo",
+        "WADMKK": "Sukoharjo",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1538,
+        "KDPKAB": "53.12",
+        "NAMOBJ": "Sumba Barat",
+        "WADMKK": "Sumba Barat",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1539,
+        "KDPKAB": "53.18",
+        "NAMOBJ": "Sumba Barat Daya",
+        "WADMKK": "Sumba Barat Daya",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1540,
+        "KDPKAB": "53.17",
+        "NAMOBJ": "Sumba Tengah",
+        "WADMKK": "Sumba Tengah",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1541,
+        "KDPKAB": "53.11",
+        "NAMOBJ": "Sumba Timur",
+        "WADMKK": "Sumba Timur",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1543,
+        "KDPKAB": "52.07",
+        "NAMOBJ": "Sumbawa Barat",
+        "WADMKK": "Sumbawa Barat",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1544,
+        "KDPKAB": "32.11",
+        "NAMOBJ": "Sumedang",
+        "WADMKK": "Sumedang",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1545,
+        "KDPKAB": "35.29",
+        "NAMOBJ": "Sumenep",
+        "WADMKK": "Sumenep",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1546,
+        "KDPKAB": "91.19",
+        "NAMOBJ": "Supiori",
+        "WADMKK": "Supiori",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1547,
+        "KDPKAB": "63.09",
+        "NAMOBJ": "Tabalong",
+        "WADMKK": "Tabalong",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1548,
+        "KDPKAB": "51.02",
+        "NAMOBJ": "Tabanan",
+        "WADMKK": "Tabanan",
+        "WADMPR": "Bali"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1549,
+        "KDPKAB": "73.05",
+        "NAMOBJ": "Takalar",
+        "WADMKK": "Takalar",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1550,
+        "KDPKAB": "96.04",
+        "NAMOBJ": "Tambrauw",
+        "WADMKK": "Tambrauw",
+        "WADMPR": "Papua Barat Daya"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1551,
+        "KDPKAB": "65.04",
+        "NAMOBJ": "Tana Tidung",
+        "WADMKK": "Tana Tidung",
+        "WADMPR": "Kalimantan Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1552,
+        "KDPKAB": "73.18",
+        "NAMOBJ": "Tana Toraja",
+        "WADMKK": "Tana Toraja",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1553,
+        "KDPKAB": "63.10",
+        "NAMOBJ": "Tanah Bumbu",
+        "WADMKK": "Tanah Bumbu",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1554,
+        "KDPKAB": "13.04",
+        "NAMOBJ": "Tanah Datar",
+        "WADMKK": "Tanah Datar",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1555,
+        "KDPKAB": "63.01",
+        "NAMOBJ": "Tanah Laut",
+        "WADMKK": "Tanah Laut",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1556,
+        "KDPKAB": "36.03",
+        "NAMOBJ": "Tangerang",
+        "WADMKK": "Tangerang",
+        "WADMPR": "Banten"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1557,
+        "KDPKAB": "18.06",
+        "NAMOBJ": "Tanggamus",
+        "WADMKK": "Tanggamus",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1558,
+        "KDPKAB": "15.06",
+        "NAMOBJ": "Tanjung Jabung Barat",
+        "WADMKK": "Tanjung Jabung Barat",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1559,
+        "KDPKAB": "15.07",
+        "NAMOBJ": "Tanjung Jabung Timur",
+        "WADMKK": "Tanjung Jabung Timur",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1560,
+        "KDPKAB": "12.03",
+        "NAMOBJ": "Tapanuli Selatan",
+        "WADMKK": "Tapanuli Selatan",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1561,
+        "KDPKAB": "12.01",
+        "NAMOBJ": "Tapanuli Tengah",
+        "WADMKK": "Tapanuli Tengah",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1562,
+        "KDPKAB": "12.02",
+        "NAMOBJ": "Tapanuli Utara",
+        "WADMKK": "Tapanuli Utara",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1563,
+        "KDPKAB": "63.05",
+        "NAMOBJ": "Tapin",
+        "WADMKK": "Tapin",
+        "WADMPR": "Kalimantan Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1564,
+        "KDPKAB": "32.06",
+        "NAMOBJ": "Tasikmalaya",
+        "WADMKK": "Tasikmalaya",
+        "WADMPR": "Jawa Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1565,
+        "KDPKAB": "15.09",
+        "NAMOBJ": "Tebo",
+        "WADMKK": "Tebo",
+        "WADMPR": "Jambi"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1566,
+        "KDPKAB": "33.28",
+        "NAMOBJ": "Tegal",
+        "WADMKK": "Tegal",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1567,
+        "KDPKAB": "92.06",
+        "NAMOBJ": "Teluk Bintuni",
+        "WADMKK": "Teluk Bintuni",
+        "WADMPR": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1568,
+        "KDPKAB": "92.07",
+        "NAMOBJ": "Teluk Wondama",
+        "WADMKK": "Teluk Wondama",
+        "WADMPR": "Papua Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1569,
+        "KDPKAB": "33.23",
+        "NAMOBJ": "Temanggung",
+        "WADMKK": "Temanggung",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1570,
+        "KDPKAB": "53.02",
+        "NAMOBJ": "Timor Tengah Selatan",
+        "WADMKK": "Timor Tengah Selatan",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1571,
+        "KDPKAB": "53.03",
+        "NAMOBJ": "Timor Tengah Utara",
+        "WADMKK": "Timor Tengah Utara",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1572,
+        "KDPKAB": "12.12",
+        "NAMOBJ": "Toba",
+        "WADMKK": "Toba",
+        "WADMPR": "Sumatera Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1575,
+        "KDPKAB": "95.04",
+        "NAMOBJ": "Tolikara",
+        "WADMKK": "Tolikara",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1576,
+        "KDPKAB": "73.26",
+        "NAMOBJ": "Toraja Utara",
+        "WADMKK": "Toraja Utara",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1577,
+        "KDPKAB": "35.03",
+        "NAMOBJ": "Trenggalek",
+        "WADMKK": "Trenggalek",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1578,
+        "KDPKAB": "35.23",
+        "NAMOBJ": "Tuban",
+        "WADMKK": "Tuban",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1579,
+        "KDPKAB": "18.05",
+        "NAMOBJ": "Tulang Bawang",
+        "WADMKK": "Tulang Bawang",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1580,
+        "KDPKAB": "18.12",
+        "NAMOBJ": "Tulang Bawang Barat",
+        "WADMKK": "Tulang Bawang Barat",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1581,
+        "KDPKAB": "35.04",
+        "NAMOBJ": "Tulungagung",
+        "WADMKK": "Tulungagung",
+        "WADMPR": "Jawa Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1582,
+        "KDPKAB": "73.13",
+        "NAMOBJ": "Wajo",
+        "WADMKK": "Wajo",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1584,
+        "KDPKAB": "91.15",
+        "NAMOBJ": "Waropen",
+        "WADMKK": "Waropen",
+        "WADMPR": "Papua"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1585,
+        "KDPKAB": "18.08",
+        "NAMOBJ": "Way Kanan",
+        "WADMKK": "Way Kanan",
+        "WADMPR": "Lampung"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1586,
+        "KDPKAB": "33.12",
+        "NAMOBJ": "Wonogiri",
+        "WADMKK": "Wonogiri",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1587,
+        "KDPKAB": "33.07",
+        "NAMOBJ": "Wonosobo",
+        "WADMKK": "Wonosobo",
+        "WADMPR": "Jawa Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1588,
+        "KDPKAB": "95.03",
+        "NAMOBJ": "Yahukimo",
+        "WADMKK": "Yahukimo",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1589,
+        "KDPKAB": "95.06",
+        "NAMOBJ": "Yalimo",
+        "WADMKK": "Yalimo",
+        "WADMPR": "Papua Pegunungan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1590,
+        "KDPKAB": "76.05",
+        "NAMOBJ": "Majene",
+        "WADMKK": "Majene",
+        "WADMPR": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1591,
+        "KDPKAB": "61.11",
+        "NAMOBJ": "Kayong Utara",
+        "WADMKK": "Kayong Utara",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1592,
+        "KDPKAB": "61.12",
+        "NAMOBJ": "Kubu Raya",
+        "WADMKK": "Kubu Raya",
+        "WADMPR": "Kalimantan Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1593,
+        "KDPKAB": "53.14",
+        "NAMOBJ": "Rote Ndao",
+        "WADMKK": "Rote Ndao",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1594,
+        "KDPKAB": "53.20",
+        "NAMOBJ": "Sabu Raijua",
+        "WADMKK": "Sabu Raijua",
+        "WADMPR": "Nusa Tenggara Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1596,
+        "KDPKAB": "82.03",
+        "NAMOBJ": "Halmahera Utara",
+        "WADMKK": "Halmahera Utara",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1615,
+        "KDPKAB": "64.74",
+        "NAMOBJ": "Kota Bontang",
+        "WADMKK": "Kota Bontang",
+        "WADMPR": "Kalimantan Timur"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1691,
+        "KDPKAB": "74.71",
+        "NAMOBJ": "Kota Kendari",
+        "WADMKK": "Kota Kendari",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1747,
+        "KDPKAB": "11.06",
+        "NAMOBJ": "Aceh Besar",
+        "WADMKK": "Aceh Besar",
+        "WADMPR": "Aceh"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1849,
+        "KDPKAB": "75.03",
+        "NAMOBJ": "Bone Bolango",
+        "WADMKK": "Bone Bolango",
+        "WADMPR": "Gorontalo"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 1950,
+        "KDPKAB": "72.04",
+        "NAMOBJ": "Toli-Toli",
+        "WADMKK": "Toli-Toli",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2054,
+        "KDPKAB": "74.03",
+        "NAMOBJ": "Muna",
+        "WADMKK": "Muna",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2691,
+        "KDPKAB": "74.07",
+        "NAMOBJ": "Wakatobi",
+        "WADMKK": "Wakatobi",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2900,
+        "KDPKAB": "74.01",
+        "NAMOBJ": "Kolaka",
+        "WADMKK": "Kolaka",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2901,
+        "KDPKAB": "72.07",
+        "NAMOBJ": "Banggai Kepulauan",
+        "WADMKK": "Banggai Kepulauan",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3347,
+        "KDPKAB": "72.01",
+        "NAMOBJ": "Banggai",
+        "WADMKK": "Banggai",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3424,
+        "KDPKAB": "52.04",
+        "NAMOBJ": "Sumbawa",
+        "WADMKK": "Sumbawa",
+        "WADMPR": "Nusa Tenggara Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3499,
+        "KDPKAB": "13.05",
+        "NAMOBJ": "Padang Pariaman",
+        "WADMKK": "Padang Pariaman",
+        "WADMPR": "Sumatera Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3500,
+        "KDPKAB": "72.09",
+        "NAMOBJ": "Tojo Una Una",
+        "WADMKK": "Tojo Una Una",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4024,
+        "KDPKAB": "72.05",
+        "NAMOBJ": "Buol",
+        "WADMKK": "Buol",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4058,
+        "KDPKAB": "76.02",
+        "NAMOBJ": "Mamuju",
+        "WADMKK": "Mamuju",
+        "WADMPR": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4063,
+        "KDPKAB": "82.01",
+        "NAMOBJ": "Halmahera Barat",
+        "WADMKK": "Halmahera Barat",
+        "WADMPR": "Maluku Utara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4227,
+        "KDPKAB": "76.04",
+        "NAMOBJ": "Polewali Mandar",
+        "WADMKK": "Polewali Mandar",
+        "WADMPR": "Sulawesi Barat"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4228,
+        "KDPKAB": "74.07",
+        "NAMOBJ": "Wakatobi",
+        "WADMKK": "Wakatobi",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4229,
+        "KDPKAB": "74.03",
+        "NAMOBJ": "Muna",
+        "WADMKK": "Muna",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4231,
+        "KDPKAB": "74.13",
+        "NAMOBJ": "Muna Barat",
+        "WADMKK": "Muna Barat",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4232,
+        "KDPKAB": "74.02",
+        "NAMOBJ": "Konawe",
+        "WADMKK": "Konawe",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4233,
+        "KDPKAB": "74.05",
+        "NAMOBJ": "Konawe Selatan",
+        "WADMKK": "Konawe Selatan",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4234,
+        "KDPKAB": "72.06",
+        "NAMOBJ": "Morowali",
+        "WADMKK": "Morowali",
+        "WADMPR": "Sulawesi Tengah"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4235,
+        "KDPKAB": "73.73",
+        "NAMOBJ": "Kota Palopo",
+        "WADMKK": "Kota Palopo",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4236,
+        "KDPKAB": "73.17",
+        "NAMOBJ": "Luwu",
+        "WADMKK": "Luwu",
+        "WADMPR": "Sulawesi Selatan"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4237,
+        "KDPKAB": "74.04",
+        "NAMOBJ": "Buton",
+        "WADMKK": "Buton",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4238,
+        "KDPKAB": "74.04",
+        "NAMOBJ": "Buton",
+        "WADMKK": "Buton",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4239,
+        "KDPKAB": "74.15",
+        "NAMOBJ": "Buton Selatan",
+        "WADMKK": "Buton Selatan",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4241,
+        "KDPKAB": "74.10",
+        "NAMOBJ": "Buton Utara",
+        "WADMKK": "Buton Utara",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4242,
+        "KDPKAB": "74.12",
+        "NAMOBJ": "Konawe Kepulauan",
+        "WADMKK": "Konawe Kepulauan",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4243,
+        "KDPKAB": "74.72",
+        "NAMOBJ": "Kota Bau Bau",
+        "WADMKK": "Kota Bau Bau",
+        "WADMPR": "Sulawesi Tenggara"
+      }
+    }
+  ]
+}
