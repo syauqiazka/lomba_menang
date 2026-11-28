@@ -1,0 +1,2203 @@
+<?xml version="1.0"?>
+<Infogempa>
+ <gempa>
+  <eventid>bmg2026xhpn</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  11:07:21.119</waktu>
+  <lintang>1.42</lintang>
+  <bujur>128.06</bujur>
+  <dalam>123</dalam>
+  <mag>4.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Halmahera, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xhlx</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  09:17:57.889</waktu>
+  <lintang>-8.82</lintang>
+  <bujur>110.72</bujur>
+  <dalam>40</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xhlq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  09:08:56.493</waktu>
+  <lintang>-1.16</lintang>
+  <bujur>120.19</bujur>
+  <dalam>10</dalam>
+  <mag>2.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Sulawesi, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xhkj</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  08:30:40.312</waktu>
+  <lintang>5.03</lintang>
+  <bujur>94.50</bujur>
+  <dalam>10</dalam>
+  <mag>4.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xhgg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  06:26:08.392</waktu>
+  <lintang>-0.17</lintang>
+  <bujur>123.25</bujur>
+  <dalam>119</dalam>
+  <mag>3.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Minahassa Peninsula, Sulawesi</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xhfh</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  05:57:16.050</waktu>
+  <lintang>-8.22</lintang>
+  <bujur>120.56</bujur>
+  <dalam>10</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xheg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  05:25:12.963</waktu>
+  <lintang>-6.64</lintang>
+  <bujur>105.91</bujur>
+  <dalam>107</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Sunda Strait, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xhap</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  03:34:53.552</waktu>
+  <lintang>-8.16</lintang>
+  <bujur>120.52</bujur>
+  <dalam>10</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgxw</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  02:11:37.985</waktu>
+  <lintang>4.11</lintang>
+  <bujur>97.48</bujur>
+  <dalam>10</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgws</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  01:36:47.833</waktu>
+  <lintang>2.31</lintang>
+  <bujur>126.12</bujur>
+  <dalam>19</dalam>
+  <mag>4.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Molucca Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgwb</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/28  01:18:17.860</waktu>
+  <lintang>19.22</lintang>
+  <bujur>103.40</bujur>
+  <dalam>30</dalam>
+  <mag>5.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Laos</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgsx</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  23:41:54.039</waktu>
+  <lintang>0.29</lintang>
+  <bujur>122.68</bujur>
+  <dalam>261</dalam>
+  <mag>4.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Minahassa Peninsula, Sulawesi</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgrf</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  22:49:49.595</waktu>
+  <lintang>0.74</lintang>
+  <bujur>118.74</bujur>
+  <dalam>25</dalam>
+  <mag>3.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Borneo</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgns</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  21:04:25.014</waktu>
+  <lintang>-6.84</lintang>
+  <bujur>127.33</bujur>
+  <dalam>366</dalam>
+  <mag>4.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Banda Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgle</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  19:46:58.894</waktu>
+  <lintang>-8.09</lintang>
+  <bujur>120.17</bujur>
+  <dalam>10</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgko</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  19:28:07.405</waktu>
+  <lintang>-2.03</lintang>
+  <bujur>120.66</bujur>
+  <dalam>10</dalam>
+  <mag>4.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Sulawesi, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgkb</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  19:13:11.633</waktu>
+  <lintang>-7.44</lintang>
+  <bujur>128.51</bujur>
+  <dalam>174</dalam>
+  <mag>3.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Banda Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgib</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  18:13:13.990</waktu>
+  <lintang>-5.02</lintang>
+  <bujur>104.08</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Southern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xght</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  18:02:47.994</waktu>
+  <lintang>4.18</lintang>
+  <bujur>97.56</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xghi</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  17:50:05.849</waktu>
+  <lintang>-7.78</lintang>
+  <bujur>120.53</bujur>
+  <dalam>11</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgfi</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  16:50:00.739</waktu>
+  <lintang>3.11</lintang>
+  <bujur>126.56</bujur>
+  <dalam>68</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Talaud Islands, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgen</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  16:25:25.132</waktu>
+  <lintang>-3.10</lintang>
+  <bujur>139.62</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>West Papua, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgel</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  16:22:46.181</waktu>
+  <lintang>-0.73</lintang>
+  <bujur>128.00</bujur>
+  <dalam>10</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Halmahera, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgec</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  16:13:08.561</waktu>
+  <lintang>-2.47</lintang>
+  <bujur>139.88</bujur>
+  <dalam>58</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgdy</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  16:07:42.796</waktu>
+  <lintang>-2.66</lintang>
+  <bujur>139.76</bujur>
+  <dalam>55</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgds</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  16:00:48.404</waktu>
+  <lintang>2.95</lintang>
+  <bujur>127.65</bujur>
+  <dalam>10</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Molucca Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgdp</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  15:57:25.992</waktu>
+  <lintang>0.04</lintang>
+  <bujur>119.74</bujur>
+  <dalam>20</dalam>
+  <mag>2.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Minahassa Peninsula, Sulawesi</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgdm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  15:53:54.996</waktu>
+  <lintang>-9.52</lintang>
+  <bujur>117.75</bujur>
+  <dalam>26</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumbawa Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgdd</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  15:42:55.465</waktu>
+  <lintang>-0.05</lintang>
+  <bujur>125.35</bujur>
+  <dalam>10</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Southern Molucca Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgbx</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  15:06:37.742</waktu>
+  <lintang>-2.21</lintang>
+  <bujur>139.20</bujur>
+  <dalam>60</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xgat</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  14:30:35.962</waktu>
+  <lintang>-8.41</lintang>
+  <bujur>121.48</bujur>
+  <dalam>11</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfzb</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  13:40:09.691</waktu>
+  <lintang>-6.27</lintang>
+  <bujur>130.88</bujur>
+  <dalam>109</dalam>
+  <mag>4.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Banda Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfvc</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  11:39:46.815</waktu>
+  <lintang>-7.84</lintang>
+  <bujur>120.51</bujur>
+  <dalam>21</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfub</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  11:08:52.466</waktu>
+  <lintang>-8.38</lintang>
+  <bujur>121.55</bujur>
+  <dalam>13</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfpv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  09:00:22.237</waktu>
+  <lintang>-2.53</lintang>
+  <bujur>101.17</bujur>
+  <dalam>22</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Southern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfnm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  07:49:24.720</waktu>
+  <lintang>-8.36</lintang>
+  <bujur>121.60</bujur>
+  <dalam>20</dalam>
+  <mag>2.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfnj</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  07:45:01.042</waktu>
+  <lintang>-8.91</lintang>
+  <bujur>124.29</bujur>
+  <dalam>33</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Timor Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfjo</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  05:49:42.815</waktu>
+  <lintang>-7.84</lintang>
+  <bujur>120.54</bujur>
+  <dalam>14</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfjd</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  05:37:41.501</waktu>
+  <lintang>-8.15</lintang>
+  <bujur>120.54</bujur>
+  <dalam>10</dalam>
+  <mag>2.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfiv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  05:27:32.160</waktu>
+  <lintang>-7.82</lintang>
+  <bujur>120.49</bujur>
+  <dalam>10</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfir</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  05:23:08.166</waktu>
+  <lintang>4.14</lintang>
+  <bujur>97.49</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfip</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  05:20:22.539</waktu>
+  <lintang>-7.79</lintang>
+  <bujur>120.44</bujur>
+  <dalam>12</dalam>
+  <mag>2.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfin</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  05:18:29.812</waktu>
+  <lintang>-7.90</lintang>
+  <bujur>120.68</bujur>
+  <dalam>10</dalam>
+  <mag>2.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfig</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  05:10:32.223</waktu>
+  <lintang>-7.87</lintang>
+  <bujur>120.40</bujur>
+  <dalam>33</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfhv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  04:56:58.974</waktu>
+  <lintang>4.13</lintang>
+  <bujur>97.49</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfhk</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  04:44:59.810</waktu>
+  <lintang>-2.77</lintang>
+  <bujur>122.40</bujur>
+  <dalam>10</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Sulawesi, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfhg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  04:39:01.029</waktu>
+  <lintang>-8.53</lintang>
+  <bujur>116.03</bujur>
+  <dalam>11</dalam>
+  <mag>2.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumbawa Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfhf</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  04:37:57.268</waktu>
+  <lintang>4.08</lintang>
+  <bujur>97.35</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfhe</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  04:37:11.077</waktu>
+  <lintang>0.71</lintang>
+  <bujur>126.86</bujur>
+  <dalam>19</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Molucca Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfgr</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  04:23:05.999</waktu>
+  <lintang>-7.87</lintang>
+  <bujur>120.52</bujur>
+  <dalam>10</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfgm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  04:17:12.382</waktu>
+  <lintang>1.98</lintang>
+  <bujur>126.64</bujur>
+  <dalam>61</dalam>
+  <mag>4.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Molucca Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xffx</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  03:59:43.698</waktu>
+  <lintang>4.75</lintang>
+  <bujur>96.80</bujur>
+  <dalam>10</dalam>
+  <mag>2.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xffv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  03:56:37.796</waktu>
+  <lintang>-8.55</lintang>
+  <bujur>116.04</bujur>
+  <dalam>12</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumbawa Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xffq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  03:51:12.975</waktu>
+  <lintang>-2.34</lintang>
+  <bujur>140.71</bujur>
+  <dalam>10</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfen</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  03:17:33.347</waktu>
+  <lintang>3.05</lintang>
+  <bujur>126.60</bujur>
+  <dalam>10</dalam>
+  <mag>4.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Talaud Islands, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfdg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  02:39:22.456</waktu>
+  <lintang>-7.90</lintang>
+  <bujur>120.52</bujur>
+  <dalam>10</dalam>
+  <mag>3.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfar</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  01:20:17.977</waktu>
+  <lintang>-8.35</lintang>
+  <bujur>120.54</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xfaa</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  01:00:17.522</waktu>
+  <lintang>-7.95</lintang>
+  <bujur>120.49</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xezy</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  00:58:54.431</waktu>
+  <lintang>-8.31</lintang>
+  <bujur>121.15</bujur>
+  <dalam>10</dalam>
+  <mag>2.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeyv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  00:25:17.496</waktu>
+  <lintang>-7.82</lintang>
+  <bujur>120.49</bujur>
+  <dalam>18</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeyr</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  00:19:51.044</waktu>
+  <lintang>-2.38</lintang>
+  <bujur>140.44</bujur>
+  <dalam>10</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeyl</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  00:12:29.099</waktu>
+  <lintang>4.41</lintang>
+  <bujur>96.63</bujur>
+  <dalam>10</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeyg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  00:06:58.553</waktu>
+  <lintang>-9.52</lintang>
+  <bujur>161.38</bujur>
+  <dalam>73</dalam>
+  <mag>5.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Solomon Islands</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeyf</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  00:05:50.437</waktu>
+  <lintang>-7.78</lintang>
+  <bujur>120.49</bujur>
+  <dalam>20</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeye</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/27  00:04:55.401</waktu>
+  <lintang>-7.84</lintang>
+  <bujur>120.50</bujur>
+  <dalam>20</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xevr</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  22:48:50.070</waktu>
+  <lintang>-7.83</lintang>
+  <bujur>120.58</bujur>
+  <dalam>11</dalam>
+  <mag>3.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xetu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  21:51:34.912</waktu>
+  <lintang>-1.70</lintang>
+  <bujur>101.02</bujur>
+  <dalam>34</dalam>
+  <mag>3.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Southern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xest</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  21:20:46.891</waktu>
+  <lintang>-7.81</lintang>
+  <bujur>120.55</bujur>
+  <dalam>10</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xesq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  21:17:21.434</waktu>
+  <lintang>-7.85</lintang>
+  <bujur>120.52</bujur>
+  <dalam>17</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xesl</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  21:11:05.649</waktu>
+  <lintang>-7.80</lintang>
+  <bujur>120.52</bujur>
+  <dalam>12</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xesb</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  20:59:49.345</waktu>
+  <lintang>-8.12</lintang>
+  <bujur>120.47</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xerx</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  20:54:43.528</waktu>
+  <lintang>-0.40</lintang>
+  <bujur>123.06</bujur>
+  <dalam>14</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Minahassa Peninsula, Sulawesi</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeqa</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  19:58:04.679</waktu>
+  <lintang>4.95</lintang>
+  <bujur>95.97</bujur>
+  <dalam>10</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xepf</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  19:33:11.616</waktu>
+  <lintang>27.99</lintang>
+  <bujur>141.27</bujur>
+  <dalam>90</dalam>
+  <mag>5.4</mag>
+  <fokal>mt_yes</fokal>
+  <area>Bonin Islands, Japan Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeoy</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  19:25:14.489</waktu>
+  <lintang>-7.84</lintang>
+  <bujur>120.54</bujur>
+  <dalam>10</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeof</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  19:03:19.647</waktu>
+  <lintang>-8.29</lintang>
+  <bujur>120.61</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeog</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  19:02:59.096</waktu>
+  <lintang>-2.33</lintang>
+  <bujur>140.22</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeoe</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  19:01:11.754</waktu>
+  <lintang>3.54</lintang>
+  <bujur>126.42</bujur>
+  <dalam>31</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Talaud Islands, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xenr</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:46:58.369</waktu>
+  <lintang>-2.99</lintang>
+  <bujur>128.82</bujur>
+  <dalam>12</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Ceram Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xenq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:45:43.586</waktu>
+  <lintang>4.57</lintang>
+  <bujur>118.46</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Borneo</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xenm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:40:16.360</waktu>
+  <lintang>3.42</lintang>
+  <bujur>124.59</bujur>
+  <dalam>328</dalam>
+  <mag>4.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Celebes Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeng</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:33:32.546</waktu>
+  <lintang>-7.88</lintang>
+  <bujur>120.42</bujur>
+  <dalam>58</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xemx</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:23:47.188</waktu>
+  <lintang>-7.87</lintang>
+  <bujur>120.57</bujur>
+  <dalam>10</dalam>
+  <mag>3.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xems</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:18:02.212</waktu>
+  <lintang>-9.41</lintang>
+  <bujur>114.18</bujur>
+  <dalam>10</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>South of Bali, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xemm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:09:54.580</waktu>
+  <lintang>-7.84</lintang>
+  <bujur>120.50</bujur>
+  <dalam>24</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeml</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:09:13.269</waktu>
+  <lintang>-7.80</lintang>
+  <bujur>120.53</bujur>
+  <dalam>10</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xemj</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  18:07:23.988</waktu>
+  <lintang>-7.76</lintang>
+  <bujur>120.56</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xelq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  17:45:23.155</waktu>
+  <lintang>-3.69</lintang>
+  <bujur>128.66</bujur>
+  <dalam>120</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Seram, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xekp</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  17:13:41.452</waktu>
+  <lintang>-8.17</lintang>
+  <bujur>120.84</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeiu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  16:18:01.192</waktu>
+  <lintang>4.56</lintang>
+  <bujur>125.87</bujur>
+  <dalam>161</dalam>
+  <mag>4.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Talaud Islands, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xehn</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  15:40:37.192</waktu>
+  <lintang>-1.21</lintang>
+  <bujur>134.25</bujur>
+  <dalam>13</dalam>
+  <mag>4.2</mag>
+  <fokal>undetermined</fokal>
+  <area>West Papua Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeep</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  14:11:19.197</waktu>
+  <lintang>-10.08</lintang>
+  <bujur>123.71</bujur>
+  <dalam>32</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Timor Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeed</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:58:53.827</waktu>
+  <lintang>-7.84</lintang>
+  <bujur>120.55</bujur>
+  <dalam>13</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeee</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:57:59.012</waktu>
+  <lintang>-7.95</lintang>
+  <bujur>120.52</bujur>
+  <dalam>26</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xedy</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:51:25.337</waktu>
+  <lintang>-7.89</lintang>
+  <bujur>120.54</bujur>
+  <dalam>13</dalam>
+  <mag>4.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xedv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:48:08.019</waktu>
+  <lintang>-7.92</lintang>
+  <bujur>120.49</bujur>
+  <dalam>26</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xedu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:47:25.068</waktu>
+  <lintang>-7.85</lintang>
+  <bujur>120.54</bujur>
+  <dalam>13</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xedp</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:40:41.358</waktu>
+  <lintang>-7.20</lintang>
+  <bujur>107.23</bujur>
+  <dalam>10</dalam>
+  <mag>2.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xedh</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:32:00.449</waktu>
+  <lintang>-8.37</lintang>
+  <bujur>121.52</bujur>
+  <dalam>10</dalam>
+  <mag>2.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xecs</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  13:13:56.281</waktu>
+  <lintang>6.48</lintang>
+  <bujur>94.38</bujur>
+  <dalam>83</dalam>
+  <mag>3.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Nicobar Islands, India Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xebb</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  12:23:57.048</waktu>
+  <lintang>-7.83</lintang>
+  <bujur>120.55</bujur>
+  <dalam>10</dalam>
+  <mag>3.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeat</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  12:14:56.333</waktu>
+  <lintang>-7.80</lintang>
+  <bujur>120.53</bujur>
+  <dalam>10</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xeak</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  12:04:02.253</waktu>
+  <lintang>-8.40</lintang>
+  <bujur>116.97</bujur>
+  <dalam>12</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumbawa Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xead</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  11:55:43.431</waktu>
+  <lintang>-1.45</lintang>
+  <bujur>123.82</bujur>
+  <dalam>48</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Sulawesi, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdzu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  11:45:19.178</waktu>
+  <lintang>-2.93</lintang>
+  <bujur>127.91</bujur>
+  <dalam>11</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Ceram Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdyk</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  11:03:27.665</waktu>
+  <lintang>-7.78</lintang>
+  <bujur>120.52</bujur>
+  <dalam>10</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdyd</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  10:55:08.600</waktu>
+  <lintang>-7.82</lintang>
+  <bujur>120.53</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdxu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  10:44:47.696</waktu>
+  <lintang>-7.10</lintang>
+  <bujur>129.17</bujur>
+  <dalam>144</dalam>
+  <mag>4.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Banda Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdvb</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  09:22:47.480</waktu>
+  <lintang>-20.52</lintang>
+  <bujur>-177.83</bujur>
+  <dalam>512</dalam>
+  <mag>5.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Fiji Islands Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdup</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  09:08:39.179</waktu>
+  <lintang>-11.04</lintang>
+  <bujur>117.17</bujur>
+  <dalam>10</dalam>
+  <mag>5.4</mag>
+  <fokal>mt_yes</fokal>
+  <area>South of Sumbawa, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdui</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  09:00:42.929</waktu>
+  <lintang>-10.75</lintang>
+  <bujur>117.28</bujur>
+  <dalam>10</dalam>
+  <mag>4.7</mag>
+  <fokal>undetermined</fokal>
+  <area>South of Sumbawa, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdtl</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  08:33:46.102</waktu>
+  <lintang>-8.09</lintang>
+  <bujur>120.65</bujur>
+  <dalam>10</dalam>
+  <mag>2.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdtd</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  08:23:30.167</waktu>
+  <lintang>-8.37</lintang>
+  <bujur>121.50</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdru</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  07:42:50.567</waktu>
+  <lintang>-8.14</lintang>
+  <bujur>107.48</bujur>
+  <dalam>20</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdnd</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  05:21:51.433</waktu>
+  <lintang>-9.73</lintang>
+  <bujur>118.96</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumbawa Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdlz</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  04:46:54.267</waktu>
+  <lintang>-3.01</lintang>
+  <bujur>128.60</bujur>
+  <dalam>11</dalam>
+  <mag>2.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Seram, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdlk</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  04:29:16.143</waktu>
+  <lintang>-8.25</lintang>
+  <bujur>120.44</bujur>
+  <dalam>10</dalam>
+  <mag>2.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdko</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  04:04:09.431</waktu>
+  <lintang>-8.13</lintang>
+  <bujur>120.95</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdiq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  03:05:58.609</waktu>
+  <lintang>3.10</lintang>
+  <bujur>97.42</bujur>
+  <dalam>10</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdio</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  03:02:48.806</waktu>
+  <lintang>-8.28</lintang>
+  <bujur>120.32</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdif</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  02:52:35.766</waktu>
+  <lintang>1.00</lintang>
+  <bujur>122.09</bujur>
+  <dalam>10</dalam>
+  <mag>3.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Minahassa Peninsula, Sulawesi</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdhh</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  02:24:34.933</waktu>
+  <lintang>-7.97</lintang>
+  <bujur>120.83</bujur>
+  <dalam>10</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdgu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  02:10:14.438</waktu>
+  <lintang>-8.18</lintang>
+  <bujur>120.48</bujur>
+  <dalam>10</dalam>
+  <mag>2.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdgv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  02:09:32.671</waktu>
+  <lintang>-36.16</lintang>
+  <bujur>178.06</bujur>
+  <dalam>128</dalam>
+  <mag>5.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Off East Coast of North Island, New Zealand</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdgg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  01:53:59.617</waktu>
+  <lintang>-1.28</lintang>
+  <bujur>101.52</bujur>
+  <dalam>173</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Southern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdgc</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  01:48:43.711</waktu>
+  <lintang>-35.70</lintang>
+  <bujur>178.80</bujur>
+  <dalam>10</dalam>
+  <mag>5.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Off East Coast of North Island, New Zealand</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdde</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  00:20:41.186</waktu>
+  <lintang>-8.03</lintang>
+  <bujur>120.49</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdcn</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/26  00:00:53.486</waktu>
+  <lintang>4.64</lintang>
+  <bujur>96.77</bujur>
+  <dalam>139</dalam>
+  <mag>2.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xdae</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  22:49:28.459</waktu>
+  <lintang>-3.73</lintang>
+  <bujur>140.87</bujur>
+  <dalam>97</dalam>
+  <mag>3.9</mag>
+  <fokal>undetermined</fokal>
+  <area>West Papua, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xczo</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  22:30:28.886</waktu>
+  <lintang>-6.60</lintang>
+  <bujur>105.48</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Sunda Strait, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcyc</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  21:46:24.658</waktu>
+  <lintang>-8.26</lintang>
+  <bujur>120.60</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcwo</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  20:59:46.139</waktu>
+  <lintang>2.04</lintang>
+  <bujur>99.03</bujur>
+  <dalam>116</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcwi</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  20:52:55.501</waktu>
+  <lintang>-1.84</lintang>
+  <bujur>121.25</bujur>
+  <dalam>10</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Sulawesi, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcvm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  20:27:10.993</waktu>
+  <lintang>4.40</lintang>
+  <bujur>125.87</bujur>
+  <dalam>54</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Talaud Islands, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcss</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  19:02:52.310</waktu>
+  <lintang>-2.82</lintang>
+  <bujur>139.93</bujur>
+  <dalam>88</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcsm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  18:56:19.225</waktu>
+  <lintang>-6.99</lintang>
+  <bujur>105.44</bujur>
+  <dalam>24</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Sunda Strait, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcrq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  18:29:55.321</waktu>
+  <lintang>-6.72</lintang>
+  <bujur>105.41</bujur>
+  <dalam>10</dalam>
+  <mag>4.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Sunda Strait, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcra</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  18:11:10.659</waktu>
+  <lintang>-9.09</lintang>
+  <bujur>106.95</bujur>
+  <dalam>10</dalam>
+  <mag>3.8</mag>
+  <fokal>undetermined</fokal>
+  <area>South of Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcqo</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  17:58:00.294</waktu>
+  <lintang>-8.37</lintang>
+  <bujur>120.05</bujur>
+  <dalam>168</dalam>
+  <mag>1.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcpz</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  17:39:47.928</waktu>
+  <lintang>-8.34</lintang>
+  <bujur>120.64</bujur>
+  <dalam>10</dalam>
+  <mag>2.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcpe</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  17:15:29.195</waktu>
+  <lintang>-8.11</lintang>
+  <bujur>120.56</bujur>
+  <dalam>10</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xckz</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  15:08:49.763</waktu>
+  <lintang>-2.96</lintang>
+  <bujur>128.60</bujur>
+  <dalam>15</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Ceram Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcko</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  14:56:14.641</waktu>
+  <lintang>1.92</lintang>
+  <bujur>127.45</bujur>
+  <dalam>104</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Halmahera, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xchr</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  13:28:30.029</waktu>
+  <lintang>-8.37</lintang>
+  <bujur>120.52</bujur>
+  <dalam>10</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcho</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  13:25:21.780</waktu>
+  <lintang>-3.01</lintang>
+  <bujur>128.57</bujur>
+  <dalam>12</dalam>
+  <mag>2.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Seram, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcgv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  13:02:40.627</waktu>
+  <lintang>-3.00</lintang>
+  <bujur>128.59</bujur>
+  <dalam>12</dalam>
+  <mag>3.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Ceram Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcgr</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  12:58:09.349</waktu>
+  <lintang>-3.18</lintang>
+  <bujur>127.90</bujur>
+  <dalam>12</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Seram, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcgi</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  12:47:54.040</waktu>
+  <lintang>-8.36</lintang>
+  <bujur>116.80</bujur>
+  <dalam>15</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumbawa Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcfn</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  12:22:52.256</waktu>
+  <lintang>-8.14</lintang>
+  <bujur>120.54</bujur>
+  <dalam>10</dalam>
+  <mag>3.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xcfa</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  12:08:11.684</waktu>
+  <lintang>-0.41</lintang>
+  <bujur>123.10</bujur>
+  <dalam>55</dalam>
+  <mag>5.3</mag>
+  <fokal>mt_yes</fokal>
+  <area>Minahassa Peninsula, Sulawesi</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbzl</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  09:19:16.628</waktu>
+  <lintang>-3.75</lintang>
+  <bujur>127.41</bujur>
+  <dalam>10</dalam>
+  <mag>4.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Seram, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbyk</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  08:47:16.879</waktu>
+  <lintang>21.87</lintang>
+  <bujur>121.53</bujur>
+  <dalam>10</dalam>
+  <mag>5.4</mag>
+  <fokal>mt_yes</fokal>
+  <area>Taiwan Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbvr</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  07:24:10.780</waktu>
+  <lintang>-2.51</lintang>
+  <bujur>126.14</bujur>
+  <dalam>10</dalam>
+  <mag>4.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Ceram Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbus</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  06:55:57.275</waktu>
+  <lintang>-2.32</lintang>
+  <bujur>140.30</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbua</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  06:34:03.690</waktu>
+  <lintang>-35.85</lintang>
+  <bujur>178.84</bujur>
+  <dalam>10</dalam>
+  <mag>5.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Off East Coast of North Island, New Zealand</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbsh</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  05:41:52.634</waktu>
+  <lintang>-8.19</lintang>
+  <bujur>120.49</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbsf</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  05:39:35.816</waktu>
+  <lintang>-8.18</lintang>
+  <bujur>120.49</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbsa</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  05:33:26.502</waktu>
+  <lintang>-8.10</lintang>
+  <bujur>120.48</bujur>
+  <dalam>10</dalam>
+  <mag>4.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbro</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  05:20:18.903</waktu>
+  <lintang>4.05</lintang>
+  <bujur>97.39</bujur>
+  <dalam>10</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbpg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  04:09:35.834</waktu>
+  <lintang>-8.34</lintang>
+  <bujur>116.81</bujur>
+  <dalam>12</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumbawa Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbot</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  03:54:28.469</waktu>
+  <lintang>-8.11</lintang>
+  <bujur>120.55</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbkg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/25  01:38:49.484</waktu>
+  <lintang>-63.20</lintang>
+  <bujur>171.26</bujur>
+  <dalam>30</dalam>
+  <mag>5.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Balleny Islands Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbga</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  23:29:58.749</waktu>
+  <lintang>10.87</lintang>
+  <bujur>122.39</bujur>
+  <dalam>66</dalam>
+  <mag>5.1</mag>
+  <fokal>mt_yes</fokal>
+  <area>Panay, Philippines</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbfo</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  23:16:22.011</waktu>
+  <lintang>1.64</lintang>
+  <bujur>94.39</bujur>
+  <dalam>10</dalam>
+  <mag>4.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Off West Coast of Northern Sumatra</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbbl</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  21:11:49.795</waktu>
+  <lintang>-5.75</lintang>
+  <bujur>153.19</bujur>
+  <dalam>65</dalam>
+  <mag>5.0</mag>
+  <fokal>undetermined</fokal>
+  <area>New Ireland Region, Papua New Guinea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbbk</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  21:09:49.259</waktu>
+  <lintang>-8.17</lintang>
+  <bujur>120.51</bujur>
+  <dalam>10</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xbam</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  20:42:08.999</waktu>
+  <lintang>1.64</lintang>
+  <bujur>128.37</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Halmahera, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xazs</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  20:18:43.223</waktu>
+  <lintang>-8.30</lintang>
+  <bujur>120.61</bujur>
+  <dalam>10</dalam>
+  <mag>2.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xazm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  20:11:33.333</waktu>
+  <lintang>-6.59</lintang>
+  <bujur>129.15</bujur>
+  <dalam>233</dalam>
+  <mag>3.7</mag>
+  <fokal>undetermined</fokal>
+  <area>Banda Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xayy</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  19:55:07.517</waktu>
+  <lintang>4.93</lintang>
+  <bujur>95.96</bujur>
+  <dalam>10</dalam>
+  <mag>2.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xayf</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  19:33:03.486</waktu>
+  <lintang>-4.29</lintang>
+  <bujur>137.02</bujur>
+  <dalam>24</dalam>
+  <mag>4.4</mag>
+  <fokal>undetermined</fokal>
+  <area>West Papua, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xaxu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  19:20:41.685</waktu>
+  <lintang>-8.31</lintang>
+  <bujur>120.63</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xaxm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  19:11:35.059</waktu>
+  <lintang>-8.26</lintang>
+  <bujur>120.55</bujur>
+  <dalam>10</dalam>
+  <mag>2.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xaut</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  17:47:56.983</waktu>
+  <lintang>-2.66</lintang>
+  <bujur>129.41</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Seram, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xaqf</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  15:31:09.394</waktu>
+  <lintang>0.39</lintang>
+  <bujur>123.16</bujur>
+  <dalam>31</dalam>
+  <mag>3.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Minahassa Peninsula, Sulawesi</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xanb</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  13:55:05.754</waktu>
+  <lintang>-8.34</lintang>
+  <bujur>121.44</bujur>
+  <dalam>12</dalam>
+  <mag>2.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xalv</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  13:17:46.845</waktu>
+  <lintang>-8.43</lintang>
+  <bujur>120.94</bujur>
+  <dalam>19</dalam>
+  <mag>2.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xalt</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  13:15:16.622</waktu>
+  <lintang>-3.55</lintang>
+  <bujur>140.60</bujur>
+  <dalam>68</dalam>
+  <mag>3.8</mag>
+  <fokal>undetermined</fokal>
+  <area>West Papua, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xajc</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  11:55:12.893</waktu>
+  <lintang>14.21</lintang>
+  <bujur>144.72</bujur>
+  <dalam>143</dalam>
+  <mag>4.2</mag>
+  <fokal>undetermined</fokal>
+  <area>Mariana Islands</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xaiz</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  11:51:35.526</waktu>
+  <lintang>-6.44</lintang>
+  <bujur>130.21</bujur>
+  <dalam>184</dalam>
+  <mag>4.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Banda Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xahm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  11:06:15.992</waktu>
+  <lintang>-17.73</lintang>
+  <bujur>65.74</bujur>
+  <dalam>12</dalam>
+  <mag>5.8</mag>
+  <fokal>mt_yes</fokal>
+  <area>Mauritius-Reunion Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xaha</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  10:52:36.492</waktu>
+  <lintang>-2.96</lintang>
+  <bujur>140.07</bujur>
+  <dalam>95</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Near North Coast of West Papua</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xagy</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  10:49:31.397</waktu>
+  <lintang>-7.98</lintang>
+  <bujur>120.03</bujur>
+  <dalam>10</dalam>
+  <mag>3.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xafm</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  10:05:23.354</waktu>
+  <lintang>1.37</lintang>
+  <bujur>96.94</bujur>
+  <dalam>12</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Off West Coast of Northern Sumatra</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xacs</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  08:41:05.736</waktu>
+  <lintang>1.27</lintang>
+  <bujur>96.99</bujur>
+  <dalam>10</dalam>
+  <mag>3.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Off West Coast of Northern Sumatra</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026xaas</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  07:41:19.958</waktu>
+  <lintang>-7.94</lintang>
+  <bujur>110.40</bujur>
+  <dalam>125</dalam>
+  <mag>2.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzrw</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  03:12:25.411</waktu>
+  <lintang>-7.35</lintang>
+  <bujur>125.21</bujur>
+  <dalam>513</dalam>
+  <mag>4.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Banda Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzos</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  01:36:49.314</waktu>
+  <lintang>8.12</lintang>
+  <bujur>97.38</bujur>
+  <dalam>518</dalam>
+  <mag>4.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Nicobar Islands, India Region</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzon</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  01:31:33.546</waktu>
+  <lintang>-9.39</lintang>
+  <bujur>120.53</bujur>
+  <dalam>67</dalam>
+  <mag>3.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Sumba Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzom</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  01:30:02.854</waktu>
+  <lintang>-8.78</lintang>
+  <bujur>123.45</bujur>
+  <dalam>10</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wznk</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  00:57:38.853</waktu>
+  <lintang>-7.49</lintang>
+  <bujur>120.24</bujur>
+  <dalam>378</dalam>
+  <mag>3.6</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Sea</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wznh</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  00:54:06.954</waktu>
+  <lintang>-8.93</lintang>
+  <bujur>110.59</bujur>
+  <dalam>10</dalam>
+  <mag>3.0</mag>
+  <fokal>undetermined</fokal>
+  <area>Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzmz</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  00:44:56.676</waktu>
+  <lintang>-9.03</lintang>
+  <bujur>110.68</bujur>
+  <dalam>10</dalam>
+  <mag>3.6</mag>
+  <fokal>undetermined</fokal>
+  <area>South of Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzma</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/24  00:15:06.119</waktu>
+  <lintang>1.86</lintang>
+  <bujur>127.33</bujur>
+  <dalam>99</dalam>
+  <mag>4.4</mag>
+  <fokal>undetermined</fokal>
+  <area>Halmahera, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzkq</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/23  23:33:59.363</waktu>
+  <lintang>-6.92</lintang>
+  <bujur>108.65</bujur>
+  <dalam>224</dalam>
+  <mag>3.3</mag>
+  <fokal>undetermined</fokal>
+  <area>Java, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzfx</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/23  21:10:32.979</waktu>
+  <lintang>-1.83</lintang>
+  <bujur>100.41</bujur>
+  <dalam>12</dalam>
+  <mag>3.1</mag>
+  <fokal>undetermined</fokal>
+  <area>Southern Sumatra, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzfu</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/23  21:06:31.286</waktu>
+  <lintang>-3.01</lintang>
+  <bujur>129.71</bujur>
+  <dalam>12</dalam>
+  <mag>2.5</mag>
+  <fokal>undetermined</fokal>
+  <area>Seram, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzfs</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/23  21:04:05.466</waktu>
+  <lintang>-8.15</lintang>
+  <bujur>120.54</bujur>
+  <dalam>10</dalam>
+  <mag>2.9</mag>
+  <fokal>undetermined</fokal>
+  <area>Flores Region, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzfg</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/23  20:50:48.524</waktu>
+  <lintang>-2.68</lintang>
+  <bujur>122.03</bujur>
+  <dalam>10</dalam>
+  <mag>3.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Sulawesi, Indonesia</area>
+ </gempa>
+ <gempa>
+  <eventid>bmg2026wzeo</eventid>
+  <status>confirmed</status>
+  <waktu>2026/11/23  20:29:33.105</waktu>
+  <lintang>4.06</lintang>
+  <bujur>97.37</bujur>
+  <dalam>10</dalam>
+  <mag>2.8</mag>
+  <fokal>undetermined</fokal>
+  <area>Northern Sumatra, Indonesia</area>
+ </gempa>
+</Infogempa>

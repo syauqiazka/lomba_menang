@@ -10,6 +10,7 @@ import type {
   DisasterIncidentDTO,
   IncidentCategory,
   IncidentsFeedResponse,
+  RealtimeEarthquakesResponse,
 } from '@/types/map';
 import type { MapSummaryCounts } from '@/lib/map-data';
 import { MapFallback } from './MapFallback';
@@ -34,7 +35,10 @@ import {
   computeGeoJSONBounds,
   formatCoordsLSBT,
   formatDateTimeWIB,
+  formatDateTimeWIBWithSeconds,
   formatIndonesianDecimal,
+  formatRelativeTimeId,
+  formatTimeWIBWithSeconds,
   getStatusLabel,
   type BasemapMode,
 } from '@/lib/map-utils';
@@ -202,6 +206,11 @@ export function DisasterMap({
   const [detailLoading, setDetailLoading] = useState(false);
   const [incidentsData, setIncidentsData] = useState<IncidentsFeedResponse | null>(null);
   const [incidentsLoading, setIncidentsLoading] = useState(false);
+  const [realtimeEqAutoPoll, setRealtimeEqAutoPoll] = useState(true);
+  const [realtimeEqSyncing, setRealtimeEqSyncing] = useState(false);
+  const [realtimeEqUpdatedAt, setRealtimeEqUpdatedAt] = useState<string | null>(null);
+  const [latestRealtimeEq, setLatestRealtimeEq] = useState<DisasterIncidentDTO | null>(null);
+  const [clockNowMs, setClockNowMs] = useState(() => Date.now());
   const [showIncidents, setShowIncidents] = useState(true);
   const [incidentCategory, setIncidentCategory] = useState<IncidentCategory | 'ALL'>('ALL');
   const [confidenceFilter, setConfidenceFilter] = useState<'ALL' | 'Tinggi' | 'Sedang'>('ALL');
@@ -225,7 +234,98 @@ export function DisasterMap({
   const applyIncidentsPayload = useCallback((payload: IncidentsFeedResponse) => {
     setIncidentsData(payload);
     incidentsByIdRef.current = new Map(payload.incidents.map((inc) => [inc.id, inc]));
+    setRealtimeEqUpdatedAt(payload.bmkgRealtimeUpdatedAt ?? payload.updatedAt);
+    const newestEq = payload.incidents.find((inc) => inc.category === 'EARTHQUAKE') ?? null;
+    setLatestRealtimeEq(newestEq);
   }, []);
+
+  const mergeRealtimeEarthquakes = useCallback((payload: RealtimeEarthquakesResponse) => {
+    setRealtimeEqUpdatedAt(payload.updatedAt);
+    setLatestRealtimeEq(payload.latestEarthquake ?? payload.incidents[0] ?? null);
+
+    setIncidentsData((prev) => {
+      if (!prev) return prev;
+
+      const bmkgKeys = payload.incidents.map((inc) => ({
+        timeMs: new Date(inc.occurredAt).getTime(),
+        lng: inc.coordinates[0],
+        lat: inc.coordinates[1],
+      }));
+
+      const nonBmkg = prev.incidents.filter((inc) => {
+        if (inc.id.startsWith('bmkg-')) return false;
+        if (inc.id.startsWith('usgs-')) {
+          const tMs = new Date(inc.occurredAt).getTime();
+          const [lng, lat] = inc.coordinates;
+          const dup = bmkgKeys.some(
+            (b) =>
+              Math.abs(b.timeMs - tMs) < 180_000 &&
+              Math.abs(b.lng - lng) < 0.45 &&
+              Math.abs(b.lat - lat) < 0.45
+          );
+          if (dup) return false;
+        }
+        return true;
+      });
+
+      const merged = [...payload.incidents, ...nonBmkg].sort(
+        (a, b) => new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime()
+      );
+
+      const countsByCategory: Record<IncidentCategory, number> = {
+        FLOOD: 0,
+        LANDSLIDE: 0,
+        EARTHQUAKE: 0,
+        EXTREME_WEATHER: 0,
+        VOLCANO: 0,
+        OTHER: 0,
+      };
+      const dateSet = new Set<string>();
+      for (const inc of merged) {
+        countsByCategory[inc.category] += 1;
+        dateSet.add(getWibDateString(inc.occurredAt));
+      }
+      const datesAvailable = Array.from(dateSet)
+        .sort((a, b) => b.localeCompare(a))
+        .slice(0, 14);
+
+      incidentsByIdRef.current = new Map(merged.map((inc) => [inc.id, inc]));
+
+      return {
+        ...prev,
+        bmkgRealtimeUpdatedAt: payload.updatedAt,
+        bmkgRealtimeCount: payload.totalCount,
+        liveStatus: {
+          ...prev.liveStatus,
+          bmkg:
+            payload.liveStatus.inatews === 'live' || payload.liveStatus.tews === 'live'
+              ? 'live'
+              : 'snapshot',
+          bmkgInatews: payload.liveStatus.inatews,
+        },
+        countsByCategory,
+        datesAvailable,
+        incidents: merged,
+      };
+    });
+  }, []);
+
+  const pullRealtimeEarthquakes = useCallback(
+    async (force = false) => {
+      setRealtimeEqSyncing(true);
+      try {
+        const resp = await fetch(`/api/map/earthquakes/realtime${force ? '?refresh=1' : ''}`);
+        if (!resp.ok) return;
+        const payload = (await resp.json()) as RealtimeEarthquakesResponse;
+        mergeRealtimeEarthquakes(payload);
+      } catch (error) {
+        console.error('Failed to sync BMKG InaTEWS realtime earthquakes:', error);
+      } finally {
+        setRealtimeEqSyncing(false);
+      }
+    },
+    [mergeRealtimeEarthquakes]
+  );
 
   const handleManualRefreshIncidents = useCallback(async () => {
     setIncidentsLoading(true);
@@ -262,6 +362,35 @@ export function DisasterMap({
       window.clearInterval(timer);
     };
   }, [applyIncidentsPayload]);
+
+  useEffect(() => {
+    if (!realtimeEqAutoPoll) return;
+
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === 'visible') {
+        void pullRealtimeEarthquakes(false);
+      }
+    }, 15_000);
+
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible') {
+        void pullRealtimeEarthquakes(false);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+
+    return () => {
+      window.clearInterval(timer);
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
+  }, [realtimeEqAutoPoll, pullRealtimeEarthquakes]);
+
+  useEffect(() => {
+    const clockTimer = window.setInterval(() => {
+      setClockNowMs(Date.now());
+    }, 15_000);
+    return () => window.clearInterval(clockTimer);
+  }, []);
 
   const visibleIncidents = useMemo(() => {
     if (!showIncidents || !incidentsData) return [];
@@ -1162,20 +1291,27 @@ export function DisasterMap({
     }
 
     const beforeLabelId = getFirstSymbolLayerId(map);
-    const features: GeoJSON.Feature[] = visibleIncidents.map((inc) => ({
-      type: 'Feature',
-      properties: {
-        id: inc.id,
-        title: inc.title,
-        category: inc.category,
-        categoryLabel: inc.categoryLabel,
-        precisionLabel: inc.precisionLabel,
-      },
-      geometry: {
-        type: 'Point',
-        coordinates: inc.coordinates,
-      },
-    }));
+    const features: GeoJSON.Feature[] = visibleIncidents.map((inc) => {
+      const magNum =
+        inc.category === 'EARTHQUAKE' && inc.metrics?.magnitude
+          ? Number.parseFloat(inc.metrics.magnitude.replace(',', '.'))
+          : 0;
+      return {
+        type: 'Feature',
+        properties: {
+          id: inc.id,
+          title: inc.title,
+          category: inc.category,
+          categoryLabel: inc.categoryLabel,
+          precisionLabel: inc.precisionLabel,
+          magnitude: Number.isFinite(magNum) ? magNum : 0,
+        },
+        geometry: {
+          type: 'Point',
+          coordinates: inc.coordinates,
+        },
+      };
+    });
 
     map.addSource('disaster-incidents', {
       type: 'geojson',
@@ -1240,7 +1376,33 @@ export function DisasterMap({
         source: 'disaster-incidents',
         filter: unclusteredFilter,
         paint: {
-          'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, 8, 9, 14],
+          'circle-radius': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            4,
+            [
+              'case',
+              ['==', ['get', 'category'], 'EARTHQUAKE'],
+              [
+                '+',
+                6,
+                ['*', ['min', 6, ['max', 0, ['-', ['coalesce', ['get', 'magnitude'], 0], 2]]], 1.4],
+              ],
+              8,
+            ],
+            9,
+            [
+              'case',
+              ['==', ['get', 'category'], 'EARTHQUAKE'],
+              [
+                '+',
+                10,
+                ['*', ['min', 6, ['max', 0, ['-', ['coalesce', ['get', 'magnitude'], 0], 2]]], 1.8],
+              ],
+              14,
+            ],
+          ],
           'circle-color': [
             'match',
             ['get', 'category'],
@@ -1269,7 +1431,33 @@ export function DisasterMap({
         source: 'disaster-incidents',
         filter: unclusteredFilter,
         paint: {
-          'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, 3.8, 9, 6.8],
+          'circle-radius': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            4,
+            [
+              'case',
+              ['==', ['get', 'category'], 'EARTHQUAKE'],
+              [
+                '+',
+                3.2,
+                ['*', ['min', 6, ['max', 0, ['-', ['coalesce', ['get', 'magnitude'], 0], 2]]], 0.9],
+              ],
+              3.8,
+            ],
+            9,
+            [
+              'case',
+              ['==', ['get', 'category'], 'EARTHQUAKE'],
+              [
+                '+',
+                5.5,
+                ['*', ['min', 6, ['max', 0, ['-', ['coalesce', ['get', 'magnitude'], 0], 2]]], 1.1],
+              ],
+              6.8,
+            ],
+          ],
           'circle-color': [
             'match',
             ['get', 'category'],
@@ -1317,20 +1505,27 @@ export function DisasterMap({
     const src = map.getSource('disaster-incidents') as maplibregl.GeoJSONSource | undefined;
     if (!src) return;
 
-    const features: GeoJSON.Feature[] = visibleIncidents.map((inc) => ({
-      type: 'Feature',
-      properties: {
-        id: inc.id,
-        title: inc.title,
-        category: inc.category,
-        categoryLabel: inc.categoryLabel,
-        precisionLabel: inc.precisionLabel,
-      },
-      geometry: {
-        type: 'Point',
-        coordinates: inc.coordinates,
-      },
-    }));
+    const features: GeoJSON.Feature[] = visibleIncidents.map((inc) => {
+      const magNum =
+        inc.category === 'EARTHQUAKE' && inc.metrics?.magnitude
+          ? Number.parseFloat(inc.metrics.magnitude.replace(',', '.'))
+          : 0;
+      return {
+        type: 'Feature',
+        properties: {
+          id: inc.id,
+          title: inc.title,
+          category: inc.category,
+          categoryLabel: inc.categoryLabel,
+          precisionLabel: inc.precisionLabel,
+          magnitude: Number.isFinite(magNum) ? magNum : 0,
+        },
+        geometry: {
+          type: 'Point',
+          coordinates: inc.coordinates,
+        },
+      };
+    });
 
     src.setData({ type: 'FeatureCollection', features });
   }, [mapLoaded, basemapMode, clusterPoints, visibleIncidents]);
@@ -1455,6 +1650,13 @@ export function DisasterMap({
       eqEl.className = 'font-medium text-primary';
       eqEl.textContent = `M ${formatIndonesianDecimal(selectedIncident.metrics.magnitude)} · Kedalaman ${selectedIncident.metrics.depth ?? '-'} · ${formatCoordsLSBT(selectedIncident.coordinates)}`;
       container.appendChild(eqEl);
+
+      if (selectedIncident.metrics.eventStatus) {
+        const statusEl = document.createElement('p');
+        statusEl.className = 'text-secondary-text';
+        statusEl.textContent = `Status: ${selectedIncident.metrics.eventStatus}`;
+        container.appendChild(statusEl);
+      }
     }
 
     if (selectedIncident.category === 'VOLCANO' && selectedIncident.metrics?.alertLevel) {
@@ -1478,7 +1680,10 @@ export function DisasterMap({
 
     const timeEl = document.createElement('p');
     timeEl.className = 'text-primary font-medium pt-0.5';
-    timeEl.textContent = formatDateTimeWIB(selectedIncident.occurredAt);
+    timeEl.textContent =
+      selectedIncident.category === 'EARTHQUAKE'
+        ? formatDateTimeWIBWithSeconds(selectedIncident.occurredAt)
+        : formatDateTimeWIB(selectedIncident.occurredAt);
     container.appendChild(timeEl);
 
     const updatedEl = document.createElement('p');
@@ -1933,9 +2138,11 @@ export function DisasterMap({
           <div className="flex flex-wrap items-center gap-2 text-xs text-secondary-text">
             {incidentsData && (
               <span>
-                BMKG:{' '}
+                BMKG InaTEWS:{' '}
                 <strong className="text-primary">
-                  {incidentsData.liveStatus.bmkg === 'live' ? 'Live' : 'Snapshot'}
+                  {(incidentsData.liveStatus.bmkgInatews ?? incidentsData.liveStatus.bmkg) === 'live'
+                    ? 'Live'
+                    : 'Snapshot'}
                 </strong>{' '}
                 · Cuaca CAP:{' '}
                 <strong className="text-primary">
@@ -1967,6 +2174,80 @@ export function DisasterMap({
               className="min-h-[36px] px-3 py-1 rounded-lg border border-border bg-background text-xs font-medium text-primary hover:bg-secondary-background transition-colors disabled:opacity-50"
             >
               {incidentsLoading ? 'Memperbarui…' : 'Perbarui Data'}
+            </button>
+          </div>
+        </div>
+
+        {/* BMKG InaTEWS Live Earthquake Stream Strip (15s Auto-Poll) */}
+        <div
+          className="flex flex-wrap items-center justify-between gap-2 px-3 py-2 rounded-lg border border-border bg-secondary-background/50 text-xs"
+          aria-label="Stream gempabumi realtime BMKG InaTEWS"
+        >
+          <div className="flex flex-wrap items-center gap-2 min-w-0">
+            <span className="inline-flex items-center gap-1.5 font-semibold text-primary whitespace-nowrap">
+              <span
+                className={`w-2 h-2 rounded-full ${
+                  (incidentsData?.liveStatus.bmkgInatews ?? incidentsData?.liveStatus.bmkg) === 'live'
+                    ? 'bg-[#16a34a] animate-pulse'
+                    : 'bg-[#d97706]'
+                }`}
+                aria-hidden="true"
+              />
+              InaTEWS Realtime
+            </span>
+            {latestRealtimeEq ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setShowIncidents(true);
+                  setIncidentCategory('ALL');
+                  void handleSelectIncident(latestRealtimeEq.id);
+                }}
+                className="text-left text-primary hover:underline truncate max-w-[680px]"
+                title="Klik untuk memusatkan peta ke gempabumi terbaru"
+              >
+                <span className="font-mono font-bold text-[#dc2626]">
+                  M {formatIndonesianDecimal(latestRealtimeEq.metrics?.magnitude ?? '?')}
+                </span>{' '}
+                · {latestRealtimeEq.locationText} · {latestRealtimeEq.metrics?.depth ?? '-'} ·{' '}
+                <span className="font-mono text-secondary-text">
+                  {formatTimeWIBWithSeconds(latestRealtimeEq.occurredAt)}
+                </span>{' '}
+                <span className="text-secondary-text">
+                  ({formatRelativeTimeId(latestRealtimeEq.occurredAt, clockNowMs)})
+                </span>{' '}
+                <span className="font-medium text-primary">→</span>
+              </button>
+            ) : (
+              <span className="text-secondary-text">Memuat stream seismik BMKG InaTEWS…</span>
+            )}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 flex-shrink-0">
+            {realtimeEqUpdatedAt && (
+              <span className="font-mono text-[11px] text-secondary-text">
+                Sync: {formatTimeWIBWithSeconds(realtimeEqUpdatedAt)}
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={() => setRealtimeEqAutoPoll((prev) => !prev)}
+              aria-pressed={realtimeEqAutoPoll}
+              className={`min-h-[32px] px-2.5 py-1 rounded border text-[11px] font-medium transition-colors ${
+                realtimeEqAutoPoll
+                  ? 'bg-primary text-white border-primary'
+                  : 'bg-background border-border text-primary hover:bg-secondary-background'
+              }`}
+            >
+              Auto 15 dtk: {realtimeEqAutoPoll ? 'On' : 'Off'}
+            </button>
+            <button
+              type="button"
+              onClick={() => void pullRealtimeEarthquakes(true)}
+              disabled={realtimeEqSyncing}
+              className="min-h-[32px] px-2.5 py-1 rounded border border-border bg-background text-[11px] font-medium text-primary hover:bg-secondary-background transition-colors disabled:opacity-50"
+            >
+              {realtimeEqSyncing ? 'Sinkron…' : 'Sync Gempa'}
             </button>
           </div>
         </div>

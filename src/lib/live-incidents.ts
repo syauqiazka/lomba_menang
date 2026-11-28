@@ -1,6 +1,13 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { prisma } from '@/lib/prisma';
+import {
+  getBmkgRealtimeEarthquakes,
+  matchFeltRegencies,
+  normalizeRegencyName,
+  parseCentroid,
+  type RegencyLookupRef,
+} from '@/lib/bmkg-realtime';
 import type {
   DisasterIncidentDTO,
   IncidentCategory,
@@ -11,8 +18,6 @@ import type {
 const SNAPSHOT_DIR = path.join(process.cwd(), 'data', 'snapshots', 'bnpb-2026-11-28');
 const PROVINCES_GEOJSON_PATH = path.join(process.cwd(), 'public', 'geo', 'provinces.geojson');
 
-const BMKG_TERKINI_URL = 'https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json';
-const BMKG_DIRASAKAN_URL = 'https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.json';
 const BNPB_WEEKLY_URL =
   'https://gis.bnpb.go.id/server/rest/services/Kejadian_Bencana_Mingguan/MapServer/25/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson';
 const PU_LAYER_URL =
@@ -30,13 +35,7 @@ const RAINVIEWER_API_URL = 'https://api.rainviewer.com/public/weather-maps.json'
 const MAGMA_V1_URL = 'https://magma.esdm.go.id/v1';
 const GDACS_RSS_URL = 'https://www.gdacs.org/xml/rss.xml';
 
-interface RegencyRef {
-  code: string;
-  name: string;
-  normalizedName: string;
-  provinceCode: string;
-  centroid?: [number, number];
-}
+type RegencyRef = RegencyLookupRef;
 
 interface ProvincePolyIndex {
   code: string;
@@ -49,18 +48,6 @@ interface ProvincePolyIndex {
     box: [number, number, number, number];
     rings: number[][][];
   }>;
-}
-
-interface BmkgGempaItem {
-  Tanggal?: string;
-  Jam?: string;
-  DateTime?: string;
-  Coordinates?: string;
-  Magnitude?: string;
-  Kedalaman?: string;
-  Wilayah?: string;
-  Potensi?: string;
-  Dirasakan?: string;
 }
 
 interface PuFeature {
@@ -295,15 +282,6 @@ function stripHtml(text?: string | null): string {
     .trim();
 }
 
-function normalizeRegencyName(raw: string): string {
-  return raw
-    .toLowerCase()
-    .replace(/\bkabupaten\b|\bkab\.?\b|\bkota\b/g, ' ')
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 function normalizeCode4(raw?: string | null): string | null {
   if (!raw) return null;
   const digits = raw.replace(/\./g, '').trim();
@@ -315,22 +293,6 @@ function codeFromDesaSdi(raw?: string | null): string | null {
   const parts = raw.trim().split('.');
   if (parts.length < 2 || !/^\d+$/.test(parts[0]) || !/^\d+$/.test(parts[1])) return null;
   return parts[0].padStart(2, '0') + parts[1].padStart(2, '0');
-}
-
-function parseCentroid(raw: unknown): [number, number] | undefined {
-  if (!raw || typeof raw !== 'object') return undefined;
-  const c = raw as { coordinates?: unknown };
-  if (Array.isArray(c.coordinates) && typeof c.coordinates[0] === 'number' && typeof c.coordinates[1] === 'number') {
-    return [c.coordinates[0], c.coordinates[1]];
-  }
-  return undefined;
-}
-
-function parseBmkgCoordinates(raw?: string): [number, number] | null {
-  if (!raw) return null;
-  const parts = raw.split(',').map((s) => Number.parseFloat(s.trim()));
-  if (parts.length !== 2 || Number.isNaN(parts[0]) || Number.isNaN(parts[1])) return null;
-  return [parts[1], parts[0]];
 }
 
 function classifyPuIncident(name?: string | null, cause?: string | null, damage?: string | null): IncidentCategory {
@@ -454,60 +416,6 @@ function formatSatelliteLabel(rawSat?: string, sourceType?: 'viirs' | 'modis'): 
   if (s === 'T' || s === 'TERRA') return 'MODIS Terra';
   if (s === 'A' || s === 'AQUA') return 'MODIS Aqua';
   return sourceType === 'modis' ? `MODIS ${s || ''}`.trim() : `VIIRS ${s || 'NOAA-20'}`.trim();
-}
-
-function matchFeltRegencies(
-  feltText: string,
-  wilayahText: string,
-  coords: [number, number],
-  sortedRegsByNameLen: RegencyRef[]
-): SpreadRegionDTO[] {
-  const haystack = normalizeRegencyName(`${feltText} ${wilayahText}`);
-  const matched = new Map<string, SpreadRegionDTO>();
-
-  if (haystack) {
-    for (const reg of sortedRegsByNameLen) {
-      if (reg.normalizedName.length < 4) continue;
-      const paddedHay = ` ${haystack} `;
-      const needle = ` ${reg.normalizedName} `;
-      if (paddedHay.includes(needle)) {
-        matched.set(reg.code, {
-          code: reg.code,
-          name: reg.name,
-          provinceCode: reg.provinceCode,
-          centroid: reg.centroid,
-          summary: feltText ? `MMI: ${feltText}` : wilayahText,
-        });
-      }
-      if (matched.size >= 10) break;
-    }
-  }
-
-  if (matched.size === 0) {
-    let best: RegencyRef | null = null;
-    let bestDistSq = 1.8 * 1.8;
-    for (const reg of sortedRegsByNameLen) {
-      if (!reg.centroid) continue;
-      const dx = reg.centroid[0] - coords[0];
-      const dy = reg.centroid[1] - coords[1];
-      const d2 = dx * dx + dy * dy;
-      if (d2 < bestDistSq) {
-        bestDistSq = d2;
-        best = reg;
-      }
-    }
-    if (best) {
-      matched.set(best.code, {
-        code: best.code,
-        name: best.name,
-        provinceCode: best.provinceCode,
-        centroid: best.centroid,
-        summary: 'Kab/Kota terdekat dari episentrum resmi',
-      });
-    }
-  }
-
-  return Array.from(matched.values());
 }
 
 interface NowcastAreaRaw {
@@ -852,7 +760,6 @@ export async function getDisasterIncidentsFeed(options?: {
     (a, b) => b.normalizedName.length - a.normalizedName.length
   );
 
-  let bmkgLive = true;
   let nowcastLive = true;
   let magmaLive = true;
   let gdacsLive = true;
@@ -862,8 +769,7 @@ export async function getDisasterIncidentsFeed(options?: {
   let usgsLive = true;
 
   const [
-    bmkgTerkini,
-    bmkgDirasakan,
+    bmkgRealtimeResult,
     nowcastRaw,
     rainViewerRadar,
     magmaRaw,
@@ -877,19 +783,9 @@ export async function getDisasterIncidentsFeed(options?: {
     bansorRaw,
     karhutlaRaw,
   ] = await Promise.all([
-    fetchJsonWithTimeout<{ Infogempa?: { gempa?: BmkgGempaItem[] } }>(BMKG_TERKINI_URL, {
-      revalidate: 900,
+    getBmkgRealtimeEarthquakes({
       forceRefresh,
-    }).catch(async () => {
-      bmkgLive = false;
-      return readSnapshotJson<{ Infogempa?: { gempa?: BmkgGempaItem[] } }>('bmkg_gempaterkini.json');
-    }),
-    fetchJsonWithTimeout<{ Infogempa?: { gempa?: BmkgGempaItem[] } }>(BMKG_DIRASAKAN_URL, {
-      revalidate: 900,
-      forceRefresh,
-    }).catch(async () => {
-      bmkgLive = false;
-      return readSnapshotJson<{ Infogempa?: { gempa?: BmkgGempaItem[] } }>('bmkg_gempadirasakan.json');
+      preloadedRegencies: sortedRegsByNameLen,
     }),
     fetchBmkgNowcastLive({
       revalidate: 600,
@@ -967,69 +863,9 @@ export async function getDisasterIncidentsFeed(options?: {
 
   const incidents: DisasterIncidentDTO[] = [];
 
-  // --- 1. BMKG Live Earthquakes ---
-  const mergedEq = new Map<string, BmkgGempaItem>();
-  const bmkgEqKeys: Array<{ timeMs: number; lng: number; lat: number }> = [];
-
-  for (const item of [
-    ...(bmkgDirasakan.Infogempa?.gempa ?? []),
-    ...(bmkgTerkini.Infogempa?.gempa ?? []),
-  ]) {
-    const key = `${item.DateTime ?? ''}|${item.Coordinates ?? ''}`;
-    if (!mergedEq.has(key)) {
-      mergedEq.set(key, item);
-    } else {
-      const existing = mergedEq.get(key)!;
-      if (!existing.Dirasakan && item.Dirasakan) existing.Dirasakan = item.Dirasakan;
-      if (!existing.Potensi && item.Potensi) existing.Potensi = item.Potensi;
-    }
-  }
-
-  for (const eq of mergedEq.values()) {
-    const coords = parseBmkgCoordinates(eq.Coordinates);
-    if (!coords) continue;
-    const occurredAt = eq.DateTime ? new Date(eq.DateTime).toISOString() : nowIso;
-    bmkgEqKeys.push({ timeMs: new Date(occurredAt).getTime(), lng: coords[0], lat: coords[1] });
-    const felt = eq.Dirasakan?.trim() || '';
-    const wilayah = eq.Wilayah?.trim() || 'Indonesia';
-    const spreadRegions = matchFeltRegencies(felt, wilayah, coords, sortedRegsByNameLen);
-    const primaryReg = spreadRegions[0];
-
-    incidents.push({
-      id: `bmkg-${occurredAt}-${coords[0].toFixed(2)}-${coords[1].toFixed(2)}`,
-      title: `Gempa M ${eq.Magnitude ?? '?'} — ${wilayah}`,
-      category: 'EARTHQUAKE',
-      categoryLabel: INCIDENT_CATEGORY_LABEL.EARTHQUAKE,
-      coordinates: coords,
-      precision: 'EXACT_EPICENTER',
-      precisionLabel: 'Episentrum Resmi BMKG',
-      occurredAt,
-      locationText: wilayah,
-      regionCode: primaryReg?.code,
-      provinceCode: primaryReg?.provinceCode,
-      summary: `Kedalaman ${eq.Kedalaman ?? '-'}. ${eq.Potensi ?? ''}`.trim(),
-      metrics: {
-        magnitude: eq.Magnitude,
-        depth: eq.Kedalaman,
-        feltAreas: felt || undefined,
-        potential: eq.Potensi,
-      },
-      spreadRegions,
-      spreadExplanation: felt
-        ? `Wilayah merasakan getaran (skala MMI resmi BMKG): ${felt}.`
-        : primaryReg
-          ? `Pusat gempa dekat ${primaryReg.name}; tidak ada laporan getaran daratan pada daftar dirasakan BMKG.`
-          : 'Episentrum berada di laut lepas tanpa laporan dampak daratan pada feed BMKG.',
-      source: {
-        title: 'BMKG TEWS — Gempa Bumi Terkini & Dirasakan',
-        publisher: 'BMKG',
-        url: 'https://data.bmkg.go.id/gempabumi/',
-        category: 'OFFICIAL',
-        isLive: bmkgLive,
-        updatedAt: nowIso,
-      },
-    });
-  }
+  // --- 1. BMKG InaTEWS Realtime & TEWS Earthquakes ---
+  const bmkgEqKeys = bmkgRealtimeResult.eqKeys;
+  incidents.push(...bmkgRealtimeResult.response.incidents);
 
   // --- 2. USGS Earthquakes (deduplicated against BMKG within 3 min & 0.4 deg) ---
   for (const uf of usgsRaw.features ?? []) {
@@ -1804,8 +1640,15 @@ export async function getDisasterIncidentsFeed(options?: {
 
   return {
     updatedAt: nowIso,
+    bmkgRealtimeUpdatedAt: bmkgRealtimeResult.response.updatedAt,
+    bmkgRealtimeCount: bmkgRealtimeResult.response.totalCount,
     liveStatus: {
-      bmkg: bmkgLive ? 'live' : 'snapshot',
+      bmkg:
+        bmkgRealtimeResult.response.liveStatus.inatews === 'live' ||
+        bmkgRealtimeResult.response.liveStatus.tews === 'live'
+          ? 'live'
+          : 'snapshot',
+      bmkgInatews: bmkgRealtimeResult.response.liveStatus.inatews,
       bmkgNowcast: nowcastLive ? 'live' : 'snapshot',
       magmaVolcano: magmaLive ? 'live' : 'snapshot',
       gdacs: gdacsLive ? 'live' : 'snapshot',

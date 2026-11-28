@@ -152,7 +152,7 @@ export default async function MapPage({
                     </span>
                     <span className="inline-flex items-center gap-1.5">
                       <span className="w-3 h-3 rounded-full bg-[#dc2626] border border-white" aria-hidden="true" />
-                      Gempabumi (BMKG TEWS &amp; BNPB)
+                      Gempabumi (BMKG InaTEWS Realtime &amp; BNPB)
                     </span>
                     <span className="inline-flex items-center gap-1.5">
                       <span className="w-3 h-3 rounded-full bg-[#7c3aed] border border-white" aria-hidden="true" />
@@ -197,7 +197,7 @@ export default async function MapPage({
                   <strong>Batas Administratif:</strong> Data administratif Indonesia resmi dari Badan Informasi Geospasial (BIG) &amp; BPS ({summaryCounts.provinceCount} provinsi, {summaryCounts.regencyCount} kabupaten/kota).
                 </p>
                 <p className="mb-2">
-                  <strong>Sumber Data Bencana Resmi:</strong> BMKG TEWS &amp; Nowcast CAP 1.2 (<code>bmkg.go.id</code>), PVMBG MAGMA Indonesia KESDM (<code>magma.esdm.go.id</code>), RainViewer Radar Presipitasi, GDACS (UN OCHA / Copernicus), NASA EOSDIS FIRMS (VIIRS NOAA-20 &amp; MODIS), USGS Earthquake Hazards Program, BNPB Geoportal (<code>gis.bnpb.go.id</code> &amp; inaRISK), dan SITABA Kementerian PU.{' '}
+                  <strong>Sumber Data Bencana Resmi:</strong> BMKG InaTEWS Realtime (<code>live30event.xml</code> &amp; <code>lastQL.json</code>), BMKG TEWS &amp; Nowcast CAP 1.2 (<code>bmkg.go.id</code>), PVMBG MAGMA Indonesia KESDM (<code>magma.esdm.go.id</code>), RainViewer Radar Presipitasi, GDACS (UN OCHA / Copernicus), NASA EOSDIS FIRMS (VIIRS NOAA-20 &amp; MODIS), USGS Earthquake Hazards Program, BNPB Geoportal (<code>gis.bnpb.go.id</code> &amp; inaRISK), dan SITABA Kementerian PU.{' '}
                   <Link href="/sumber" className="text-primary underline hover:text-black">
                     Telusuri semua sumber →
                   </Link>

@@ -104,6 +104,11 @@ export interface DisasterIncidentDTO {
     depth?: string;
     feltAreas?: string;
     potential?: string;
+    eventId?: string;
+    eventStatus?: string;
+    focalMechanism?: string;
+    phaseCount?: number;
+    shakemapUrl?: string;
     affectedCount?: number;
     displacedCount?: number;
     fatalitiesCount?: number;
@@ -134,8 +139,11 @@ export interface DisasterIncidentDTO {
 
 export interface IncidentsFeedResponse {
   updatedAt: string;
+  bmkgRealtimeUpdatedAt?: string;
+  bmkgRealtimeCount?: number;
   liveStatus: {
     bmkg: 'live' | 'snapshot';
+    bmkgInatews?: 'live' | 'snapshot';
     bmkgNowcast: 'live' | 'snapshot';
     magmaVolcano: 'live' | 'snapshot';
     gdacs: 'live' | 'snapshot';
@@ -155,5 +163,16 @@ export interface IncidentsFeedResponse {
   nowcastPolygons?: GeoJSON.FeatureCollection;
   datesAvailable?: string[];
   countsByCategory: Record<IncidentCategory, number>;
+  incidents: DisasterIncidentDTO[];
+}
+
+export interface RealtimeEarthquakesResponse {
+  updatedAt: string;
+  liveStatus: {
+    inatews: 'live' | 'snapshot';
+    tews: 'live' | 'snapshot';
+  };
+  totalCount: number;
+  latestEarthquake: DisasterIncidentDTO | null;
   incidents: DisasterIncidentDTO[];
 }

@@ -7,6 +7,7 @@ import {
   INARISK_HAZARD_LAYERS,
   formatCoordsLSBT,
   formatDateTimeWIB,
+  formatDateTimeWIBWithSeconds,
   formatIndonesianDecimal,
   formatNumber,
 } from '@/lib/map-utils';
@@ -125,6 +126,34 @@ export function IncidentPanel({
                 Kedalaman:
               </span>
               <span className="font-display font-bold text-primary">{incident.metrics.depth}</span>
+            </div>
+          )}
+
+          {incident.category === 'EARTHQUAKE' && incident.metrics?.eventStatus && (
+            <div className="flex items-center justify-between gap-3 px-3.5 py-2.5 text-xs">
+              <span className="text-secondary-text">Status Deteksi:</span>
+              <span className="font-semibold text-primary text-right">{incident.metrics.eventStatus}</span>
+            </div>
+          )}
+
+          {incident.category === 'EARTHQUAKE' && incident.metrics?.eventId && (
+            <div className="flex items-center justify-between gap-3 px-3.5 py-2 text-xs">
+              <span className="text-secondary-text">ID Event BMKG:</span>
+              <span className="font-mono font-medium text-primary">{incident.metrics.eventId}</span>
+            </div>
+          )}
+
+          {incident.category === 'EARTHQUAKE' && typeof incident.metrics?.phaseCount === 'number' && (
+            <div className="flex items-center justify-between gap-3 px-3.5 py-2 text-xs">
+              <span className="text-secondary-text">Fase Seismik:</span>
+              <span className="font-semibold text-primary">{incident.metrics.phaseCount} stasiun</span>
+            </div>
+          )}
+
+          {incident.category === 'EARTHQUAKE' && incident.metrics?.focalMechanism === 'mt_yes' && (
+            <div className="flex items-center justify-between gap-3 px-3.5 py-2 text-xs">
+              <span className="text-secondary-text">Mekanisme Fokus:</span>
+              <span className="font-semibold text-primary">Moment Tensor Tersedia</span>
             </div>
           )}
 
@@ -255,7 +284,9 @@ export function IncidentPanel({
               Waktu Kejadian:
             </span>
             <time dateTime={incident.occurredAt} className="font-semibold text-primary text-right">
-              {formatDateTimeWIB(incident.occurredAt)}
+              {incident.category === 'EARTHQUAKE'
+                ? formatDateTimeWIBWithSeconds(incident.occurredAt)
+                : formatDateTimeWIB(incident.occurredAt)}
             </time>
           </div>
 
@@ -417,16 +448,28 @@ export function IncidentPanel({
               {formatDateTimeWIB(incident.source.updatedAt)}
             </time>
           </p>
-          {isSafeHttpUrl(incident.source.url) && (
-            <a
-              href={incident.source.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-primary underline hover:text-black"
-            >
-              Buka sumber resmi →
-            </a>
-          )}
+          <div className="flex flex-wrap items-center gap-3">
+            {isSafeHttpUrl(incident.source.url) && (
+              <a
+                href={incident.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-primary underline hover:text-black"
+              >
+                Buka sumber resmi →
+              </a>
+            )}
+            {isSafeHttpUrl(incident.metrics?.shakemapUrl) && (
+              <a
+                href={incident.metrics.shakemapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-[#dc2626] underline hover:text-black"
+              >
+                Peta Guncangan (Shakemap) →
+              </a>
+            )}
+          </div>
         </section>
       </div>
     </aside>

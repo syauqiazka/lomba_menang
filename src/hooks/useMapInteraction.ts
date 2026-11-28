@@ -119,6 +119,7 @@ export function useMapInteraction({
           const coords = (cf.geometry as GeoJSON.Point).coordinates as [number, number];
           const src = map.getSource('disaster-incidents') as maplibregl.GeoJSONSource | undefined;
           if (src && Number.isFinite(clusterId)) {
+            onHover?.(null);
             void src
               .getClusterExpansionZoom(clusterId)
               .then((zoom) => {
@@ -183,7 +184,7 @@ export function useMapInteraction({
         onSelect(null);
       }
     },
-    [onSelect, mapRef, reducedMotion]
+    [onSelect, onHover, mapRef, reducedMotion]
   );
 
   const handleMouseMove = useCallback(

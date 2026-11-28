@@ -10,7 +10,7 @@ const QuerySchema = z.object({
   refresh: z.enum(['0', '1']).optional(),
 });
 
-const REFRESH_COOLDOWN_MS = 60_000;
+const REFRESH_COOLDOWN_MS = 10_000;
 let lastForcedRefreshAt = 0;
 let lastRefreshCache: IncidentsFeedResponse | null = null;
 
@@ -58,7 +58,7 @@ export async function GET(request: NextRequest) {
       headers: {
         'Cache-Control': wantsForce
           ? 'no-store'
-          : 'public, s-maxage=300, stale-while-revalidate=600',
+          : 'public, s-maxage=30, stale-while-revalidate=60',
       },
     });
   } catch (error) {

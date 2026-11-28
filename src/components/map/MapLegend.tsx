@@ -68,7 +68,7 @@ export function MapLegend({ className = '', statusCounts }: MapLegendProps) {
         <p><strong>Peta Dasar:</strong> OpenFreeMap &amp; OpenMapTiles (© kontributor OpenStreetMap) dengan cadangan vektor lokal offline.</p>
         <p><strong>Batas Administratif:</strong> Data administratif Indonesia dari Badan Informasi Geospasial (BIG) / BPS.</p>
         <p>
-          <strong>Sumber Data Bencana:</strong> BMKG TEWS &amp; Nowcast CAP, PVMBG MAGMA Indonesia, RainViewer Radar, GDACS (UN OCHA / Copernicus), NASA FIRMS (VIIRS NOAA-20 &amp; MODIS), USGS, BNPB Geoportal (<code>gis.bnpb.go.id</code> &amp; inaRISK), serta SITABA Kementerian PU.{' '}
+          <strong>Sumber Data Bencana:</strong> BMKG InaTEWS Realtime (<code>live30event.xml</code>), BMKG TEWS &amp; Nowcast CAP, PVMBG MAGMA Indonesia, RainViewer Radar, GDACS (UN OCHA / Copernicus), NASA FIRMS (VIIRS NOAA-20 &amp; MODIS), USGS, BNPB Geoportal (<code>gis.bnpb.go.id</code> &amp; inaRISK), serta SITABA Kementerian PU.{' '}
           <Link href="/sumber" className="text-primary underline hover:text-black">
             Lihat Registri Sumber →
           </Link>

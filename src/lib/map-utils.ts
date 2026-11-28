@@ -223,6 +223,67 @@ export function formatDateTimeWIB(isoString: string): string {
   }
 }
 
+export function formatDateTimeWIBWithSeconds(isoString: string): string {
+  try {
+    const date = new Date(isoString);
+    if (Number.isNaN(date.getTime())) return isoString;
+    const datePart = new Intl.DateTimeFormat('id-ID', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'Asia/Jakarta',
+    }).format(date);
+    const timePart = new Intl.DateTimeFormat('id-ID', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+      timeZone: 'Asia/Jakarta',
+    })
+      .format(date)
+      .replace(/:/g, '.');
+    return `${datePart} pukul ${timePart} WIB`;
+  } catch {
+    return isoString;
+  }
+}
+
+export function formatTimeWIBWithSeconds(isoString: string): string {
+  try {
+    const date = new Date(isoString);
+    if (Number.isNaN(date.getTime())) return isoString;
+    const timePart = new Intl.DateTimeFormat('id-ID', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+      timeZone: 'Asia/Jakarta',
+    })
+      .format(date)
+      .replace(/:/g, '.');
+    return `${timePart} WIB`;
+  } catch {
+    return isoString;
+  }
+}
+
+export function formatRelativeTimeId(isoString: string, nowMs = Date.now()): string {
+  try {
+    const dateMs = new Date(isoString).getTime();
+    if (Number.isNaN(dateMs)) return '';
+    const diffSec = Math.max(0, Math.floor((nowMs - dateMs) / 1000));
+    if (diffSec < 60) return 'Baru saja';
+    const diffMin = Math.floor(diffSec / 60);
+    if (diffMin < 60) return `${diffMin} menit lalu`;
+    const diffHour = Math.floor(diffMin / 60);
+    if (diffHour < 24) return `${diffHour} jam lalu`;
+    const diffDay = Math.floor(diffHour / 24);
+    return `${diffDay} hari lalu`;
+  } catch {
+    return '';
+  }
+}
+
 export function formatIndonesianDecimal(value: string | number): string {
   const num = typeof value === 'string' ? Number.parseFloat(value) : value;
   if (Number.isNaN(num)) return String(value).replace('.', ',');

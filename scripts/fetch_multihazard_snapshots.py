@@ -11,7 +11,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 SNAPSHOT_DIR = Path(__file__).resolve().parent.parent / "data" / "snapshots" / "bnpb-2026-11-28"
-USER_AGENT = "SATGAS-PetaBencana/1.0 (+https://satgas-app)"
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
 TIMEOUT_SEC = 25
 
 SSL_CTX = ssl.create_default_context()
@@ -189,6 +192,14 @@ def main() -> None:
     gdacs_path = SNAPSHOT_DIR / "gdacs_idn_snapshot.json"
     gdacs_path.write_text(json.dumps(gdacs_data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Saved {gdacs_path.name}: {gdacs_data['count']} Indonesia items")
+
+    try:
+        inatews_xml = fetch_text("https://cdn.bmkg.go.id/live30event.xml")
+        inatews_path = SNAPSHOT_DIR / "bmkg_inatews_live30event.xml"
+        inatews_path.write_text(inatews_xml, encoding="utf-8")
+        print(f"Saved {inatews_path.name}: {len(inatews_xml)} bytes")
+    except Exception as exc:
+        print(f"[WARN] Failed to fetch BMKG InaTEWS live30event.xml: {exc}")
 
 
 if __name__ == "__main__":
