@@ -23,7 +23,7 @@ export function Footer() {
               <li><Link href="/" className="text-secondary-text hover:text-primary transition-colors">Beranda</Link></li>
               <li><Link href="/peta" className="text-secondary-text hover:text-primary transition-colors">Peta Nasional</Link></li>
               <li><Link href="/tren" className="text-secondary-text hover:text-primary transition-colors">Tren Bencana</Link></li>
-              <li><Link href="/kasus/ntt-2026" className="text-secondary-text hover:text-primary transition-colors">Kasus Flores NTT 2026</Link></li>
+              <li><Link href="/kasus" className="text-secondary-text hover:text-primary transition-colors">Studi Kasus</Link></li>
               <li><Link href="/metodologi" className="text-secondary-text hover:text-primary transition-colors">Metodologi</Link></li>
               <li><Link href="/sumber" className="text-secondary-text hover:text-primary transition-colors">Sumber Data</Link></li>
               <li><Link href="/bantu" className="text-secondary-text hover:text-primary transition-colors">Saluran Bantuan Resmi</Link></li>

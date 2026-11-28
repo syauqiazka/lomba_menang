@@ -23,9 +23,19 @@ export function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 8);
     };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false);
+    };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
+
+  const isNavActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header
@@ -62,21 +72,24 @@ export function Navigation() {
             <span className="sm:hidden">Transparansi</span>
           </Link>
 
-          <div className="hidden md:flex md:items-center md:gap-6">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-md px-2 py-1 ${
-                  pathname === item.href
-                    ? "text-primary"
-                    : "text-secondary-text hover:text-primary"
-                }`}
-                aria-current={pathname === item.href ? "page" : undefined}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:flex md:items-center md:gap-2 lg:gap-4">
+            {navigation.map((item) => {
+              const active = isNavActive(item.href);
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-md px-2.5 py-1.5 ${
+                    active
+                      ? "bg-secondary-background text-primary font-semibold"
+                      : "font-medium text-secondary-text hover:text-primary hover:bg-secondary-background/60"
+                  }`}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
 
           <button
@@ -102,21 +115,24 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <div id="mobile-menu" className="md:hidden py-4 border-t border-border animate-slide-up" role="navigation" aria-label="Menu mobile">
             <div className="flex flex-col gap-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
-                    pathname === item.href
-                      ? "bg-secondary-background text-primary"
-                      : "text-secondary-text hover:text-primary hover:bg-secondary-background"
-                  }`}
-                  aria-current={pathname === item.href ? "page" : undefined}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const active = isNavActive(item.href);
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`px-3 py-2.5 rounded-md text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+                      active
+                        ? "bg-secondary-background text-primary font-semibold"
+                        : "text-secondary-text hover:text-primary hover:bg-secondary-background"
+                    }`}
+                    aria-current={active ? "page" : undefined}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}

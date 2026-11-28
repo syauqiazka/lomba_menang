@@ -1,13 +1,13 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { prisma } from '@/lib/prisma';
 import {
   getBmkgRealtimeEarthquakes,
+  getCachedRegenciesByNameLen,
   matchFeltRegencies,
   normalizeRegencyName,
-  parseCentroid,
   type RegencyLookupRef,
 } from '@/lib/bmkg-realtime';
+import { withSwrCache } from '@/lib/server-cache';
 import type {
   DisasterIncidentDTO,
   IncidentCategory,
@@ -335,7 +335,7 @@ function buildHeaders(accept = 'application/json, text/plain, */*') {
 
 async function fetchJsonWithTimeout<T>(url: string, options: { revalidate: number; forceRefresh: boolean }): Promise<T> {
   const fetchInit: RequestInit & { next?: { revalidate: number } } = {
-    signal: AbortSignal.timeout(7000),
+    signal: AbortSignal.timeout(4500),
     headers: buildHeaders(),
     ...(options.forceRefresh ? { cache: 'no-store' } : { next: { revalidate: options.revalidate } }),
   };
@@ -348,7 +348,7 @@ async function fetchJsonWithTimeout<T>(url: string, options: { revalidate: numbe
 
 async function fetchTextWithTimeout(url: string, options: { revalidate: number; forceRefresh: boolean }): Promise<string> {
   const fetchInit: RequestInit & { next?: { revalidate: number } } = {
-    signal: AbortSignal.timeout(8000),
+    signal: AbortSignal.timeout(4500),
     headers: buildHeaders('text/csv, text/plain, */*'),
     ...(options.forceRefresh ? { cache: 'no-store' } : { next: { revalidate: options.revalidate } }),
   };
@@ -728,37 +728,37 @@ export async function getDisasterIncidentsFeed(options?: {
   category?: IncidentCategory | 'ALL';
 }): Promise<IncidentsFeedResponse> {
   const forceRefresh = Boolean(options?.forceRefresh);
+  const fullFeed = await withSwrCache(
+    'incidents:all',
+    { freshMs: 2 * 60_000, staleMs: 15 * 60_000, forceRefresh },
+    () => loadAllDisasterIncidents(forceRefresh)
+  );
+
+  if (options?.category && options.category !== 'ALL') {
+    return {
+      ...fullFeed,
+      incidents: fullFeed.incidents.filter((inc) => inc.category === options.category),
+    };
+  }
+  return fullFeed;
+}
+
+async function loadAllDisasterIncidents(forceRefresh: boolean): Promise<IncidentsFeedResponse> {
   const nowIso = new Date().toISOString();
 
-  const [dbRegions, provIndex] = await Promise.all([
-    prisma.region.findMany({
-      where: { level: 'REGENCY_CITY' },
-      select: { code: true, name: true, parentCode: true, centroid: true },
-    }),
+  const [sortedRegsByNameLen, provIndex] = await Promise.all([
+    getCachedRegenciesByNameLen(),
     getProvinceIndex(),
   ]);
 
   const regByCode = new Map<string, RegencyRef>();
   const regsByProv = new Map<string, RegencyRef[]>();
-  const regsList: RegencyRef[] = [];
 
-  for (const r of dbRegions) {
-    const provCode = r.parentCode ?? r.code.slice(0, 2);
-    const ref: RegencyRef = {
-      code: r.code,
-      name: r.name,
-      normalizedName: normalizeRegencyName(r.name),
-      provinceCode: provCode,
-      centroid: parseCentroid(r.centroid),
-    };
-    regByCode.set(r.code, ref);
-    regsList.push(ref);
-    if (!regsByProv.has(provCode)) regsByProv.set(provCode, []);
-    regsByProv.get(provCode)!.push(ref);
+  for (const ref of sortedRegsByNameLen) {
+    regByCode.set(ref.code, ref);
+    if (!regsByProv.has(ref.provinceCode)) regsByProv.set(ref.provinceCode, []);
+    regsByProv.get(ref.provinceCode)!.push(ref);
   }
-  const sortedRegsByNameLen = [...regsList].sort(
-    (a, b) => b.normalizedName.length - a.normalizedName.length
-  );
 
   let nowcastLive = true;
   let magmaLive = true;
@@ -1633,11 +1633,6 @@ export async function getDisasterIncidentsFeed(options?: {
     .sort((a, b) => b.localeCompare(a))
     .slice(0, 14);
 
-  const filtered =
-    options?.category && options.category !== 'ALL'
-      ? incidents.filter((inc) => inc.category === options.category)
-      : incidents;
-
   return {
     updatedAt: nowIso,
     bmkgRealtimeUpdatedAt: bmkgRealtimeResult.response.updatedAt,
@@ -1666,6 +1661,6 @@ export async function getDisasterIncidentsFeed(options?: {
     },
     datesAvailable,
     countsByCategory,
-    incidents: filtered,
+    incidents,
   };
 }

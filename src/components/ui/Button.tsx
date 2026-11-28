@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -63,33 +64,44 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = "Button";
 
-export const LinkButton = forwardRef<HTMLAnchorElement, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & { href: string; variant?: "primary" | "secondary"; size?: "sm" | "md" | "lg" }>(
-  ({ variant = "primary", size = "md", href, className = "", children, ...props }, ref) => {
-    const baseStyles =
-      "inline-flex items-center justify-center font-medium font-body rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
+export const LinkButton = forwardRef<
+  HTMLAnchorElement,
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
+    href: string;
+    variant?: "primary" | "secondary" | "inverted";
+    size?: "sm" | "md" | "lg";
+  }
+>(({ variant = "primary", size = "md", href, className = "", children, ...props }, ref) => {
+  const baseStyles =
+    "inline-flex items-center justify-center font-medium font-body rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
 
-    const variantStyles = {
-      primary: "bg-primary text-white hover:bg-black",
-      secondary: "bg-white text-primary border border-border hover:bg-secondary-background",
-    };
+  const variantStyles = {
+    primary: "bg-primary text-white hover:bg-black",
+    secondary: "bg-white text-primary border border-border hover:bg-secondary-background",
+    inverted: "bg-white text-primary border border-white hover:bg-secondary-background",
+  };
 
-    const sizeStyles = {
-      sm: "px-3 py-1.5 text-sm",
-      md: "px-4 py-2 text-base",
-      lg: "px-6 py-3 text-lg",
-    };
+  const sizeStyles = {
+    sm: "px-3 py-1.5 text-sm",
+    md: "px-4 py-2 text-base",
+    lg: "px-6 py-3 text-lg",
+  };
 
+  const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+
+  if (href.startsWith("/") && !props.target && !props.download) {
     return (
-      <a
-        ref={ref}
-        href={href}
-        className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
-        {...props}
-      >
+      <Link ref={ref} href={href} className={classes} {...props}>
         {children}
-      </a>
+      </Link>
     );
   }
-);
+
+  return (
+    <a ref={ref} href={href} className={classes} {...props}>
+      {children}
+    </a>
+  );
+});
 
 LinkButton.displayName = "LinkButton";

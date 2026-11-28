@@ -6,10 +6,12 @@ import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
   title: "Saluran Bantuan Resmi | Transparansi Bantuan Bencana",
-  description: "Daftar saluran bantuan resmi terverifikasi: BNPB, PMI, Baznas, dan instansi pemerintah. Platform ini tidak mengumpulkan donasi.",
+  description:
+    "Daftar saluran bantuan resmi terverifikasi: BNPB, Basarnas, PMI, Baznas, Kemensos, dan BMKG InaTEWS. Platform ini tidak mengumpulkan donasi.",
   openGraph: {
     title: "Saluran Bantuan Resmi | Transparansi Bantuan Bencana",
-    description: "Link ke saluran bantuan resmi terverifikasi: BNPB, PMI, Baznas, dan instansi pemerintah.",
+    description:
+      "Tautan ke saluran bantuan resmi terverifikasi: BNPB, Basarnas, PMI, Baznas, Kemensos, dan BMKG.",
     type: "website",
     locale: "id_ID",
   },
@@ -17,62 +19,125 @@ export const metadata: Metadata = {
 
 const officialChannels = [
   {
-    name: "BNPB (Badan Nasional Penanggulangan Bencana)",
-    description: "Instansi utama penanggulangan bencana nasional. Koordinasi respons darurat, data bencana, dan saluran bantuan resmi pusat.",
+    name: "BNPB & Pusdalops PB",
+    description:
+      "Badan Nasional Penanggulangan Bencana dan Pusat Pengendalian Operasional 24 jam. Koordinasi respons darurat nasional, data dampak resmi, dan rujukan BPBD daerah.",
     url: "https://bnpb.go.id",
-    verified: true,
     category: "Pemerintah Pusat",
-    services: ["Koordinasi bencana nasional", "Data bencana real-time", "Posko bantuan terpusat", "Informasi evakuasi"],
+    services: [
+      "Koordinasi bencana nasional",
+      "Call Center 117 / 021-80820200",
+      "Direktori BPBD Provinsi & Kab/Kota",
+      "Posko bantuan & logistik terpusat",
+    ],
+  },
+  {
+    name: "Basarnas (Badan Nasional Pencarian dan Pertolongan)",
+    description:
+      "Instansi pemerintah yang bertugas melaksanakan pencarian, pertolongan, dan evakuasi korban bencana alam, kecelakaan transportasi, maupun kondisi darurat.",
+    url: "https://basarnas.go.id",
+    category: "Layanan SAR",
+    services: [
+      "Pencarian & pertolongan (SAR)",
+      "Nomor darurat 115",
+      "Evakuasi wilayah terisolir",
+      "Koordinasi tim SAR daerah",
+    ],
   },
   {
     name: "PMI (Palang Merah Indonesia)",
-    description: "Organisasi kemanusiaan nasional dengan jaringan cabang di seluruh Indonesia. Penyaluran bantuan logistik, kesehatan, dan relawan.",
+    description:
+      "Organisasi kemanusiaan nasional dengan jaringan cabang di seluruh Indonesia untuk penyaluran bantuan logistik, layanan kesehatan darurat, donor darah, dan relawan.",
     url: "https://pmi.or.id",
-    verified: true,
     category: "Organisasi Kemanusiaan",
-    services: ["Bantuan logistik (tenda, makanan, air)", "Layanan kesehatan darurat", "Relawan & donor darah", "Restoring Family Links"],
+    services: [
+      "Bantuan logistik (tenda, pangan, air)",
+      "Layanan kesehatan darurat",
+      "Relawan & donor darah",
+      "Restoring Family Links",
+    ],
   },
   {
     name: "Baznas (Badan Amil Zakat Nasional)",
-    description: "Badan pengelola zakat nasional resmi. Program bantuan bencana melalui dana zakat, infak, sedekah (ZIS).",
+    description:
+      "Lembaga pemerintah nonstruktural pengelola zakat, infak, dan sedekah (ZIS) nasional dengan program Baznas Tanggap Bencana dan pemulihan pasca-bencana.",
     url: "https://baznas.go.id",
-    verified: true,
-    category: "Lembaga Keagamaan",
-    services: ["Bantuan darurat ZIS", "Program rehabilitasi", "Pemberdayaan ekonomi pasca-bencana", "Laporan keuangan transparan"],
-  },
-  {
-    name: "BPBD Provinsi & Kabupaten/Kota",
-    description: "Badan Penanggulangan Bencana Daerah di tingkat provinsi dan kabupaten/kota. Titik koordinasi bantuan lokal terdekat.",
-    url: "https://bpbd.go.id",
-    verified: true,
-    category: "Pemerintah Daerah",
-    services: ["Koordinasi bencana daerah", "Data kerusakan lokal", "Posko kecamatan/desa", "Distribusi bantuan daerah"],
+    category: "Lembaga Resmi ZIS",
+    services: [
+      "Bantuan darurat ZIS",
+      "Baznas Tanggap Bencana",
+      "Program rehabilitasi & pemulihan",
+      "Laporan penyaluran transparan",
+    ],
   },
   {
     name: "Kemensos (Kementerian Sosial RI)",
-    description: "Kementerian yang menangani rehabilitasi sosial, bantuan sosial (bansos), dan perlindungan rentan pasca-bencana.",
+    description:
+      "Kementerian yang menangani jaminan sosial korban bencana, lumbung sosial daerah, layanan dukungan psikososial, serta perlindungan kelompok rentan.",
     url: "https://kemensos.go.id",
-    verified: true,
     category: "Pemerintah Pusat",
-    services: ["Bantuan sosial tunai (BST)", "Rehabilitasi sosial", "Perlindungan anak & lansia", "Data terduga (DTKS)"],
+    services: [
+      "Lumbung sosial & dapur umum (Tagana)",
+      "Santunan & bantuan sosial darurat",
+      "Dukungan psikososial",
+      "Perlindungan anak & lansia",
+    ],
   },
   {
-    name: "Pusdalops PB (Pusat Pengendalian Operasional Penanggulangan Bencana)",
-    description: "Pusat informasi dan koordinasi operasional bencana 24 jam di bawah BNPB. Nomor darurat dan laporan bencana.",
-    url: "https://bnpb.go.id/pusdalops",
-    verified: true,
-    category: "Layanan Darurat",
-    services: ["Nomor darurat 117 / 021-80820200", "Laporan bencana real-time", "Koordinasi SAR", "Early warning system"],
+    name: "BMKG InaTEWS (Peringatan Dini Gempa & Tsunami)",
+    description:
+      "Sistem peringatan dini gempabumi dan tsunami nasional resmi BMKG untuk memantau parameter gempa realtime, peta guncangan (Shakemap), dan status tsunami.",
+    url: "https://inatews.bmkg.go.id",
+    category: "Informasi & Peringatan Dini",
+    services: [
+      "Monitor gempabumi realtime",
+      "Peringatan dini tsunami",
+      "Peta guncangan MMI (Shakemap)",
+      "Peringatan cuaca ekstrem",
+    ],
+  },
+];
+
+const emergencyNumbers = [
+  {
+    label: "Darurat BNPB / Pusdalops",
+    phones: [{ display: "117", tel: "117" }, { display: "021-80820200", tel: "02180820200" }],
+    description: "Layanan pengaduan & koordinasi bencana 24 jam",
+  },
+  {
+    label: "SAR Basarnas",
+    phones: [{ display: "115", tel: "115" }, { display: "021-65834900", tel: "02165834900" }],
+    description: "Pencarian, pertolongan, dan evakuasi darurat",
+  },
+  {
+    label: "Ambulans / Kesehatan",
+    phones: [{ display: "119", tel: "119" }],
+    description: "Public Safety Center layanan kesehatan darurat",
+  },
+  {
+    label: "Kepolisian RI",
+    phones: [{ display: "110", tel: "110" }],
+    description: "Layanan keamanan, lalu lintas, & ketertiban",
+  },
+  {
+    label: "Pemadam Kebakaran",
+    phones: [{ display: "113", tel: "113" }],
+    description: "Kebakaran & operasi penyelamatan lokal",
+  },
+  {
+    label: "Layanan Darurat Terpadu",
+    phones: [{ display: "112", tel: "112" }],
+    description: "Nomor darurat nasional bebas pulsa (kota/kabupaten)",
   },
 ];
 
 const importantNoticePoints = [
   <>Kami <strong>tidak menerima uang</strong> dalam bentuk apa pun (transfer bank, e-wallet, kripto, dll.).</>,
   <>Kami <strong>tidak mempublikasikan nomor rekening bank</strong> pribadi atau organisasi.</>,
-  <>Kami <strong>tidak menyediakan dompet penggalangan dana</strong> (fundraising wallet) atau QRIS donasi.</>,
+  <>Kami <strong>tidak menyediakan dompet penggalangan dana</strong> atau QRIS donasi.</>,
   <>Kami <strong>tidak mengintegrasikan payment gateway</strong> atau sistem pembayaran apa pun.</>,
-  <>Semua tautan di halaman ini mengarah ke <strong>situs web resmi instansi</strong> yang terverifikasi.</>,
-  <>Jika Anda menemukan pihak yang mengatasnamakan platform ini meminta donasi, <strong>itu adalah penipuan</strong>.</>,
+  <>Semua tautan di halaman ini mengarah langsung ke <strong>situs web resmi instansi</strong> terkait.</>,
+  <>Jika ada pihak mengatasnamakan platform ini untuk meminta donasi, <strong>abaikan dan laporkan sebagai penipuan</strong>.</>,
 ];
 
 export default function HelpPage() {
@@ -80,13 +145,13 @@ export default function HelpPage() {
     <MainLayout>
       <section className="py-12 md:py-16 bg-background" aria-labelledby="help-heading">
         <div className="container-main max-w-4xl">
-          <header className="mb-12 text-center">
+          <header className="mb-10 text-center">
             <h1 id="help-heading" className="font-display font-bold text-3xl md:text-4xl text-primary mb-4">
               Saluran Bantuan Resmi
             </h1>
-            <p className="text-secondary-text text-lg">
-              Daftar instansi dan organisasi resmi yang menangani bantuan bencana di Indonesia.
-              Semua tautan diverifikasi mengarah ke situs web resmi.
+            <p className="text-secondary-text text-lg leading-relaxed">
+              Daftar instansi pemerintah, layanan SAR, dan organisasi kemanusiaan resmi di Indonesia.
+              Seluruh tautan mengarah langsung ke kanal terverifikasi masing-masing instansi.
             </p>
           </header>
 
@@ -99,7 +164,7 @@ export default function HelpPage() {
                 </svg>
                 Peringatan Penting: Platform Ini Tidak Mengumpulkan Donasi
               </h2>
-              <ul className="list-disc list-inside text-secondary-text space-y-2">
+              <ul className="list-disc list-inside text-secondary-text text-sm space-y-2">
                 {importantNoticePoints.map((point, index) => (
                   <li key={index} className="leading-relaxed">{point}</li>
                 ))}
@@ -110,38 +175,40 @@ export default function HelpPage() {
           {/* Official Channels */}
           <section aria-labelledby="channels-heading" className="mb-12">
             <h2 id="channels-heading" className="font-display font-semibold text-2xl text-primary mb-6">
-              Instansi & Organisasi Resmi
+              Instansi &amp; Organisasi Resmi
             </h2>
             <div className="space-y-4">
-              {officialChannels.map((channel, index) => (
-                <Card key={index} className="hover:border-primary transition-colors">
+              {officialChannels.map((channel) => (
+                <Card key={channel.name} className="hover:border-primary transition-colors">
                   <CardContent className="flex flex-col md:flex-row md:items-center gap-6">
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
                         <h3 className="font-display font-semibold text-lg text-primary">{channel.name}</h3>
-                        {channel.verified && (
-                          <Badge variant="safe" className="flex-shrink-0">
-                            Terverifikasi
-                          </Badge>
-                        )}
+                        <Badge variant="safe" size="sm" className="flex-shrink-0">
+                          Resmi
+                        </Badge>
+                        <Badge variant="neutral" size="sm" className="flex-shrink-0">
+                          {channel.category}
+                        </Badge>
                       </div>
-                      <p className="text-secondary-text text-sm mb-3">{channel.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="neutral" className="text-xs">{channel.category}</Badge>
-                        {channel.services.slice(0, 3).map((service, si) => (
-                          <Badge key={si} variant="default" className="text-xs">
+                      <p className="text-secondary-text text-sm mb-3 leading-relaxed">{channel.description}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {channel.services.map((service) => (
+                          <Badge key={service} variant="default" size="sm">
                             {service}
                           </Badge>
                         ))}
-                        {channel.services.length > 3 && (
-                          <Badge variant="default" className="text-xs">
-                            +{channel.services.length - 3} layanan lain
-                          </Badge>
-                        )}
                       </div>
                     </div>
-                    <div className="flex-shrink-0 md:w-48">
-                      <LinkButton size="lg" variant="primary" href={channel.url} className="w-full" target="_blank" rel="noopener noreferrer">
+                    <div className="flex-shrink-0 md:w-52">
+                      <LinkButton
+                        size="md"
+                        variant="primary"
+                        href={channel.url}
+                        className="w-full"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Kunjungi Situs Resmi
                         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -159,21 +226,28 @@ export default function HelpPage() {
             <h2 id="emergency-heading" className="font-display font-semibold text-2xl text-primary mb-6">
               Nomor Darurat Penting
             </h2>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                { label: "Darurat BNPB / Pusdalops", number: "117", description: "Layanan 24 jam, gratis" },
-                { label: "Darurat BNPB (Darurat)", number: "021-80820200", description: "Nomor darurat alternatif" },
-                { label: "Ambulans / Kesehatan", number: "119", description: "Layanan kesehatan darurat" },
-                { label: "Polisi", number: "110", description: "Keamanan & ketertiban" },
-                { label: "Pemadam Kebakaran", number: "113", description: "Kebakaran & penyelamatan" },
-                { label: "SAR Basarnas", number: "115 / 021-65834900", description: "Search and Rescue" },
-              ].map((item, index) => (
-                <Card key={index} className="text-center p-6">
-                  <p className="text-secondary-text text-sm mb-1">{item.label}</p>
-                  <p className="font-display font-bold text-3xl text-primary font-mono">
-                    <a href={`tel:${item.number.replace(/\D/g, "")}`} className="hover:underline">{item.number}</a>
-                  </p>
-                  <p className="text-secondary-text text-xs mt-1">{item.description}</p>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {emergencyNumbers.map((item) => (
+                <Card key={item.label} className="text-center">
+                  <CardContent className="flex flex-col justify-between h-full">
+                    <p className="text-secondary-text text-sm font-medium mb-2">{item.label}</p>
+                    <div className="flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 my-1">
+                      {item.phones.map((ph, idx) => (
+                        <span key={ph.tel} className="inline-flex items-baseline gap-2">
+                          {idx > 0 && <span className="text-secondary-text text-sm">/</span>}
+                          <a
+                            href={`tel:${ph.tel}`}
+                            className={`font-display font-bold font-mono text-primary hover:underline ${
+                              idx === 0 ? "text-2xl sm:text-3xl" : "text-lg text-secondary-text"
+                            }`}
+                          >
+                            {ph.display}
+                          </a>
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-secondary-text text-xs mt-2">{item.description}</p>
+                  </CardContent>
                 </Card>
               ))}
             </div>
@@ -182,35 +256,35 @@ export default function HelpPage() {
           {/* Guidance */}
           <section aria-labelledby="guidance-heading" className="mb-12">
             <h2 id="guidance-heading" className="font-display font-semibold text-2xl text-primary mb-6">
-              Panduan Menyalurkan Bantuan
+              Panduan Menyalurkan Bantuan Secara Aman
             </h2>
-            <div className="space-y-6">
+            <div className="grid gap-4 md:grid-cols-2">
               {[
                 {
-                  title: "1. Verifikasi Kebutuhan",
-                  content: "Sebelum menyumbangkan, cek kebutuhan aktual via laporan BNPB/BPBD atau organisasi kemanusiaan terverifikasi. Hindari mengirim barang yang tidak dibutuhkan (baju bekas tidak layak pakai, makanan kedaluwarsa).",
+                  title: "1. Verifikasi Kebutuhan Lapangan",
+                  content:
+                    "Periksa kebutuhan aktual melalui laporan BNPB, BPBD setempat, atau PMI sebelum mengirim logistik agar barang tidak menumpuk di posko tanpa terpakai.",
                 },
                 {
-                  title: "2. Salurkan Lewat Resmi",
-                  content: "Gunakan rekening resmi instansi (BNPB, PMI, Baznas, Kemensos) yang terpublikasi di website masing-masing. Jangan transfer ke rekening pribadi yang mengklaim sebagai 'wakil' instansi.",
+                  title: "2. Salurkan Melalui Kanal Resmi",
+                  content:
+                    "Gunakan rekening atau kanal resmi yang dipublikasikan langsung di situs instansi (BNPB, PMI, Baznas, Kemensos). Hindari transfer ke rekening pribadi.",
                 },
                 {
-                  title: "3. Catat Bukti Transfer",
-                  content: "Simpan bukti transfer dan konfirmasikan ke instansi penerima. Minta nomor registrasi donasi untuk pelacakan transparansi.",
+                  title: "3. Koordinasi Bantuan Barang (In-Kind)",
+                  content:
+                    "Koordinasikan pengiriman barang dengan BPBD atau cabang PMI terdekat. Pastikan kemasan rapi, berlabel jelas, serta bukan makanan kedaluwarsa atau pakaian tak layak.",
                 },
                 {
-                  title: "4. Bantuan Barang (In-Kind)",
-                  content: "Koordinasikan dengan BPBD setempat atau PMI cabang untuk logistik pengiriman. Barang harus terkemas rapi, berlabel jelas, dan sesuai kebutuhan prioritas (tenda, air, makanan siap saji, obat, alat kebersihan).",
+                  title: "4. Pendaftaran Relawan Terkoordinasi",
+                  content:
+                    "Daftarkan diri melalui PMI, BNPB, atau organisasi kemanusiaan terdaftar. Jangan memasuki wilayah terdampak secara mandiri tanpa koordinasi posko.",
                 },
-                {
-                  title: "5. Relawan",
-                  content: "Daftar melalui PMI, BNPB, atau organisasi kemanusiaan terdaftar. Jangan datang sendiri ke lokasi bencana tanpa koordinasi — berisiko menambah beban logistik dan keamanan.",
-                },
-              ].map((item, index) => (
-                <Card key={index}>
+              ].map((item) => (
+                <Card key={item.title}>
                   <CardContent>
-                    <h3 className="font-semibold text-primary mb-2">{item.title}</h3>
-                    <p className="text-secondary-text">{item.content}</p>
+                    <h3 className="font-display font-semibold text-base text-primary mb-2">{item.title}</h3>
+                    <p className="text-secondary-text text-sm leading-relaxed">{item.content}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -220,7 +294,8 @@ export default function HelpPage() {
           {/* Navigation */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <LinkButton variant="secondary" href="/peta">← Lihat Peta Bencana</LinkButton>
-            <LinkButton variant="secondary" href="/kasus/ntt-2026">Lihat Kasus NTT 2026 →</LinkButton>
+            <LinkButton href="/kasus">Lihat Studi Kasus →</LinkButton>
+            <LinkButton variant="secondary" href="/sumber">Lihat Sumber Data →</LinkButton>
           </div>
         </div>
       </section>

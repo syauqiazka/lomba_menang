@@ -41,12 +41,16 @@ export async function GET(
       );
     }
 
+    const cacheHeaders = {
+      'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+    };
+
     if (validCode.length === 2) {
       const regencies = await getRegenciesForProvince(validCode);
-      return NextResponse.json({ region, regencies });
+      return NextResponse.json({ region, regencies }, { headers: cacheHeaders });
     }
 
-    return NextResponse.json({ region });
+    return NextResponse.json({ region }, { headers: cacheHeaders });
   } catch (error) {
     console.error('Failed to fetch map region detail:', error);
     return NextResponse.json(

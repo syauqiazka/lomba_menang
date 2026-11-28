@@ -17,8 +17,8 @@ export interface SourceRegistryItem {
   importBatchId: string | null;
 }
 
-const categoryFilters = [
-  { value: "", label: "Semua Kategori" },
+const categoryFilters: Array<{ value: string; label: string }> = [
+  { value: "", label: "Semua" },
   { value: "OFFICIAL", label: "Resmi" },
   { value: "MEDIA", label: "Media" },
   { value: "RESEARCH", label: "Penelitian" },
@@ -55,6 +55,20 @@ export function SourcesRegistryClient({ sources }: { sources: SourceRegistryItem
   const [category, setCategory] = useState("");
   const [query, setQuery] = useState("");
 
+  const countsByCategory = useMemo(() => {
+    const counts: Record<string, number> = {
+      "": sources.length,
+      OFFICIAL: 0,
+      MEDIA: 0,
+      RESEARCH: 0,
+      EDITORIAL: 0,
+    };
+    for (const src of sources) {
+      counts[src.category] = (counts[src.category] ?? 0) + 1;
+    }
+    return counts;
+  }, [sources]);
+
   const filteredSources = useMemo(() => {
     const q = query.trim().toLowerCase();
     return sources.filter((source) => {
@@ -73,13 +87,41 @@ export function SourcesRegistryClient({ sources }: { sources: SourceRegistryItem
     });
   }, [sources, category, query]);
 
+  const hasFilters = Boolean(category || query.trim());
+
   return (
     <>
+      {/* Category Summary Chips */}
+      <div className="flex flex-wrap items-center gap-2 mb-5" role="group" aria-label="Ringkasan kategori sumber">
+        {categoryFilters.map((f) => {
+          const active = category === f.value;
+          const count = countsByCategory[f.value] ?? 0;
+          return (
+            <button
+              key={f.value || "all"}
+              type="button"
+              onClick={() => setCategory(f.value)}
+              aria-pressed={active}
+              className={`min-h-[38px] px-3.5 py-1.5 rounded-lg border text-xs sm:text-sm font-medium transition-colors inline-flex items-center gap-2 ${
+                active
+                  ? "bg-primary text-white border-primary"
+                  : "bg-background border-border text-primary hover:bg-secondary-background"
+              }`}
+            >
+              <span>{f.label}</span>
+              <span className={`font-mono text-xs ${active ? "text-white/80" : "text-secondary-text"}`}>
+                {count}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
       {/* Filters */}
       <Card className="mb-8">
-        <CardContent className="pt-6">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1">
+        <CardContent>
+          <div className="flex flex-col md:flex-row gap-4 items-end">
+            <div className="flex-1 w-full">
               <label htmlFor="category-filter" className="block text-sm font-medium text-primary mb-1">
                 Filter Kategori
               </label>
@@ -91,26 +133,38 @@ export function SourcesRegistryClient({ sources }: { sources: SourceRegistryItem
                 onChange={(e) => setCategory(e.target.value)}
               >
                 {categoryFilters.map((f) => (
-                  <option key={f.value} value={f.value}>
-                    {f.label}
+                  <option key={f.value || "all"} value={f.value}>
+                    {f.label === "Semua" ? "Semua Kategori" : f.label} ({countsByCategory[f.value] ?? 0})
                   </option>
                 ))}
               </select>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 w-full">
               <label htmlFor="search-sources" className="block text-sm font-medium text-primary mb-1">
                 Cari Sumber
               </label>
               <input
                 type="search"
                 id="search-sources"
-                placeholder="Judul, penerbit, atau URL..."
+                placeholder="Judul, penerbit, deskripsi, atau URL..."
                 className="input-field"
                 aria-label="Cari sumber data"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
             </div>
+            {hasFilters && (
+              <button
+                type="button"
+                onClick={() => {
+                  setCategory("");
+                  setQuery("");
+                }}
+                className="min-h-[44px] px-4 py-2 rounded-md border border-border bg-background text-sm font-medium text-primary hover:bg-secondary-background transition-colors whitespace-nowrap"
+              >
+                Reset
+              </button>
+            )}
           </div>
           <p className="text-xs text-secondary-text mt-3" aria-live="polite">
             Menampilkan {filteredSources.length} dari {sources.length} sumber terdaftar.
@@ -120,15 +174,27 @@ export function SourcesRegistryClient({ sources }: { sources: SourceRegistryItem
 
       {filteredSources.length === 0 ? (
         <Card className="mb-8">
-          <CardContent className="py-12 text-center">
-            <p className="text-primary font-medium mb-1">Tidak ada sumber yang cocok dengan filter.</p>
+          <CardContent className="py-12 text-center space-y-3">
+            <p className="text-primary font-medium">Tidak ada sumber yang cocok dengan filter.</p>
             <p className="text-secondary-text text-sm">Coba ubah kategori atau kata kunci pencarian.</p>
+            {hasFilters && (
+              <button
+                type="button"
+                onClick={() => {
+                  setCategory("");
+                  setQuery("");
+                }}
+                className="inline-flex items-center px-4 py-2 rounded-md border border-border bg-background text-sm font-medium text-primary hover:bg-secondary-background transition-colors"
+              >
+                Reset Filter
+              </button>
+            )}
           </CardContent>
         </Card>
       ) : (
         <>
           {/* Sources List - Table View (Desktop) */}
-          <div className="hidden lg:block mb-8" role="region" aria-label="Daftar sumber data tampilan tabel" tabIndex={0}>
+          <div className="hidden lg:block mb-8 overflow-x-auto" role="region" aria-label="Daftar sumber data tampilan tabel" tabIndex={0}>
             <div className="table-container">
               <table>
                 <thead>
@@ -144,37 +210,44 @@ export function SourcesRegistryClient({ sources }: { sources: SourceRegistryItem
                 <tbody>
                   {filteredSources.map((source) => (
                     <tr key={source.id}>
-                      <td>
+                      <td className="max-w-md">
                         <div>
                           <p className="font-medium text-primary">{source.title}</p>
-                          {source.publisher && <p className="text-secondary-text text-sm">{source.publisher}</p>}
+                          {source.publisher && (
+                            <p className="text-secondary-text text-xs font-medium mt-0.5">{source.publisher}</p>
+                          )}
+                          {source.description && (
+                            <p className="text-secondary-text text-xs mt-1 leading-relaxed">{source.description}</p>
+                          )}
                         </div>
                       </td>
-                      <td>
-                        <Badge variant={categoryBadges[source.category]}>
+                      <td className="whitespace-nowrap">
+                        <Badge variant={categoryBadges[source.category]} size="sm">
                           {categoryLabels[source.category]}
                         </Badge>
                       </td>
-                      <td>
+                      <td className="whitespace-nowrap">
                         {source.publicationDate ? (
                           <time dateTime={source.publicationDate}>{formatShortDate(source.publicationDate)}</time>
                         ) : (
                           "—"
                         )}
                       </td>
-                      <td>
+                      <td className="whitespace-nowrap">
                         <time dateTime={source.accessDate}>{formatShortDate(source.accessDate)}</time>
                       </td>
-                      <td className="font-mono text-sm text-secondary-text">{source.importBatchId ?? "—"}</td>
-                      <td>
+                      <td className="font-mono text-xs text-secondary-text whitespace-nowrap">
+                        {source.importBatchId ?? "—"}
+                      </td>
+                      <td className="whitespace-nowrap">
                         {isSafeHttpUrl(source.url) ? (
                           <a
                             href={source.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-primary underline hover:text-black text-sm"
+                            className="text-primary underline hover:text-black text-sm font-medium"
                           >
-                            Buka
+                            Buka →
                           </a>
                         ) : (
                           <span className="text-secondary-text text-sm">—</span>
@@ -205,8 +278,13 @@ export function SourcesRegistryClient({ sources }: { sources: SourceRegistryItem
                     compact={false}
                     showCategory={true}
                   />
+                  {source.description && (
+                    <p className="text-xs text-secondary-text mt-2 leading-relaxed">{source.description}</p>
+                  )}
                   <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border">
-                    <span className="font-mono text-xs text-secondary-text">{source.importBatchId ?? "—"}</span>
+                    <span className="font-mono text-xs text-secondary-text">
+                      Batch: {source.importBatchId ?? "—"}
+                    </span>
                   </div>
                 </CardContent>
               </Card>

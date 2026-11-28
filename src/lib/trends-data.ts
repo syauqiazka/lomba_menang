@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { withSwrCache } from '@/lib/server-cache';
 import type { IncidentCategory } from '@/types/map';
 import type {
   DailyTrendPoint,
@@ -273,7 +274,7 @@ function buildHeaders(accept = 'application/json, text/plain, */*') {
   };
 }
 
-async function fetchJsonTimeout<T>(url: string, timeoutMs = 8000): Promise<T> {
+async function fetchJsonTimeout<T>(url: string, timeoutMs = 4500): Promise<T> {
   const resp = await fetch(url, {
     signal: AbortSignal.timeout(timeoutMs),
     headers: buildHeaders(),
@@ -283,7 +284,7 @@ async function fetchJsonTimeout<T>(url: string, timeoutMs = 8000): Promise<T> {
   return (await resp.json()) as T;
 }
 
-async function fetchTextTimeout(url: string, timeoutMs = 9000): Promise<string> {
+async function fetchTextTimeout(url: string, timeoutMs = 4500): Promise<string> {
   const resp = await fetch(url, {
     signal: AbortSignal.timeout(timeoutMs),
     headers: buildHeaders('text/csv, text/plain, text/html, */*'),
@@ -342,13 +343,13 @@ async function fetchUsgs2yLive(nowMs: number): Promise<UsgsCompactSnapshot> {
       features?: Array<{ properties?: { time?: number; mag?: number }; geometry?: { coordinates?: number[] } }>;
     }>(
       `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minlatitude=-11.5&maxlatitude=6.5&minlongitude=94.5&maxlongitude=141.5&minmagnitude=4.0&starttime=${startIso}&endtime=${midIso}&limit=10000`,
-      10000
+      4500
     ),
     fetchJsonTimeout<{
       features?: Array<{ properties?: { time?: number; mag?: number }; geometry?: { coordinates?: number[] } }>;
     }>(
       `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minlatitude=-11.5&maxlatitude=6.5&minlongitude=94.5&maxlongitude=141.5&minmagnitude=4.0&starttime=${midIso}&endtime=${endIso}&limit=10000`,
-      10000
+      4500
     ),
   ]);
 
@@ -377,7 +378,7 @@ async function fetchGdacs2yLive(nowMs: number): Promise<{ features: GdacsFeature
     types.map((ev) =>
       fetchJsonTimeout<{ features?: GdacsFeatureRaw[] }>(
         `https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?fromDate=${fromIso}&toDate=${toIso}&alertlevel=Green;Orange;Red&country=Indonesia&eventlist=${ev}&limit=500`,
-        9000
+        4500
       )
     )
   );
@@ -529,145 +530,202 @@ function calcPctAndRatio(
   return { pct, ratio };
 }
 
+async function loadTrendsRawBundle(nowMs: number) {
+  return withSwrCache(
+    'trends:raw-bundle',
+    { freshMs: 10 * 60_000, staleMs: 60 * 60_000 },
+    async () => {
+      let usgsLive = true;
+      let eonetLive = true;
+      let gdacsLive = true;
+      let firms7dLive = true;
+      let bnpbWeeklyLive = true;
+      let bmkgLive = true;
+      let magmaLive = true;
+
+      const [
+        usgsRaw,
+        eonetRaw,
+        gdacsRaw,
+        firmsNoaaCsv,
+        firmsModisCsv,
+        bnpbWeeklyRaw,
+        puRaw,
+        bmkgTerkini,
+        bmkgDirasakan,
+        bmkgNowcastAlerts,
+        magmaList,
+      ] = await Promise.all([
+        fetchUsgs2yLive(nowMs).catch(async () => {
+          usgsLive = false;
+          return readSnapJson<UsgsCompactSnapshot>('usgs_2y_idn.json');
+        }),
+        fetchJsonTimeout<{ events?: EonetEventRaw[] }>(EONET_2Y_URL, 4500).catch(async () => {
+          eonetLive = false;
+          return readSnapJson<{ events?: EonetEventRaw[] }>('eonet_2y_idn.json');
+        }),
+        fetchGdacs2yLive(nowMs).catch(async () => {
+          gdacsLive = false;
+          return readSnapJson<{ features?: GdacsFeatureRaw[] }>('gdacs_2y_idn.json');
+        }),
+        fetchTextTimeout(NASA_FIRMS_NOAA20_7D_URL, 4500).catch(async () => {
+          firms7dLive = false;
+          return readSnapText('nasa_firms_noaa20_7d.csv');
+        }),
+        fetchTextTimeout(NASA_FIRMS_MODIS_7D_URL, 4500).catch(async () => {
+          firms7dLive = false;
+          return readSnapText('nasa_firms_modis_7d.csv');
+        }),
+        fetchJsonTimeout<{
+          features?: Array<{
+            attributes: { dt?: number | null; kategori_bencana?: string | null; id_kab_sdi?: string | null };
+          }>;
+        }>(BNPB_WEEKLY_URL, 4500).catch(async () => {
+          bnpbWeeklyLive = false;
+          return readSnapJson<{
+            features?: Array<{
+              attributes: { dt?: number | null; kategori_bencana?: string | null; id_kab_sdi?: string | null };
+            }>;
+          }>('kejadian_bencana_mingguan.json');
+        }),
+        readSnapJson<{
+          features?: Array<{
+            attributes: {
+              dt?: number | null;
+              cause?: string | null;
+              damage?: string | null;
+              lat?: number | null;
+              lon?: number | null;
+              id_desa_sdi?: string | null;
+              provinsi?: string | null;
+            };
+          }>;
+        }>('data_jalan_jembatan_putus_akses_pu.json').catch(() => ({ features: [] })),
+        fetchJsonTimeout<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
+          BMKG_TERKINI_URL,
+          4500
+        ).catch(async () => {
+          bmkgLive = false;
+          return readSnapJson<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
+            'bmkg_gempaterkini.json'
+          );
+        }),
+        fetchJsonTimeout<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
+          BMKG_DIRASAKAN_URL,
+          4500
+        ).catch(async () => {
+          bmkgLive = false;
+          return readSnapJson<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
+            'bmkg_gempadirasakan.json'
+          );
+        }),
+        fetchTextTimeout(BMKG_NOWCAST_RSS_URL, 4500)
+          .then((xml) => extractRssAlertsForTrends(xml))
+          .catch(async () => {
+            const snap = await readSnapJson<{
+              alerts?: Array<{
+                title?: string;
+                pubDate?: string;
+                cap?: { headline?: string; effective?: string; areas?: Array<{ areaDesc?: string }> } | null;
+              }>;
+            }>('bmkg_nowcast_snapshot.json').catch(() => ({ alerts: [] }));
+            return (snap.alerts ?? []).map((a) => ({
+              title: `${a.cap?.headline ?? a.title ?? ''} ${a.cap?.areas?.map((ar) => ar.areaDesc).join(' ') ?? ''}`.trim(),
+              pubDate: a.cap?.effective || a.pubDate || '',
+            }));
+          }),
+        fetchTextTimeout(MAGMA_V1_URL, 4500)
+          .then((html) => extractMagmaJsonArray(html))
+          .catch(async () => {
+            magmaLive = false;
+            const snap = await readSnapJson<{
+              volcanoes?: Array<{
+                ga_lon_gapi?: number;
+                ga_lat_gapi?: number;
+                ga_prov_gapi?: string;
+                ga_status?: number | string;
+              }>;
+            }>('magma_volcanoes.json');
+            return snap.volcanoes ?? [];
+          }),
+      ]);
+
+      return {
+        usgsLive,
+        eonetLive,
+        gdacsLive,
+        firms7dLive,
+        bnpbWeeklyLive,
+        bmkgLive,
+        magmaLive,
+        usgsRaw,
+        eonetRaw,
+        gdacsRaw,
+        firmsNoaaCsv,
+        firmsModisCsv,
+        bnpbWeeklyRaw,
+        puRaw,
+        bmkgTerkini,
+        bmkgDirasakan,
+        bmkgNowcastAlerts,
+        magmaList,
+      };
+    }
+  );
+}
+
 export async function getDisasterTrends(options?: {
   category?: TrendCategory;
   rangeDays?: TrendRange;
 }): Promise<TrendsResponse> {
   const category: TrendCategory = options?.category ?? 'ALL';
   const rangeDays: TrendRange = options?.rangeDays ?? 30;
-  const nowMs = Date.now();
-  const nowIso = new Date(nowMs).toISOString();
-  const todayWib = toWibDateFromMs(nowMs);
 
-  const provIndex = await getProvinceGeoIndex();
-  const provByNormName = new Map(provIndex.map((p) => [p.normalizedName, p.code]));
-  const matchProvByName = (raw?: string | null): string | null => {
-    if (!raw) return null;
-    const norm = normalizeText(raw);
-    if (!norm) return null;
-    if (provByNormName.has(norm)) return provByNormName.get(norm)!;
-    for (const p of provIndex) {
-      if (norm.includes(p.normalizedName) || p.normalizedName.includes(norm)) {
-        return p.code;
-      }
-    }
-    return null;
-  };
+  return withSwrCache(
+    `trends:resp:${category}:${rangeDays}`,
+    { freshMs: 5 * 60_000, staleMs: 30 * 60_000 },
+    async () => {
+      const nowMs = Date.now();
+      const nowIso = new Date(nowMs).toISOString();
+      const todayWib = toWibDateFromMs(nowMs);
 
-  let usgsLive = true;
-  let eonetLive = true;
-  let gdacsLive = true;
-  let firms7dLive = true;
-  let bnpbWeeklyLive = true;
-  let bmkgLive = true;
-  let magmaLive = true;
-
-  const [
-    usgsRaw,
-    eonetRaw,
-    gdacsRaw,
-    firmsNoaaCsv,
-    firmsModisCsv,
-    bnpbWeeklyRaw,
-    puRaw,
-    bmkgTerkini,
-    bmkgDirasakan,
-    bmkgNowcastAlerts,
-    magmaList,
-  ] = await Promise.all([
-    fetchUsgs2yLive(nowMs).catch(async () => {
-      usgsLive = false;
-      return readSnapJson<UsgsCompactSnapshot>('usgs_2y_idn.json');
-    }),
-    fetchJsonTimeout<{ events?: EonetEventRaw[] }>(EONET_2Y_URL, 9000).catch(async () => {
-      eonetLive = false;
-      return readSnapJson<{ events?: EonetEventRaw[] }>('eonet_2y_idn.json');
-    }),
-    fetchGdacs2yLive(nowMs).catch(async () => {
-      gdacsLive = false;
-      return readSnapJson<{ features?: GdacsFeatureRaw[] }>('gdacs_2y_idn.json');
-    }),
-    fetchTextTimeout(NASA_FIRMS_NOAA20_7D_URL, 10000).catch(async () => {
-      firms7dLive = false;
-      return readSnapText('nasa_firms_noaa20_7d.csv');
-    }),
-    fetchTextTimeout(NASA_FIRMS_MODIS_7D_URL, 10000).catch(async () => {
-      firms7dLive = false;
-      return readSnapText('nasa_firms_modis_7d.csv');
-    }),
-    fetchJsonTimeout<{
-      features?: Array<{
-        attributes: { dt?: number | null; kategori_bencana?: string | null; id_kab_sdi?: string | null };
-      }>;
-    }>(BNPB_WEEKLY_URL, 7000).catch(async () => {
-      bnpbWeeklyLive = false;
-      return readSnapJson<{
-        features?: Array<{
-          attributes: { dt?: number | null; kategori_bencana?: string | null; id_kab_sdi?: string | null };
-        }>;
-      }>('kejadian_bencana_mingguan.json');
-    }),
-    readSnapJson<{
-      features?: Array<{
-        attributes: {
-          dt?: number | null;
-          cause?: string | null;
-          damage?: string | null;
-          lat?: number | null;
-          lon?: number | null;
-          id_desa_sdi?: string | null;
-          provinsi?: string | null;
-        };
-      }>;
-    }>('data_jalan_jembatan_putus_akses_pu.json').catch(() => ({ features: [] })),
-    fetchJsonTimeout<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
-      BMKG_TERKINI_URL,
-      6000
-    ).catch(async () => {
-      bmkgLive = false;
-      return readSnapJson<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
-        'bmkg_gempaterkini.json'
-      );
-    }),
-    fetchJsonTimeout<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
-      BMKG_DIRASAKAN_URL,
-      6000
-    ).catch(async () => {
-      bmkgLive = false;
-      return readSnapJson<{ Infogempa?: { gempa?: Array<{ DateTime?: string; Coordinates?: string }> } }>(
-        'bmkg_gempadirasakan.json'
-      );
-    }),
-    fetchTextTimeout(BMKG_NOWCAST_RSS_URL, 6000)
-      .then((xml) => extractRssAlertsForTrends(xml))
-      .catch(async () => {
-        const snap = await readSnapJson<{
-          alerts?: Array<{
-            title?: string;
-            pubDate?: string;
-            cap?: { headline?: string; effective?: string; areas?: Array<{ areaDesc?: string }> } | null;
-          }>;
-        }>('bmkg_nowcast_snapshot.json').catch(() => ({ alerts: [] }));
-        return (snap.alerts ?? []).map((a) => ({
-          title: `${a.cap?.headline ?? a.title ?? ''} ${a.cap?.areas?.map((ar) => ar.areaDesc).join(' ') ?? ''}`.trim(),
-          pubDate: a.cap?.effective || a.pubDate || '',
-        }));
-      }),
-    fetchTextTimeout(MAGMA_V1_URL, 7000)
-      .then((html) => extractMagmaJsonArray(html))
-      .catch(async () => {
-        magmaLive = false;
-        const snap = await readSnapJson<{
-          volcanoes?: Array<{
-            ga_lon_gapi?: number;
-            ga_lat_gapi?: number;
-            ga_prov_gapi?: string;
-            ga_status?: number | string;
-          }>;
-        }>('magma_volcanoes.json');
-        return snap.volcanoes ?? [];
-      }),
-  ]);
+      const [provIndex, rawBundle] = await Promise.all([
+        getProvinceGeoIndex(),
+        loadTrendsRawBundle(nowMs),
+      ]);
+      const {
+        usgsLive,
+        eonetLive,
+        gdacsLive,
+        firms7dLive,
+        bnpbWeeklyLive,
+        bmkgLive,
+        magmaLive,
+        usgsRaw,
+        eonetRaw,
+        gdacsRaw,
+        firmsNoaaCsv,
+        firmsModisCsv,
+        bnpbWeeklyRaw,
+        puRaw,
+        bmkgTerkini,
+        bmkgDirasakan,
+        bmkgNowcastAlerts,
+        magmaList,
+      } = rawBundle;
+      const provByNormName = new Map(provIndex.map((p) => [p.normalizedName, p.code]));
+      const matchProvByName = (raw?: string | null): string | null => {
+        if (!raw) return null;
+        const norm = normalizeText(raw);
+        if (!norm) return null;
+        if (provByNormName.has(norm)) return provByNormName.get(norm)!;
+        for (const p of provIndex) {
+          if (norm.includes(p.normalizedName) || p.normalizedName.includes(norm)) {
+            return p.code;
+          }
+        }
+        return null;
+      };
 
   const useFirmsHotspotStream = category === 'OTHER' && rangeDays === 7;
   const records: TrendEventRecord[] = [];
@@ -1055,4 +1113,5 @@ export async function getDisasterTrends(options?: {
     },
     sourceSummary,
   };
+  });
 }

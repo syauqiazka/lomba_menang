@@ -39,6 +39,7 @@ function formatDate(date?: string | Date): string {
     day: "numeric",
     month: "long",
     year: "numeric",
+    timeZone: "Asia/Jakarta",
   });
 }
 

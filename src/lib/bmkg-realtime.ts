@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { prisma } from '@/lib/prisma';
+import { prisma, runDbQuery } from '@/lib/prisma';
+import { getFallbackRegenciesByNameLen } from '@/lib/local-db-fallback';
 import type {
   DisasterIncidentDTO,
   RealtimeEarthquakesResponse,
@@ -67,10 +68,12 @@ let cachedRegenciesByNameLen: RegencyLookupRef[] | null = null;
 let cachedRegenciesAt = 0;
 
 const RESPONSE_CACHE_TTL_MS = 8_000;
+const RESPONSE_STALE_TTL_MS = 5 * 60_000;
 const FORCE_COOLDOWN_MS = 4_000;
 let cachedResult: BmkgRealtimeResult | null = null;
 let cachedResultAt = 0;
 let lastForcedAt = 0;
+let inflightBmkg: Promise<BmkgRealtimeResult> | null = null;
 
 export function normalizeRegencyName(raw: string): string {
   return raw
@@ -321,27 +324,35 @@ export function matchFeltRegencies(
 }
 
 export async function getCachedRegenciesByNameLen(): Promise<RegencyLookupRef[]> {
-  const now = Date.now();
+  const now = performance.now();
   if (cachedRegenciesByNameLen && now - cachedRegenciesAt < REGENCY_CACHE_TTL_MS) {
     return cachedRegenciesByNameLen;
   }
 
-  const dbRegions = await prisma.region.findMany({
-    where: { level: 'REGENCY_CITY' },
-    select: { code: true, name: true, parentCode: true, centroid: true },
-  });
+  const list = await runDbQuery(
+    async () => {
+      const dbRegions = await prisma.region.findMany({
+        where: { level: 'REGENCY_CITY' },
+        select: { code: true, name: true, parentCode: true, centroid: true },
+      });
 
-  const list: RegencyLookupRef[] = dbRegions.map((r) => ({
-    code: r.code,
-    name: r.name,
-    normalizedName: normalizeRegencyName(r.name),
-    provinceCode: r.parentCode ?? r.code.slice(0, 2),
-    centroid: parseCentroid(r.centroid),
-  }));
+      const mapped: RegencyLookupRef[] = dbRegions.map((r) => ({
+        code: r.code,
+        name: r.name,
+        normalizedName: normalizeRegencyName(r.name),
+        provinceCode: r.parentCode ?? r.code.slice(0, 2),
+        centroid: parseCentroid(r.centroid),
+      }));
 
-  list.sort((a, b) => b.normalizedName.length - a.normalizedName.length);
+      mapped.sort((a, b) => b.normalizedName.length - a.normalizedName.length);
+      return mapped;
+    },
+    () => getFallbackRegenciesByNameLen(),
+    { label: 'bmkg:regencies' }
+  );
+
   cachedRegenciesByNameLen = list;
-  cachedRegenciesAt = now;
+  cachedRegenciesAt = performance.now();
   return list;
 }
 
@@ -355,7 +366,7 @@ function parseBmkgCoordinates(raw?: string): [number, number] | null {
 async function fetchLiveText(url: string, accept: string): Promise<string> {
   const resp = await fetch(url, {
     cache: 'no-store',
-    signal: AbortSignal.timeout(9500),
+    signal: AbortSignal.timeout(6000),
     headers: {
       ...CHROME_HEADERS,
       Accept: accept,
@@ -370,7 +381,7 @@ async function fetchLiveText(url: string, accept: string): Promise<string> {
 async function fetchLiveJson<T>(url: string): Promise<T> {
   const resp = await fetch(url, {
     cache: 'no-store',
-    signal: AbortSignal.timeout(9500),
+    signal: AbortSignal.timeout(6000),
     headers: {
       ...CHROME_HEADERS,
       Accept: 'application/json, text/plain, */*',
@@ -411,258 +422,289 @@ export async function getBmkgRealtimeEarthquakes(options?: {
   preloadedRegencies?: RegencyLookupRef[];
 }): Promise<BmkgRealtimeResult> {
   const forceRefresh = Boolean(options?.forceRefresh);
-  const now = Date.now();
+  const now = performance.now();
 
   if (forceRefresh && cachedResult && now - lastForcedAt < FORCE_COOLDOWN_MS) {
     return cachedResult;
   }
-  if (!forceRefresh && cachedResult && now - cachedResultAt < RESPONSE_CACHE_TTL_MS) {
-    return cachedResult;
+  if (!forceRefresh && cachedResult) {
+    const age = now - cachedResultAt;
+    if (age < RESPONSE_CACHE_TTL_MS) {
+      return cachedResult;
+    }
+    if (age < RESPONSE_STALE_TTL_MS) {
+      if (!inflightBmkg) {
+        void loadBmkgRealtimeEarthquakes(false, options?.preloadedRegencies).catch(() => undefined);
+      }
+      return cachedResult;
+    }
   }
 
-  let inatewsLive = true;
-  let tewsLive = true;
+  if (inflightBmkg) {
+    return inflightBmkg;
+  }
 
-  const [
-    regsByNameLen,
-    live30Xml,
-    lastQlRaw,
-    autogempaRaw,
-    dirasakanRaw,
-    terkiniRaw,
-  ] = await Promise.all([
-    options?.preloadedRegencies
-      ? Promise.resolve(options.preloadedRegencies)
-      : getCachedRegenciesByNameLen(),
-    fetchLiveText(INATEWS_LIVE30_URL, 'application/xml, text/xml, */*').catch(async () => {
+  return loadBmkgRealtimeEarthquakes(forceRefresh, options?.preloadedRegencies);
+}
+
+async function loadBmkgRealtimeEarthquakes(
+  forceRefresh: boolean,
+  preloadedRegencies?: RegencyLookupRef[]
+): Promise<BmkgRealtimeResult> {
+  if (inflightBmkg) return inflightBmkg;
+
+  const task = (async () => {
+    let inatewsLive = true;
+    let tewsLive = true;
+
+    const [
+      regsByNameLen,
+      live30Xml,
+      lastQlRaw,
+      autogempaRaw,
+      dirasakanRaw,
+      terkiniRaw,
+    ] = await Promise.all([
+      preloadedRegencies
+        ? Promise.resolve(preloadedRegencies)
+        : getCachedRegenciesByNameLen(),
+      fetchLiveText(INATEWS_LIVE30_URL, 'application/xml, text/xml, */*').catch(async () => {
+        inatewsLive = false;
+        return readSnapshotTextSafe('bmkg_inatews_live30event.xml');
+      }),
+      fetchLiveJson<unknown>(INATEWS_LAST_QL_URL).catch(() => null),
+      fetchLiveJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem } }>(BMKG_AUTOGEMPA_URL).catch(
+        () => null
+      ),
+      fetchLiveJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(BMKG_DIRASAKAN_URL).catch(
+        async () => {
+          tewsLive = false;
+          return readSnapshotJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(
+            'bmkg_gempadirasakan.json'
+          ).catch(() => ({ Infogempa: { gempa: [] } }));
+        }
+      ),
+      fetchLiveJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(BMKG_TERKINI_URL).catch(
+        async () => {
+          tewsLive = false;
+          return readSnapshotJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(
+            'bmkg_gempaterkini.json'
+          ).catch(() => ({ Infogempa: { gempa: [] } }));
+        }
+      ),
+    ]);
+
+    const nowIso = new Date().toISOString();
+
+    // 1. Parse InaTEWS live30event.xml + merge lastQL.json
+    const inatewsEvents = parseInatewsLive30Xml(live30Xml);
+    const lastQlEvent = parseInatewsLastQlJson(lastQlRaw);
+
+    if (lastQlEvent) {
+      const existing = inatewsEvents.find((ev) => ev.eventId === lastQlEvent.eventId);
+      if (existing) {
+        if (typeof lastQlEvent.phaseCount === 'number') {
+          existing.phaseCount = lastQlEvent.phaseCount;
+        }
+      } else {
+        inatewsEvents.unshift(lastQlEvent);
+      }
+    } else if (inatewsEvents.length === 0) {
       inatewsLive = false;
-      return readSnapshotTextSafe('bmkg_inatews_live30event.xml');
-    }),
-    fetchLiveJson<unknown>(INATEWS_LAST_QL_URL).catch(() => null),
-    fetchLiveJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem } }>(BMKG_AUTOGEMPA_URL).catch(
-      () => null
-    ),
-    fetchLiveJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(BMKG_DIRASAKAN_URL).catch(
-      async () => {
-        tewsLive = false;
-        return readSnapshotJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(
-          'bmkg_gempadirasakan.json'
-        ).catch(() => ({ Infogempa: { gempa: [] } }));
-      }
-    ),
-    fetchLiveJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(BMKG_TERKINI_URL).catch(
-      async () => {
-        tewsLive = false;
-        return readSnapshotJson<{ Infogempa?: { gempa?: BmkgTewsGempaItem[] } }>(
-          'bmkg_gempaterkini.json'
-        ).catch(() => ({ Infogempa: { gempa: [] } }));
-      }
-    ),
-  ]);
-
-  const nowIso = new Date().toISOString();
-
-  // 1. Parse InaTEWS live30event.xml + merge lastQL.json
-  const inatewsEvents = parseInatewsLive30Xml(live30Xml);
-  const lastQlEvent = parseInatewsLastQlJson(lastQlRaw);
-
-  if (lastQlEvent) {
-    const existing = inatewsEvents.find((ev) => ev.eventId === lastQlEvent.eventId);
-    if (existing) {
-      if (typeof lastQlEvent.phaseCount === 'number') {
-        existing.phaseCount = lastQlEvent.phaseCount;
-      }
-    } else {
-      inatewsEvents.unshift(lastQlEvent);
     }
-  } else if (inatewsEvents.length === 0) {
-    inatewsLive = false;
-  }
 
-  // 2. Deduplicate TEWS bulletins (autogempa + dirasakan + terkini)
-  const mergedTewsMap = new Map<string, BmkgTewsGempaItem>();
-  const tewsCandidates: BmkgTewsGempaItem[] = [];
-  if (autogempaRaw?.Infogempa?.gempa) {
-    tewsCandidates.push(autogempaRaw.Infogempa.gempa);
-  }
-  tewsCandidates.push(...(dirasakanRaw.Infogempa?.gempa ?? []));
-  tewsCandidates.push(...(terkiniRaw.Infogempa?.gempa ?? []));
-
-  for (const item of tewsCandidates) {
-    const key = `${item.DateTime ?? ''}|${item.Coordinates ?? ''}`;
-    if (!mergedTewsMap.has(key)) {
-      mergedTewsMap.set(key, { ...item });
-    } else {
-      const existing = mergedTewsMap.get(key)!;
-      if (!existing.Dirasakan && item.Dirasakan) existing.Dirasakan = item.Dirasakan;
-      if (!existing.Potensi && item.Potensi) existing.Potensi = item.Potensi;
-      if (!existing.Shakemap && item.Shakemap) existing.Shakemap = item.Shakemap;
-      if (!existing.Wilayah && item.Wilayah) existing.Wilayah = item.Wilayah;
+    // 2. Deduplicate TEWS bulletins (autogempa + dirasakan + terkini)
+    const mergedTewsMap = new Map<string, BmkgTewsGempaItem>();
+    const tewsCandidates: BmkgTewsGempaItem[] = [];
+    if (autogempaRaw?.Infogempa?.gempa) {
+      tewsCandidates.push(autogempaRaw.Infogempa.gempa);
     }
-  }
+    tewsCandidates.push(...(dirasakanRaw.Infogempa?.gempa ?? []));
+    tewsCandidates.push(...(terkiniRaw.Infogempa?.gempa ?? []));
 
-  const tewsItems = Array.from(mergedTewsMap.values()).map((item) => {
-    const coords = parseBmkgCoordinates(item.Coordinates);
-    const occurredAt = item.DateTime ? new Date(item.DateTime).toISOString() : nowIso;
-    const timeMs = new Date(occurredAt).getTime();
-    return { item, coords, occurredAt, timeMs, consumed: false };
-  });
-
-  const incidents: DisasterIncidentDTO[] = [];
-  const eqKeys: Array<{ timeMs: number; lng: number; lat: number }> = [];
-
-  // 3. Emit InaTEWS Realtime events (enriched with TEWS Wilayah/MMI/Potensi/Shakemap when matched)
-  for (const ev of inatewsEvents) {
-    const evTimeMs = new Date(ev.occurredAt).getTime();
-    const coords: [number, number] = [ev.lng, ev.lat];
-    eqKeys.push({ timeMs: evTimeMs, lng: ev.lng, lat: ev.lat });
-
-    let matchedTews: (typeof tewsItems)[number] | undefined;
-    for (const candidate of tewsItems) {
-      if (candidate.consumed || !candidate.coords) continue;
-      const dt = Math.abs(candidate.timeMs - evTimeMs);
-      const dLng = Math.abs(candidate.coords[0] - ev.lng);
-      const dLat = Math.abs(candidate.coords[1] - ev.lat);
-      if (dt <= 180_000 && dLng <= 0.45 && dLat <= 0.45) {
-        matchedTews = candidate;
-        candidate.consumed = true;
-        break;
+    for (const item of tewsCandidates) {
+      const key = `${item.DateTime ?? ''}|${item.Coordinates ?? ''}`;
+      if (!mergedTewsMap.has(key)) {
+        mergedTewsMap.set(key, { ...item });
+      } else {
+        const existing = mergedTewsMap.get(key)!;
+        if (!existing.Dirasakan && item.Dirasakan) existing.Dirasakan = item.Dirasakan;
+        if (!existing.Potensi && item.Potensi) existing.Potensi = item.Potensi;
+        if (!existing.Shakemap && item.Shakemap) existing.Shakemap = item.Shakemap;
+        if (!existing.Wilayah && item.Wilayah) existing.Wilayah = item.Wilayah;
       }
     }
 
-    const tews = matchedTews?.item;
-    const felt = tews?.Dirasakan?.trim() || '';
-    const displayLocation = tews?.Wilayah?.trim() || ev.area;
-    const magStr = ev.magnitude.toFixed(1);
-    const depthStr = tews?.Kedalaman?.trim() || `${ev.depthKm} km`;
-    const eventStatusLabel = formatInatewsStatusLabel(ev.status);
-    const shakemapUrl = buildShakemapUrl(tews?.Shakemap);
-
-    const spreadRegions = matchFeltRegencies(felt, displayLocation, coords, regsByNameLen);
-    const primaryReg = spreadRegions[0];
-
-    const summaryParts = [
-      `Kedalaman ${depthStr}`,
-      `Status ${eventStatusLabel}`,
-    ];
-    if (typeof ev.phaseCount === 'number') {
-      summaryParts.push(`${ev.phaseCount} fase stasiun`);
-    }
-    if (tews?.Potensi?.trim()) {
-      summaryParts.push(tews.Potensi.trim());
-    } else if (ev.focalMechanism === 'mt_yes') {
-      summaryParts.push('Analisis Moment Tensor tersedia di InaTEWS');
-    }
-
-    incidents.push({
-      id: `bmkg-rt-${ev.eventId}`,
-      title: `Gempa M ${magStr} — ${displayLocation}`,
-      category: 'EARTHQUAKE',
-      categoryLabel: 'Gempabumi',
-      coordinates: coords,
-      precision: 'EXACT_EPICENTER',
-      precisionLabel: 'Episentrum Realtime InaTEWS BMKG',
-      occurredAt: ev.occurredAt,
-      locationText: displayLocation,
-      regionCode: primaryReg?.code,
-      provinceCode: primaryReg?.provinceCode,
-      summary: `${summaryParts.join(' · ')}.`,
-      metrics: {
-        magnitude: magStr,
-        depth: depthStr,
-        feltAreas: felt || undefined,
-        potential: tews?.Potensi?.trim() || undefined,
-        eventId: ev.eventId,
-        eventStatus: eventStatusLabel,
-        focalMechanism: ev.focalMechanism,
-        phaseCount: ev.phaseCount,
-        shakemapUrl,
-      },
-      spreadRegions,
-      spreadExplanation: felt
-        ? `Wilayah merasakan getaran (skala MMI resmi BMKG): ${felt}.`
-        : primaryReg
-          ? `Pusat gempa realtime InaTEWS dekat ${primaryReg.name}; tidak ada laporan getaran MMI pada buletin dirasakan BMKG.`
-          : 'Episentrum terpantau pada jaringan sensor seismik realtime BMKG InaTEWS.',
-      source: {
-        title: 'BMKG InaTEWS Realtime (live30event.xml)',
-        publisher: 'BMKG InaTEWS',
-        url: `${INATEWS_DETAIL_BASE_URL}?name=${encodeURIComponent(ev.eventId)}`,
-        category: 'OFFICIAL',
-        isLive: inatewsLive,
-        updatedAt: nowIso,
-      },
+    const tewsItems = Array.from(mergedTewsMap.values()).map((item) => {
+      const coords = parseBmkgCoordinates(item.Coordinates);
+      const occurredAt = item.DateTime ? new Date(item.DateTime).toISOString() : nowIso;
+      const timeMs = new Date(occurredAt).getTime();
+      return { item, coords, occurredAt, timeMs, consumed: false };
     });
-  }
 
-  // 4. Preserve remaining unconsumed TEWS events (older M>=5 or felt quakes beyond rolling 200 events)
-  for (const entry of tewsItems) {
-    if (entry.consumed || !entry.coords) continue;
-    const eq = entry.item;
-    const coords = entry.coords;
-    eqKeys.push({ timeMs: entry.timeMs, lng: coords[0], lat: coords[1] });
+    const incidents: DisasterIncidentDTO[] = [];
+    const eqKeys: Array<{ timeMs: number; lng: number; lat: number }> = [];
 
-    const felt = eq.Dirasakan?.trim() || '';
-    const wilayah = eq.Wilayah?.trim() || 'Indonesia';
-    const spreadRegions = matchFeltRegencies(felt, wilayah, coords, regsByNameLen);
-    const primaryReg = spreadRegions[0];
+    // 3. Emit InaTEWS Realtime events (enriched with TEWS Wilayah/MMI/Potensi/Shakemap when matched)
+    for (const ev of inatewsEvents) {
+      const evTimeMs = new Date(ev.occurredAt).getTime();
+      const coords: [number, number] = [ev.lng, ev.lat];
+      eqKeys.push({ timeMs: evTimeMs, lng: ev.lng, lat: ev.lat });
 
-    incidents.push({
-      id: `bmkg-tews-${entry.occurredAt}-${coords[0].toFixed(2)}-${coords[1].toFixed(2)}`,
-      title: `Gempa M ${eq.Magnitude ?? '?'} — ${wilayah}`,
-      category: 'EARTHQUAKE',
-      categoryLabel: 'Gempabumi',
-      coordinates: coords,
-      precision: 'EXACT_EPICENTER',
-      precisionLabel: 'Episentrum Resmi BMKG TEWS',
-      occurredAt: entry.occurredAt,
-      locationText: wilayah,
-      regionCode: primaryReg?.code,
-      provinceCode: primaryReg?.provinceCode,
-      summary: `Kedalaman ${eq.Kedalaman ?? '-'}. ${eq.Potensi ?? ''}`.trim(),
-      metrics: {
-        magnitude: eq.Magnitude,
-        depth: eq.Kedalaman,
-        feltAreas: felt || undefined,
-        potential: eq.Potensi,
-        shakemapUrl: buildShakemapUrl(eq.Shakemap),
+      let matchedTews: (typeof tewsItems)[number] | undefined;
+      for (const candidate of tewsItems) {
+        if (candidate.consumed || !candidate.coords) continue;
+        const dt = Math.abs(candidate.timeMs - evTimeMs);
+        const dLng = Math.abs(candidate.coords[0] - ev.lng);
+        const dLat = Math.abs(candidate.coords[1] - ev.lat);
+        if (dt <= 180_000 && dLng <= 0.45 && dLat <= 0.45) {
+          matchedTews = candidate;
+          candidate.consumed = true;
+          break;
+        }
+      }
+
+      const tews = matchedTews?.item;
+      const felt = tews?.Dirasakan?.trim() || '';
+      const displayLocation = tews?.Wilayah?.trim() || ev.area;
+      const magStr = ev.magnitude.toFixed(1);
+      const depthStr = tews?.Kedalaman?.trim() || `${ev.depthKm} km`;
+      const eventStatusLabel = formatInatewsStatusLabel(ev.status);
+      const shakemapUrl = buildShakemapUrl(tews?.Shakemap);
+
+      const spreadRegions = matchFeltRegencies(felt, displayLocation, coords, regsByNameLen);
+      const primaryReg = spreadRegions[0];
+
+      const summaryParts = [
+        `Kedalaman ${depthStr}`,
+        `Status ${eventStatusLabel}`,
+      ];
+      if (typeof ev.phaseCount === 'number') {
+        summaryParts.push(`${ev.phaseCount} fase stasiun`);
+      }
+      if (tews?.Potensi?.trim()) {
+        summaryParts.push(tews.Potensi.trim());
+      } else if (ev.focalMechanism === 'mt_yes') {
+        summaryParts.push('Analisis Moment Tensor tersedia di InaTEWS');
+      }
+
+      incidents.push({
+        id: `bmkg-rt-${ev.eventId}`,
+        title: `Gempa M ${magStr} — ${displayLocation}`,
+        category: 'EARTHQUAKE',
+        categoryLabel: 'Gempabumi',
+        coordinates: coords,
+        precision: 'EXACT_EPICENTER',
+        precisionLabel: 'Episentrum Realtime InaTEWS BMKG',
+        occurredAt: ev.occurredAt,
+        locationText: displayLocation,
+        regionCode: primaryReg?.code,
+        provinceCode: primaryReg?.provinceCode,
+        summary: `${summaryParts.join(' · ')}.`,
+        metrics: {
+          magnitude: magStr,
+          depth: depthStr,
+          feltAreas: felt || undefined,
+          potential: tews?.Potensi?.trim() || undefined,
+          eventId: ev.eventId,
+          eventStatus: eventStatusLabel,
+          focalMechanism: ev.focalMechanism,
+          phaseCount: ev.phaseCount,
+          shakemapUrl,
+        },
+        spreadRegions,
+        spreadExplanation: felt
+          ? `Wilayah merasakan getaran (skala MMI resmi BMKG): ${felt}.`
+          : primaryReg
+            ? `Pusat gempa realtime InaTEWS dekat ${primaryReg.name}; tidak ada laporan getaran MMI pada buletin dirasakan BMKG.`
+            : 'Episentrum terpantau pada jaringan sensor seismik realtime BMKG InaTEWS.',
+        source: {
+          title: 'BMKG InaTEWS Realtime (live30event.xml)',
+          publisher: 'BMKG InaTEWS',
+          url: `${INATEWS_DETAIL_BASE_URL}?name=${encodeURIComponent(ev.eventId)}`,
+          category: 'OFFICIAL',
+          isLive: inatewsLive,
+          updatedAt: nowIso,
+        },
+      });
+    }
+
+    // 4. Preserve remaining unconsumed TEWS events (older M>=5 or felt quakes beyond rolling 200 events)
+    for (const entry of tewsItems) {
+      if (entry.consumed || !entry.coords) continue;
+      const eq = entry.item;
+      const coords = entry.coords;
+      eqKeys.push({ timeMs: entry.timeMs, lng: coords[0], lat: coords[1] });
+
+      const felt = eq.Dirasakan?.trim() || '';
+      const wilayah = eq.Wilayah?.trim() || 'Indonesia';
+      const spreadRegions = matchFeltRegencies(felt, wilayah, coords, regsByNameLen);
+      const primaryReg = spreadRegions[0];
+
+      incidents.push({
+        id: `bmkg-tews-${entry.occurredAt}-${coords[0].toFixed(2)}-${coords[1].toFixed(2)}`,
+        title: `Gempa M ${eq.Magnitude ?? '?'} — ${wilayah}`,
+        category: 'EARTHQUAKE',
+        categoryLabel: 'Gempabumi',
+        coordinates: coords,
+        precision: 'EXACT_EPICENTER',
+        precisionLabel: 'Episentrum Resmi BMKG TEWS',
+        occurredAt: entry.occurredAt,
+        locationText: wilayah,
+        regionCode: primaryReg?.code,
+        provinceCode: primaryReg?.provinceCode,
+        summary: `Kedalaman ${eq.Kedalaman ?? '-'}. ${eq.Potensi ?? ''}`.trim(),
+        metrics: {
+          magnitude: eq.Magnitude,
+          depth: eq.Kedalaman,
+          feltAreas: felt || undefined,
+          potential: eq.Potensi,
+          shakemapUrl: buildShakemapUrl(eq.Shakemap),
+        },
+        spreadRegions,
+        spreadExplanation: felt
+          ? `Wilayah merasakan getaran (skala MMI resmi BMKG): ${felt}.`
+          : primaryReg
+            ? `Pusat gempa dekat ${primaryReg.name}; tidak ada laporan getaran daratan pada daftar dirasakan BMKG.`
+            : 'Episentrum berada di laut lepas tanpa laporan dampak daratan pada feed BMKG.',
+        source: {
+          title: 'BMKG TEWS — Gempa Bumi Terkini & Dirasakan',
+          publisher: 'BMKG TEWS',
+          url: 'https://data.bmkg.go.id/gempabumi/',
+          category: 'OFFICIAL',
+          isLive: tewsLive,
+          updatedAt: nowIso,
+        },
+      });
+    }
+
+    incidents.sort(
+      (a, b) => new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime()
+    );
+
+    const response: RealtimeEarthquakesResponse = {
+      updatedAt: nowIso,
+      liveStatus: {
+        inatews: inatewsLive ? 'live' : 'snapshot',
+        tews: tewsLive ? 'live' : 'snapshot',
       },
-      spreadRegions,
-      spreadExplanation: felt
-        ? `Wilayah merasakan getaran (skala MMI resmi BMKG): ${felt}.`
-        : primaryReg
-          ? `Pusat gempa dekat ${primaryReg.name}; tidak ada laporan getaran daratan pada daftar dirasakan BMKG.`
-          : 'Episentrum berada di laut lepas tanpa laporan dampak daratan pada feed BMKG.',
-      source: {
-        title: 'BMKG TEWS — Gempa Bumi Terkini & Dirasakan',
-        publisher: 'BMKG TEWS',
-        url: 'https://data.bmkg.go.id/gempabumi/',
-        category: 'OFFICIAL',
-        isLive: tewsLive,
-        updatedAt: nowIso,
-      },
-    });
+      totalCount: incidents.length,
+      latestEarthquake: incidents[0] ?? null,
+      incidents,
+    };
+
+    const result: BmkgRealtimeResult = { response, eqKeys };
+    cachedResult = result;
+    cachedResultAt = performance.now();
+    if (forceRefresh) lastForcedAt = cachedResultAt;
+
+    return result;
+  })();
+
+  inflightBmkg = task;
+  try {
+    return await task;
+  } finally {
+    inflightBmkg = null;
   }
-
-  incidents.sort(
-    (a, b) => new Date(b.occurredAt).getTime() - new Date(a.occurredAt).getTime()
-  );
-
-  const response: RealtimeEarthquakesResponse = {
-    updatedAt: nowIso,
-    liveStatus: {
-      inatews: inatewsLive ? 'live' : 'snapshot',
-      tews: tewsLive ? 'live' : 'snapshot',
-    },
-    totalCount: incidents.length,
-    latestEarthquake: incidents[0] ?? null,
-    incidents,
-  };
-
-  const result: BmkgRealtimeResult = { response, eqKeys };
-  cachedResult = result;
-  cachedResultAt = Date.now();
-  if (forceRefresh) lastForcedAt = cachedResultAt;
-
-  return result;
 }

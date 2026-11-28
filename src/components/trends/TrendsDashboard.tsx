@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import type {
   ProvinceTrendRow,
@@ -63,13 +63,24 @@ export function TrendsDashboard({ initialData }: TrendsDashboardProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortKey, setSortKey] = useState<SortKey>('count7d');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
+  const clientCacheRef = useRef<Map<string, TrendsResponse>>(
+    new Map([[`${initialData.category}|${initialData.rangeDays}`, initialData]])
+  );
 
   const fetchTrends = async (category: TrendCategory, rangeDays: TrendRange) => {
+    const cacheKey = `${category}|${rangeDays}`;
+    const cached = clientCacheRef.current.get(cacheKey);
+    if (cached) {
+      setData(cached);
+      return;
+    }
+
     setLoading(true);
     try {
       const resp = await fetch(`/api/trends?category=${category}&range=${rangeDays}`);
       if (!resp.ok) return;
       const nextData = (await resp.json()) as TrendsResponse;
+      clientCacheRef.current.set(cacheKey, nextData);
       setData(nextData);
     } catch (error) {
       console.error('Gagal memuat data tren:', error);
@@ -197,13 +208,21 @@ export function TrendsDashboard({ initialData }: TrendsDashboardProps) {
     <div className="space-y-6">
       {/* Header + Category Filter Pills */}
       <header className="space-y-4">
-        <div>
-          <h1 id="trends-heading" className="font-display font-bold text-3xl md:text-4xl text-primary">
-            Tren Bencana Nasional
-          </h1>
-          <p className="text-secondary-text text-base mt-2 max-w-3xl">
-            Grafik kejadian bencana harian lintas wilayah, perbandingan terhadap minggu dan tahun sebelumnya, serta rapor tren 38 provinsi Indonesia.
-          </p>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <h1 id="trends-heading" className="font-display font-bold text-3xl md:text-4xl text-primary">
+              Tren Bencana Nasional
+            </h1>
+            <p className="text-secondary-text text-base mt-2 max-w-3xl">
+              Grafik kejadian bencana harian lintas wilayah, perbandingan terhadap minggu dan tahun sebelumnya, serta rapor tren 38 provinsi Indonesia.
+            </p>
+          </div>
+          <Link
+            href="/peta"
+            className="text-sm font-medium text-primary underline hover:text-black whitespace-nowrap flex-shrink-0"
+          >
+            Buka Peta Interaktif →
+          </Link>
         </div>
 
         <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Pilih kategori bencana">
@@ -562,7 +581,23 @@ export function TrendsDashboard({ initialData }: TrendsDashboardProps) {
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              {sortedProvinces.map((prov) => {
+              {sortedProvinces.length === 0 ? (
+                <tr>
+                  <td colSpan={6} className="py-10 px-4 text-center text-sm text-secondary-text">
+                    <p className="font-medium text-primary mb-2">
+                      Tidak ada provinsi yang cocok dengan pencarian &ldquo;{searchQuery}&rdquo;.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      className="px-3 py-1.5 rounded-md border border-border bg-background text-xs font-medium text-primary hover:bg-secondary-background transition-colors"
+                    >
+                      Reset pencarian
+                    </button>
+                  </td>
+                </tr>
+              ) : (
+                sortedProvinces.map((prov) => {
                 const maxWeek = Math.max(1, ...prov.weekly4);
                 const weekBadgeClass =
                   prov.pctVsPrevWeek === null
@@ -666,7 +701,8 @@ export function TrendsDashboard({ initialData }: TrendsDashboardProps) {
                     </td>
                   </tr>
                 );
-              })}
+              })
+              )}
             </tbody>
           </table>
         </div>
