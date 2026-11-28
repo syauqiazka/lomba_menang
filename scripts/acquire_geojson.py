@@ -13,9 +13,10 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = Path(os.environ['TEMP']) / 'Indonesia-Geojson-2026'
-TARGET_DIR = Path('D:/bismillah_menang/public/geo')
-MANIFEST_PATH = Path('D:/bismillah_menang/GEOJSON_DATASET_MANIFEST.json')
+TARGET_DIR = PROJECT_ROOT / 'public' / 'geo'
+MANIFEST_PATH = PROJECT_ROOT / 'GEOJSON_DATASET_MANIFEST.json'
 
 # Province name mapping (source folder name -> official name)
 PROVINCE_NAME_MAP = {

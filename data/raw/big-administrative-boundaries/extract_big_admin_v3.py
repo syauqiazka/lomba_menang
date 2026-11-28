@@ -108,7 +108,7 @@ def extract_regency_city_geometry_batch(start_oid, batch_size=50):
 def main():
     import os
     
-    output_dir = r"D:\bismillah_menang\data\raw\big-administrative-boundaries"
+    output_dir = os.path.dirname(os.path.abspath(__file__))
     os.makedirs(output_dir, exist_ok=True)
     
     extraction_report = {

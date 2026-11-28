@@ -1,0 +1,1022 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1795821458000,
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minlatitude=-11.5&maxlatitude=6.5&minlongitude=94.5&maxlongitude=141.5&minmagnitude=4.0&limit=25",
+    "title": "USGS Earthquakes",
+    "status": 200,
+    "api": "2.8.4",
+    "limit": 25,
+    "offset": 1
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.3,
+        "place": "211 km WSW of Tual, Indonesia",
+        "time": 1795786806122,
+        "updated": 1795814549040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udwp",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000udwp&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 284,
+        "net": "us",
+        "code": "6000udwp",
+        "ids": ",us6000udwp,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 18,
+        "dmin": 6.647,
+        "rms": 0.67,
+        "gap": 136,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.3 - 211 km WSW of Tual, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.9194,
+          -6.1581,
+          65.91
+        ]
+      },
+      "id": "us6000udwp"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.6,
+        "place": "155 km WNW of Tobelo, Indonesia",
+        "time": 1795753030107,
+        "updated": 1795753991040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udu6",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000udu6&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 326,
+        "net": "us",
+        "code": "6000udu6",
+        "ids": ",us6000udu6,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 36,
+        "dmin": 9.829,
+        "rms": 0.81,
+        "gap": 105,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.6 - 155 km WNW of Tobelo, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6462,
+          2.0437,
+          42.538
+        ]
+      },
+      "id": "us6000udu6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.5,
+        "place": "95 km SSE of Sarangani, Philippines",
+        "time": 1795709880760,
+        "updated": 1795711360040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udqa",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000udqa&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 312,
+        "net": "us",
+        "code": "6000udqa",
+        "ids": ",us6000udqa,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 34,
+        "dmin": 2.414,
+        "rms": 0.93,
+        "gap": 114,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.5 - 95 km SSE of Sarangani, Philippines"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.9086,
+          4.6618,
+          173.297
+        ]
+      },
+      "id": "us6000udqa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.3,
+        "place": "94 km NNE of Ruteng, Indonesia",
+        "time": 1795701083672,
+        "updated": 1795815372040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udnc",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000udnc&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 284,
+        "net": "us",
+        "code": "6000udnc",
+        "ids": ",us6000udnc,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 15,
+        "dmin": 2.909,
+        "rms": 0.96,
+        "gap": 144,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.3 - 94 km NNE of Ruteng, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.684,
+          -7.789,
+          10
+        ]
+      },
+      "id": "us6000udnc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.5,
+        "place": "204 km S of Taliwang, Indonesia",
+        "time": 1795684120640,
+        "updated": 1795771000828,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udm8",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000udm8&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": 0,
+        "alert": "green",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 465,
+        "net": "us",
+        "code": "6000udm8",
+        "ids": ",attp3qqn,us6000udm8,",
+        "sources": ",at,us,",
+        "types": ",internal-origin,losspager,origin,phase-data,shakemap,",
+        "nst": 57,
+        "dmin": 6.065,
+        "rms": 0.87,
+        "gap": 73,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 5.5 - 204 km S of Taliwang, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.1955,
+          -10.5618,
+          15.139
+        ]
+      },
+      "id": "us6000udm8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.8,
+        "place": "225 km S of Taliwang, Indonesia",
+        "time": 1795683641073,
+        "updated": 1795696463040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udm5",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000udm5&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 354,
+        "net": "us",
+        "code": "6000udm5",
+        "ids": ",us6000udm5,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 40,
+        "dmin": 6.294,
+        "rms": 0.82,
+        "gap": 74,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.8 - 225 km S of Taliwang, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.1007,
+          -10.773,
+          10
+        ]
+      },
+      "id": "us6000udm5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5,
+        "place": "67 km NNE of Luwuk, Indonesia",
+        "time": 1795608492731,
+        "updated": 1795609540040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udf2",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000udf2&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 385,
+        "net": "us",
+        "code": "6000udf2",
+        "ids": ",us6000udf2,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 73,
+        "dmin": 5.629,
+        "rms": 0.79,
+        "gap": 64,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 5.0 - 67 km NNE of Luwuk, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.0018,
+          -0.3849,
+          106.384
+        ]
+      },
+      "id": "us6000udf2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.4,
+        "place": "153 km N of Likisá, Timor Leste",
+        "time": 1795489944992,
+        "updated": 1795490702040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud41",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ud41&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 298,
+        "net": "us",
+        "code": "6000ud41",
+        "ids": ",us6000ud41,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 22,
+        "dmin": 5.832,
+        "rms": 0.45,
+        "gap": 117,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.4 - 153 km N of Likisá, Timor Leste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.1897,
+          -7.21,
+          514.284
+        ]
+      },
+      "id": "us6000ud41"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.4,
+        "place": "240 km SW of Tual, Indonesia",
+        "time": 1795449343269,
+        "updated": 1795452390040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucz8",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucz8&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 298,
+        "net": "us",
+        "code": "6000ucz8",
+        "ids": ",us6000ucz8,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 29,
+        "dmin": 5.854,
+        "rms": 0.68,
+        "gap": 107,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.4 - 240 km SW of Tual, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.0266,
+          -6.9535,
+          35
+        ]
+      },
+      "id": "us6000ucz8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.8,
+        "place": "209 km SSE of Tobi Village, Palau",
+        "time": 1795433071100,
+        "updated": 1795434072040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucyd",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucyd&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 354,
+        "net": "us",
+        "code": "6000ucyd",
+        "ids": ",us6000ucyd,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 37,
+        "dmin": 9.486,
+        "rms": 1.14,
+        "gap": 63,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.8 - 209 km SSE of Tobi Village, Palau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.0172,
+          1.3368,
+          10
+        ]
+      },
+      "id": "us6000ucyd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.4,
+        "place": "181 km NE of Lospalos, Timor Leste",
+        "time": 1795419381052,
+        "updated": 1795506281226,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucx6",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucx6&format=geojson",
+        "felt": 1,
+        "cdi": 2,
+        "mmi": 3.719,
+        "alert": "green",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 449,
+        "net": "us",
+        "code": "6000ucx6",
+        "ids": ",us6000ucx6,",
+        "sources": ",us,",
+        "types": ",dyfi,losspager,moment-tensor,origin,phase-data,shakemap,",
+        "nst": 79,
+        "dmin": 6.075,
+        "rms": 0.8,
+        "gap": 72,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 5.4 - 181 km NE of Lospalos, Timor Leste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.2414,
+          -7.4408,
+          119.267
+        ]
+      },
+      "id": "us6000ucx6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.5,
+        "place": "Kepulauan Babar, Indonesia",
+        "time": 1795416456803,
+        "updated": 1795457013040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucwx",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucwx&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 312,
+        "net": "us",
+        "code": "6000ucwx",
+        "ids": ",us6000ucwx,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 13,
+        "dmin": 5.995,
+        "rms": 0.68,
+        "gap": 154,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.5 - Kepulauan Babar, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4851,
+          -7.035,
+          117.725
+        ]
+      },
+      "id": "us6000ucwx"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.7,
+        "place": "109 km E of Bitung, Indonesia",
+        "time": 1795415312358,
+        "updated": 1795427363040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucws",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucws&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 340,
+        "net": "us",
+        "code": "6000ucws",
+        "ids": ",us6000ucws,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 47,
+        "dmin": 5.674,
+        "rms": 0.74,
+        "gap": 106,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.7 - 109 km E of Bitung, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.1133,
+          1.3824,
+          69.131
+        ]
+      },
+      "id": "us6000ucws"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.3,
+        "place": "218 km ENE of Lospalos, Timor Leste",
+        "time": 1795410943178,
+        "updated": 1795447735040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucwk",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucwk&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 284,
+        "net": "us",
+        "code": "6000ucwk",
+        "ids": ",us6000ucwk,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 22,
+        "dmin": 5.879,
+        "rms": 0.84,
+        "gap": 121,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.3 - 218 km ENE of Lospalos, Timor Leste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6698,
+          -7.4528,
+          116.42
+        ]
+      },
+      "id": "us6000ucwk"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.7,
+        "place": "221 km NE of Bitung, Indonesia",
+        "time": 1795392480906,
+        "updated": 1795394078040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucv4",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucv4&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 340,
+        "net": "us",
+        "code": "6000ucv4",
+        "ids": ",us6000ucv4,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 57,
+        "dmin": 4.148,
+        "rms": 0.44,
+        "gap": 102,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.7 - 221 km NE of Bitung, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4079,
+          2.9773,
+          50.25
+        ]
+      },
+      "id": "us6000ucv4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.7,
+        "place": "226 km NW of Tobelo, Indonesia",
+        "time": 1795391444048,
+        "updated": 1795394630040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucv2",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucv2&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 340,
+        "net": "us",
+        "code": "6000ucv2",
+        "ids": ",us6000ucv2,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 47,
+        "dmin": 10.461,
+        "rms": 0.79,
+        "gap": 118,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.7 - 226 km NW of Tobelo, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.468,
+          3.0639,
+          40.004
+        ]
+      },
+      "id": "us6000ucv2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.4,
+        "place": "224 km NE of Bitung, Indonesia",
+        "time": 1795334080056,
+        "updated": 1795420956680,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucrb",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucrb&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": 3.542,
+        "alert": "green",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 449,
+        "net": "us",
+        "code": "6000ucrb",
+        "ids": ",us6000ucrb,",
+        "sources": ",us,",
+        "types": ",losspager,origin,phase-data,shakemap,",
+        "nst": 68,
+        "dmin": 4.091,
+        "rms": 1.07,
+        "gap": 77,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 5.4 - 224 km NE of Bitung, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3861,
+          3.0314,
+          43.705
+        ]
+      },
+      "id": "us6000ucrb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.9,
+        "place": "246 km ESE of Sarangani, Philippines",
+        "time": 1795331218521,
+        "updated": 1795332326040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucr3",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucr3&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 369,
+        "net": "us",
+        "code": "6000ucr3",
+        "ids": ",us6000ucr3,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 41,
+        "dmin": 3.151,
+        "rms": 1.04,
+        "gap": 136,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.9 - 246 km ESE of Sarangani, Philippines"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5165,
+          4.56,
+          5.573
+        ]
+      },
+      "id": "us6000ucr3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.6,
+        "place": "60 km WNW of Abepura, Indonesia",
+        "time": 1795302965571,
+        "updated": 1795314034983,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucpj",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucpj&format=geojson",
+        "felt": 1,
+        "cdi": 2,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 326,
+        "net": "us",
+        "code": "6000ucpj",
+        "ids": ",us6000ucpj,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 39,
+        "dmin": 7.262,
+        "rms": 0.47,
+        "gap": 60,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.6 - 60 km WNW of Abepura, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.1129,
+          -2.442,
+          31.078
+        ]
+      },
+      "id": "us6000ucpj"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.2,
+        "place": "21 km SSE of Solok, Indonesia",
+        "time": 1795290746507,
+        "updated": 1795302642040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucnl",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucnl&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 271,
+        "net": "us",
+        "code": "6000ucnl",
+        "ids": ",us6000ucnl,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 33,
+        "dmin": 4.175,
+        "rms": 0.51,
+        "gap": 127,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.2 - 21 km SSE of Solok, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.7174,
+          -0.9875,
+          147.806
+        ]
+      },
+      "id": "us6000ucnl"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.1,
+        "place": "237 km NNE of Lospalos, Timor Leste",
+        "time": 1795276567655,
+        "updated": 1795291923040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucmt",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucmt&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 259,
+        "net": "us",
+        "code": "6000ucmt",
+        "ids": ",us6000ucmt,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 31,
+        "dmin": 7.064,
+        "rms": 0.78,
+        "gap": 134,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.1 - 237 km NNE of Lospalos, Timor Leste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.8223,
+          -6.5369,
+          339.404
+        ]
+      },
+      "id": "us6000ucmt"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 6.8,
+        "place": "105 km NE of Lospalos, Timor Leste",
+        "time": 1795254129120,
+        "updated": 1795344403086,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucij&format=geojson",
+        "felt": 41,
+        "cdi": 3.6,
+        "mmi": 5.298,
+        "alert": "green",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 726,
+        "net": "us",
+        "code": "6000ucij",
+        "ids": ",us6000ucij,usauto6000ucij,attouiya,",
+        "sources": ",us,usauto,at,",
+        "types": ",dyfi,ground-failure,internal-moment-tensor,internal-origin,losspager,moment-tensor,origin,phase-data,shakemap,",
+        "nst": 106,
+        "dmin": 6.186,
+        "rms": 1.13,
+        "gap": 21,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 6.8 - 105 km NE of Lospalos, Timor Leste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5407,
+          -7.7324,
+          132.055
+        ]
+      },
+      "id": "us6000ucij"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.4,
+        "place": "109 km NNE of Lospalos, Timor Leste",
+        "time": 1795192873832,
+        "updated": 1795205525040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucax",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000ucax&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 298,
+        "net": "us",
+        "code": "6000ucax",
+        "ids": ",us6000ucax,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 42,
+        "dmin": 6.329,
+        "rms": 0.79,
+        "gap": 86,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.4 - 109 km NNE of Lospalos, Timor Leste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4332,
+          -7.6315,
+          143.686
+        ]
+      },
+      "id": "us6000ucax"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 5.1,
+        "place": "15 km SSW of Balangonan, Philippines",
+        "time": 1795180144057,
+        "updated": 1795495065997,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc96",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000uc96&format=geojson",
+        "felt": 6,
+        "cdi": 3.1,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 402,
+        "net": "us",
+        "code": "6000uc96",
+        "ids": ",us6000uc96,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 61,
+        "dmin": 1.639,
+        "rms": 1.16,
+        "gap": 73,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 5.1 - 15 km SSW of Balangonan, Philippines"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.2986,
+          5.4441,
+          73.392
+        ]
+      },
+      "id": "us6000uc96"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.5,
+        "place": "236 km W of Tual, Indonesia",
+        "time": 1795124973219,
+        "updated": 1795140139040,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc3v",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000uc3v&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 312,
+        "net": "us",
+        "code": "6000uc3v",
+        "ids": ",us6000uc3v,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 47,
+        "dmin": 6.791,
+        "rms": 0.69,
+        "gap": 100,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.5 - 236 km W of Tual, Indonesia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.6505,
+          -6.0263,
+          124.788
+        ]
+      },
+      "id": "us6000uc3v"
+    }
+  ],
+  "bbox": [
+    100.7174,
+    -10.773,
+    5.573,
+    140.1129,
+    5.4441,
+    514.284
+  ]
+}

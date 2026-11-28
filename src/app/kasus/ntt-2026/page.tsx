@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { MainLayout } from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/Card";
 import { LinkButton } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
+import { Badge, StatusBadge } from "@/components/ui/Badge";
 import { StatisticDisplay } from "@/components/ui/StatisticDisplay";
 import Link from "next/link";
 
@@ -51,11 +51,11 @@ const timeline = [
 ];
 
 const affectedRegions = [
-  { name: "Kabupaten Sikka", code: "53.07", status: "Dilaporkan belum menerima bantuan" as const },
-  { name: "Kabupaten Flores Timur", code: "53.08", status: "Akses terisolir" as const },
-  { name: "Kabupaten Lembata", code: "53.09", status: "Belum terverifikasi" as const },
-  { name: "Kabupaten Ngada", code: "53.10", status: "Dilaporkan belum menerima bantuan" as const },
-  { name: "Kabupaten Ende", code: "53.11", status: "Belum terverifikasi" as const },
+  { name: "Kabupaten Flores Timur", code: "5306", status: "Akses terisolir" as const },
+  { name: "Kabupaten Sikka", code: "5307", status: "Dilaporkan belum menerima bantuan" as const },
+  { name: "Kabupaten Ende", code: "5308", status: "Belum terverifikasi" as const },
+  { name: "Kabupaten Ngada", code: "5309", status: "Dilaporkan belum menerima bantuan" as const },
+  { name: "Kabupaten Lembata", code: "5313", status: "Belum terverifikasi" as const },
 ];
 
 const placeholderStats = [
@@ -71,7 +71,7 @@ const placeholderStats = [
       publisher: "BNPB / BPBD NTT",
       category: "OFFICIAL" as const,
       publicationDate: new Date("2026-08-31"),
-      accessDate: new Date(),
+      accessDate: new Date("2026-11-28"),
     },
   },
   {
@@ -86,7 +86,7 @@ const placeholderStats = [
       publisher: "BPBD NTT",
       category: "OFFICIAL" as const,
       publicationDate: new Date("2026-08-31"),
-      accessDate: new Date(),
+      accessDate: new Date("2026-11-28"),
     },
   },
   {
@@ -101,7 +101,7 @@ const placeholderStats = [
       publisher: "BPBD NTT",
       category: "OFFICIAL" as const,
       publicationDate: new Date("2026-08-31"),
-      accessDate: new Date(),
+      accessDate: new Date("2026-11-28"),
     },
   },
 ];
@@ -111,25 +111,21 @@ const keyDocuments = [
     title: "Laporan Situasi BNPB H+7",
     description: "Laporan resmi Badan Nasional Penanggulangan Bencana 7 hari pasca gempa.",
     type: "OFFICIAL" as const,
-    url: "#",
   },
   {
     title: "Keputusan Gubernur NTT Status Darurat",
     description: "Penetapan status tanggap darurat bencana oleh Gubernur NTT.",
     type: "OFFICIAL" as const,
-    url: "#",
   },
   {
     title: "Laporan Medis RSUD Maumere",
     description: "Data korban luka dan penanganan medis dari rumah sakit rujukan.",
     type: "OFFICIAL" as const,
-    url: "#",
   },
   {
     title: "Laporan Investigasi Media Tempo",
     description: "Liputan mendalam mengenai distribusi bantuan di wilayah terpencil.",
     type: "MEDIA" as const,
-    url: "#",
   },
 ];
 
@@ -152,6 +148,11 @@ export default function NTT2026CasePage() {
               Melacak dampak, respons bantuan, tantangan distribusi logistik ke wilayah terpencil, dan jejak informasi
               dari sumber resmi hingga media investigasi.
             </p>
+            <div className="mt-6 p-4 rounded-lg border border-border bg-secondary-background text-sm text-secondary-text max-w-3xl">
+              <strong className="text-primary">Status Dokumen (Kerangka Studi Kasus):</strong>{" "}
+              Kronologi, daftar wilayah indikatif, dan rujukan dokumen di halaman ini masih menunggu impor data resmi terverifikasi
+              dari BNPB, BMKG, dan BPBD NTT ke dalam database. Angka dampak tidak ditampilkan sebelum sumber terverifikasi tersedia.
+            </div>
           </header>
 
           {/* Timeline */}
@@ -190,7 +191,7 @@ export default function NTT2026CasePage() {
               <table className="table-container" role="table">
                 <thead>
                   <tr>
-                    <th scope="col">Kode Wilayah</th>
+                    <th scope="col">Kode BPS</th>
                     <th scope="col">Nama Kabupaten/Kota</th>
                     <th scope="col">Status Bantuan</th>
                     <th scope="col">Catatan</th>
@@ -201,7 +202,9 @@ export default function NTT2026CasePage() {
                     <tr key={region.code}>
                       <td className="font-mono text-sm">{region.code}</td>
                       <td className="font-medium">{region.name}</td>
-                      <td><Badge variant={region.status.toLowerCase().replace(/\s+/g, "-") as "default" | "safe" | "warning" | "danger"}>{region.status}</Badge></td>
+                      <td>
+                        <StatusBadge status={region.status} />
+                      </td>
                       <td className="text-secondary-text">Data dalam validasi</td>
                     </tr>
                   ))}
@@ -209,8 +212,9 @@ export default function NTT2026CasePage() {
               </table>
             </div>
             <p className="text-secondary-text text-sm mt-4">
-              Status di atas bersifat indikatif berdasarkan laporan awal. Data detail per kecamatan/desa
-              tersedia setelah validasi selesai. Lihat <Link href="/sumber" className="underline hover:text-primary">halaman Sumber</Link> untuk metodologi penetapan status.
+              Kode wilayah menggunakan kode administratif resmi BPS (provinsi NTT <code className="font-mono text-xs">53</code>).
+              Status di atas bersifat indikatif menunggu verifikasi resmi. Lihat{" "}
+              <Link href="/sumber" className="underline hover:text-primary">halaman Sumber</Link> untuk daftar sumber terdaftar.
             </p>
           </section>
 
@@ -240,18 +244,18 @@ export default function NTT2026CasePage() {
                 <Card key={index} className="hover:border-primary transition-colors">
                   <CardContent>
                     <div className="flex items-start gap-3">
-                      <Badge variant={doc.type === "OFFICIAL" ? "safe" : doc.type === "MEDIA" ? "warning" : "neutral"} className="flex-shrink-0 mt-0.5">
-                        {doc.type === "OFFICIAL" ? "Resmi" : doc.type === "MEDIA" ? "Media" : "Lainnya"}
+                      <Badge variant={doc.type === "OFFICIAL" ? "safe" : "warning"} className="flex-shrink-0 mt-0.5">
+                        {doc.type === "OFFICIAL" ? "Resmi" : "Media"}
                       </Badge>
                       <div className="flex-1">
                         <h3 className="font-medium text-primary">{doc.title}</h3>
                         <p className="text-secondary-text text-sm mt-1">{doc.description}</p>
-                        <a href={doc.url} target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-black text-sm inline-flex items-center gap-1 mt-2">
-                          Lihat dokumen
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
+                        <div className="mt-2 flex items-center gap-3 text-xs text-secondary-text">
+                          <span>Tautan dokumen menunggu verifikasi</span>
+                          <Link href="/sumber" className="text-primary underline hover:text-black">
+                            Lihat Registri Sumber
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -270,7 +274,7 @@ export default function NTT2026CasePage() {
               <ul className="list-disc list-inside text-secondary-text space-y-2 mb-6">
                 <li>Data resmi: Laporan situasi BNPB, penetapan status darurat Gubernur NTT, laporan BPBD kabupaten/kota.</li>
                 <li>Data media: Liputan investigasi media nasional (Tempo, Kompas, BBC Indonesia) dan media lokal NTT.</li>
-                <li>Data lapangan: Laporan organisasi kemanusiaan (PMI, ACT, Dompet Dhuafa) yang terverifikasi.</li>
+                <li>Data lapangan: Laporan organisasi kemanusiaan (PMI, organisasi resmi terkait) yang terverifikasi.</li>
               </ul>
               <h3 className="font-semibold text-primary mb-2">Validasi & Penyilangan</h3>
               <ul className="list-disc list-inside text-secondary-text space-y-2 mb-6">

@@ -1,9 +1,11 @@
+import { Suspense } from "react";
 import { Metadata } from "next";
 import { MainLayout } from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/Card";
 import { LinkButton } from "@/components/ui/Button";
 import { StatisticDisplay } from "@/components/ui/StatisticDisplay";
 import { Badge } from "@/components/ui/Badge";
+import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -18,53 +20,134 @@ export const metadata: Metadata = {
   },
 };
 
-const placeholderStats = [
-  {
-    key: "total_events",
-    label: "Total Kejadian Bencana (2024)",
-    value: "—",
-    unit: "kejadian",
-    asOfDate: new Date(),
-    source: {
-      id: "placeholder",
-      title: "Data belum tersedia",
-      publisher: "BNPB",
-      category: "OFFICIAL" as const,
-      publicationDate: new Date(),
-      accessDate: new Date(),
+async function NationalStatsFromDb() {
+  const [dbStats, provinceCount, regencyCount, sourceCount] = await Promise.all([
+    prisma.stat.findMany({
+      where: { regionId: null },
+      take: 3,
+      orderBy: { asOfDate: "desc" },
+      include: {
+        source: {
+          select: {
+            id: true,
+            title: true,
+            publisher: true,
+            category: true,
+            publicationDate: true,
+            accessDate: true,
+            url: true,
+          },
+        },
+      },
+    }),
+    prisma.region.count({ where: { level: "PROVINCE" } }),
+    prisma.region.count({ where: { level: "REGENCY_CITY" } }),
+    prisma.source.count(),
+  ]);
+
+  if (dbStats.length > 0) {
+    const formatted = dbStats.map((s) => ({
+      key: s.key,
+      label: s.label,
+      value: s.value,
+      unit: s.unit ?? undefined,
+      asOfDate: s.asOfDate,
+      source: {
+        id: s.source.id,
+        title: s.source.title,
+        publisher: s.source.publisher ?? undefined,
+        category: s.source.category,
+        publicationDate: s.source.publicationDate ?? undefined,
+        accessDate: s.source.accessDate,
+        url: s.source.url ?? undefined,
+      },
+    }));
+
+    return (
+      <div className="grid gap-6 md:grid-cols-3">
+        {formatted.map((stat) => (
+          <StatisticDisplay key={stat.key} data={stat} variant="featured" />
+        ))}
+      </div>
+    );
+  }
+
+  const snapshotDate = new Date("2026-11-28T00:00:00.000Z");
+  const readinessStats = [
+    {
+      key: "mapped_provinces",
+      label: "Provinsi Terpetakan",
+      value: String(provinceCount),
+      unit: "provinsi",
+      asOfDate: snapshotDate,
+      source: {
+        id: "bps-big-provinces",
+        title: "Data Administratif BPS / BIG",
+        publisher: "BPS / BIG",
+        category: "OFFICIAL" as const,
+        publicationDate: new Date("2024-01-01T00:00:00.000Z"),
+        accessDate: snapshotDate,
+      },
     },
-  },
-  {
-    key: "affected_regions",
-    label: "Wilayah Terdampak",
-    value: "—",
-    unit: "kabupaten/kota",
-    asOfDate: new Date(),
-    source: {
-      id: "placeholder",
-      title: "Data belum tersedia",
-      publisher: "BNPB",
-      category: "OFFICIAL" as const,
-      publicationDate: new Date(),
-      accessDate: new Date(),
+    {
+      key: "mapped_regencies",
+      label: "Kabupaten/Kota Terpetakan",
+      value: String(regencyCount),
+      unit: "kabupaten/kota",
+      asOfDate: snapshotDate,
+      source: {
+        id: "big-regencies",
+        title: "Data Batas Wilayah BIG / Ina-GEO",
+        publisher: "BIG",
+        category: "OFFICIAL" as const,
+        publicationDate: new Date("2024-01-01T00:00:00.000Z"),
+        accessDate: snapshotDate,
+      },
     },
-  },
-  {
-    key: "assistance_distributed",
-    label: "Bantuan Terdistribusi",
-    value: "—",
-    unit: "paket",
-    asOfDate: new Date(),
-    source: {
-      id: "placeholder",
-      title: "Data belum tersedia",
-      publisher: "BNPB",
-      category: "OFFICIAL" as const,
-      publicationDate: new Date(),
-      accessDate: new Date(),
+    {
+      key: "registered_sources",
+      label: "Sumber Data Terdaftar",
+      value: String(sourceCount),
+      unit: "sumber",
+      asOfDate: snapshotDate,
+      source: {
+        id: "source-registry",
+        title: "Registri Sumber Platform",
+        publisher: "Tim Platform",
+        category: "EDITORIAL" as const,
+        publicationDate: snapshotDate,
+        accessDate: snapshotDate,
+      },
     },
-  },
-];
+  ];
+
+  return (
+    <>
+      <div className="grid gap-6 md:grid-cols-3">
+        {readinessStats.map((stat) => (
+          <StatisticDisplay key={stat.key} data={stat} variant="featured" />
+        ))}
+      </div>
+      <p className="text-center text-secondary-text text-sm mt-8">
+        <strong>Catatan:</strong> Kartu di atas menampilkan cakupan basis data wilayah dan registri sumber aktif.
+        Statistik dampak bencana nasional akan tampil otomatis setelah impor data resmi terverifikasi ke tabel{" "}
+        <code className="font-mono text-xs">Stat</code>. Lihat halaman{" "}
+        <Link href="/sumber" className="underline hover:text-primary">Sumber Data</Link>{" "}
+        untuk daftar lengkap sumber terdaftar.
+      </p>
+    </>
+  );
+}
+
+function NationalStatsSkeleton() {
+  return (
+    <div className="grid gap-6 md:grid-cols-3" role="status" aria-label="Memuat statistik nasional">
+      {[0, 1, 2].map((i) => (
+        <div key={i} className="h-44 bg-background rounded-xl border border-border animate-pulse" />
+      ))}
+    </div>
+  );
+}
 
 const quickLinks = [
   {
@@ -167,21 +250,13 @@ export default function HomePage() {
               Konteks Nasional
             </h2>
             <p className="text-secondary-text max-w-2xl mx-auto">
-              Ringkasan statistik bencana dan bantuan di Indonesia. Setiap angka memiliki sumber dan tanggal data yang jelas.
+              Ringkasan statistik dan cakupan data bencana di Indonesia. Setiap angka memiliki sumber dan tanggal data yang jelas.
             </p>
           </header>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {placeholderStats.map((stat) => (
-              <StatisticDisplay key={stat.key} data={stat} variant="featured" />
-            ))}
-          </div>
-
-          <p className="text-center text-secondary-text text-sm mt-8">
-            <strong>Catatan:</strong> Data statistik nasional sedang dalam proses pengumpulan dan validasi.
-            Silakan kunjungi halaman <Link href="/sumber" className="underline hover:text-primary">Sumber Data</Link>
-            untuk melihat metodologi dan status pengumpulan data.
-          </p>
+          <Suspense fallback={<NationalStatsSkeleton />}>
+            <NationalStatsFromDb />
+          </Suspense>
         </div>
       </section>
 
@@ -266,7 +341,7 @@ export default function HomePage() {
                 <h3 className="font-display font-semibold text-xl text-primary mb-2">Gempa Flores NTT</h3>
                 <p className="text-secondary-text text-sm mb-4 flex-1">
                   Gempa bumi magnitudo 6.1 SR mengguncang Pulau Flores. Studi kasus distribusi bantuan
-                  ke wilayah terpencil dan keterelaksanaan informasi bencana geologis.
+                  ke wilayah terpencil dan keterlacakan informasi bencana geologis.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <Badge variant="warning">Dilaporkan belum menerima bantuan</Badge>

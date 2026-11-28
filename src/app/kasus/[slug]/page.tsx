@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MainLayout } from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
+import { Badge, StatusBadge } from "@/components/ui/Badge";
 import { StatisticDisplay } from "@/components/ui/StatisticDisplay";
 import { LinkButton } from "@/components/ui/Button";
 import Link from "next/link";
@@ -46,7 +46,6 @@ interface CaseStudyData {
     title: string;
     description: string;
     type: "OFFICIAL" | "MEDIA" | "RESEARCH" | "EDITORIAL";
-    url: string;
   }[];
   methodology: {
     dataCollection: string[];
@@ -54,6 +53,8 @@ interface CaseStudyData {
     limitations: string[];
   };
 }
+
+const SNAPSHOT_ACCESS_DATE = new Date("2026-11-28");
 
 const caseStudiesData: Record<string, CaseStudyData> = {
   "ntt-2026": {
@@ -98,11 +99,11 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       },
     ],
     affectedRegions: [
-      { name: "Kabupaten Sikka", code: "53.07", status: "Dilaporkan belum menerima bantuan" },
-      { name: "Kabupaten Flores Timur", code: "53.08", status: "Akses terisolir" },
-      { name: "Kabupaten Lembata", code: "53.09", status: "Belum terverifikasi" },
-      { name: "Kabupaten Ngada", code: "53.10", status: "Dilaporkan belum menerima bantuan" },
-      { name: "Kabupaten Ende", code: "53.11", status: "Belum terverifikasi" },
+      { name: "Kabupaten Flores Timur", code: "5306", status: "Akses terisolir" },
+      { name: "Kabupaten Sikka", code: "5307", status: "Dilaporkan belum menerima bantuan" },
+      { name: "Kabupaten Ende", code: "5308", status: "Belum terverifikasi" },
+      { name: "Kabupaten Ngada", code: "5309", status: "Dilaporkan belum menerima bantuan" },
+      { name: "Kabupaten Lembata", code: "5313", status: "Belum terverifikasi" },
     ],
     stats: [
       {
@@ -117,7 +118,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
           publisher: "BNPB / BPBD NTT",
           category: "OFFICIAL",
           publicationDate: new Date("2026-08-31"),
-          accessDate: new Date(),
+          accessDate: SNAPSHOT_ACCESS_DATE,
         },
       },
       {
@@ -132,7 +133,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
           publisher: "BPBD NTT",
           category: "OFFICIAL",
           publicationDate: new Date("2026-08-31"),
-          accessDate: new Date(),
+          accessDate: SNAPSHOT_ACCESS_DATE,
         },
       },
       {
@@ -147,7 +148,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
           publisher: "BPBD NTT",
           category: "OFFICIAL",
           publicationDate: new Date("2026-08-31"),
-          accessDate: new Date(),
+          accessDate: SNAPSHOT_ACCESS_DATE,
         },
       },
     ],
@@ -156,32 +157,28 @@ const caseStudiesData: Record<string, CaseStudyData> = {
         title: "Laporan Situasi BNPB H+7",
         description: "Laporan resmi Badan Nasional Penanggulangan Bencana 7 hari pasca gempa.",
         type: "OFFICIAL",
-        url: "#",
       },
       {
         title: "Keputusan Gubernur NTT Status Darurat",
         description: "Penetapan status tanggap darurat bencana oleh Gubernur NTT.",
         type: "OFFICIAL",
-        url: "#",
       },
       {
         title: "Laporan Medis RSUD Maumere",
         description: "Data korban luka dan penanganan medis dari rumah sakit rujukan.",
         type: "OFFICIAL",
-        url: "#",
       },
       {
         title: "Laporan Investigasi Media Tempo",
         description: "Liputan mendalam mengenai distribusi bantuan di wilayah terpencil.",
         type: "MEDIA",
-        url: "#",
       },
     ],
     methodology: {
       dataCollection: [
         "Data resmi: Laporan situasi BNPB, penetapan status darurat Gubernur NTT, laporan BPBD kabupaten/kota.",
         "Data media: Liputan investigasi media nasional (Tempo, Kompas, BBC Indonesia) dan media lokal NTT.",
-        "Data lapangan: Laporan organisasi kemanusiaan (PMI, ACT, Dompet Dhuafa) yang terverifikasi.",
+        "Data lapangan: Laporan organisasi kemanusiaan (PMI dan lembaga resmi terkait) yang terverifikasi.",
       ],
       validation: [
         "Menyilangkan data BNPB dengan laporan BPBD kabupaten dan media investigasi.",
@@ -214,14 +211,14 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       },
       {
         date: "H+1 hingga H+3",
-        title: "Evacuasi Darurat & Penanganan Korban",
+        title: "Evakuasi Darurat & Penanganan Korban",
         description: "BPBD Aceh, TNI, POLRI, Basarnas, dan PMI melakukan evakuasi warga terperangkap. Posko darurat dibuka di setiap kabupaten terdampak. Akses jalan lintas provinsi terputus di beberapa titik.",
         type: "response",
       },
       {
         date: "H+5",
         title: "Pengungsian Massal & Logistik",
-        description: "Puluhan ribu warga mengungsi ke masjid, balai desa, dan gedung publik. Kebutuhan Mendesak: tenda, makanan siap saji, air bersih, obat-obatan, sanitasi. Distribusi terhambat oleh genangan air dan longsor di jalur akses.",
+        description: "Puluhan ribu warga mengungsi ke masjid, balai desa, dan gedung publik. Kebutuhan mendesak: tenda, makanan siap saji, air bersih, obat-obatan, sanitasi. Distribusi terhambat oleh genangan air dan longsor di jalur akses.",
         type: "response",
       },
       {
@@ -238,13 +235,13 @@ const caseStudiesData: Record<string, CaseStudyData> = {
       },
     ],
     affectedRegions: [
-      { name: "Kabupaten Aceh Utara", code: "11.06", status: "Dilaporkan belum menerima bantuan" },
-      { name: "Kabupaten Aceh Timur", code: "11.07", status: "Akses terisolir" },
-      { name: "Kota Bireuen", code: "11.18", status: "Belum terverifikasi" },
-      { name: "Kota Lhokseumawe", code: "11.71", status: "Dilaporkan belum menerima bantuan" },
-      { name: "Kabupaten Aceh Tamiang", code: "11.13", status: "Akses terisolir" },
-      { name: "Kota Langsa", code: "11.74", status: "Belum terverifikasi" },
-      { name: "Kabupaten Pidie", code: "11.08", status: "Dilaporkan belum menerima bantuan" },
+      { name: "Kabupaten Aceh Timur", code: "1103", status: "Akses terisolir" },
+      { name: "Kabupaten Pidie", code: "1107", status: "Dilaporkan belum menerima bantuan" },
+      { name: "Kabupaten Aceh Utara", code: "1108", status: "Dilaporkan belum menerima bantuan" },
+      { name: "Kabupaten Bireuen", code: "1111", status: "Belum terverifikasi" },
+      { name: "Kabupaten Aceh Tamiang", code: "1116", status: "Akses terisolir" },
+      { name: "Kota Lhokseumawe", code: "1173", status: "Dilaporkan belum menerima bantuan" },
+      { name: "Kota Langsa", code: "1174", status: "Belum terverifikasi" },
     ],
     stats: [
       {
@@ -259,7 +256,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
           publisher: "BPBD Aceh / BNPB",
           category: "OFFICIAL",
           publicationDate: new Date("2026-11-20"),
-          accessDate: new Date(),
+          accessDate: SNAPSHOT_ACCESS_DATE,
         },
       },
       {
@@ -274,7 +271,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
           publisher: "BPBD Aceh",
           category: "OFFICIAL",
           publicationDate: new Date("2026-11-20"),
-          accessDate: new Date(),
+          accessDate: SNAPSHOT_ACCESS_DATE,
         },
       },
       {
@@ -289,7 +286,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
           publisher: "BPBD Aceh",
           category: "OFFICIAL",
           publicationDate: new Date("2026-11-20"),
-          accessDate: new Date(),
+          accessDate: SNAPSHOT_ACCESS_DATE,
         },
       },
       {
@@ -304,7 +301,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
           publisher: "BPBD Aceh",
           category: "OFFICIAL",
           publicationDate: new Date("2026-11-20"),
-          accessDate: new Date(),
+          accessDate: SNAPSHOT_ACCESS_DATE,
         },
       },
     ],
@@ -313,38 +310,33 @@ const caseStudiesData: Record<string, CaseStudyData> = {
         title: "Laporan Situasi BPBD Provinsi Aceh H+7",
         description: "Laporan resmi Badan Penanggulangan Bencana Daerah Provinsi Aceh 7 hari pasca kejadian.",
         type: "OFFICIAL",
-        url: "#",
       },
       {
         title: "Keputusan Gubernur Aceh Status Darurat Bencana",
         description: "Penetapan status tanggap darurat bencana provinsi oleh Gubernur Aceh.",
         type: "OFFICIAL",
-        url: "#",
       },
       {
         title: "Analisis BMKG Curah Hujan Ekstrem Aceh Nov 2026",
         description: "Analisis meteorologi dan prakiraan lanjutan dari BMKG Stasiun Klimatologi Aceh.",
         type: "OFFICIAL",
-        url: "#",
       },
       {
         title: "Laporan Medis RSUD Meulaboh & RSUD Langsa",
         description: "Data penanganan korban luka dan kesehatan jiwa pasca bencana dari rumah sakit rujukan.",
         type: "OFFICIAL",
-        url: "#",
       },
       {
         title: "Laporan Investigasi Media Kompas: Akses Terputus di Aceh Timur",
         description: "Liputan mendalam mengenai tantangan distribusi bantuan di wilayah terisolir longsor.",
         type: "MEDIA",
-        url: "#",
       },
     ],
     methodology: {
       dataCollection: [
         "Data resmi: Laporan situasi BPBD Provinsi Aceh, penetapan status darurat Gubernur Aceh, analisis BMKG, laporan BPBD kabupaten/kota.",
         "Data media: Liputan investigasi media nasional (Kompas, Tempo, Detik, CNN Indonesia) dan media lokal Aceh (Serambi Indonesia, Aceh Kini).",
-        "Data lapangan: Laporan PMI Aceh, TAGANA, ACT, Dompet Dhuafa, dan organisasi kemanusiaan lokal yang terverifikasi.",
+        "Data lapangan: Laporan PMI Aceh, TAGANA, dan organisasi kemanusiaan lokal yang terverifikasi.",
       ],
       validation: [
         "Menyilangkan data BPBD Provinsi dengan laporan BPBD kabupaten/kota, analisis BMKG, dan media investigasi.",
@@ -433,6 +425,11 @@ export default async function CasePage({ params }: CasePageProps) {
               {caseStudy.title}
             </h1>
             <p className="text-secondary-text text-lg max-w-3xl">{caseStudy.description}</p>
+            <div className="mt-6 p-4 rounded-lg border border-border bg-secondary-background text-sm text-secondary-text max-w-3xl">
+              <strong className="text-primary">Status Dokumen (Kerangka Studi Kasus):</strong>{" "}
+              Kronologi, daftar wilayah indikatif, dan rujukan dokumen di halaman ini masih menunggu impor data resmi terverifikasi
+              dari BNPB, BMKG, dan BPBD setempat ke dalam database.
+            </div>
           </header>
 
           {/* Timeline */}
@@ -471,7 +468,7 @@ export default async function CasePage({ params }: CasePageProps) {
               <table className="table-container" role="table">
                 <thead>
                   <tr>
-                    <th scope="col">Kode Wilayah</th>
+                    <th scope="col">Kode BPS</th>
                     <th scope="col">Nama Kabupaten/Kota</th>
                     <th scope="col">Status Bantuan</th>
                     <th scope="col">Catatan</th>
@@ -483,11 +480,7 @@ export default async function CasePage({ params }: CasePageProps) {
                       <td className="font-mono text-sm">{region.code}</td>
                       <td className="font-medium">{region.name}</td>
                       <td>
-                        <Badge
-                          variant={region.status.toLowerCase().replace(/\s+/g, "-") as "default" | "safe" | "warning" | "danger"}
-                        >
-                          {region.status}
-                        </Badge>
+                        <StatusBadge status={region.status} />
                       </td>
                       <td className="text-secondary-text">Data dalam validasi</td>
                     </tr>
@@ -496,12 +489,11 @@ export default async function CasePage({ params }: CasePageProps) {
               </table>
             </div>
             <p className="text-secondary-text text-sm mt-4">
-              Status di atas bersifat indikatif berdasarkan laporan awal. Data detail per kecamatan/desa
-              tersedia setelah validasi selesai. Lihat{" "}
+              Status di atas bersifat indikatif berdasarkan laporan awal menggunakan kode BPS resmi. Lihat{" "}
               <Link href="/sumber" className="underline hover:text-primary">
                 halaman Sumber
               </Link>{" "}
-              untuk metodologi penetapan status.
+              untuk daftar sumber terdaftar.
             </p>
           </section>
 
@@ -554,17 +546,12 @@ export default async function CasePage({ params }: CasePageProps) {
                       <div className="flex-1">
                         <h3 className="font-medium text-primary">{doc.title}</h3>
                         <p className="text-secondary-text text-sm mt-1">{doc.description}</p>
-                        <a
-                          href={doc.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary underline hover:text-black text-sm inline-flex items-center gap-1 mt-2"
-                        >
-                          Lihat dokumen
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
+                        <div className="mt-2 flex items-center gap-3 text-xs text-secondary-text">
+                          <span>Tautan dokumen menunggu verifikasi</span>
+                          <Link href="/sumber" className="text-primary underline hover:text-black">
+                            Lihat Registri Sumber
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </CardContent>

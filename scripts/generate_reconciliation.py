@@ -1,7 +1,9 @@
 import json
 from pathlib import Path
 
-with open(r'D:/bismillah_menang/reports/GEOJSON_FILE_INVENTORY.json', 'r', encoding='utf-8') as f:
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+with open(PROJECT_ROOT / 'reports' / 'GEOJSON_FILE_INVENTORY.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 empty_files = [item for item in data['inventory'] if not item['has_valid_geometry']]
@@ -35,7 +37,7 @@ summary = {
     'recommendation': 'Source the missing 8 Papua regencies from official BPS 2022+ data to reach target count of 514'
 }
 
-with open(r'D:/bismillah_menang/reports/RECONCILIATION_SUMMARY.json', 'w', encoding='utf-8') as f:
+with open(PROJECT_ROOT / 'reports' / 'RECONCILIATION_SUMMARY.json', 'w', encoding='utf-8') as f:
     json.dump(summary, f, indent=2, ensure_ascii=False)
 
 print(json.dumps(summary, indent=2, ensure_ascii=False))

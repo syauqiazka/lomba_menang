@@ -1,6 +1,7 @@
 import json
+from pathlib import Path
 
-with open('D:/bismillah_menang/public/geo/provinces.geojson') as f:
+with open(Path(__file__).resolve().parent / 'public' / 'geo' / 'provinces.geojson', encoding='utf-8') as f:
     data = json.load(f)
 
 print(f'Total features: {len(data["features"])}')

@@ -12,6 +12,18 @@ const PRISMA_REGION_FIELDS = {
   },
 };
 
+const STATUS_PRIORITY: Record<PublicStatus, number> = {
+  AKSES_TERISOLIR: 3,
+  DILAPORKAN_BELUM_MENERIMA_BANTUAN: 2,
+  BELUM_TERVERIFIKASI: 1,
+};
+
+function pickHigherStatus(a?: PublicStatus, b?: PublicStatus): PublicStatus | undefined {
+  if (!a) return b;
+  if (!b) return a;
+  return STATUS_PRIORITY[a] >= STATUS_PRIORITY[b] ? a : b;
+}
+
 function toPublicStatus(status: string | null): PublicStatus | undefined {
   if (!status) return undefined;
   const validStatuses: PublicStatus[] = ['DILAPORKAN_BELUM_MENERIMA_BANTUAN', 'AKSES_TERISOLIR', 'BELUM_TERVERIFIKASI'];
@@ -56,11 +68,14 @@ export async function getMapRegions(filters?: { status?: PublicStatus; provinceC
   const regionCodes = provinces.map((p) => p.code);
   const eventImpacts = await prisma.eventImpact.findMany({
     where: {
-      region: { code: { in: regionCodes } },
+      OR: [
+        { region: { code: { in: regionCodes } } },
+        { region: { parentCode: { in: regionCodes } } },
+      ],
       ...(filters?.status ? { status: filters.status } : {}),
     },
     include: {
-      region: { select: { code: true } },
+      region: { select: { code: true, parentCode: true } },
       source: { select: { title: true, category: true, url: true, publicationDate: true, accessDate: true } },
       event: { select: { id: true, name: true, type: true, nature: true, occurredAt: true } },
     },
@@ -71,36 +86,37 @@ export async function getMapRegions(filters?: { status?: PublicStatus; provinceC
       region: { code: { in: regionCodes } },
     },
     include: {
+      region: { select: { code: true } },
       source: { select: { title: true, category: true, url: true } },
     },
   });
 
-  const impactByRegion = new Map<string, typeof eventImpacts>();
+  const provinceStatusMap = new Map<string, PublicStatus>();
   for (const impact of eventImpacts) {
-    const code = impact.region.code;
-    if (!impactByRegion.has(code)) impactByRegion.set(code, []);
-    impactByRegion.get(code)!.push(impact);
+    const provCode =
+      impact.region.parentCode && regionCodes.includes(impact.region.parentCode)
+        ? impact.region.parentCode
+        : impact.region.code;
+    const next = pickHigherStatus(provinceStatusMap.get(provCode), toPublicStatus(impact.status ?? null));
+    if (next) provinceStatusMap.set(provCode, next);
   }
 
   const statsByRegion = new Map<string, typeof stats>();
   for (const stat of stats) {
-    if (!stat.regionId) continue;
-    const region = await prisma.region.findUnique({ where: { id: stat.regionId }, select: { code: true } });
-    if (!region) continue;
-    if (!statsByRegion.has(region.code)) statsByRegion.set(region.code, []);
-    statsByRegion.get(region.code)!.push(stat);
+    const code = stat.region?.code;
+    if (!code) continue;
+    if (!statsByRegion.has(code)) statsByRegion.set(code, []);
+    statsByRegion.get(code)!.push(stat);
   }
 
   return provinces.map((province) => {
-    const impacts = impactByRegion.get(province.code) ?? [];
-    const latestImpact = impacts.sort((a, b) => b.event.occurredAt.getTime() - a.event.occurredAt.getTime())[0];
     const regionStats = statsByRegion.get(province.code) ?? [];
 
     return {
       code: province.code,
       name: province.name,
       level: 'province' as const,
-      status: toPublicStatus(latestImpact?.status ?? null),
+      status: provinceStatusMap.get(province.code),
       stats: regionStats.map((s) => ({
         key: s.key,
         label: s.label,
@@ -137,28 +153,28 @@ export async function getRegenciesForProvince(provinceCode: string): Promise<Reg
 
   const stats = await prisma.stat.findMany({
     where: { region: { code: { in: regionCodes } } },
-    include: { source: { select: { title: true, category: true, url: true } } },
+    include: {
+      region: { select: { code: true } },
+      source: { select: { title: true, category: true, url: true } },
+    },
   });
 
-  const impactByRegion = new Map<string, typeof eventImpacts>();
+  const statusByRegion = new Map<string, PublicStatus>();
   for (const impact of eventImpacts) {
     const code = impact.region.code;
-    if (!impactByRegion.has(code)) impactByRegion.set(code, []);
-    impactByRegion.get(code)!.push(impact);
+    const next = pickHigherStatus(statusByRegion.get(code), toPublicStatus(impact.status ?? null));
+    if (next) statusByRegion.set(code, next);
   }
 
   const statsByRegion = new Map<string, typeof stats>();
   for (const stat of stats) {
-    if (!stat.regionId) continue;
-    const region = await prisma.region.findUnique({ where: { id: stat.regionId }, select: { code: true } });
-    if (!region) continue;
-    if (!statsByRegion.has(region.code)) statsByRegion.set(region.code, []);
-    statsByRegion.get(region.code)!.push(stat);
+    const code = stat.region?.code;
+    if (!code) continue;
+    if (!statsByRegion.has(code)) statsByRegion.set(code, []);
+    statsByRegion.get(code)!.push(stat);
   }
 
   return regencies.map((regency) => {
-    const impacts = impactByRegion.get(regency.code) ?? [];
-    const latestImpact = impacts.sort((a, b) => b.event.occurredAt.getTime() - a.event.occurredAt.getTime())[0];
     const regionStats = statsByRegion.get(regency.code) ?? [];
 
     return {
@@ -166,7 +182,7 @@ export async function getRegenciesForProvince(provinceCode: string): Promise<Reg
       name: regency.name,
       level: 'regency' as const,
       parentCode: regency.parentCode ?? undefined,
-      status: toPublicStatus(latestImpact?.status ?? null),
+      status: statusByRegion.get(regency.code),
       stats: regionStats.map((s) => ({
         key: s.key,
         label: s.label,
@@ -192,14 +208,37 @@ export async function getRegionDetail(code: string): Promise<RegionDetailDTO | n
 
   if (!region) return null;
 
-  const eventImpacts = await prisma.eventImpact.findMany({
+  const directImpacts = await prisma.eventImpact.findMany({
     where: { regionId: region.id },
     include: {
+      region: { select: { name: true } },
       source: { select: { title: true, category: true, url: true, publicationDate: true, accessDate: true } },
       event: { select: { id: true, name: true, type: true, nature: true, occurredAt: true } },
     },
     orderBy: { event: { occurredAt: 'desc' } },
   });
+
+  const childImpacts =
+    region.level === 'PROVINCE' && directImpacts.length === 0
+      ? await prisma.eventImpact.findMany({
+          where: { region: { parentCode: region.code } },
+          include: {
+            region: { select: { name: true } },
+            source: { select: { title: true, category: true, url: true, publicationDate: true, accessDate: true } },
+            event: { select: { id: true, name: true, type: true, nature: true, occurredAt: true } },
+          },
+          orderBy: { event: { occurredAt: 'desc' } },
+          take: 25,
+        })
+      : [];
+
+  const eventImpacts = directImpacts.length > 0 ? directImpacts : childImpacts;
+  const isProvinceRollup = directImpacts.length === 0 && childImpacts.length > 0;
+
+  let highestStatus: PublicStatus | undefined;
+  for (const imp of eventImpacts) {
+    highestStatus = pickHigherStatus(highestStatus, toPublicStatus(imp.status ?? null));
+  }
 
   const stats = await prisma.stat.findMany({
     where: { regionId: region.id },
@@ -211,7 +250,7 @@ export async function getRegionDetail(code: string): Promise<RegionDetailDTO | n
     name: region.name,
     level: region.level === 'PROVINCE' ? 'province' : 'regency',
     parentCode: region.parentCode ?? undefined,
-    status: undefined,
+    status: highestStatus,
     stats: stats.map((s) => ({
       key: s.key,
       label: s.label,
@@ -226,8 +265,8 @@ export async function getRegionDetail(code: string): Promise<RegionDetailDTO | n
     })),
     centroid: formatCentroid(region.centroid),
     eventImpacts: eventImpacts.map((i) => ({
-      eventId: i.event.id,
-      eventName: i.event.name,
+      eventId: isProvinceRollup ? `${i.event.id}-${i.id}` : i.event.id,
+      eventName: isProvinceRollup ? `${i.region.name} — ${i.event.name}` : i.event.name,
       eventType: i.event.type,
       eventNature: i.event.nature,
       occurredAt: i.event.occurredAt.toISOString(),
@@ -258,4 +297,95 @@ export async function getAllProvinceCodes(): Promise<string[]> {
     orderBy: { name: 'asc' },
   });
   return provinces.map((p) => p.code);
+}
+
+export async function getAllMapRegencies(): Promise<RegionMapDTO[]> {
+  const regencies = await prisma.region.findMany({
+    where: { level: 'REGENCY_CITY' },
+    orderBy: { name: 'asc' },
+    ...PRISMA_REGION_FIELDS,
+  });
+
+  const eventImpacts = await prisma.eventImpact.findMany({
+    where: {
+      region: { level: 'REGENCY_CITY' },
+      status: { not: null },
+    },
+    include: {
+      region: { select: { code: true } },
+      event: { select: { occurredAt: true } },
+    },
+    orderBy: { event: { occurredAt: 'desc' } },
+  });
+
+  const statusByCode = new Map<string, PublicStatus>();
+  for (const impact of eventImpacts) {
+    const next = pickHigherStatus(statusByCode.get(impact.region.code), toPublicStatus(impact.status ?? null));
+    if (next) statusByCode.set(impact.region.code, next);
+  }
+
+  return regencies.map((regency) => ({
+    code: regency.code,
+    name: regency.name,
+    level: 'regency' as const,
+    parentCode: regency.parentCode ?? undefined,
+    status: statusByCode.get(regency.code),
+    centroid: formatCentroid(regency.centroid),
+  }));
+}
+
+export interface MapSummaryCounts {
+  provinceCount: number;
+  regencyCount: number;
+  activeStatusCount: number;
+  sourceCount: number;
+  statusCounts: {
+    tidakAdaLaporan: number;
+    belumMenerimaBantuan: number;
+    aksesTerisolir: number;
+    belumTerverifikasi: number;
+  };
+}
+
+export async function getMapSummaryCounts(): Promise<MapSummaryCounts> {
+  const [provinceCount, regencyCount, regencyImpacts, sourceCount] = await Promise.all([
+    prisma.region.count({ where: { level: 'PROVINCE' } }),
+    prisma.region.count({ where: { level: 'REGENCY_CITY' } }),
+    prisma.eventImpact.findMany({
+      where: { region: { level: 'REGENCY_CITY' }, status: { not: null } },
+      select: { status: true, region: { select: { code: true } } },
+    }),
+    prisma.source.count(),
+  ]);
+
+  const bestByCode = new Map<string, PublicStatus>();
+  for (const row of regencyImpacts) {
+    const next = pickHigherStatus(bestByCode.get(row.region.code), toPublicStatus(row.status ?? null));
+    if (next) bestByCode.set(row.region.code, next);
+  }
+
+  let aksesTerisolir = 0;
+  let belumMenerimaBantuan = 0;
+  let belumTerverifikasi = 0;
+  for (const st of bestByCode.values()) {
+    if (st === 'AKSES_TERISOLIR') aksesTerisolir++;
+    else if (st === 'DILAPORKAN_BELUM_MENERIMA_BANTUAN') belumMenerimaBantuan++;
+    else if (st === 'BELUM_TERVERIFIKASI') belumTerverifikasi++;
+  }
+
+  const activeStatusCount = aksesTerisolir + belumMenerimaBantuan + belumTerverifikasi;
+  const tidakAdaLaporan = Math.max(0, regencyCount - activeStatusCount);
+
+  return {
+    provinceCount,
+    regencyCount,
+    activeStatusCount,
+    sourceCount,
+    statusCounts: {
+      tidakAdaLaporan,
+      belumMenerimaBantuan,
+      aksesTerisolir,
+      belumTerverifikasi,
+    },
+  };
 }

@@ -133,7 +133,7 @@ def extract_geometry_by_objectid_batch(start_oid, batch_size=5):
         return None
 
 def main():
-    output_dir = r"D:\bismillah_menang\data\raw\big-administrative-boundaries"
+    output_dir = os.path.dirname(os.path.abspath(__file__))
     os.makedirs(output_dir, exist_ok=True)
     
     report = {

@@ -1,68 +1,92 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { PublicStatus } from '@/types/map';
+import type { PublicStatus } from '@/types/map';
 import { Button } from '@/components/ui/Button';
-import { getAllProvinceCodes } from '@/lib/indonesian-admin-codes';
 
 interface MapFiltersProps {
-  initialStatus?: PublicStatus;
-  initialProvince?: string;
-  onFilterChange: (filters: { status?: PublicStatus; provinceCode?: string }) => void;
+  provinces: Array<{ code: string; name: string }>;
+  status: PublicStatus | '';
+  provinceCode: string;
+  confidenceFilter: 'ALL' | 'Tinggi' | 'Sedang';
+  dateFilter: string;
+  datesAvailable: string[];
+  visibleIncidentCount: number;
+  hasAnyFilter?: boolean;
+  onStatusChange: (status: PublicStatus | '') => void;
+  onProvinceChange: (provinceCode: string) => void;
+  onConfidenceChange: (confidence: 'ALL' | 'Tinggi' | 'Sedang') => void;
+  onDateChange: (dateFilter: string) => void;
+  onDownloadCsv: () => void;
+  onReset: () => void;
   loading?: boolean;
 }
 
-export function MapFilters({ initialStatus, initialProvince, onFilterChange, loading }: MapFiltersProps) {
-  const [status, setStatus] = useState<PublicStatus | ''>(initialStatus ?? '');
-  const [province, setProvince] = useState<string>(initialProvince ?? '');
-  const [provinces, setProvinces] = useState<{ code: string; name: string }[]>([]);
-  const [provincesLoading, setProvincesLoading] = useState(true);
+const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
 
-  useEffect(() => {
-    async function loadProvinces() {
-      try {
-        const codes = await getAllProvinceCodes();
-        const provinceData = codes.map((code) => {
-          const match = INDONESIAN_PROVINCES.find((p) => p.code === code);
-          return { code, name: match?.name ?? code };
-        });
-        setProvinces(provinceData);
-      } catch (error) {
-        console.error('Failed to load provinces:', error);
-      } finally {
-        setProvincesLoading(false);
-      }
-    }
-    loadProvinces();
-  }, []);
+function formatShortDateLabel(isoDate: string): string {
+  const parts = isoDate.split('-');
+  if (parts.length !== 3) return isoDate;
+  const monthIdx = Number.parseInt(parts[1], 10) - 1;
+  const day = Number.parseInt(parts[2], 10);
+  if (!Number.isFinite(day) || monthIdx < 0 || monthIdx > 11) return isoDate;
+  return `${day} ${SHORT_MONTHS[monthIdx]}`;
+}
 
-  useEffect(() => {
-    const filters: { status?: PublicStatus; provinceCode?: string } = {};
-    if (status) filters.status = status;
-    if (province) filters.provinceCode = province;
-    onFilterChange(filters);
-  }, [status, province, onFilterChange]);
-
-  const handleReset = () => {
-    setStatus('');
-    setProvince('');
-  };
-
-  const hasActiveFilters = status || province;
+export function MapFilters({
+  provinces,
+  status,
+  provinceCode,
+  confidenceFilter,
+  dateFilter,
+  datesAvailable,
+  visibleIncidentCount,
+  hasAnyFilter,
+  onStatusChange,
+  onProvinceChange,
+  onConfidenceChange,
+  onDateChange,
+  onDownloadCsv,
+  onReset,
+  loading = false,
+}: MapFiltersProps) {
+  const showReset =
+    hasAnyFilter ??
+    Boolean(status || provinceCode || confidenceFilter !== 'ALL' || dateFilter !== 'ALL');
 
   return (
     <div className="bg-background border border-border rounded-lg p-4" role="search" aria-label="Filter peta">
-      <div className="flex flex-col sm:flex-row gap-3 mb-3">
-        <div className="flex-1">
-          <label htmlFor="status-filter" className="block text-sm font-medium text-primary mb-1">
-            Filter Status
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-end">
+        <div className="lg:col-span-3">
+          <label htmlFor="province-filter" className="block text-xs font-medium text-secondary-text mb-1">
+            Provinsi
+          </label>
+          <select
+            id="province-filter"
+            value={provinceCode}
+            onChange={(e) => onProvinceChange(e.target.value)}
+            disabled={loading}
+            className="w-full min-h-[44px] px-3 py-2 border border-border rounded-lg bg-background text-primary text-sm focus:ring-2 focus:ring-primary focus:border-transparent transition"
+            aria-label="Filter provinsi"
+          >
+            <option value="">Semua Provinsi ({provinces.length})</option>
+            {provinces.map((p) => (
+              <option key={p.code} value={p.code}>
+                {p.code} — {p.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="lg:col-span-3">
+          <label htmlFor="status-filter" className="block text-xs font-medium text-secondary-text mb-1">
+            Status Wilayah
           </label>
           <select
             id="status-filter"
             value={status}
-            onChange={(e) => setStatus(e.target.value as PublicStatus | '')}
+            onChange={(e) => onStatusChange(e.target.value as PublicStatus | '')}
             disabled={loading}
-            className="w-full px-3 py-2 border border-border rounded-lg bg-background text-primary focus:ring-2 focus:ring-primary focus:border-transparent transition"
+            className="w-full min-h-[44px] px-3 py-2 border border-border rounded-lg bg-background text-primary text-sm focus:ring-2 focus:ring-primary focus:border-transparent transition"
             aria-label="Filter status bantuan"
           >
             <option value="">Semua Status</option>
@@ -71,75 +95,70 @@ export function MapFilters({ initialStatus, initialProvince, onFilterChange, loa
             <option value="BELUM_TERVERIFIKASI">Belum terverifikasi</option>
           </select>
         </div>
-        <div className="flex-1">
-          <label htmlFor="province-filter" className="block text-sm font-medium text-primary mb-1">
-            Filter Provinsi
+
+        <div className="lg:col-span-2">
+          <label htmlFor="confidence-filter" className="block text-xs font-medium text-secondary-text mb-1">
+            Tingkat Kepercayaan
           </label>
           <select
-            id="province-filter"
-            value={province}
-            onChange={(e) => setProvince(e.target.value)}
-            disabled={loading || provincesLoading}
-            className="w-full px-3 py-2 border border-border rounded-lg bg-background text-primary focus:ring-2 focus:ring-primary focus:border-transparent transition"
-            aria-label="Filter provinsi"
+            id="confidence-filter"
+            value={confidenceFilter}
+            onChange={(e) => onConfidenceChange(e.target.value as 'ALL' | 'Tinggi' | 'Sedang')}
+            disabled={loading}
+            className="w-full min-h-[44px] px-3 py-2 border border-border rounded-lg bg-background text-primary text-sm focus:ring-2 focus:ring-primary focus:border-transparent transition"
+            aria-label="Filter tingkat kepercayaan satelit"
           >
-            <option value="">Semua Provinsi</option>
-            {provincesLoading ? (
-              <option value="" disabled>Memuat daftar provinsi...</option>
-            ) : (
-              provinces.map((p) => (
-                <option key={p.code} value={p.code}>{p.name}</option>
-              ))
-            )}
+            <option value="ALL">Semua</option>
+            <option value="Tinggi">Tinggi (High)</option>
+            <option value="Sedang">Sedang (Nominal)</option>
           </select>
         </div>
+
+        <div className="lg:col-span-2">
+          <label htmlFor="date-filter" className="block text-xs font-medium text-secondary-text mb-1">
+            Tanggal
+          </label>
+          <select
+            id="date-filter"
+            value={dateFilter}
+            onChange={(e) => onDateChange(e.target.value)}
+            disabled={loading}
+            className="w-full min-h-[44px] px-3 py-2 border border-border rounded-lg bg-background text-primary text-sm focus:ring-2 focus:ring-primary focus:border-transparent transition"
+            aria-label="Filter tanggal kejadian bencana"
+          >
+            <option value="ALL">Semua tanggal</option>
+            <option value="24H">24 jam terakhir</option>
+            <option value="7D">7 hari terakhir</option>
+            <option value="30D">30 hari terakhir</option>
+            {datesAvailable.map((d) => (
+              <option key={d} value={d}>
+                {formatShortDateLabel(d)}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="sm:col-span-2 lg:col-span-2 flex items-center gap-2">
+          <button
+            type="button"
+            onClick={onDownloadCsv}
+            disabled={loading || visibleIncidentCount === 0}
+            className="flex-1 min-h-[44px] px-3 py-2 border border-border rounded-lg bg-background text-xs font-medium text-primary hover:bg-secondary-background transition-colors disabled:opacity-50 whitespace-nowrap"
+          >
+            Unduh CSV ({visibleIncidentCount.toLocaleString('id-ID')})
+          </button>
+          {showReset && (
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={onReset}
+              className="min-h-[44px] px-3 whitespace-nowrap"
+            >
+              Reset
+            </Button>
+          )}
+        </div>
       </div>
-      {hasActiveFilters && (
-        <Button variant="secondary" size="sm" onClick={handleReset} className="w-full sm:w-auto">
-          Reset Filter
-        </Button>
-      )}
     </div>
   );
 }
-
-const INDONESIAN_PROVINCES = [
-  { code: "11", name: "Aceh" },
-  { code: "12", name: "Sumatera Utara" },
-  { code: "13", name: "Sumatera Barat" },
-  { code: "14", name: "Riau" },
-  { code: "15", name: "Jambi" },
-  { code: "16", name: "Sumatera Selatan" },
-  { code: "17", name: "Bengkulu" },
-  { code: "18", name: "Lampung" },
-  { code: "19", name: "Kepulauan Bangka Belitung" },
-  { code: "21", name: "Kepulauan Riau" },
-  { code: "31", name: "DKI Jakarta" },
-  { code: "32", name: "Jawa Barat" },
-  { code: "33", name: "Jawa Tengah" },
-  { code: "34", name: "DI Yogyakarta" },
-  { code: "35", name: "Jawa Timur" },
-  { code: "36", name: "Banten" },
-  { code: "51", name: "Bali" },
-  { code: "52", name: "Nusa Tenggara Barat" },
-  { code: "53", name: "Nusa Tenggara Timur" },
-  { code: "61", name: "Kalimantan Barat" },
-  { code: "62", name: "Kalimantan Tengah" },
-  { code: "63", name: "Kalimantan Selatan" },
-  { code: "64", name: "Kalimantan Timur" },
-  { code: "65", name: "Kalimantan Utara" },
-  { code: "71", name: "Sulawesi Utara" },
-  { code: "72", name: "Sulawesi Tengah" },
-  { code: "73", name: "Sulawesi Selatan" },
-  { code: "74", name: "Sulawesi Tenggara" },
-  { code: "75", name: "Gorontalo" },
-  { code: "76", name: "Sulawesi Barat" },
-  { code: "81", name: "Maluku" },
-  { code: "82", name: "Maluku Utara" },
-  { code: "91", name: "Papua Barat" },
-  { code: "92", name: "Papua" },
-  { code: "93", name: "Papua Tengah" },
-  { code: "94", name: "Papua Pegunungan" },
-  { code: "95", name: "Papua Selatan" },
-  { code: "96", name: "Papua Barat Daya" },
-];

@@ -1,0 +1,96 @@
+{
+  "fetchedAt": "2026-11-27T23:17:14.453247+00:00",
+  "sourcePortal": "https://gis.bnpb.go.id/server/rest/services",
+  "datasets": [
+    {
+      "key": "mv_gempa_ntt_2026_v2",
+      "title": "BNPB Geoportal — Data Dampak Gempabumi NTT Agustus 2026 (mv_gempa_ntt_2026_v2)",
+      "filename": "mv_gempa_ntt_2026_v2.json",
+      "url": "https://gis.bnpb.go.id/server/rest/services/2026_gempabumi_ntt/mv_gempa_ntt_2026_v2/MapServer/40/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson",
+      "featureCount": 10,
+      "bytes": 19998,
+      "sha256": "cb53b7f58c48e72374c93249cdca833bac10eb6bc92f09238c703f5879bd9f7c"
+    },
+    {
+      "key": "mv_bansor_sumatera_v4",
+      "title": "BNPB Geoportal — Data Banjir dan Longsor Sumatera (MV_Bansor_Sumatera_v4)",
+      "filename": "mv_bansor_sumatera_v4.json",
+      "url": "https://gis.bnpb.go.id/server/rest/services/MV_Bansor_Sumatera_v4/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson",
+      "featureCount": 59,
+      "bytes": 218015,
+      "sha256": "9dba5438959bc244abc15adb3bf7277d8bd9956b19b7d9612aba1348b44c208c"
+    },
+    {
+      "key": "kejadian_bencana_mingguan",
+      "title": "BNPB Geoportal — Kejadian Bencana Mingguan Nasional (Kejadian_Bencana_Mingguan)",
+      "filename": "kejadian_bencana_mingguan.json",
+      "url": "https://gis.bnpb.go.id/server/rest/services/Kejadian_Bencana_Mingguan/MapServer/25/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson",
+      "featureCount": 35,
+      "bytes": 64789,
+      "sha256": "7305b299c30c54aa4e9ad54964e917f3ba692a1c90f710997fafc59dad809a62"
+    },
+    {
+      "key": "data_jalan_jembatan_putus_akses_pu",
+      "title": "SITABA Kementerian PU & BNPB — Data Jalan dan Jembatan Putus Akses",
+      "filename": "data_jalan_jembatan_putus_akses_pu.json",
+      "url": "https://gis.bnpb.go.id/server/rest/services/Data_Jalan_Jembatan_Putus_Akses_PU/MapServer/13/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson",
+      "featureCount": 341,
+      "bytes": 232541,
+      "sha256": "02fbee1d9fefa977cf0f217f0e6b71f5d66a25432410cf21a79f8aa09a22f773"
+    },
+    {
+      "key": "bmkg_gempaterkini",
+      "title": "BMKG TEWS — Gempa Bumi Terkini (M >= 5.0)",
+      "filename": "bmkg_gempaterkini.json",
+      "url": "https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json",
+      "featureCount": 15,
+      "bytes": 5921,
+      "sha256": "acb1ae374d9523949828beb895e129abb3509f7aa9955c0d88ae15163a0007a4"
+    },
+    {
+      "key": "bmkg_gempadirasakan",
+      "title": "BMKG TEWS — Gempa Bumi Dirasakan",
+      "filename": "bmkg_gempadirasakan.json",
+      "url": "https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.json",
+      "featureCount": 15,
+      "bytes": 6545,
+      "sha256": "b3522b629659422a43bbfdd2fff8ecff9f7f4ed41fcc11971d1a50041d181abc"
+    },
+    {
+      "key": "nasa_firms_noaa20_24h",
+      "title": "NASA EOSDIS FIRMS — VIIRS NOAA-20 24h (Indonesia)",
+      "filename": "nasa_firms_noaa20_24h.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/noaa-20-viirs-c2/csv/J1_VIIRS_C2_SouthEast_Asia_24h.csv",
+      "featureCount": 2873,
+      "bytes": 240554,
+      "sha256": "b672aa9f997f572a6189160820c03b20cb876d53f35f10f520cc3812f361129c"
+    },
+    {
+      "key": "nasa_firms_modis_24h",
+      "title": "NASA EOSDIS FIRMS — MODIS C6.1 24h (Indonesia)",
+      "filename": "nasa_firms_modis_24h.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/modis-c6.1/csv/MODIS_C6_1_SouthEast_Asia_24h.csv",
+      "featureCount": 376,
+      "bytes": 29219,
+      "sha256": "5670d47756bfad60dba14169de35abe8d5b6b753cc695fc09575042b114be6e1"
+    },
+    {
+      "key": "usgs_earthquakes_idn",
+      "title": "USGS Earthquake Hazards Program — Indonesia M >= 4.0",
+      "filename": "usgs_earthquakes_idn.json",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minlatitude=-11.5&maxlatitude=6.5&minlongitude=94.5&maxlongitude=141.5&minmagnitude=4.0&limit=25",
+      "featureCount": 25,
+      "bytes": 27749,
+      "sha256": "bce9f66cf53ab4383e71429945375e137078b00b13e199a93c7e9e740bcd2d31"
+    },
+    {
+      "key": "bnpb_karhutla_2026",
+      "title": "BNPB Geoportal — Situasi Penanganan Karhutla Provinsi 2026",
+      "filename": "bnpb_karhutla_2026.json",
+      "url": "https://gis.bnpb.go.id/server/rest/services/2026_karhutla/mv_prov_karhutla_2026/MapServer/3/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson",
+      "featureCount": 6,
+      "bytes": 24952,
+      "sha256": "15f9dd7e11bc1ac166fce69ba63c7645b97d45664aa4d3e1fc6b9f4760fc847d"
+    }
+  ]
+}

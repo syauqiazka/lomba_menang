@@ -57,7 +57,7 @@ const officialChannels = [
     services: ["Bantuan sosial tunai (BST)", "Rehabilitasi sosial", "Perlindungan anak & lansia", "Data terduga (DTKS)"],
   },
   {
-    name: "Pusdalops PB (Pusat Dalil Operasional Penanggulangan Bencana)",
+    name: "Pusdalops PB (Pusat Pengendalian Operasional Penanggulangan Bencana)",
     description: "Pusat informasi dan koordinasi operasional bencana 24 jam di bawah BNPB. Nomor darurat dan laporan bencana.",
     url: "https://bnpb.go.id/pusdalops",
     verified: true,
@@ -66,17 +66,14 @@ const officialChannels = [
   },
 ];
 
-const importantNotice = {
-  title: "⚠️ Peringatan Penting: Platform Ini Tidak Mengumpulkan Donasi",
-  points: [
-    "Kami <strong>tidak menerima uang</strong> dalam bentuk apapun (transfer bank, e-wallet, kripto, dll).",
-    "Kami <strong>tidak mempublikasikan nomor rekening bank</strong> pribadi atau organisasi.",
-    "Kami <strong>tidak menyediakan dompet penggalangan dana</strong> (fundraising wallet) atau QRIS donasi.",
-    "Kami <strong>tidak mengintegrasikan payment gateway</strong> atau sistem pembayaran apapun.",
-    "Semua tautan di halaman ini mengarah ke <strong>situs web resmi instansi</strong> yang terverifikasi.",
-    "Jika Anda menemukan pihak yang mengatasnamakan platform ini meminta donasi, <strong>itu adalah penipuan</strong>.",
-  ],
-};
+const importantNoticePoints = [
+  <>Kami <strong>tidak menerima uang</strong> dalam bentuk apa pun (transfer bank, e-wallet, kripto, dll.).</>,
+  <>Kami <strong>tidak mempublikasikan nomor rekening bank</strong> pribadi atau organisasi.</>,
+  <>Kami <strong>tidak menyediakan dompet penggalangan dana</strong> (fundraising wallet) atau QRIS donasi.</>,
+  <>Kami <strong>tidak mengintegrasikan payment gateway</strong> atau sistem pembayaran apa pun.</>,
+  <>Semua tautan di halaman ini mengarah ke <strong>situs web resmi instansi</strong> yang terverifikasi.</>,
+  <>Jika Anda menemukan pihak yang mengatasnamakan platform ini meminta donasi, <strong>itu adalah penipuan</strong>.</>,
+];
 
 export default function HelpPage() {
   return (
@@ -100,10 +97,10 @@ export default function HelpPage() {
                 <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
-                {importantNotice.title}
+                Peringatan Penting: Platform Ini Tidak Mengumpulkan Donasi
               </h2>
               <ul className="list-disc list-inside text-secondary-text space-y-2">
-                {importantNotice.points.map((point, index) => (
+                {importantNoticePoints.map((point, index) => (
                   <li key={index} className="leading-relaxed">{point}</li>
                 ))}
               </ul>
@@ -124,7 +121,7 @@ export default function HelpPage() {
                         <h3 className="font-display font-semibold text-lg text-primary">{channel.name}</h3>
                         {channel.verified && (
                           <Badge variant="safe" className="flex-shrink-0">
-                            ✓ Terverifikasi
+                            Terverifikasi
                           </Badge>
                         )}
                       </div>
@@ -191,15 +188,15 @@ export default function HelpPage() {
               {[
                 {
                   title: "1. Verifikasi Kebutuhan",
-                  content: "Sebelum menyumbangkan, cek kebutuhan aktual via laporan BNPB/BPBD atau organisasi kemanusiaan terverifikasi. Hindari mengirim barang yang tidak dibutuhkan (baju bekas tidak layak pakai, makanan kadaluarsa).",
+                  content: "Sebelum menyumbangkan, cek kebutuhan aktual via laporan BNPB/BPBD atau organisasi kemanusiaan terverifikasi. Hindari mengirim barang yang tidak dibutuhkan (baju bekas tidak layak pakai, makanan kedaluwarsa).",
                 },
                 {
                   title: "2. Salurkan Lewat Resmi",
-                  content: "Gunakan rekening resmi instansi (BNPB, PMI, Baznas, Kemensos) yang terpublikasi di website masing-masing. Jangan transfer ke rekening pribadi yang klaim 'wakil' instansi.",
+                  content: "Gunakan rekening resmi instansi (BNPB, PMI, Baznas, Kemensos) yang terpublikasi di website masing-masing. Jangan transfer ke rekening pribadi yang mengklaim sebagai 'wakil' instansi.",
                 },
                 {
                   title: "3. Catat Bukti Transfer",
-                  content: "Simpan bukti transfer dan Konfirmasikan ke instansi penerima. Minta nomor registrasi donasi untuk pelacakan transparansi.",
+                  content: "Simpan bukti transfer dan konfirmasikan ke instansi penerima. Minta nomor registrasi donasi untuk pelacakan transparansi.",
                 },
                 {
                   title: "4. Bantuan Barang (In-Kind)",

@@ -1,0 +1,52 @@
+{
+  "fetchedAt": "2026-11-27T23:27:28.991978+00:00",
+  "sourceUrl": "https://www.gdacs.org/xml/rss.xml",
+  "count": 3,
+  "items": [
+    {
+      "title": "Green earthquake (Magnitude 5.5M, Depth:15.139km) in South Of Sumbawa, Indonesia 26/11/2026 09:08 UTC, [unknown].",
+      "link": "http://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1579362",
+      "description": "On 11/26/2026 9:08:40 AM, an earthquake occurred in South Of Sumbawa, Indonesia potentially affecting [unknown]. The earthquake had Magnitude 5.5M, Depth:15.139km.",
+      "pubDate": "Thu, 26 Nov 2026 09:24:03 GMT",
+      "eventType": "EQ",
+      "alertLevel": "Green",
+      "eventId": "1579362",
+      "country": "South Of Sumbawa, Indonesia",
+      "iso3": "",
+      "fromDate": "Thu, 26 Nov 2026 09:08:40 GMT",
+      "toDate": "Thu, 26 Nov 2026 09:08:40 GMT",
+      "lat": -10.5618,
+      "lng": 117.1955
+    },
+    {
+      "title": "Green flood alert in Indonesia",
+      "link": "http://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104253",
+      "description": "On 24/10/2026, a flood started in Indonesia, lasting until 25/11/2026 (last update). The flood caused 4 deaths and 6179 displaced .",
+      "pubDate": "Thu, 29 Oct 2026 09:29:04 GMT",
+      "eventType": "FL",
+      "alertLevel": "Green",
+      "eventId": "1104253",
+      "country": "Indonesia",
+      "iso3": "IDN",
+      "fromDate": "Sat, 24 Oct 2026 01:00:00 GMT",
+      "toDate": "Wed, 25 Nov 2026 01:00:00 GMT",
+      "lat": 2.1923519,
+      "lng": 99.3812201
+    },
+    {
+      "title": "Drought is on going in Brunei, Indonesia, Cambodia, Laos, Malaysia, Papua New Guinea, Philippines, Singapore, Vietnam",
+      "link": "http://www.gdacs.org/report.aspx?eventtype=DR&eventid=1018545",
+      "description": "The  Drought notification level is Green.",
+      "pubDate": "Thu, 30 Apr 2026 13:07:47 GMT",
+      "eventType": "DR",
+      "alertLevel": "Green",
+      "eventId": "1018545",
+      "country": "Brunei, Indonesia, Cambodia, Laos, Malaysia, Papua New Guinea, Philippines, Singapore, Vietnam",
+      "iso3": "BRN",
+      "fromDate": "Sat, 21 Mar 2026 00:00:00 GMT",
+      "toDate": "Wed, 25 Nov 2026 00:00:00 GMT",
+      "lat": 13.746,
+      "lng": 107.999
+    }
+  ]
+}

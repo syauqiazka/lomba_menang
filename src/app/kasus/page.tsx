@@ -48,7 +48,7 @@ const caseStudies: CaseStudy[] = [
   {
     slug: "ntt-2026",
     title: "Gempa Flores NTT, Agustus 2026",
-    description: "Gempa bumi magnitudo 6.1 SR mengguncang Pulau Flores, Nusa Tenggara Timur pada Agustus 2026. Studi kasus bencana geologis dengan fokus pada distribusi bantuan ke wilayah terpencil dan keterelaksanaan informasi.",
+    description: "Gempa bumi magnitudo 6.1 SR mengguncang Pulau Flores, Nusa Tenggara Timur pada Agustus 2026. Studi kasus bencana geologis dengan fokus pada distribusi bantuan ke wilayah terpencil dan keterlacakan informasi.",
     eventType: "geological",
     date: "Agustus 2026",
     region: "Nusa Tenggara Timur",
